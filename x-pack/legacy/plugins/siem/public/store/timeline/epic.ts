@@ -75,8 +75,7 @@ interface TimelineEpicDependencies<State> {
   apolloClient$: Observable<AppApolloClient>;
 }
 
-export interface ActionTimeline extends Action {
-  type: string;
+export interface ActionTimeline extends Action<string> {
   payload: {
     id: string;
     eventId: string;
