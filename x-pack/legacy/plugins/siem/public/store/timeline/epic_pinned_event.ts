@@ -26,8 +26,7 @@ import {
 import { myEpicTimelineId } from './my_epic_timeline_id';
 import { refetchQueries } from './refetch_queries';
 import { dispatcherTimelinePersistQueue } from './epic_dispatcher_timeline_persistence_queue';
-import { TimelineById } from './types';
-import { ActionTimeline } from './epic';
+import { TimelineById, ActionTimeline } from './types';
 
 export const timelinePinnedEventActionsType = [pinEvent.type, unPinEvent.type];
 
