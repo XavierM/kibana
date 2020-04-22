@@ -10,7 +10,12 @@ import { SavedObjectsFindOptions } from '../../../../../../src/core/server';
 import { UNAUTHENTICATED_USER } from '../../../common/constants';
 import { NoteSavedObject } from '../../../common/types/timeline/note';
 import { PinnedEventSavedObject } from '../../../common/types/timeline/pinned_event';
-import { SavedTimeline, TimelineSavedObject, TimelineType } from '../../../common/types/timeline';
+import {
+  SavedTimeline,
+  TimelineSavedObject,
+  TimelineType,
+  TimelineResponse,
+} from '../../../common/types/timeline';
 import {
   ResponseTimeline,
   PageInfoTimeline,
@@ -188,7 +193,7 @@ export const persistTimeline = async (
   timelineId: string | null,
   version: string | null,
   timeline: SavedTimeline
-): Promise<ResponseTimeline> => {
+): Promise<TimelineResponse> => {
   const savedObjectsClient = request.context.core.savedObjects.client;
   try {
     if (timelineId == null) {
@@ -228,7 +233,7 @@ export const persistTimeline = async (
         timeline: await getSavedTimeline(request, timelineId),
       };
     } else if (getOr(null, 'output.statusCode', err) === 403) {
-      const timelineToReturn: TimelineResult = {
+      const timelineToReturn: TimelineSavedObject = {
         ...timeline,
         savedObjectId: '',
         version: '',

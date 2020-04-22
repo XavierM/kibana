@@ -7,7 +7,7 @@
 import { IRouter } from '../../../../../../../src/core/server';
 
 import { TIMELINE_URL } from '../../../../common/constants';
-import { TimelineType } from '../../../../common/types/timeline';
+import { TimelineType, TimelineResponseType } from '../../../../common/types/timeline';
 
 import { SetupPlugins } from '../../../plugin';
 import { buildRouteValidation } from '../../../utils/build_validation/route_validation';
@@ -71,11 +71,7 @@ export const updateTimelinesRoute = (
           version
         );
         return response.ok({
-          body: {
-            data: {
-              persistTimeline: updatedTimeline,
-            },
-          },
+          body: TimelineResponseType.encode(updatedTimeline),
         });
       } catch (err) {
         const error = transformError(err);

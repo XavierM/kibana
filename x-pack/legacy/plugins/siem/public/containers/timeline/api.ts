@@ -43,7 +43,7 @@ const postTimeline = async ({ timeline }: RequestPostTimeline): Promise<Timeline
     body: JSON.stringify(timeline),
     // signal,
   });
-  return response; // decodeTimelineResponse(response);
+  return decodeTimelineResponse(response);
 };
 
 const patchTimeline = async ({
@@ -56,8 +56,7 @@ const patchTimeline = async ({
     body: JSON.stringify({ timeline, timelineId, version }),
     // signal,
   });
-  console.log('PathReporter', PathReporter.report(TimelineResponseType.decode(response)));
-  return response; // decodeTimelineResponse(response);
+  return decodeTimelineResponse(response);
 };
 
 export const persistTimeline = async ({

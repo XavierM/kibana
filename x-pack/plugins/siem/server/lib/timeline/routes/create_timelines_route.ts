@@ -8,7 +8,7 @@ import { transformError, buildSiemResponse } from '../../detection_engine/routes
 import { IRouter } from '../../../../../../../src/core/server';
 import { ConfigType } from '../../..';
 import { SetupPlugins } from '../../../plugin';
-import { TimelineType } from '../../../../common/types/timeline';
+import { TimelineType, TimelineResponseType } from '../../../../common/types/timeline';
 import { buildRouteValidation } from '../../../utils/build_validation/route_validation';
 
 import { createTimelineSchema } from './schemas/create_timelines_schema';
@@ -68,11 +68,7 @@ export const createTimelinesRoute = (
         // Create timeline
         const newTimeline = await createTimelines(frameworkRequest, timeline, null, version);
         return response.ok({
-          body: {
-            data: {
-              persistTimeline: newTimeline,
-            },
-          },
+          body: TimelineResponseType.encode(newTimeline),
         });
       } catch (err) {
         const error = transformError(err);

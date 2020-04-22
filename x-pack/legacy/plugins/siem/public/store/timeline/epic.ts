@@ -28,14 +28,10 @@ import {
   takeUntil,
 } from 'rxjs/operators';
 
+import { TimelineResponse } from 'x-../../../../../../plugins/siem/common/types/timeline';
 import { esFilters, Filter, MatchAllFilter } from '../../../../../../../src/plugins/data/public';
-// import { persistTimelineMutation } from '../../containers/timeline/persist.gql_query';
-import {
-  // PersistTimelineMutation,
-  TimelineInput,
-  ResponseTimeline,
-  TimelineResult,
-} from '../../graphql/types';
+
+import { TimelineInput, TimelineResult } from '../../graphql/types';
 import { AppApolloClient } from '../../lib/lib';
 import { addError } from '../app/actions';
 import { NotesById } from '../app/model';
@@ -202,7 +198,7 @@ export const createTimelineEpic = <State>(): Epic<
             withLatestFrom(timeline$, allTimelineQuery$),
             mergeMap(([result, recentTimeline, allTimelineQuery]) => {
               const savedTimeline = recentTimeline[action.payload.id];
-              const response: ResponseTimeline = get('data.persistTimeline', result);
+              const response: TimelineResponse = result;
               const callOutMsg = response.code === 403 ? [showCallOutUnauthorizedMsg()] : [];
 
               if (allTimelineQuery.refetch != null) {

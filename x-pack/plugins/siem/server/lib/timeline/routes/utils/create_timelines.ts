@@ -9,7 +9,11 @@ import * as timelineLib from '../../saved_object';
 import * as pinnedEventLib from '../../../pinned_event/saved_object';
 import * as noteLib from '../../../note/saved_object';
 import { FrameworkRequest } from '../../../framework';
-import { SavedTimeline, TimelineSavedObject } from '../../../../../common/types/timeline';
+import {
+  SavedTimeline,
+  TimelineSavedObject,
+  TimelineResponse,
+} from '../../../../../common/types/timeline';
 import { SavedNote } from '../../../../../common/types/timeline/note';
 import { NoteResult, ResponseTimeline } from '../../../../graphql/types';
 export const CREATE_TIMELINE_ERROR_MESSAGE =
@@ -22,7 +26,7 @@ export const saveTimelines = (
   timeline: SavedTimeline,
   timelineSavedObjectId?: string | null,
   timelineVersion?: string | null
-): Promise<ResponseTimeline> => {
+): Promise<TimelineResponse> => {
   return timelineLib.persistTimeline(
     frameworkRequest,
     timelineSavedObjectId ?? null,
@@ -80,7 +84,7 @@ export const createTimelines = async (
   pinnedEventIds?: string[] | null,
   notes?: NoteResult[],
   existingNoteIds?: string[]
-): Promise<ResponseTimeline> => {
+): Promise<TimelineResponse> => {
   const responseTimeline = await saveTimelines(
     frameworkRequest,
     timeline,
