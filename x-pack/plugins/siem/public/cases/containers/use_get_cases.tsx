@@ -7,7 +7,7 @@
 import { useCallback, useEffect, useReducer } from 'react';
 import { DEFAULT_TABLE_ACTIVE_PAGE, DEFAULT_TABLE_LIMIT } from './constants';
 import { AllCases, SortFieldCase, FilterOptions, QueryParams, Case } from './types';
-import { errorToToaster, useStateToaster } from '../../components/toasters';
+import { errorToToaster, useStateToaster } from '../../common/components/toasters';
 import * as i18n from './translations';
 import { UpdateByKey } from './use_update_case';
 import { getCases, patchCase } from './api';

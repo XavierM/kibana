@@ -7,7 +7,7 @@
 import { useReducer, useCallback } from 'react';
 
 import { CasePostRequest } from '../../../../case/common/api';
-import { errorToToaster, useStateToaster } from '../../components/toasters';
+import { errorToToaster, useStateToaster } from '../../common/components/toasters';
 import { postCase } from './api';
 import * as i18n from './translations';
 import { Case } from './types';

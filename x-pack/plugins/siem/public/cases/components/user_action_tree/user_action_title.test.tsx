@@ -8,9 +8,9 @@ import React from 'react';
 import { mount } from 'enzyme';
 import copy from 'copy-to-clipboard';
 import { Router, routeData, mockHistory } from '../__mock__/router';
-import { caseUserActions as basicUserActions } from '../../../../containers/case/mock';
+import { caseUserActions as basicUserActions } from '../../containers/mock';
 import { UserActionTitle } from './user_action_title';
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 
 const outlineComment = jest.fn();
 const onEdit = jest.fn();

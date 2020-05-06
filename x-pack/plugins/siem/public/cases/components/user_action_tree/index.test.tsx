@@ -9,11 +9,11 @@ import { mount } from 'enzyme';
 
 import { Router, routeData, mockHistory, mockLocation } from '../__mock__/router';
 import { getFormMock, useFormMock } from '../__mock__/form';
-import { useUpdateComment } from '../../../../containers/case/use_update_comment';
-import { basicCase, getUserAction } from '../../../../containers/case/mock';
+import { useUpdateComment } from '../../containers/use_update_comment';
+import { basicCase, getUserAction } from '../../containers/mock';
 import { UserActionTree } from '.';
-import { TestProviders } from '../../../../mock';
-import { wait } from '../../../../lib/helpers';
+import { TestProviders } from '../../../common/mock';
+import { wait } from '../../../common/lib/helpers';
 import { act } from 'react-dom/test-utils';
 
 const fetchUserActions = jest.fn();
@@ -32,7 +32,7 @@ const defaultProps = {
   updateCase,
 };
 const useUpdateCommentMock = useUpdateComment as jest.Mock;
-jest.mock('../../../../containers/case/use_update_comment');
+jest.mock('../../containers/use_update_comment');
 
 const patchComment = jest.fn();
 describe('UserActionTree ', () => {

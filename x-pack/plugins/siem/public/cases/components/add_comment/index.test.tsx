@@ -8,19 +8,21 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import { AddComment } from '.';
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 import { getFormMock } from '../__mock__/form';
 import { Router, routeData, mockHistory, mockLocation } from '../__mock__/router';
 
-import { useInsertTimeline } from '../../../../components/timeline/insert_timeline_popover/use_insert_timeline';
-import { usePostComment } from '../../../../containers/case/use_post_comment';
-import { useForm } from '../../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form';
-import { wait } from '../../../../lib/helpers';
+import { useInsertTimeline } from '../../../timelines/components/timeline/insert_timeline_popover/use_insert_timeline';
+import { usePostComment } from '../../containers/use_post_comment';
+import { useForm } from '../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form';
+import { wait } from '../../../common/lib/helpers';
+
 jest.mock(
-  '../../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form'
+  '../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form'
 );
-jest.mock('../../../../components/timeline/insert_timeline_popover/use_insert_timeline');
-jest.mock('../../../../containers/case/use_post_comment');
+
+jest.mock('../../../timelines/components/timeline/insert_timeline_popover/use_insert_timeline');
+jest.mock('../../containers/use_post_comment');
 
 export const useFormMock = useForm as jest.Mock;
 

@@ -13,11 +13,11 @@ import {
   ThirdPartyField,
   CaseField,
   ActionType,
-} from '../../../../containers/case/configure/types';
+} from '../../containers/configure/types';
 import { FieldMappingRow } from './field_mapping_row';
 import * as i18n from './translations';
 
-import { defaultMapping } from '../../../../lib/connectors/config';
+import { defaultMapping } from '../../../common/lib/connectors/config';
 import { setActionTypeToMapping, setThirdPartyToMapping } from './utils';
 
 const FieldRowWrapper = styled.div`

@@ -22,31 +22,31 @@ import styled, { css } from 'styled-components';
 import * as i18n from './translations';
 
 import { getCasesColumns } from './columns';
-import { Case, DeleteCase, FilterOptions, SortFieldCase } from '../../../../containers/case/types';
-import { useGetCases, UpdateCase } from '../../../../containers/case/use_get_cases';
-import { useGetCasesStatus } from '../../../../containers/case/use_get_cases_status';
-import { useDeleteCases } from '../../../../containers/case/use_delete_cases';
-import { EuiBasicTableOnChange } from '../../../detection_engine/rules/types';
-import { useGetUrlSearch } from '../../../../components/navigation/use_get_url_search';
-import { Panel } from '../../../../components/panel';
+import { Case, DeleteCase, FilterOptions, SortFieldCase } from '../../containers/types';
+import { useGetCases, UpdateCase } from '../../containers/use_get_cases';
+import { useGetCasesStatus } from '../../containers/use_get_cases_status';
+import { useDeleteCases } from '../../containers/use_delete_cases';
+import { EuiBasicTableOnChange } from '../../../alerts/pages/detection_engine/rules/types';
+import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
+import { Panel } from '../../../common/components/panel';
 import {
   UtilityBar,
   UtilityBarAction,
   UtilityBarGroup,
   UtilityBarSection,
   UtilityBarText,
-} from '../../../../components/utility_bar';
-import { getCreateCaseUrl } from '../../../../components/link_to';
+} from '../../../common/components/utility_bar';
+import { getCreateCaseUrl } from '../../../common/components/link_to';
 import { getBulkItems } from '../bulk_actions';
 import { CaseHeaderPage } from '../case_header_page';
 import { ConfirmDeleteCaseModal } from '../confirm_delete_case';
 import { OpenClosedStats } from '../open_closed_stats';
-import { navTabs } from '../../../home/home_navigations';
+import { navTabs } from '../../../app/home/home_navigations';
 
 import { getActions } from './actions';
 import { CasesTableFilters } from './table_filters';
-import { useUpdateCases } from '../../../../containers/case/use_bulk_update_case';
-import { useGetActionLicense } from '../../../../containers/case/use_get_action_license';
+import { useUpdateCases } from '../../containers/use_bulk_update_case';
+import { useGetActionLicense } from '../../containers/use_get_action_license';
 import { getActionLicenseError } from '../use_push_to_service/helpers';
 import { CaseCallOut } from '../callout';
 import { ConfigureCaseButton } from '../configure_cases/button';

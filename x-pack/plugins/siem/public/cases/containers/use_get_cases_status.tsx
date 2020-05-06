@@ -6,52 +6,44 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-import { isEmpty } from 'lodash/fp';
-import { User } from '../../../../case/common/api';
-import { errorToToaster, useStateToaster } from '../../components/toasters';
-import { getReporters } from './api';
+import { errorToToaster, useStateToaster } from '../../common/components/toasters';
+import { getCasesStatus } from './api';
 import * as i18n from './translations';
+import { CasesStatus } from './types';
 
-interface ReportersState {
-  reporters: string[];
-  respReporters: User[];
+interface CasesStatusState extends CasesStatus {
   isLoading: boolean;
   isError: boolean;
 }
 
-const initialData: ReportersState = {
-  reporters: [],
-  respReporters: [],
+const initialData: CasesStatusState = {
+  countClosedCases: null,
+  countOpenCases: null,
   isLoading: true,
   isError: false,
 };
 
-export interface UseGetReporters extends ReportersState {
-  fetchReporters: () => void;
+export interface UseGetCasesStatus extends CasesStatusState {
+  fetchCasesStatus: () => void;
 }
 
-export const useGetReporters = (): UseGetReporters => {
-  const [reportersState, setReporterState] = useState<ReportersState>(initialData);
-
+export const useGetCasesStatus = (): UseGetCasesStatus => {
+  const [casesStatusState, setCasesStatusState] = useState<CasesStatusState>(initialData);
   const [, dispatchToaster] = useStateToaster();
 
-  const fetchReporters = useCallback(() => {
+  const fetchCasesStatus = useCallback(() => {
     let didCancel = false;
     const abortCtrl = new AbortController();
     const fetchData = async () => {
-      setReporterState({
-        ...reportersState,
+      setCasesStatusState({
+        ...casesStatusState,
         isLoading: true,
       });
       try {
-        const response = await getReporters(abortCtrl.signal);
-        const myReporters = response
-          .map(r => (r.full_name == null || isEmpty(r.full_name) ? r.username ?? '' : r.full_name))
-          .filter(u => !isEmpty(u));
+        const response = await getCasesStatus(abortCtrl.signal);
         if (!didCancel) {
-          setReporterState({
-            reporters: myReporters,
-            respReporters: response,
+          setCasesStatusState({
+            ...response,
             isLoading: false,
             isError: false,
           });
@@ -63,9 +55,9 @@ export const useGetReporters = (): UseGetReporters => {
             error: error.body && error.body.message ? new Error(error.body.message) : error,
             dispatchToaster,
           });
-          setReporterState({
-            reporters: [],
-            respReporters: [],
+          setCasesStatusState({
+            countClosedCases: 0,
+            countOpenCases: 0,
             isLoading: false,
             isError: true,
           });
@@ -77,10 +69,14 @@ export const useGetReporters = (): UseGetReporters => {
       didCancel = true;
       abortCtrl.abort();
     };
-  }, [reportersState]);
+  }, [casesStatusState]);
 
   useEffect(() => {
-    fetchReporters();
+    fetchCasesStatus();
   }, []);
-  return { ...reportersState, fetchReporters };
+
+  return {
+    ...casesStatusState,
+    fetchCasesStatus,
+  };
 };

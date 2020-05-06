@@ -16,24 +16,24 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 
 import * as i18n from './translations';
-import { Case } from '../../../../containers/case/types';
-import { getCaseUrl } from '../../../../components/link_to';
-import { HeaderPage } from '../../../../components/header_page';
-import { EditableTitle } from '../../../../components/header_page/editable_title';
+import { Case } from '../../containers/types';
+import { getCaseUrl } from '../../../common/components/link_to';
+import { HeaderPage } from '../../../common/components/header_page';
+import { EditableTitle } from '../../../common/components/header_page/editable_title';
 import { TagList } from '../tag_list';
-import { useGetCase } from '../../../../containers/case/use_get_case';
+import { useGetCase } from '../../containers/use_get_case';
 import { UserActionTree } from '../user_action_tree';
 import { UserList } from '../user_list';
-import { useUpdateCase } from '../../../../containers/case/use_update_case';
-import { useGetUrlSearch } from '../../../../components/navigation/use_get_url_search';
-import { WrapperPage } from '../../../../components/wrapper_page';
-import { getTypedPayload } from '../../../../containers/case/utils';
+import { useUpdateCase } from '../../containers/use_update_case';
+import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
+import { WrapperPage } from '../../../common/components/wrapper_page';
+import { getTypedPayload } from '../../containers/utils';
 import { WhitePageWrapper } from '../wrappers';
-import { useBasePath } from '../../../../lib/kibana';
+import { useBasePath } from '../../../common/lib/kibana';
 import { CaseStatus } from '../case_status';
-import { navTabs } from '../../../home/home_navigations';
-import { SpyRoute } from '../../../../utils/route/spy_routes';
-import { useGetCaseUserActions } from '../../../../containers/case/use_get_case_user_actions';
+import { navTabs } from '../../../app/home/home_navigations';
+import { SpyRoute } from '../../../common/utils/route/spy_routes';
+import { useGetCaseUserActions } from '../../containers/use_get_case_user_actions';
 import { usePushToService } from '../use_push_to_service';
 
 interface Props {

@@ -8,11 +8,11 @@ import { isEmpty } from 'lodash/fp';
 import React, { useMemo } from 'react';
 import { Redirect } from 'react-router-dom';
 import * as i18n from './translations';
-import { useDeleteCases } from '../../../../containers/case/use_delete_cases';
+import { useDeleteCases } from '../../containers/use_delete_cases';
 import { ConfirmDeleteCaseModal } from '../confirm_delete_case';
-import { SiemPageName } from '../../../home/types';
+import { SiemPageName } from '../../../app/home/types';
 import { PropertyActions } from '../property_actions';
-import { Case } from '../../../../containers/case/types';
+import { Case } from '../../containers/types';
 
 interface CaseViewActions {
   caseData: Case;

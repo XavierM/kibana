@@ -10,7 +10,11 @@ import {
   ServiceConnectorCaseResponse,
   ServiceConnectorCaseParams,
 } from '../../../../case/common/api';
-import { errorToToaster, useStateToaster, displaySuccessToast } from '../../components/toasters';
+import {
+  errorToToaster,
+  useStateToaster,
+  displaySuccessToast,
+} from '../../common/components/toasters';
 
 import { getCase, pushToService, pushCase } from './api';
 import * as i18n from './translations';

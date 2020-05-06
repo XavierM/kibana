@@ -17,9 +17,9 @@ import {
   EuiText,
 } from '@elastic/eui';
 import { isEmpty, difference } from 'lodash/fp';
-import { useKibana } from '../../../../lib/kibana';
-import { useConnectors } from '../../../../containers/case/configure/use_connectors';
-import { useCaseConfigure } from '../../../../containers/case/configure/use_configure';
+import { useKibana } from '../../../common/lib/kibana';
+import { useConnectors } from '../../containers/configure/use_connectors';
+import { useCaseConfigure } from '../../containers/configure/use_configure';
 import {
   ActionsConnectorsContextProvider,
   ActionType,
@@ -29,9 +29,9 @@ import {
 
 // eslint-disable-next-line @kbn/eslint/no-restricted-paths
 import { ActionConnectorTableItem } from '../../../../../../triggers_actions_ui/public/types';
-import { getCaseUrl } from '../../../../components/link_to';
-import { useGetUrlSearch } from '../../../../components/navigation/use_get_url_search';
-import { CCMapsCombinedActionAttributes } from '../../../../containers/case/configure/types';
+import { getCaseUrl } from '../../../common/componentslink_to';
+import { useGetUrlSearch } from '../../../common/componentsnavigation/use_get_url_search';
+import { CCMapsCombinedActionAttributes } from '../../containers/configure/types';
 import { Connectors } from './connectors';
 import { ClosureOptions } from './closure_options';
 import { Mapping } from './mapping';

@@ -16,7 +16,7 @@ import styled, { css } from 'styled-components';
 import { Redirect } from 'react-router-dom';
 
 import { isEqual } from 'lodash/fp';
-import { CasePostRequest } from '../../../../../../case/common/api';
+import { CasePostRequest } from '../../../../../case/common/api';
 import {
   Field,
   Form,
@@ -24,15 +24,15 @@ import {
   useForm,
   UseField,
   FormDataProvider,
-} from '../../../../shared_imports';
-import { usePostCase } from '../../../../containers/case/use_post_case';
+} from '../../../shared_imports';
+import { usePostCase } from '../../containers/use_post_case';
 import { schema } from './schema';
-import { InsertTimelinePopover } from '../../../../components/timeline/insert_timeline_popover';
-import { useInsertTimeline } from '../../../../components/timeline/insert_timeline_popover/use_insert_timeline';
+import { InsertTimelinePopover } from '../../../timelines/components/timeline/insert_timeline_popover';
+import { useInsertTimeline } from '../../../timelines/components/timeline/insert_timeline_popover/use_insert_timeline';
 import * as i18n from '../../translations';
-import { SiemPageName } from '../../../home/types';
-import { MarkdownEditorForm } from '../../../../components/markdown_editor/form';
-import { useGetTags } from '../../../../containers/case/use_get_tags';
+import { SiemPageName } from '../../../app/home/types';
+import { MarkdownEditorForm } from '../../../common/components//markdown_editor/form';
+import { useGetTags } from '../../containers/use_get_tags';
 
 export const CommonUseField = getUseField({ component: Field });
 

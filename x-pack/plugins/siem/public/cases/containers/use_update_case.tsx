@@ -5,7 +5,11 @@
  */
 
 import { useReducer, useCallback } from 'react';
-import { displaySuccessToast, errorToToaster, useStateToaster } from '../../components/toasters';
+import {
+  displaySuccessToast,
+  errorToToaster,
+  useStateToaster,
+} from '../../common/components/toasters';
 import { CasePatchRequest } from '../../../../case/common/api';
 
 import { patchCase } from './api';

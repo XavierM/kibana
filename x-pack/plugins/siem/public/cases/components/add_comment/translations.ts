@@ -3,9 +3,5 @@
  * or more contributor license agreements. Licensed under the Elastic License;
  * you may not use this file except in compliance with the Elastic License.
  */
-import { FormSchema } from '../../../shared_imports';
-import { schemaTags } from '../create/schema';
 
-export const schema: FormSchema = {
-  tags: schemaTags,
-};
+export * from '../../translations';

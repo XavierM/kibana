@@ -6,9 +6,9 @@
 
 import React from 'react';
 
-import { EmptyPage } from '../../components/empty_page';
+import { EmptyPage } from '../../common/components/empty_page';
 import * as i18n from './translations';
-import { useKibana } from '../../lib/kibana';
+import { useKibana } from '../../common/lib/kibana';
 
 export const CaseSavedObjectNoPermissions = React.memo(() => {
   const docLinks = useKibana().services.docLinks;

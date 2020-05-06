@@ -15,11 +15,7 @@ import {
 
 import { capitalize } from 'lodash/fp';
 import * as i18n from './translations';
-import {
-  CaseField,
-  ActionType,
-  ThirdPartyField,
-} from '../../../../containers/case/configure/types';
+import { CaseField, ActionType, ThirdPartyField } from '../../containers/configure/types';
 
 export interface RowProps {
   disabled: boolean;

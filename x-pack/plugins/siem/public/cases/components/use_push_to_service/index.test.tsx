@@ -7,16 +7,16 @@
 import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { usePushToService, ReturnUsePushToService, UsePushToService } from '.';
-import { TestProviders } from '../../../../mock';
-import { usePostPushToService } from '../../../../containers/case/use_post_push_to_service';
-import { ClosureType } from '../../../../../../case/common/api/cases';
+import { TestProviders } from '../../../common/mock';
+import { usePostPushToService } from '../../containers/use_post_push_to_service';
+import { ClosureType } from '../../../../../case/common/api/cases';
 import * as i18n from './translations';
-import { useGetActionLicense } from '../../../../containers/case/use_get_action_license';
+import { useGetActionLicense } from '../../containers/use_get_action_license';
 import { getKibanaConfigError, getLicenseError } from './helpers';
-import * as api from '../../../../containers/case/configure/api';
-jest.mock('../../../../containers/case/use_get_action_license');
-jest.mock('../../../../containers/case/use_post_push_to_service');
-jest.mock('../../../../containers/case/configure/api');
+import * as api from '../../containers/configure/api';
+jest.mock('../../containers/use_get_action_license');
+jest.mock('../../containers/use_post_push_to_service');
+jest.mock('../../containers/configure/api');
 
 describe('usePushToService', () => {
   const caseId = '12345';

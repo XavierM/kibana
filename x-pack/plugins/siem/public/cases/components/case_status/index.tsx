@@ -17,9 +17,9 @@ import {
   EuiFlexItem,
 } from '@elastic/eui';
 import * as i18n from '../case_view/translations';
-import { FormattedRelativePreferenceDate } from '../../../../components/formatted_date';
+import { FormattedRelativePreferenceDate } from '../../../common/components/formatted_date';
 import { CaseViewActions } from '../case_view/actions';
-import { Case } from '../../../../containers/case/types';
+import { Case } from '../../containers/types';
 
 const MyDescriptionList = styled(EuiDescriptionList)`
   ${({ theme }) => css`

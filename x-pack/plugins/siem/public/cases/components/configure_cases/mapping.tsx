@@ -18,7 +18,7 @@ import {
 import * as i18n from './translations';
 
 import { FieldMapping } from './field_mapping';
-import { CasesConfigurationMapping } from '../../../../containers/case/configure/types';
+import { CasesConfigurationMapping } from '../../containers/configure/types';
 
 export interface MappingProps {
   disabled: boolean;

@@ -8,20 +8,22 @@ import React from 'react';
 import { mount } from 'enzyme';
 import moment from 'moment-timezone';
 import { AllCases } from '.';
-import { TestProviders } from '../../../../mock';
-import { useGetCasesMockState } from '../../../../containers/case/mock';
+import { TestProviders } from '../../../common/mock';
+import { useGetCasesMockState } from '../../containers/mock';
 import * as i18n from './translations';
 
-import { getEmptyTagValue } from '../../../../components/empty_value';
-import { useDeleteCases } from '../../../../containers/case/use_delete_cases';
-import { useGetCases } from '../../../../containers/case/use_get_cases';
-import { useGetCasesStatus } from '../../../../containers/case/use_get_cases_status';
-import { useUpdateCases } from '../../../../containers/case/use_bulk_update_case';
+import { getEmptyTagValue } from '../../../common/components/empty_value';
+import { useDeleteCases } from '../../containers/use_delete_cases';
+import { useGetCases } from '../../containers/use_get_cases';
+import { useGetCasesStatus } from '../../containers/use_get_cases_status';
+import { useUpdateCases } from '../../containers/use_bulk_update_case';
 import { getCasesColumns } from './columns';
-jest.mock('../../../../containers/case/use_bulk_update_case');
-jest.mock('../../../../containers/case/use_delete_cases');
-jest.mock('../../../../containers/case/use_get_cases');
-jest.mock('../../../../containers/case/use_get_cases_status');
+
+jest.mock('../../containers/use_bulk_update_case');
+jest.mock('../../containers/use_delete_cases');
+jest.mock('../../containers/use_get_cases');
+jest.mock('../../containers/use_get_cases_status');
+
 const useDeleteCasesMock = useDeleteCases as jest.Mock;
 const useGetCasesMock = useGetCases as jest.Mock;
 const useGetCasesStatusMock = useGetCasesStatus as jest.Mock;

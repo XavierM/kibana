@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { KibanaServices } from '../../lib/kibana';
+import { KibanaServices } from '../../common/lib/kibana';
 
 import { CASES_URL } from '../../../../case/common/constants';
 
@@ -54,7 +54,7 @@ import * as i18n from './translations';
 
 const abortCtrl = new AbortController();
 const mockKibanaServices = KibanaServices.get as jest.Mock;
-jest.mock('../../lib/kibana');
+jest.mock('../../common/lib/kibana');
 
 const fetchMock = jest.fn();
 mockKibanaServices.mockReturnValue({ http: { fetch: fetchMock } });

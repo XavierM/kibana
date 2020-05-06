@@ -35,7 +35,7 @@ import {
   getCaseCommentsUrl,
 } from '../../../../case/common/api/helpers';
 
-import { KibanaServices } from '../../lib/kibana';
+import { KibanaServices } from '../../common/lib/kibana';
 
 import {
   ActionLicense,

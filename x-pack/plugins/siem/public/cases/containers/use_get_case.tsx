@@ -8,7 +8,7 @@ import { useEffect, useReducer, useCallback } from 'react';
 
 import { Case } from './types';
 import * as i18n from './translations';
-import { errorToToaster, useStateToaster } from '../../components/toasters';
+import { errorToToaster, useStateToaster } from '../../common/components/toasters';
 import { getCase } from './api';
 
 interface CaseState {

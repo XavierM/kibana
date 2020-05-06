@@ -9,8 +9,8 @@ import { mount, ReactWrapper } from 'enzyme';
 import { EuiSuperSelectOption, EuiSuperSelect } from '@elastic/eui';
 
 import { FieldMappingRow, RowProps } from './field_mapping_row';
-import { TestProviders } from '../../../../mock';
-import { ThirdPartyField } from '../../../../containers/case/configure/types';
+import { TestProviders } from '../../../common/mock';
+import { ThirdPartyField } from '../../containers/configure/types';
 
 const thirdPartyOptions: Array<EuiSuperSelectOption<ThirdPartyField>> = [
   {

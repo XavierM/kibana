@@ -20,7 +20,7 @@ import {
 
 import styled, { css } from 'styled-components';
 
-import { ElasticUser } from '../../../../containers/case/types';
+import { ElasticUser } from '../../containers/types';
 import * as i18n from './translations';
 
 interface UserListProps {

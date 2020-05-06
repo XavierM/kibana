@@ -14,11 +14,11 @@ import {
 } from '@elastic/eui';
 import styled from 'styled-components';
 import { DefaultItemIconButtonAction } from '@elastic/eui/src/components/basic_table/action_types';
-import { getEmptyTagValue } from '../../../../components/empty_value';
-import { Case } from '../../../../containers/case/types';
-import { FormattedRelativePreferenceDate } from '../../../../components/formatted_date';
-import { CaseDetailsLink } from '../../../../components/links';
-import { TruncatableText } from '../../../../components/truncatable_text';
+import { getEmptyTagValue } from '../../../common/components/empty_value';
+import { Case } from '../../containers/types';
+import { FormattedRelativePreferenceDate } from '../../../common/components/formatted_date';
+import { CaseDetailsLink } from '../../../common/components/links';
+import { TruncatableText } from '../../../common/components/truncatable_text';
 import * as i18n from './translations';
 
 export type CasesColumns =
