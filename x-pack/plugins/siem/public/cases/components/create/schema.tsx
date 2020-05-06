@@ -4,8 +4,8 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { CasePostRequest } from '../../../../../../case/common/api';
-import { FIELD_TYPES, fieldValidators, FormSchema } from '../../../../shared_imports';
+import { CasePostRequest } from '../../../../../case/common/api';
+import { FIELD_TYPES, fieldValidators, FormSchema } from '../../../shared_imports';
 import * as i18n from '../../translations';
 
 import { OptionalFieldLabel } from './optional_field_label';

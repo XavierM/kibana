@@ -7,7 +7,7 @@
 import { useReducer, useCallback } from 'react';
 
 import { CommentRequest } from '../../../../case/common/api';
-import { errorToToaster, useStateToaster } from '../../components/toasters';
+import { errorToToaster, useStateToaster } from '../../common/components/toasters';
 
 import { postComment } from './api';
 import * as i18n from './translations';

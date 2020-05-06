@@ -9,7 +9,7 @@ import { ReactWrapper, mount } from 'enzyme';
 import { EuiText } from '@elastic/eui';
 
 import { ConfigureCaseButton, ConfigureCaseButtonProps } from './button';
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 import { searchURL } from './__mock__';
 
 describe('Configuration button', () => {

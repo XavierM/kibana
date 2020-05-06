@@ -9,7 +9,7 @@ import { FormattedMessage } from '@kbn/i18n/react';
 import React from 'react';
 
 import * as i18n from './translations';
-import { ActionLicense } from '../../../../containers/case/types';
+import { ActionLicense } from '../../containers/types';
 
 export const getLicenseError = () => ({
   title: i18n.PUSH_DISABLE_BY_LICENSE_TITLE,

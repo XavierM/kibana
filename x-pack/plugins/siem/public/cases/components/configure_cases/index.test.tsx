@@ -8,7 +8,7 @@ import React from 'react';
 import { ReactWrapper, mount } from 'enzyme';
 
 import { ConfigureCases } from '.';
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 import { Connectors } from './connectors';
 import { ClosureOptions } from './closure_options';
 import { Mapping } from './mapping';
@@ -16,13 +16,13 @@ import {
   ActionsConnectorsContextProvider,
   ConnectorAddFlyout,
   ConnectorEditFlyout,
-} from '../../../../../../triggers_actions_ui/public';
+} from '../../../../../triggers_actions_ui/public';
 import { EuiBottomBar } from '@elastic/eui';
 
-import { useKibana } from '../../../../lib/kibana';
-import { useConnectors } from '../../../../containers/case/configure/use_connectors';
-import { useCaseConfigure } from '../../../../containers/case/configure/use_configure';
-import { useGetUrlSearch } from '../../../../components/navigation/use_get_url_search';
+import { useKibana } from '../../../common/lib/kibana';
+import { useConnectors } from '../../containers/configure/use_connectors';
+import { useCaseConfigure } from '../../containers/configure/use_configure';
+import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
 
 import {
   connectors,
@@ -33,10 +33,10 @@ import {
   mapping,
 } from './__mock__';
 
-jest.mock('../../../../lib/kibana');
-jest.mock('../../../../containers/case/configure/use_connectors');
-jest.mock('../../../../containers/case/configure/use_configure');
-jest.mock('../../../../components/navigation/use_get_url_search');
+jest.mock('../../../common/lib/kibana');
+jest.mock('../../containers/configure/use_connectors');
+jest.mock('../../containers/configure/use_configure');
+jest.mock('../../../common/components/navigation/use_get_url_search');
 
 const useKibanaMock = useKibana as jest.Mock;
 const useConnectorsMock = useConnectors as jest.Mock;

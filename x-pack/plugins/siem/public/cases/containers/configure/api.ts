@@ -11,7 +11,7 @@ import {
   CasesConfigureResponse,
   CasesConfigureRequest,
 } from '../../../../../case/common/api';
-import { KibanaServices } from '../../../lib/kibana';
+import { KibanaServices } from '../../../common/lib/kibana';
 
 import {
   CASE_CONFIGURE_CONNECTORS_URL,

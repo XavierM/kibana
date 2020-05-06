@@ -11,9 +11,9 @@ import styled from 'styled-components';
 
 import * as i18n from '../case_view/translations';
 
-import { Case, CaseUserActions } from '../../../../containers/case/types';
-import { useUpdateComment } from '../../../../containers/case/use_update_comment';
-import { useCurrentUser } from '../../../../lib/kibana';
+import { Case, CaseUserActions } from '../../containers/types';
+import { useUpdateComment } from '../../containers/use_update_comment';
+import { useCurrentUser } from '../../../common/lib/kibana';
 import { AddComment } from '../add_comment';
 import { getLabelTitle } from './helpers';
 import { UserActionItem } from './user_action_item';

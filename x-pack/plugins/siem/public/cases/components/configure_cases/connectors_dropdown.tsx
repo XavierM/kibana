@@ -8,8 +8,8 @@ import React, { useMemo } from 'react';
 import { EuiIcon, EuiSuperSelect } from '@elastic/eui';
 import styled from 'styled-components';
 
-import { Connector } from '../../../../containers/case/configure/types';
-import { connectors as connectorsDefinition } from '../../../../lib/connectors/config';
+import { Connector } from '../../containers/configure/types';
+import { connectors as connectorsDefinition } from '../../../common/lib/connectors/config';
 import * as i18n from './translations';
 
 export interface Props {

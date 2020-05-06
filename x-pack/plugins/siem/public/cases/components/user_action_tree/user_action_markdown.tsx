@@ -9,12 +9,12 @@ import React, { useCallback } from 'react';
 import styled, { css } from 'styled-components';
 
 import * as i18n from '../case_view/translations';
-import { Markdown } from '../../../../components/markdown';
-import { Form, useForm, UseField } from '../../../../shared_imports';
+import { Markdown } from '../../../common/components/markdown';
+import { Form, useForm, UseField } from '../../../shared_imports';
 import { schema, Content } from './schema';
-import { InsertTimelinePopover } from '../../../../components/timeline/insert_timeline_popover';
-import { useInsertTimeline } from '../../../../components/timeline/insert_timeline_popover/use_insert_timeline';
-import { MarkdownEditorForm } from '../../../../components/markdown_editor/form';
+import { InsertTimelinePopover } from '../../../timelines/components/timeline/insert_timeline_popover';
+import { useInsertTimeline } from '../../../timelines/components/timeline/insert_timeline_popover/use_insert_timeline';
+import { MarkdownEditorForm } from '../../../common/components//markdown_editor/form';
 
 const ContentWrapper = styled.div`
   ${({ theme }) => css`

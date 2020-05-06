@@ -7,7 +7,7 @@
 import { isEmpty, uniqBy } from 'lodash/fp';
 import { useCallback, useEffect, useState } from 'react';
 
-import { errorToToaster, useStateToaster } from '../../components/toasters';
+import { errorToToaster, useStateToaster } from '../../common/components/toasters';
 import { getCaseUserActions } from './api';
 import * as i18n from './translations';
 import { CaseUserActions, ElasticUser } from './types';

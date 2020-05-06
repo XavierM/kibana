@@ -7,7 +7,7 @@
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 import { Mapping, MappingProps } from './mapping';
 import { mapping } from './__mock__';
 

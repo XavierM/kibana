@@ -4,17 +4,18 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { Connector } from '../../../../../containers/case/configure/types';
-import { ReturnConnectors } from '../../../../../containers/case/configure/use_connectors';
-import { connectorsMock } from '../../../../../containers/case/configure/mock';
-import { ReturnUseCaseConfigure } from '../../../../../containers/case/configure/use_configure';
-import { createUseKibanaMock } from '../../../../../mock/kibana_react';
-export { mapping } from '../../../../../containers/case/configure/mock';
+import { Connector } from '../../../containers/configure/types';
+import { ReturnConnectors } from '../../../containers/configure/use_connectors';
+import { connectorsMock } from '../../../containers/configure/mock';
+import { ReturnUseCaseConfigure } from '../../../containers/configure/use_configure';
+import { createUseKibanaMock } from '../../../../common/mock/kibana_react';
+export { mapping } from '../../../containers/configure/mock';
 // eslint-disable-next-line @kbn/eslint/no-restricted-paths
-import { actionTypeRegistryMock } from '../../../../../../../triggers_actions_ui/public/application/action_type_registry.mock';
+import { actionTypeRegistryMock } from '../../../../../../triggers_actions_ui/public/application/action_type_registry.mock';
 
 export const connectors: Connector[] = connectorsMock;
 
+// x - pack / plugins / triggers_actions_ui;
 export const searchURL =
   '?timerange=(global:(linkTo:!(),timerange:(from:1585487656371,fromStr:now-24h,kind:relative,to:1585574056371,toStr:now)),timeline:(linkTo:!(),timerange:(from:1585227005527,kind:absolute,to:1585313405527)))';
 

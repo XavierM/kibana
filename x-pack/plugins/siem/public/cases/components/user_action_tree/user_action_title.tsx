@@ -19,11 +19,11 @@ import React, { useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 
-import { LocalizedDateTooltip } from '../../../../components/localized_date_tooltip';
-import { useGetUrlSearch } from '../../../../components/navigation/use_get_url_search';
-import { navTabs } from '../../../home/home_navigations';
+import { LocalizedDateTooltip } from '../../../common/components/localized_date_tooltip';
+import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
+import { navTabs } from '../../../app/home/home_navigations';
 import { PropertyActions } from '../property_actions';
-import { SiemPageName } from '../../../home/types';
+import { SiemPageName } from '../../../app/home/types';
 import * as i18n from './translations';
 
 const MySpinner = styled(EuiLoadingSpinner)`

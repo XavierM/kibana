@@ -10,8 +10,8 @@ import { mount, ReactWrapper } from 'enzyme';
 import { FieldMapping, FieldMappingProps } from './field_mapping';
 import { mapping } from './__mock__';
 import { FieldMappingRow } from './field_mapping_row';
-import { defaultMapping } from '../../../../lib/connectors/config';
-import { TestProviders } from '../../../../mock';
+import { defaultMapping } from '../../../common/lib/connectors/config';
+import { TestProviders } from '../../../common/mock';
 
 describe('FieldMappingRow', () => {
   let wrapper: ReactWrapper;

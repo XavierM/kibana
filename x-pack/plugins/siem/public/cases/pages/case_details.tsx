@@ -7,13 +7,13 @@
 import React from 'react';
 import { useParams, Redirect } from 'react-router-dom';
 
-import { useGetUrlSearch } from '../../components/navigation/use_get_url_search';
-import { useGetUserSavedObjectPermissions } from '../../lib/kibana';
-import { SpyRoute } from '../../utils/route/spy_routes';
-import { getCaseUrl } from '../../components/link_to';
-import { navTabs } from '../home/home_navigations';
-import { CaseView } from './components/case_view';
-import { savedObjectReadOnly, CaseCallOut } from './components/callout';
+import { useGetUrlSearch } from '../../common/components/navigation/use_get_url_search';
+import { useGetUserSavedObjectPermissions } from '../../common/lib/kibana';
+import { SpyRoute } from '../../common/utils/route/spy_routes';
+import { getCaseUrl } from '../../common/components/link_to';
+import { navTabs } from '../../app/home/home_navigations';
+import { CaseView } from '../components/case_view';
+import { savedObjectReadOnly, CaseCallOut } from '../components/callout';
 
 export const CaseDetailsPage = React.memo(() => {
   const userPermissions = useGetUserSavedObjectPermissions();

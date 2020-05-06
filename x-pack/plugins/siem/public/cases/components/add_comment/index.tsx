@@ -8,15 +8,15 @@ import { EuiButton, EuiLoadingSpinner } from '@elastic/eui';
 import React, { useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 
-import { CommentRequest } from '../../../../../../case/common/api';
-import { usePostComment } from '../../../../containers/case/use_post_comment';
-import { Case } from '../../../../containers/case/types';
-import { MarkdownEditorForm } from '../../../../components/markdown_editor/form';
-import { InsertTimelinePopover } from '../../../../components/timeline/insert_timeline_popover';
-import { useInsertTimeline } from '../../../../components/timeline/insert_timeline_popover/use_insert_timeline';
-import { Form, useForm, UseField } from '../../../../shared_imports';
+import { CommentRequest } from '../../../../../case/common/api';
+import { usePostComment } from '../../containers/use_post_comment';
+import { Case } from '../../containers/types';
+import { MarkdownEditorForm } from '../../../common/components/markdown_editor/form';
+import { InsertTimelinePopover } from '../../../timelines/components/timeline/insert_timeline_popover';
+import { useInsertTimeline } from '../../../timelines/components/timeline/insert_timeline_popover/use_insert_timeline';
+import { Form, useForm, UseField } from '../../../shared_imports';
 
-import * as i18n from '../../translations';
+import * as i18n from './translations';
 import { schema } from './schema';
 
 const MySpinner = styled(EuiLoadingSpinner)`

@@ -26,7 +26,7 @@ import {
   ServiceConnectorCaseResponseRt,
   ServiceConnectorCaseResponse,
 } from '../../../../case/common/api';
-import { ToasterError } from '../../components/toasters';
+import { ToasterError } from '../../common/components/toasters';
 import { AllCases, Case } from './types';
 
 export const getTypedPayload = <T>(a: unknown): T => a as T;

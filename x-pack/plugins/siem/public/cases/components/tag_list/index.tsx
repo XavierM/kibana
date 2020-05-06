@@ -19,10 +19,10 @@ import {
 import styled, { css } from 'styled-components';
 import { isEqual } from 'lodash/fp';
 import * as i18n from './translations';
-import { Form, FormDataProvider, useForm } from '../../../../shared_imports';
+import { Form, FormDataProvider, useForm } from '../../../shared_imports';
 import { schema } from './schema';
 import { CommonUseField } from '../create';
-import { useGetTags } from '../../../../containers/case/use_get_tags';
+import { useGetTags } from '../../containers/use_get_tags';
 
 interface TagListProps {
   disabled?: boolean;

@@ -9,7 +9,7 @@ import { mount, ReactWrapper } from 'enzyme';
 import { EuiSuperSelect } from '@elastic/eui';
 
 import { ConnectorsDropdown, Props } from './connectors_dropdown';
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 import { connectors } from './__mock__';
 
 describe('ConnectorsDropdown', () => {

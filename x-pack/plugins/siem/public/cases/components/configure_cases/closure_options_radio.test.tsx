@@ -8,7 +8,7 @@ import React from 'react';
 import { ReactWrapper, mount } from 'enzyme';
 
 import { ClosureOptionsRadio, ClosureOptionsRadioComponentProps } from './closure_options_radio';
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 
 describe('ClosureOptionsRadio', () => {
   let wrapper: ReactWrapper;

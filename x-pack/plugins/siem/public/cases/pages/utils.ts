@@ -8,8 +8,8 @@ import { isEmpty } from 'lodash/fp';
 
 import { ChromeBreadcrumb } from 'src/core/public';
 
-import { getCaseDetailsUrl, getCaseUrl, getCreateCaseUrl } from '../../components/link_to';
-import { RouteSpyState } from '../../utils/route/types';
+import { getCaseDetailsUrl, getCaseUrl, getCreateCaseUrl } from '../../common/components/link_to';
+import { RouteSpyState } from '../../common/utils/route/types';
 import * as i18n from './translations';
 
 export const getBreadcrumbs = (params: RouteSpyState, search: string[]): ChromeBreadcrumb[] => {
