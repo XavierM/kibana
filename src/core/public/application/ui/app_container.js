@@ -1,0 +1,58 @@
+"use strict";
+/*
+ * Licensed to Elasticsearch B.V. under one or more contributor
+ * license agreements. See the NOTICE file distributed with
+ * this work for additional information regarding copyright
+ * ownership. Elasticsearch B.V. licenses this file to you under
+ * the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const react_1 = tslib_1.__importStar(require("react"));
+const types_1 = require("../types");
+const app_not_found_screen_1 = require("./app_not_found_screen");
+exports.AppContainer = ({ mounter, appId, appPath, setAppLeaveHandler, createScopedHistory, appStatus, }) => {
+    const [appNotFound, setAppNotFound] = react_1.useState(false);
+    const elementRef = react_1.useRef(null);
+    const unmountRef = react_1.useRef(null);
+    react_1.useLayoutEffect(() => {
+        const unmount = () => {
+            if (unmountRef.current) {
+                unmountRef.current();
+                unmountRef.current = null;
+            }
+        };
+        if (!mounter || appStatus !== types_1.AppStatus.accessible) {
+            return setAppNotFound(true);
+        }
+        setAppNotFound(false);
+        if (mounter.unmountBeforeMounting) {
+            unmount();
+        }
+        const mount = async () => {
+            unmountRef.current =
+                (await mounter.mount({
+                    appBasePath: mounter.appBasePath,
+                    history: createScopedHistory(appPath),
+                    element: elementRef.current,
+                    onAppLeave: handler => setAppLeaveHandler(appId, handler),
+                })) || null;
+        };
+        mount();
+        return unmount;
+    }, [appId, appStatus, mounter, createScopedHistory, setAppLeaveHandler, appPath]);
+    return (react_1.default.createElement(react_1.Fragment, null,
+        appNotFound && react_1.default.createElement(app_not_found_screen_1.AppNotFound, null),
+        react_1.default.createElement("div", { key: appId, ref: elementRef })));
+};

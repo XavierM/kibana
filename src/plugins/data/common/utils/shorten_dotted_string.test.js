@@ -1,0 +1,32 @@
+"use strict";
+/*
+ * Licensed to Elasticsearch B.V. under one or more contributor
+ * license agreements. See the NOTICE file distributed with
+ * this work for additional information regarding copyright
+ * ownership. Elasticsearch B.V. licenses this file to you under
+ * the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const shorten_dotted_string_1 = require("./shorten_dotted_string");
+describe('shortenDottedString', () => {
+    test('should convert a dot.notated.string into a short string', () => {
+        expect(shorten_dotted_string_1.shortenDottedString('dot.notated.string')).toBe('d.n.string');
+    });
+    test('should ignore non-string values', () => {
+        const obj = { key: 'val' };
+        expect(shorten_dotted_string_1.shortenDottedString(true)).toBe(true);
+        expect(shorten_dotted_string_1.shortenDottedString(123)).toBe(123);
+        expect(shorten_dotted_string_1.shortenDottedString(obj)).toBe(obj);
+    });
+});

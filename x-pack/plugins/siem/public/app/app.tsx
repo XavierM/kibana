@@ -17,20 +17,20 @@ import euiLightVars from '@elastic/eui/dist/eui_theme_light.json';
 import { BehaviorSubject } from 'rxjs';
 import { pluck } from 'rxjs/operators';
 
-import { KibanaContextProvider, useKibana, useUiSetting$ } from '../lib/kibana';
+import { KibanaContextProvider, useKibana, useUiSetting$ } from '../common/lib/kibana';
 import { Storage } from '../../../../../src/plugins/kibana_utils/public';
 
 import { DEFAULT_DARK_MODE } from '../../common/constants';
-import { ErrorToastDispatcher } from '../components/error_toast_dispatcher';
-import { compose } from '../lib/compose/kibana_compose';
-import { AppFrontendLibs, AppApolloClient } from '../lib/lib';
+import { ErrorToastDispatcher } from '../common/components/error_toast_dispatcher';
+import { compose } from '../common/lib/compose/kibana_compose';
+import { AppFrontendLibs, AppApolloClient } from '../common/lib/lib';
 import { StartServices } from '../plugin';
 import { PageRouter } from '../routes';
-import { createStore, createInitialState } from '../store';
-import { GlobalToaster, ManageGlobalToaster } from '../components/toasters';
-import { MlCapabilitiesProvider } from '../components/ml/permissions/ml_capabilities_provider';
+import { createStore, createInitialState } from '../common/store';
+import { GlobalToaster, ManageGlobalToaster } from '../common/components/toasters';
+import { MlCapabilitiesProvider } from '../common/components/ml/permissions/ml_capabilities_provider';
 
-import { ApolloClientContext } from '../utils/apollo_context';
+import { ApolloClientContext } from '../common/utils/apollo_context';
 
 interface AppPluginRootComponentProps {
   apolloClient: AppApolloClient;

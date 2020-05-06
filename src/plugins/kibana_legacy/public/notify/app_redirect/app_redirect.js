@@ -1,0 +1,42 @@
+"use strict";
+/*
+ * Licensed to Elasticsearch B.V. under one or more contributor
+ * license agreements. See the NOTICE file distributed with
+ * this work for additional information regarding copyright
+ * ownership. Elasticsearch B.V. licenses this file to you under
+ * the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const utils_1 = require("../../../../../core/utils");
+const APP_REDIRECT_MESSAGE_PARAM = 'app_redirect_message';
+function addAppRedirectMessageToUrl(url, message) {
+    return utils_1.modifyUrl(url, urlParts => {
+        urlParts.hash = utils_1.modifyUrl(urlParts.hash || '', hashParts => {
+            hashParts.query[APP_REDIRECT_MESSAGE_PARAM] = message;
+        });
+    });
+}
+exports.addAppRedirectMessageToUrl = addAppRedirectMessageToUrl;
+// If an app needs to redirect, e.g. due to an expired license, it can surface a message via
+// the URL query params.
+function showAppRedirectNotification($location, toasts) {
+    const queryString = $location.search();
+    if (!queryString[APP_REDIRECT_MESSAGE_PARAM]) {
+        return;
+    }
+    const message = queryString[APP_REDIRECT_MESSAGE_PARAM];
+    $location.search(APP_REDIRECT_MESSAGE_PARAM, null);
+    toasts.addDanger(message);
+}
+exports.showAppRedirectNotification = showAppRedirectNotification;

@@ -1,0 +1,136 @@
+"use strict";
+/*
+ * Licensed to Elasticsearch B.V. under one or more contributor
+ * license agreements. See the NOTICE file distributed with
+ * this work for additional information regarding copyright
+ * ownership. Elasticsearch B.V. licenses this file to you under
+ * the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const react_1 = tslib_1.__importStar(require("react"));
+const react_2 = require("@kbn/i18n/react");
+const eui_1 = require("@elastic/eui");
+const index_pattern_select_form_row_1 = require("./index_pattern_select_form_row");
+const field_select_1 = require("./field_select");
+function filterField(field) {
+    return (Boolean(field.aggregatable) &&
+        ['number', 'boolean', 'date', 'ip', 'string'].includes(field.type));
+}
+class ListControlEditor extends react_1.PureComponent {
+    constructor() {
+        super(...arguments);
+        this.isMounted = false;
+        this.state = {
+            isLoadingFieldType: true,
+            isStringField: false,
+            prevFieldName: this.props.controlParams.fieldName,
+            IndexPatternSelect: null,
+        };
+        this.componentDidUpdate = () => {
+            if (this.state.isLoadingFieldType) {
+                this.loadIsStringField();
+            }
+        };
+        this.loadIsStringField = async () => {
+            if (!this.props.controlParams.indexPattern || !this.props.controlParams.fieldName) {
+                this.setState({ isLoadingFieldType: false });
+                return;
+            }
+            let indexPattern;
+            try {
+                indexPattern = await this.props.getIndexPattern(this.props.controlParams.indexPattern);
+            }
+            catch (err) {
+                // index pattern no longer exists
+                return;
+            }
+            if (!this.isMounted) {
+                return;
+            }
+            const field = indexPattern.fields.find(({ name }) => name === this.props.controlParams.fieldName);
+            if (!field) {
+                return;
+            }
+            this.setState({
+                isLoadingFieldType: false,
+                isStringField: field.type === 'string',
+            });
+        };
+        this.renderOptions = () => {
+            if (this.state.isLoadingFieldType || !this.props.controlParams.fieldName) {
+                return;
+            }
+            const options = [];
+            if (this.props.parentCandidates && this.props.parentCandidates.length > 0) {
+                const parentCandidatesOptions = [{ value: '', text: '' }, ...this.props.parentCandidates];
+                options.push(react_1.default.createElement(eui_1.EuiFormRow, { id: `parentSelect-${this.props.controlIndex}`, label: react_1.default.createElement(react_2.FormattedMessage, { id: "inputControl.editor.listControl.parentLabel", defaultMessage: "Parent control" }), helpText: react_1.default.createElement(react_2.FormattedMessage, { id: "inputControl.editor.listControl.parentDescription", defaultMessage: "Options are based on the value of parent control. Disabled if parent is not set." }), key: "parentSelect" },
+                    react_1.default.createElement(eui_1.EuiSelect, { options: parentCandidatesOptions, value: this.props.controlParams.parent, onChange: event => {
+                            this.props.handleParentChange(this.props.controlIndex, event.target.value);
+                        } })));
+            }
+            options.push(react_1.default.createElement(eui_1.EuiFormRow, { id: `multiselect-${this.props.controlIndex}`, key: "multiselect", helpText: react_1.default.createElement(react_2.FormattedMessage, { id: "inputControl.editor.listControl.multiselectDescription", defaultMessage: "Allow multiple selection" }) },
+                react_1.default.createElement(eui_1.EuiSwitch, { label: react_1.default.createElement(react_2.FormattedMessage, { id: "inputControl.editor.listControl.multiselectLabel", defaultMessage: "Multiselect" }), checked: this.props.controlParams.options.multiselect ?? true, onChange: event => {
+                        this.props.handleOptionsChange(this.props.controlIndex, 'multiselect', event.target.checked);
+                    }, "data-test-subj": "listControlMultiselectInput" })));
+            const dynamicOptionsHelpText = this.state.isStringField ? (react_1.default.createElement(react_2.FormattedMessage, { id: "inputControl.editor.listControl.dynamicOptions.updateDescription", defaultMessage: "Update options in response to user input" })) : (react_1.default.createElement(react_2.FormattedMessage, { id: "inputControl.editor.listControl.dynamicOptions.stringFieldDescription", defaultMessage: 'Only available for "string" fields' }));
+            options.push(react_1.default.createElement(eui_1.EuiFormRow, { id: `dynamicOptions-${this.props.controlIndex}`, key: "dynamicOptions", helpText: dynamicOptionsHelpText },
+                react_1.default.createElement(eui_1.EuiSwitch, { label: react_1.default.createElement(react_2.FormattedMessage, { id: "inputControl.editor.listControl.dynamicOptionsLabel", defaultMessage: "Dynamic Options" }), checked: this.props.controlParams.options.dynamicOptions ?? false, onChange: event => {
+                        this.props.handleOptionsChange(this.props.controlIndex, 'dynamicOptions', event.target.checked);
+                    }, disabled: this.state.isStringField ? false : true, "data-test-subj": "listControlDynamicOptionsSwitch" })));
+            // size is not used when dynamic options is set
+            if (!this.props.controlParams.options.dynamicOptions || !this.state.isStringField) {
+                options.push(react_1.default.createElement(eui_1.EuiFormRow, { id: `size-${this.props.controlIndex}`, label: react_1.default.createElement(react_2.FormattedMessage, { id: "inputControl.editor.listControl.sizeLabel", defaultMessage: "Size" }), key: "size", helpText: react_1.default.createElement(react_2.FormattedMessage, { id: "inputControl.editor.listControl.sizeDescription", defaultMessage: "Number of options" }) },
+                    react_1.default.createElement(eui_1.EuiFieldNumber, { min: 1, value: this.props.controlParams.options.size, onChange: event => {
+                            this.props.handleOptionsChange(this.props.controlIndex, 'size', event.target.valueAsNumber);
+                        }, "data-test-subj": "listControlSizeInput" })));
+            }
+            return options;
+        };
+    }
+    componentDidMount() {
+        this.isMounted = true;
+        this.loadIsStringField();
+        this.getIndexPatternSelect();
+    }
+    componentWillUnmount() {
+        this.isMounted = false;
+    }
+    async getIndexPatternSelect() {
+        const [, { data }] = await this.props.deps.core.getStartServices();
+        this.setState({
+            IndexPatternSelect: data.ui.IndexPatternSelect,
+        });
+    }
+    render() {
+        if (this.state.IndexPatternSelect === null) {
+            return null;
+        }
+        return (react_1.default.createElement(react_1.default.Fragment, null,
+            react_1.default.createElement(index_pattern_select_form_row_1.IndexPatternSelectFormRow, { indexPatternId: this.props.controlParams.indexPattern, onChange: this.props.handleIndexPatternChange, controlIndex: this.props.controlIndex, IndexPatternSelect: this.state.IndexPatternSelect }),
+            react_1.default.createElement(field_select_1.FieldSelect, { fieldName: this.props.controlParams.fieldName, indexPatternId: this.props.controlParams.indexPattern, filterField: filterField, onChange: this.props.handleFieldNameChange, getIndexPattern: this.props.getIndexPattern, controlIndex: this.props.controlIndex }),
+            this.renderOptions()));
+    }
+}
+exports.ListControlEditor = ListControlEditor;
+ListControlEditor.getDerivedStateFromProps = (nextProps, prevState) => {
+    const isNewFieldName = prevState.prevFieldName !== nextProps.controlParams.fieldName;
+    if (!prevState.isLoadingFieldType && isNewFieldName) {
+        return {
+            prevFieldName: nextProps.controlParams.fieldName,
+            isLoadingFieldType: true,
+        };
+    }
+    return null;
+};

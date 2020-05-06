@@ -1,0 +1,51 @@
+"use strict";
+/*
+ * Licensed to Elasticsearch B.V. under one or more contributor
+ * license agreements. See the NOTICE file distributed with
+ * this work for additional information regarding copyright
+ * ownership. Elasticsearch B.V. licenses this file to you under
+ * the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const i18n_1 = require("@kbn/i18n");
+const dashboard_container_1 = require("./dashboard_container");
+const dashboard_constants_1 = require("./dashboard_constants");
+class DashboardContainerFactory {
+    constructor(getStartServices) {
+        this.getStartServices = getStartServices;
+        this.isContainerType = true;
+        this.type = dashboard_constants_1.DASHBOARD_CONTAINER_TYPE;
+        this.isEditable = async () => {
+            const { capabilities } = await this.getStartServices();
+            return !!capabilities.createNew && !!capabilities.showWriteControls;
+        };
+        this.getDisplayName = () => {
+            return i18n_1.i18n.translate('dashboard.factory.displayName', {
+                defaultMessage: 'dashboard',
+            });
+        };
+        this.create = async (initialInput, parent) => {
+            const services = await this.getStartServices();
+            return new dashboard_container_1.DashboardContainer(initialInput, services, parent);
+        };
+    }
+    getDefaultInput() {
+        return {
+            panels: {},
+            isFullScreenMode: false,
+            useMargins: true,
+        };
+    }
+}
+exports.DashboardContainerFactory = DashboardContainerFactory;
