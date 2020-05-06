@@ -9,11 +9,11 @@ import React from 'react';
 
 import { DEFAULT_ACTIONS_COLUMN_WIDTH } from '../constants';
 import { defaultHeaders } from './default_headers';
-import { Direction } from '../../../../graphql/types';
-import { mockBrowserFields } from '../../../../../public/containers/source/mock';
+import { Direction } from '../../../../../graphql/types';
+import { mockBrowserFields } from '../../../../../common/containers/source/mock';
 import { Sort } from '../sort';
-import { TestProviders } from '../../../../mock/test_providers';
-import { useMountAppended } from '../../../../utils/use_mount_appended';
+import { TestProviders } from '../../../../../common/mock/test_providers';
+import { useMountAppended } from '../../../../../common/utils/use_mount_appended';
 
 import { ColumnHeadersComponent } from '.';
 

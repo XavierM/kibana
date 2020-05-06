@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { TimelineNonEcsData } from '../../../../graphql/types';
+import { TimelineNonEcsData } from '../../../../../graphql/types';
 import { ColumnRenderer } from './column_renderer';
 
 const unhandledColumnRenderer = (): never => {

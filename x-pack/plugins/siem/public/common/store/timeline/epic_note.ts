@@ -13,7 +13,7 @@ import { from, empty, Observable } from 'rxjs';
 import { filter, mergeMap, switchMap, withLatestFrom, startWith, takeUntil } from 'rxjs/operators';
 
 import { persistTimelineNoteMutation } from '../../containers/timeline/notes/persist.gql_query';
-import { PersistTimelineNoteMutation, ResponseNote } from '../../graphql/types';
+import { PersistTimelineNoteMutation, ResponseNote } from '../../../graphql/types';
 import { updateNote, addError } from '../app/actions';
 import { NotesById } from '../app/model';
 import { inputsModel } from '../inputs';
@@ -77,13 +77,13 @@ export const epicPersistNote = (
         ...callOutMsg,
         recentTimeline[action.payload.id].savedObjectId == null
           ? updateTimeline({
-              id: action.payload.id,
-              timeline: {
-                ...recentTimeline[action.payload.id],
-                savedObjectId: response.note.timelineId || null,
-                version: response.note.timelineVersion || null,
-              },
-            })
+            id: action.payload.id,
+            timeline: {
+              ...recentTimeline[action.payload.id],
+              savedObjectId: response.note.timelineId || null,
+              version: response.note.timelineVersion || null,
+            },
+          })
           : null,
         updateNote({
           note: {

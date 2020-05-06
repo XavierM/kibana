@@ -10,14 +10,24 @@ import { getOr } from 'lodash/fp';
 import React, { Fragment, useState } from 'react';
 import styled from 'styled-components';
 
-import { AutonomousSystem, FlowTarget, HostEcsFields, IpOverviewData } from '../../graphql/types';
-import { escapeDataProviderId } from '../drag_and_drop/helpers';
-import { DefaultDraggable } from '../draggables';
-import { getEmptyTagValue } from '../empty_value';
-import { FormattedRelativePreferenceDate } from '../formatted_date';
-import { HostDetailsLink, ReputationLink, WhoIsLink, ReputationLinkSetting } from '../links';
-import { Spacer } from '../page';
-import * as i18n from '../page/network/ip_overview/translations';
+import {
+  AutonomousSystem,
+  FlowTarget,
+  HostEcsFields,
+  IpOverviewData,
+} from '../../../graphql/types';
+import { escapeDataProviderId } from '../../../common/components/drag_and_drop/helpers';
+import { DefaultDraggable } from '../../../common/components/draggables';
+import { getEmptyTagValue } from '../../../common/components/empty_value';
+import { FormattedRelativePreferenceDate } from '../../../common/components/formatted_date';
+import {
+  HostDetailsLink,
+  ReputationLink,
+  WhoIsLink,
+  ReputationLinkSetting,
+} from '../../../common/components/links';
+import { Spacer } from '../../../common/components/page';
+import * as i18n from '../../../common/components/page/network/ip_overview/translations';
 
 const DraggableContainerFlexGroup = styled(EuiFlexGroup)`
   flex-grow: unset;

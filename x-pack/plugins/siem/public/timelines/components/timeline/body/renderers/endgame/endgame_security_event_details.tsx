@@ -8,8 +8,8 @@ import { EuiSpacer } from '@elastic/eui';
 import { get } from 'lodash/fp';
 import React from 'react';
 
-import { BrowserFields } from '../../../../../containers/source';
-import { Ecs } from '../../../../../graphql/types';
+import { BrowserFields } from '../../../../../../common/containers/source';
+import { Ecs } from '../../../../../../graphql/types';
 import { NetflowRenderer } from '../netflow';
 
 import { EndgameSecurityEventDetailsLine } from './endgame_security_event_details_line';

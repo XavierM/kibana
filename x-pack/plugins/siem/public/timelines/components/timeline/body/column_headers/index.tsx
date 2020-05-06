@@ -10,11 +10,14 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Droppable, DraggableChildrenFn } from 'react-beautiful-dnd';
 import deepEqual from 'fast-deep-equal';
 
-import { DragEffects } from '../../../drag_and_drop/draggable_wrapper';
-import { DraggableFieldBadge } from '../../../draggables/field_badge';
-import { BrowserFields } from '../../../../containers/source';
-import { ColumnHeaderOptions } from '../../../../store/timeline/model';
-import { DRAG_TYPE_FIELD, droppableTimelineColumnsPrefix } from '../../../drag_and_drop/helpers';
+import { DragEffects } from '../../../../../common/components/drag_and_drop/draggable_wrapper';
+import { DraggableFieldBadge } from '../../../../../common/components/draggables/field_badge';
+import { BrowserFields } from '../../../../../common/containers/source';
+import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
+import {
+  DRAG_TYPE_FIELD,
+  droppableTimelineColumnsPrefix,
+} from '../../../../../common/components/drag_and_drop/helpers';
 import { StatefulFieldsBrowser } from '../../../fields_browser';
 import { FIELD_BROWSER_HEIGHT, FIELD_BROWSER_WIDTH } from '../../../fields_browser/helpers';
 import {

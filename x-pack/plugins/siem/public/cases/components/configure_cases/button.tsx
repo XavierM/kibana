@@ -6,7 +6,7 @@
 
 import { EuiButton, EuiToolTip } from '@elastic/eui';
 import React, { memo, useMemo } from 'react';
-import { getConfigureCasesUrl } from '../../../../components/link_to';
+import { getConfigureCasesUrl } from '../../../common/components/link_to';
 
 export interface ConfigureCaseButtonProps {
   label: string;

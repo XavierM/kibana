@@ -10,9 +10,9 @@ import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react'
 import { connect, ConnectedProps } from 'react-redux';
 import styled from 'styled-components';
 
-import { BrowserFields } from '../../containers/source';
-import { timelineActions } from '../../store/actions';
-import { ColumnHeaderOptions } from '../../store/timeline/model';
+import { BrowserFields } from '../../../common/containers/source';
+import { timelineActions } from '../../../common/store/actions';
+import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
 import { DEFAULT_CATEGORY_NAME } from '../timeline/body/column_headers/default_headers';
 import { FieldsBrowser } from './field_browser';
 import { filterBrowserFieldsByFieldName, mergeBrowserFieldsWithDefaultCategory } from './helpers';

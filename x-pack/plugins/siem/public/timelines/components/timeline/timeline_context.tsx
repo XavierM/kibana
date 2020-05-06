@@ -6,7 +6,7 @@
 
 import React, { createContext, memo, useContext, useEffect, useState } from 'react';
 
-import { FilterManager } from '../../../../../../src/plugins/data/public';
+import { FilterManager } from '../../../../../../../src/plugins/data/public';
 
 import { TimelineAction } from './body/actions';
 

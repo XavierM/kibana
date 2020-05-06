@@ -5,7 +5,7 @@
  */
 
 import { allTimelinesQuery } from '../../containers/timeline/all/index.gql_query';
-import { Direction } from '../../graphql/types';
+import { Direction } from '../../../graphql/types';
 import { DEFAULT_SORT_FIELD } from '../../components/open_timeline/constants';
 
 export const refetchQueries = [

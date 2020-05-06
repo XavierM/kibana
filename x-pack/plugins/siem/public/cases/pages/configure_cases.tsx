@@ -7,15 +7,15 @@
 import React, { useMemo } from 'react';
 import { Redirect } from 'react-router-dom';
 
-import { getCaseUrl } from '../../components/link_to';
-import { useGetUrlSearch } from '../../components/navigation/use_get_url_search';
-import { WrapperPage } from '../../components/wrapper_page';
-import { useGetUserSavedObjectPermissions } from '../../lib/kibana';
-import { SpyRoute } from '../../utils/route/spy_routes';
-import { navTabs } from '../home/home_navigations';
-import { CaseHeaderPage } from './components/case_header_page';
-import { ConfigureCases } from './components/configure_cases';
-import { WhitePageWrapper, SectionWrapper } from './components/wrappers';
+import { getCaseUrl } from '../../common/components/link_to';
+import { useGetUrlSearch } from '../../common/components/navigation/use_get_url_search';
+import { WrapperPage } from '../../common/components/wrapper_page';
+import { useGetUserSavedObjectPermissions } from '../../common/lib/kibana';
+import { SpyRoute } from '../../common/utils/route/spy_routes';
+import { navTabs } from '../../app/home/home_navigations';
+import { CaseHeaderPage } from '../components/case_header_page';
+import { ConfigureCases } from '../components/configure_cases';
+import { WhitePageWrapper, SectionWrapper } from '../components/wrappers';
 import * as i18n from './translations';
 
 const wrapperPageStyle: Record<string, string> = {

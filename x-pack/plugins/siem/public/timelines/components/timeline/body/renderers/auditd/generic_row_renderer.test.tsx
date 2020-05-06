@@ -8,11 +8,11 @@ import { shallow } from 'enzyme';
 import { cloneDeep } from 'lodash/fp';
 import React from 'react';
 
-import { BrowserFields } from '../../../../../containers/source';
-import { mockBrowserFields } from '../../../../../containers/source/mock';
-import { Ecs } from '../../../../../graphql/types';
-import { mockTimelineData, TestProviders } from '../../../../../mock';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { BrowserFields } from '../../../../../../common/containers/source';
+import { mockBrowserFields } from '../../../../../../common/containers/source/mock';
+import { Ecs } from '../../../../../../graphql/types';
+import { mockTimelineData, TestProviders } from '../../../../../../common/mock';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 import { RowRenderer } from '../row_renderer';
 import {
   createGenericAuditRowRenderer,

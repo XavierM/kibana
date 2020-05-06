@@ -6,9 +6,9 @@
 
 import React from 'react';
 
-import { mockBrowserFields } from '../../../../../containers/source/mock';
-import { mockTimelineData, TestProviders } from '../../../../../mock';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { mockBrowserFields } from '../../../../../../common/containers/source/mock';
+import { mockTimelineData, TestProviders } from '../../../../../../common/mock';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 import { ZeekDetails } from './zeek_details';
 
 describe('ZeekDetails', () => {

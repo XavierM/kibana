@@ -8,13 +8,13 @@ import { EuiButtonIcon, EuiHighlight, EuiIcon, EuiText, EuiToolTip } from '@elas
 import React, { useCallback, useContext, useState, useMemo } from 'react';
 import styled from 'styled-components';
 
-import { ColumnHeaderOptions } from '../../store/timeline/model';
+import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
 import { OnUpdateColumns } from '../timeline/events';
 import { TimelineContext } from '../timeline/timeline_context';
-import { WithHoverActions } from '../with_hover_actions';
+import { WithHoverActions } from '../../../common/components/with_hover_actions';
 import { LoadingSpinner } from './helpers';
 import * as i18n from './translations';
-import { DraggableWrapperHoverContent } from '../drag_and_drop/draggable_wrapper_hover_content';
+import { DraggableWrapperHoverContent } from '../../../common/components/drag_and_drop/draggable_wrapper_hover_content';
 
 /**
  * The name of a (draggable) field

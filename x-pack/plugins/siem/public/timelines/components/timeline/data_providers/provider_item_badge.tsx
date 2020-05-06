@@ -7,7 +7,7 @@
 import { noop } from 'lodash/fp';
 import React, { useCallback, useState } from 'react';
 
-import { BrowserFields } from '../../../containers/source';
+import { BrowserFields } from '../../../../common/containers/source';
 
 import { OnDataProviderEdited } from '../events';
 import { ProviderBadge } from './provider_badge';

@@ -9,7 +9,7 @@ import { mountWithIntl } from 'test_utils/enzyme_helpers';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { getEmptyValue } from '../../empty_value';
+import { getEmptyValue } from '../../../../common/components/empty_value';
 import { NotePreview } from './note_preview';
 
 import * as i18n from '../translations';

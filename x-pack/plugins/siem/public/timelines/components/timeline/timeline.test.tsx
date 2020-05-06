@@ -9,11 +9,11 @@ import React from 'react';
 import { MockedProvider } from 'react-apollo/test-utils';
 import useResizeObserver from 'use-resize-observer/polyfilled';
 
-import { timelineQuery } from '../../containers/timeline/index.gql_query';
-import { mockBrowserFields } from '../../containers/source/mock';
-import { Direction } from '../../graphql/types';
-import { defaultHeaders, mockTimelineData, mockIndexPattern } from '../../mock';
-import { TestProviders } from '../../mock/test_providers';
+import { timelineQuery } from '../../containers/index.gql_query';
+import { mockBrowserFields } from '../../../common/containers/source/mock';
+import { Direction } from '../../../graphql/types';
+import { defaultHeaders, mockTimelineData, mockIndexPattern } from '../../../common/mock';
+import { TestProviders } from '../../../common/mock/test_providers';
 
 import {
   DELETE_CLASS_NAME,
@@ -23,9 +23,9 @@ import {
 import { TimelineComponent, Props as TimelineComponentProps } from './timeline';
 import { Sort } from './body/sort';
 import { mockDataProviders } from './data_providers/mock/mock_data_providers';
-import { useMountAppended } from '../../utils/use_mount_appended';
+import { useMountAppended } from '../../../common/utils/use_mount_appended';
 
-jest.mock('../../lib/kibana');
+jest.mock('../../../common/lib/kibana');
 
 const mockUseResizeObserver: jest.Mock = useResizeObserver as jest.Mock;
 jest.mock('use-resize-observer/polyfilled');

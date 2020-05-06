@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { Direction } from '../../../../graphql/types';
+import { Direction } from '../../../../../graphql/types';
 import { ColumnId } from '../column_id';
 
 /** Specifies a column's sort direction */

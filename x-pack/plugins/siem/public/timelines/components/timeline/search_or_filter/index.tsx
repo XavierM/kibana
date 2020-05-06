@@ -10,9 +10,13 @@ import { connect, ConnectedProps } from 'react-redux';
 import { Dispatch } from 'redux';
 import deepEqual from 'fast-deep-equal';
 
-import { Filter, FilterManager, IIndexPattern } from '../../../../../../../src/plugins/data/public';
-import { BrowserFields } from '../../../containers/source';
-import { convertKueryToElasticSearchQuery } from '../../../lib/keury';
+import {
+  Filter,
+  FilterManager,
+  IIndexPattern,
+} from '../../../../../../../../src/plugins/data/public';
+import { BrowserFields } from '../../../../common/containers/source';
+import { convertKueryToElasticSearchQuery } from '../../../../common/lib/keury';
 import {
   KueryFilterQuery,
   SerializedFilterQuery,
@@ -20,11 +24,11 @@ import {
   timelineSelectors,
   inputsModel,
   inputsSelectors,
-} from '../../../store';
-import { timelineActions } from '../../../store/actions';
-import { KqlMode, TimelineModel, EventType } from '../../../store/timeline/model';
-import { timelineDefaults } from '../../../store/timeline/defaults';
-import { dispatchUpdateReduxTime } from '../../super_date_picker';
+} from '../../../../common/store';
+import { timelineActions } from '../../../../common/store/actions';
+import { KqlMode, TimelineModel, EventType } from '../../../../common/store/timeline/model';
+import { timelineDefaults } from '../../../../common/store/timeline/defaults';
+import { dispatchUpdateReduxTime } from '../../../../common/components/super_date_picker';
 import { SearchOrFilter } from './search_or_filter';
 
 interface OwnProps {

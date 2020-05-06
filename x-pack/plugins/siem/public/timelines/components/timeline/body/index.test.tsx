@@ -6,16 +6,16 @@
 
 import React from 'react';
 
-import { mockBrowserFields } from '../../../containers/source/mock';
-import { Direction } from '../../../graphql/types';
-import { defaultHeaders, mockTimelineData } from '../../../mock';
-import { TestProviders } from '../../../mock/test_providers';
+import { mockBrowserFields } from '../../../../common/containers/source/mock';
+import { Direction } from '../../../../graphql/types';
+import { defaultHeaders, mockTimelineData } from '../../../../common/mock';
+import { TestProviders } from '../../../../common/mock/test_providers';
 
 import { Body, BodyProps } from '.';
 import { columnRenderers, rowRenderers } from './renderers';
 import { Sort } from './sort';
-import { wait } from '../../../lib/helpers';
-import { useMountAppended } from '../../../utils/use_mount_appended';
+import { wait } from '../../../../common/lib/helpers';
+import { useMountAppended } from '../../../../common/utils/use_mount_appended';
 
 const testBodyHeight = 700;
 const mockGetNotesByIds = (eventId: string[]) => [];
@@ -30,7 +30,7 @@ jest.mock(
     children({ isVisible: true })
 );
 
-jest.mock('../../../lib/helpers/scheduler', () => ({
+jest.mock('../../../../common/lib/helpers/scheduler', () => ({
   requestIdleCallbackViaScheduler: (callback: () => void, opts?: unknown) => {
     callback();
   },

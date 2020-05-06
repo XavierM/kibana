@@ -8,7 +8,7 @@ import { EuiFlexItem } from '@elastic/eui';
 import { isNumber, isEmpty } from 'lodash/fp';
 import styled from 'styled-components';
 
-import { TimelineNonEcsData } from '../../../../graphql/types';
+import { TimelineNonEcsData } from '../../../../../graphql/types';
 
 export const deleteItemIdx = (data: TimelineNonEcsData[], idx: number) => [
   ...data.slice(0, idx),

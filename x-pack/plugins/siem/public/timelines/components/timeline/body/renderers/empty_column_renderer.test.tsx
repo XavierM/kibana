@@ -8,10 +8,10 @@ import { shallow } from 'enzyme';
 import { cloneDeep } from 'lodash/fp';
 import React from 'react';
 
-import { TimelineNonEcsData } from '../../../../graphql/types';
-import { defaultHeaders, mockTimelineData, TestProviders } from '../../../../mock';
-import { useMountAppended } from '../../../../utils/use_mount_appended';
-import { getEmptyValue } from '../../../empty_value';
+import { TimelineNonEcsData } from '../../../../../graphql/types';
+import { defaultHeaders, mockTimelineData, TestProviders } from '../../../../../common/mock';
+import { useMountAppended } from '../../../../../common/utils/use_mount_appended';
+import { getEmptyValue } from '../../../../../common/components/empty_value';
 import { deleteItemIdx, findItem } from './helpers';
 import { emptyColumnRenderer } from './empty_column_renderer';
 

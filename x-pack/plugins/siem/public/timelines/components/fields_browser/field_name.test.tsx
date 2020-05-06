@@ -7,9 +7,9 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import { mockBrowserFields } from '../../containers/source/mock';
-import { TestProviders } from '../../mock';
-import { getColumnsWithTimestamp } from '../event_details/helpers';
+import { mockBrowserFields } from '../../../common/containers/source/mock';
+import { TestProviders } from '../../../common/mock';
+import { getColumnsWithTimestamp } from '../../../common/components/event_details/helpers';
 
 import { FieldName } from './field_name';
 

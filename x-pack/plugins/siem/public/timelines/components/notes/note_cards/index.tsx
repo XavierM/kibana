@@ -8,7 +8,7 @@ import { EuiFlexGroup, EuiPanel } from '@elastic/eui';
 import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
 
-import { Note } from '../../../lib/note';
+import { Note } from '../../../../common/lib/note';
 import { AddNote } from '../add_note';
 import { AssociateNote, GetNewNoteId, UpdateNote } from '../helpers';
 import { NoteCard } from '../note_card';

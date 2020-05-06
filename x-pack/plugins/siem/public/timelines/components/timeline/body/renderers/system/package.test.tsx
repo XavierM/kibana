@@ -7,8 +7,8 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { TestProviders } from '../../../../../mock';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { TestProviders } from '../../../../../../common/mock';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 import { Package } from './package';
 
 describe('Package', () => {

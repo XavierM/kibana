@@ -6,7 +6,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../../../common/mock';
 import { DEFAULT_ACTIONS_COLUMN_WIDTH } from '../constants';
 
 import { Actions } from '.';

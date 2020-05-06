@@ -11,10 +11,10 @@
 
 import React from 'react';
 
-import { TestProviders } from '../../../../../mock';
+import { TestProviders } from '../../../../../../common/mock';
 
 import { EndgameSecurityEventDetailsLine } from './endgame_security_event_details_line';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
 describe('EndgameSecurityEventDetailsLine', () => {
   const mount = useMountAppended();

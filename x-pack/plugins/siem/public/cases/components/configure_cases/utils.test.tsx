@@ -6,7 +6,7 @@
 
 import { mapping } from './__mock__';
 import { setActionTypeToMapping, setThirdPartyToMapping } from './utils';
-import { CasesConfigurationMapping } from '../../../../containers/case/configure/types';
+import { CasesConfigurationMapping } from '../../containers/configure/types';
 
 describe('FieldMappingRow', () => {
   test('it should change the action type', () => {

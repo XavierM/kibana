@@ -8,11 +8,14 @@
 
 import React from 'react';
 
-import { TimelineNonEcsData } from '../../../../graphql/types';
-import { ColumnHeaderOptions } from '../../../../store/timeline/model';
-import { DraggableWrapper, DragEffects } from '../../../drag_and_drop/draggable_wrapper';
-import { escapeDataProviderId } from '../../../drag_and_drop/helpers';
-import { getEmptyValue } from '../../../empty_value';
+import { TimelineNonEcsData } from '../../../../../graphql/types';
+import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
+import {
+  DraggableWrapper,
+  DragEffects,
+} from '../../../../../common/components/drag_and_drop/draggable_wrapper';
+import { escapeDataProviderId } from '../../../../../common/components/drag_and_drop/helpers';
+import { getEmptyValue } from '../../../../../common/components/empty_value';
 import { EXISTS_OPERATOR } from '../../data_providers/data_provider';
 import { Provider } from '../../data_providers/provider';
 import { ColumnRenderer } from './column_renderer';

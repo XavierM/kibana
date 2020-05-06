@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { ColumnHeaderOptions } from '../../store/timeline/model';
+import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
 import { ColumnId } from './body/column_id';
 import { SortDirection } from './body/sort';
 import { QueryOperator } from './data_providers/data_provider';

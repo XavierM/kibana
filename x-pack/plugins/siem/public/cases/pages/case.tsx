@@ -6,12 +6,12 @@
 
 import React from 'react';
 
-import { WrapperPage } from '../../components/wrapper_page';
-import { useGetUserSavedObjectPermissions } from '../../lib/kibana';
-import { SpyRoute } from '../../utils/route/spy_routes';
-import { AllCases } from './components/all_cases';
+import { WrapperPage } from '../../common/components/wrapper_page';
+import { useGetUserSavedObjectPermissions } from '../../common/lib/kibana';
+import { SpyRoute } from '../../common/utils/route/spy_routes';
+import { AllCases } from '../components/all_cases';
 
-import { savedObjectReadOnly, CaseCallOut } from './components/callout';
+import { savedObjectReadOnly, CaseCallOut } from '../components/callout';
 import { CaseSavedObjectNoPermissions } from './saved_object_no_permissions';
 
 export const CasesPage = React.memo(() => {

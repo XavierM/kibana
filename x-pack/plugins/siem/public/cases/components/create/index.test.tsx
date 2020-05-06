@@ -8,23 +8,23 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import { Create } from '.';
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 import { getFormMock } from '../__mock__/form';
 import { Router, routeData, mockHistory, mockLocation } from '../__mock__/router';
 
-import { useInsertTimeline } from '../../../../components/timeline/insert_timeline_popover/use_insert_timeline';
-import { usePostCase } from '../../../../containers/case/use_post_case';
-import { useGetTags } from '../../../../containers/case/use_get_tags';
+import { useInsertTimeline } from '../../../timelines/components/timeline/insert_timeline_popover/use_insert_timeline';
+import { usePostCase } from '../../containers/use_post_case';
+import { useGetTags } from '../../containers/use_get_tags';
 
-jest.mock('../../../../components/timeline/insert_timeline_popover/use_insert_timeline');
-jest.mock('../../../../containers/case/use_post_case');
-import { useForm } from '../../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks';
-import { wait } from '../../../../lib/helpers';
-import { SiemPageName } from '../../../home/types';
+jest.mock('../../../timelines/components/timeline/insert_timeline_popover/use_insert_timeline');
+jest.mock('../../containers/use_post_case');
+import { useForm } from '../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form';
+import { wait } from '../../../common/lib/helpers';
+import { SiemPageName } from '../../../app/home/types';
 jest.mock(
-  '../../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form'
+  '../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form/use_form'
 );
-jest.mock('../../../../containers/case/use_get_tags');
+jest.mock('../../containers/use_get_tags');
 jest.mock(
   '../../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/components/form_data_provider',
   () => ({

@@ -7,8 +7,8 @@
 import { EuiFlexItem } from '@elastic/eui';
 import React from 'react';
 
-import { AndOrBadge } from '../../and_or_badge';
-import { BrowserFields } from '../../../containers/source';
+import { AndOrBadge } from '../and_or_badge';
+import { BrowserFields } from '../../../../common/containers/source';
 import {
   OnChangeDataProviderKqlQuery,
   OnDataProviderEdited,

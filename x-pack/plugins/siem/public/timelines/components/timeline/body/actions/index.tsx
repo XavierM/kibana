@@ -6,15 +6,15 @@
 import { EuiButtonIcon, EuiCheckbox, EuiLoadingSpinner, EuiToolTip } from '@elastic/eui';
 import React from 'react';
 
-import { Note } from '../../../../lib/note';
+import { Note } from '../../../../../common/lib/note';
 import { AssociateNote, UpdateNote } from '../../../notes/helpers';
-import { Pin } from '../../../pin';
+import { Pin } from '../../pin';
 import { NotesButton } from '../../properties/helpers';
 import { EventsLoading, EventsTd, EventsTdContent, EventsTdGroupActions } from '../../styles';
 import { eventHasNotes, getPinTooltip } from '../helpers';
 import * as i18n from '../translations';
 import { OnRowSelected } from '../../events';
-import { Ecs } from '../../../../graphql/types';
+import { Ecs } from '../../../../../graphql/types';
 
 export interface TimelineActionProps {
   eventId: string;

@@ -7,7 +7,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import { mockBrowserFields } from '../../containers/source/mock';
+import { mockBrowserFields } from '../../../common/containers/source/mock';
 
 import { CategoryTitle } from './category_title';
 import { getFieldCount } from './helpers';

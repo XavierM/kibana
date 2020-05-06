@@ -8,12 +8,12 @@ import { shallow } from 'enzyme';
 import { cloneDeep } from 'lodash/fp';
 import React from 'react';
 
-import { mockBrowserFields } from '../../../../../containers/source/mock';
-import { Ecs } from '../../../../../graphql/types';
-import { mockTimelineData } from '../../../../../mock';
-import { TestProviders } from '../../../../../mock/test_providers';
+import { mockBrowserFields } from '../../../../../../common/containers/source/mock';
+import { Ecs } from '../../../../../../graphql/types';
+import { mockTimelineData } from '../../../../../../common/mock';
+import { TestProviders } from '../../../../../../common/mock/test_providers';
 import { suricataRowRenderer } from './suricata_row_renderer';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
 describe('suricata_row_renderer', () => {
   const mount = useMountAppended();

@@ -7,22 +7,28 @@
 import { get } from 'lodash/fp';
 import React from 'react';
 
-import { Ecs } from '../../../../graphql/types';
-import { asArrayIfExists } from '../../../../lib/helpers';
+import { Ecs } from '../../../../../graphql/types';
+import { asArrayIfExists } from '../../../../../common/lib/helpers';
 import {
   TLS_CLIENT_CERTIFICATE_FINGERPRINT_SHA1_FIELD_NAME,
   TLS_SERVER_CERTIFICATE_FINGERPRINT_SHA1_FIELD_NAME,
-} from '../../../certificate_fingerprint';
-import { EVENT_DURATION_FIELD_NAME } from '../../../duration';
-import { ID_FIELD_NAME } from '../../../event_details/event_id';
-import { DESTINATION_IP_FIELD_NAME, SOURCE_IP_FIELD_NAME } from '../../../ip';
+} from '../../../../../common/components/certificate_fingerprint';
+import { EVENT_DURATION_FIELD_NAME } from '../../../../../common/components/duration';
+import { ID_FIELD_NAME } from '../../../../../common/components/event_details/event_id';
+import {
+  DESTINATION_IP_FIELD_NAME,
+  SOURCE_IP_FIELD_NAME,
+} from '../../../../../common/components/ip';
 import { JA3_HASH_FIELD_NAME } from '../../../ja3_fingerprint';
 import { Netflow } from '../../../netflow';
 import {
   EVENT_END_FIELD_NAME,
   EVENT_START_FIELD_NAME,
 } from '../../../netflow/netflow_columns/duration_event_start_end';
-import { DESTINATION_PORT_FIELD_NAME, SOURCE_PORT_FIELD_NAME } from '../../../port';
+import {
+  DESTINATION_PORT_FIELD_NAME,
+  SOURCE_PORT_FIELD_NAME,
+} from '../../../../../common/components/port';
 import {
   DESTINATION_GEO_CITY_NAME_FIELD_NAME,
   DESTINATION_GEO_CONTINENT_NAME_FIELD_NAME,
@@ -34,13 +40,13 @@ import {
   SOURCE_GEO_COUNTRY_ISO_CODE_FIELD_NAME,
   SOURCE_GEO_COUNTRY_NAME_FIELD_NAME,
   SOURCE_GEO_REGION_NAME_FIELD_NAME,
-} from '../../../source_destination/geo_fields';
+} from '../../../../../common/components/source_destination/geo_fields';
 import {
   DESTINATION_BYTES_FIELD_NAME,
   DESTINATION_PACKETS_FIELD_NAME,
   SOURCE_BYTES_FIELD_NAME,
   SOURCE_PACKETS_FIELD_NAME,
-} from '../../../source_destination/source_destination_arrows';
+} from '../../../../../common/components/source_destination/source_destination_arrows';
 import {
   NETWORK_BYTES_FIELD_NAME,
   NETWORK_COMMUNITY_ID_FIELD_NAME,
@@ -48,7 +54,7 @@ import {
   NETWORK_PACKETS_FIELD_NAME,
   NETWORK_PROTOCOL_FIELD_NAME,
   NETWORK_TRANSPORT_FIELD_NAME,
-} from '../../../source_destination/field_names';
+} from '../../../../../common/components/source_destination/field_names';
 
 interface NetflowRendererProps {
   data: Ecs;

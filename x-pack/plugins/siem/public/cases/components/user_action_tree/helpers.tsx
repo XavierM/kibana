@@ -7,8 +7,8 @@
 import { EuiFlexGroup, EuiFlexItem, EuiBadge, EuiLink } from '@elastic/eui';
 import React from 'react';
 
-import { CaseFullExternalService } from '../../../../../../case/common/api';
-import { CaseUserActions } from '../../../../containers/case/types';
+import { CaseFullExternalService } from '../../../../../case/common/api';
+import { CaseUserActions } from '../../containers/types';
 import * as i18n from '../case_view/translations';
 
 interface LabelTitle {

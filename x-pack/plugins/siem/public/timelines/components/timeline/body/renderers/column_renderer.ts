@@ -4,8 +4,8 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { TimelineNonEcsData } from '../../../../graphql/types';
-import { ColumnHeaderOptions } from '../../../../store/timeline/model';
+import { TimelineNonEcsData } from '../../../../../graphql/types';
+import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
 
 export interface ColumnRenderer {
   isInstance: (columnName: string, data: TimelineNonEcsData[]) => boolean;

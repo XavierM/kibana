@@ -10,17 +10,17 @@ import { act } from 'react-dom/test-utils';
 
 import { TagList } from '.';
 import { getFormMock } from '../__mock__/form';
-import { TestProviders } from '../../../../mock';
-import { wait } from '../../../../lib/helpers';
-import { useForm } from '../../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks';
-import { useGetTags } from '../../../../containers/case/use_get_tags';
+import { TestProviders } from '../../../common/mock';
+import { wait } from '../../../common/lib/helpers';
+import { useForm } from '../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form';
+import { useGetTags } from '../../containers/use_get_tags';
 
 jest.mock(
-  '../../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form'
+  '../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form'
 );
-jest.mock('../../../../containers/case/use_get_tags');
+jest.mock('../../containers/use_get_tags');
 jest.mock(
-  '../../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/components/form_data_provider',
+  '../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/components/form_data_provider',
   () => ({
     FormDataProvider: ({ children }: { children: ({ tags }: { tags: string[] }) => void }) =>
       children({ tags: ['rad', 'dude'] }),

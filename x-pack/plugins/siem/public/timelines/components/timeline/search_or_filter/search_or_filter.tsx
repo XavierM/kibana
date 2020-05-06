@@ -8,11 +8,15 @@ import { EuiFlexGroup, EuiFlexItem, EuiSuperSelect, EuiToolTip } from '@elastic/
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
-import { Filter, FilterManager, IIndexPattern } from '../../../../../../../src/plugins/data/public';
-import { BrowserFields } from '../../../containers/source';
-import { KueryFilterQuery, KueryFilterQueryKind } from '../../../store';
-import { KqlMode, EventType } from '../../../store/timeline/model';
-import { DispatchUpdateReduxTime } from '../../super_date_picker';
+import {
+  Filter,
+  FilterManager,
+  IIndexPattern,
+} from '../../../../../../../../src/plugins/data/public';
+import { BrowserFields } from '../../../../common/containers/source';
+import { KueryFilterQuery, KueryFilterQueryKind } from '../../../../common/store';
+import { KqlMode, EventType } from '../../../../common/store/timeline/model';
+import { DispatchUpdateReduxTime } from '../../../../common/components/super_date_picker';
 import { DataProvider } from '../data_providers/data_provider';
 import { QueryBarTimeline } from '../query_bar';
 

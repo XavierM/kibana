@@ -7,7 +7,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 
-import { AppMountParameters } from '../../../../../src/core/public';
+import { AppMountParameters } from '../../../../../../src/core/public';
 import { StartServices } from '../plugin';
 import { SiemApp } from './app';
 

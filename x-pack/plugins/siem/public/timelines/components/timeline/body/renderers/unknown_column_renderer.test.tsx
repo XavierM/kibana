@@ -10,9 +10,9 @@ import { cloneDeep } from 'lodash';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { TimelineNonEcsData } from '../../../../graphql/types';
-import { defaultHeaders, mockTimelineData } from '../../../../mock';
-import { getEmptyValue } from '../../../empty_value';
+import { TimelineNonEcsData } from '../../../../../graphql/types';
+import { defaultHeaders, mockTimelineData } from '../../../../../common/mock';
+import { getEmptyValue } from '../../../../../common/components/empty_value';
 import { unknownColumnRenderer } from './unknown_column_renderer';
 import { getValues } from './helpers';
 

@@ -11,10 +11,10 @@
 
 import React from 'react';
 
-import { TestProviders } from '../../../../../mock';
-import { mockBrowserFields } from '../../../../../../public/containers/source/mock';
-import { mockEndgameDnsRequest } from '../../../../../../public/mock/mock_endgame_ecs_data';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { TestProviders } from '../../../../../../common/mock';
+import { mockBrowserFields } from '../../../../../../common/containers/source/mock';
+import { mockEndgameDnsRequest } from '../../../../../../common/mock/mock_endgame_ecs_data';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
 import { DnsRequestEventDetails } from './dns_request_event_details';
 

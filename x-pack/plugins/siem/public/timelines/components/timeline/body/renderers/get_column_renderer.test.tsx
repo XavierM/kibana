@@ -8,16 +8,16 @@ import { shallow } from 'enzyme';
 import { cloneDeep } from 'lodash/fp';
 import React from 'react';
 
-import { TimelineNonEcsData } from '../../../../graphql/types';
-import { mockTimelineData } from '../../../../mock';
-import { TestProviders } from '../../../../mock/test_providers';
-import { getEmptyValue } from '../../../empty_value';
+import { TimelineNonEcsData } from '../../../../../graphql/types';
+import { mockTimelineData } from '../../../../../common/mock';
+import { TestProviders } from '../../../../../common/mock/test_providers';
+import { getEmptyValue } from '../../../../../common/components/empty_value';
 import { defaultHeaders } from '../column_headers/default_headers';
 
 import { columnRenderers } from '.';
 import { getColumnRenderer } from './get_column_renderer';
 import { getValues, findItem, deleteItemIdx } from './helpers';
-import { useMountAppended } from '../../../../utils/use_mount_appended';
+import { useMountAppended } from '../../../../../common/utils/use_mount_appended';
 
 describe('get_column_renderer', () => {
   let nonSuricata: TimelineNonEcsData[];

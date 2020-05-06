@@ -6,7 +6,7 @@
 
 import { getOr, omit, uniq, isEmpty, isEqualWith, union } from 'lodash/fp';
 
-import { Filter } from '../../../../../../src/plugins/data/public';
+import { Filter } from '../../../../../../../src/plugins/data/public';
 import { getColumnWidthFromType } from '../../components/timeline/body/column_headers/helpers';
 import { Sort } from '../../components/timeline/body/sort';
 import {
@@ -19,7 +19,7 @@ import { KueryFilterQuery, SerializedFilterQuery } from '../model';
 import { timelineDefaults } from './defaults';
 import { ColumnHeaderOptions, KqlMode, TimelineModel, EventType } from './model';
 import { TimelineById, TimelineState } from './types';
-import { TimelineNonEcsData } from '../../graphql/types';
+import { TimelineNonEcsData } from '../../../graphql/types';
 
 const EMPTY_TIMELINE_BY_ID: TimelineById = {}; // stable reference
 

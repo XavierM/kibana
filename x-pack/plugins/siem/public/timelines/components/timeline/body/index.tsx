@@ -6,10 +6,10 @@
 
 import React, { useMemo, useRef } from 'react';
 
-import { BrowserFields } from '../../../containers/source';
-import { TimelineItem, TimelineNonEcsData } from '../../../graphql/types';
-import { Note } from '../../../lib/note';
-import { ColumnHeaderOptions } from '../../../store/timeline/model';
+import { BrowserFields } from '../../../../common/containers/source';
+import { TimelineItem, TimelineNonEcsData } from '../../../../graphql/types';
+import { Note } from '../../../../common/lib/note';
+import { ColumnHeaderOptions } from '../../../../common/store/timeline/model';
 import { AddNoteToEvent, UpdateNote } from '../../notes/helpers';
 import {
   OnColumnRemoved,

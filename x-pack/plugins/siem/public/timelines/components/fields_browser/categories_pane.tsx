@@ -8,7 +8,7 @@ import { EuiInMemoryTable, EuiTitle } from '@elastic/eui';
 import React from 'react';
 import styled from 'styled-components';
 
-import { BrowserFields } from '../../containers/source';
+import { BrowserFields } from '../../../common/containers/source';
 
 import { FieldBrowserProps } from './types';
 import { getCategoryColumns } from './category_columns';

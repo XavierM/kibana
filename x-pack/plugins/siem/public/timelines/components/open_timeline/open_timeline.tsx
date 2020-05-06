@@ -12,9 +12,9 @@ import { OpenTimelineProps, OpenTimelineResult } from './types';
 import { SearchRow } from './search_row';
 import { TimelinesTable } from './timelines_table';
 import { TitleRow } from './title_row';
-import { ImportDataModal } from '../import_data_modal';
+import { ImportDataModal } from '../../../common/components/import_data_modal';
 import * as i18n from './translations';
-import { importTimelines } from '../../containers/timeline/api';
+import { importTimelines } from '../../containers/api';
 
 import {
   UtilityBarGroup,
@@ -22,7 +22,7 @@ import {
   UtilityBar,
   UtilityBarSection,
   UtilityBarAction,
-} from '../utility_bar';
+} from '../../../common/components/utility_bar';
 import { useEditTimelinBatchActions } from './edit_timeline_batch_actions';
 import { useEditTimelineActions } from './edit_timeline_actions';
 import { EditOneTimelineAction } from './export_timeline';

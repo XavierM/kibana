@@ -10,11 +10,11 @@ import React, { useState, useMemo } from 'react';
 import styled from 'styled-components';
 
 import { FlyoutHeaderWithCloseButton } from '../flyout/header_with_close_button';
-import { BrowserFields } from '../../containers/source';
-import { TimelineQuery } from '../../containers/timeline';
-import { Direction } from '../../graphql/types';
-import { useKibana } from '../../lib/kibana';
-import { ColumnHeaderOptions, KqlMode, EventType } from '../../store/timeline/model';
+import { BrowserFields } from '../../../common/containers/source';
+import { TimelineQuery } from '../../containers/index';
+import { Direction } from '../../../graphql/types';
+import { useKibana } from '../../../common/lib/kibana';
+import { ColumnHeaderOptions, KqlMode, EventType } from '../../../common/store/timeline/model';
 import { defaultHeaders } from './body/column_headers/default_headers';
 import { Sort } from './body/sort';
 import { StatefulBody } from './body/stateful_body';
@@ -39,7 +39,7 @@ import {
   Filter,
   FilterManager,
   IIndexPattern,
-} from '../../../../../../src/plugins/data/public';
+} from '../../../../../../../src/plugins/data/public';
 
 const TimelineContainer = styled.div`
   height: 100%;

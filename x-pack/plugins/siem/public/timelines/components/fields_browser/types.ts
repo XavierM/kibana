@@ -4,8 +4,8 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { BrowserFields } from '../../containers/source';
-import { ColumnHeaderOptions } from '../../store/timeline/model';
+import { BrowserFields } from '../../../common/containers/source';
+import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
 import { OnUpdateColumns } from '../timeline/events';
 
 export type OnFieldSelected = (fieldId: string) => void;

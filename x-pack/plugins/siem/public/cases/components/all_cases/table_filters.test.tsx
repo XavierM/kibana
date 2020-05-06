@@ -8,14 +8,14 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import { CasesTableFilters } from './table_filters';
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 
-import { useGetTags } from '../../../../containers/case/use_get_tags';
-import { useGetReporters } from '../../../../containers/case/use_get_reporters';
-import { DEFAULT_FILTER_OPTIONS } from '../../../../containers/case/use_get_cases';
-jest.mock('../../../../components/timeline/insert_timeline_popover/use_insert_timeline');
-jest.mock('../../../../containers/case/use_get_reporters');
-jest.mock('../../../../containers/case/use_get_tags');
+import { useGetTags } from '../../containers/use_get_tags';
+import { useGetReporters } from '../../containers/use_get_reporters';
+import { DEFAULT_FILTER_OPTIONS } from '../../containers/use_get_cases';
+jest.mock('../../../timelines/components/timeline/insert_timeline_popover/use_insert_timeline');
+jest.mock('../../containers/use_get_reporters');
+jest.mock('../../containers/use_get_tags');
 
 const onFilterChanged = jest.fn();
 const fetchReporters = jest.fn();

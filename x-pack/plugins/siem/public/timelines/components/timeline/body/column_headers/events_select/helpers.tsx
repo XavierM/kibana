@@ -8,7 +8,7 @@ import { EuiText } from '@elastic/eui';
 import React from 'react';
 import styled from 'styled-components';
 
-import { Pin } from '../../../../pin';
+import { Pin } from '../../../pin';
 
 import * as i18n from './translations';
 

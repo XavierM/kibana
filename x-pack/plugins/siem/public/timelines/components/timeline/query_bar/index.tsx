@@ -17,15 +17,15 @@ import {
   FilterManager,
   SavedQuery,
   SavedQueryTimeFilter,
-} from '../../../../../../../src/plugins/data/public';
+} from '../../../../../../../../src/plugins/data/public';
 
-import { BrowserFields } from '../../../containers/source';
-import { convertKueryToElasticSearchQuery } from '../../../lib/keury';
-import { KueryFilterQuery, KueryFilterQueryKind } from '../../../store';
-import { KqlMode } from '../../../store/timeline/model';
-import { useSavedQueryServices } from '../../../utils/saved_query_services';
-import { DispatchUpdateReduxTime } from '../../super_date_picker';
-import { QueryBar } from '../../query_bar';
+import { BrowserFields } from '../../../../common/containers/source';
+import { convertKueryToElasticSearchQuery } from '../../../../common/lib/keury';
+import { KueryFilterQuery, KueryFilterQueryKind } from '../../../../common/store';
+import { KqlMode } from '../../../../common/store/timeline/model';
+import { useSavedQueryServices } from '../../../../common/utils/saved_query_services';
+import { DispatchUpdateReduxTime } from '../../../../common/components/super_date_picker';
+import { QueryBar } from '../../../../common/components/query_bar';
 import { DataProvider } from '../data_providers/data_provider';
 import { buildGlobalQuery } from '../helpers';
 

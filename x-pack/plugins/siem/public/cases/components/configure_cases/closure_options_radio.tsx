@@ -7,7 +7,7 @@
 import React, { ReactNode, useCallback } from 'react';
 import { EuiRadioGroup } from '@elastic/eui';
 
-import { ClosureType } from '../../../../containers/case/configure/types';
+import { ClosureType } from '../../containers/configure/types';
 import * as i18n from './translations';
 
 interface ClosureRadios {

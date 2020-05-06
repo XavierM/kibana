@@ -7,7 +7,7 @@
 import { mount, shallow } from 'enzyme';
 import React from 'react';
 
-import { Direction } from '../../../../graphql/types';
+import { Direction } from '../../../../../graphql/types';
 
 import { getDirection, SortIndicator } from './sort_indicator';
 

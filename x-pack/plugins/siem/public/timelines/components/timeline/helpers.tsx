@@ -7,16 +7,16 @@
 import { isEmpty, isNumber, get } from 'lodash/fp';
 import memoizeOne from 'memoize-one';
 
-import { escapeQueryValue, convertToBuildEsQuery } from '../../lib/keury';
+import { escapeQueryValue, convertToBuildEsQuery } from '../../../common/lib/keury';
 
 import { DataProvider, DataProvidersAnd, EXISTS_OPERATOR } from './data_providers/data_provider';
-import { BrowserFields } from '../../containers/source';
+import { BrowserFields } from '../../../common/containers/source';
 import {
   IIndexPattern,
   Query,
   EsQueryConfig,
   Filter,
-} from '../../../../../../src/plugins/data/public';
+} from '../../../../../../../src/plugins/data/public';
 
 const convertDateFieldToQuery = (field: string, value: string | number) =>
   `${field}: ${isNumber(value) ? value : new Date(value).valueOf()}`;

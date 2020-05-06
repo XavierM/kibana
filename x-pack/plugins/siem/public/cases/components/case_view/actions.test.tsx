@@ -7,11 +7,11 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { useDeleteCases } from '../../../../containers/case/use_delete_cases';
-import { TestProviders } from '../../../../mock';
-import { basicCase } from '../../../../containers/case/mock';
+import { useDeleteCases } from '../../containers/use_delete_cases';
+import { TestProviders } from '../../../common/mock';
+import { basicCase } from '../../containers/mock';
 import { CaseViewActions } from './actions';
-jest.mock('../../../../containers/case/use_delete_cases');
+jest.mock('../../containers/use_delete_cases');
 const useDeleteCasesMock = useDeleteCases as jest.Mock;
 
 describe('CaseView actions', () => {

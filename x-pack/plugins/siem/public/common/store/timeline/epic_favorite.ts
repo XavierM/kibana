@@ -13,7 +13,7 @@ import { from, Observable, empty } from 'rxjs';
 import { filter, mergeMap, withLatestFrom, startWith, takeUntil } from 'rxjs/operators';
 
 import { persistTimelineFavoriteMutation } from '../../containers/timeline/favorite/persist.gql_query';
-import { PersistTimelineFavoriteMutation, ResponseFavoriteTimeline } from '../../graphql/types';
+import { PersistTimelineFavoriteMutation, ResponseFavoriteTimeline } from '../../../graphql/types';
 import { addError } from '../app/actions';
 import {
   endTimelineSaving,

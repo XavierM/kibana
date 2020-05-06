@@ -6,9 +6,12 @@
 
 import React, { useCallback } from 'react';
 import uuid from 'uuid';
-import { GenericDownloader, ExportSelectedData } from '../../generic_downloader';
+import {
+  GenericDownloader,
+  ExportSelectedData,
+} from '../../../../common/components/generic_downloader';
 import * as i18n from '../translations';
-import { useStateToaster } from '../../toasters';
+import { useStateToaster } from '../../../../common/components/toasters';
 
 const ExportTimeline: React.FC<{
   exportedIds: string[] | undefined;

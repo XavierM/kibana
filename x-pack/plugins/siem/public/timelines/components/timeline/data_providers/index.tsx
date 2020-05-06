@@ -8,12 +8,12 @@ import { rgba } from 'polished';
 import React from 'react';
 import styled from 'styled-components';
 
-import { BrowserFields } from '../../../containers/source';
-import { DroppableWrapper } from '../../drag_and_drop/droppable_wrapper';
+import { BrowserFields } from '../../../../common/containers/source';
+import { DroppableWrapper } from '../../../../common/components/drag_and_drop/droppable_wrapper';
 import {
   droppableTimelineProvidersPrefix,
   IS_DRAGGING_CLASS_NAME,
-} from '../../drag_and_drop/helpers';
+} from '../../../../common/components/drag_and_drop/helpers';
 import {
   OnChangeDataProviderKqlQuery,
   OnChangeDroppableAndProvider,

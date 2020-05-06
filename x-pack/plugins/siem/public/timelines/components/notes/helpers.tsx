@@ -9,10 +9,10 @@ import moment from 'moment';
 import React from 'react';
 import styled from 'styled-components';
 
-import { Note } from '../../lib/note';
+import { Note } from '../../../common/lib/note';
 
 import * as i18n from './translations';
-import { CountBadge } from '../page';
+import { CountBadge } from '../../../common/components/page';
 
 /** Performs IO to update (or add a new) note */
 export type UpdateNote = (note: Note) => void;

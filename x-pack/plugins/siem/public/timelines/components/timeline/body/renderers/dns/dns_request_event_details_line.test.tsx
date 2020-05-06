@@ -11,10 +11,10 @@
 
 import React from 'react';
 
-import { TestProviders } from '../../../../../mock';
+import { TestProviders } from '../../../../../../common/mock';
 
 import { DnsRequestEventDetailsLine } from './dns_request_event_details_line';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
 describe('DnsRequestEventDetailsLine', () => {
   const mount = useMountAppended();

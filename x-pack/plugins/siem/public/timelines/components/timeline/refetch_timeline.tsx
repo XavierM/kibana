@@ -7,9 +7,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { inputsModel } from '../../store';
-import { inputsActions } from '../../store/actions';
-import { InputsModelId } from '../../store/inputs/constants';
+import { inputsModel } from '../../../common/store';
+import { inputsActions } from '../../../common/store/actions';
+import { InputsModelId } from '../../../common/store/inputs/constants';
 
 export interface TimelineRefetchProps {
   id: string;

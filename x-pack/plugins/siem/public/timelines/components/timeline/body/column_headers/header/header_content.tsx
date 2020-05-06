@@ -8,8 +8,8 @@ import { EuiToolTip } from '@elastic/eui';
 import { noop } from 'lodash/fp';
 import React from 'react';
 
-import { ColumnHeaderOptions } from '../../../../../store/timeline/model';
-import { TruncatableText } from '../../../../truncatable_text';
+import { ColumnHeaderOptions } from '../../../../../../common/store/timeline/model';
+import { TruncatableText } from '../../../../../../common/components/truncatable_text';
 import { EventsHeading, EventsHeadingTitleButton, EventsHeadingTitleSpan } from '../../../styles';
 import { useTimelineContext } from '../../../timeline_context';
 import { Sort } from '../../sort';

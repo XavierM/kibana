@@ -7,13 +7,13 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import { DEFAULT_FROM, DEFAULT_TO } from '../../../../common/constants';
-import { mockBrowserFields } from '../../../containers/source/mock';
-import { convertKueryToElasticSearchQuery } from '../../../lib/keury';
-import { mockIndexPattern, TestProviders } from '../../../mock';
-import { createKibanaCoreStartMock } from '../../../mock/kibana_core';
-import { QueryBar } from '../../query_bar';
-import { FilterManager } from '../../../../../../../src/plugins/data/public';
+import { DEFAULT_FROM, DEFAULT_TO } from '../../../../../common/constants';
+import { mockBrowserFields } from '../../../../common/containers/source/mock';
+import { convertKueryToElasticSearchQuery } from '../../../../common/lib/keury';
+import { mockIndexPattern, TestProviders } from '../../../../common/mock';
+import { createKibanaCoreStartMock } from '../../../../common/mock/kibana_core';
+import { QueryBar } from '../../../../common/components/query_bar';
+import { FilterManager } from '../../../../../../../../src/plugins/data/public';
 import { mockDataProviders } from '../data_providers/mock/mock_data_providers';
 import { buildGlobalQuery } from '../helpers';
 
@@ -21,7 +21,7 @@ import { QueryBarTimeline, QueryBarTimelineComponentProps, getDataProviderFilter
 
 const mockUiSettingsForFilterManager = createKibanaCoreStartMock().uiSettings;
 
-jest.mock('../../../lib/kibana');
+jest.mock('../../../../common/lib/kibana');
 
 describe('Timeline QueryBar ', () => {
   // We are doing that because we need to wrapped this component with redux

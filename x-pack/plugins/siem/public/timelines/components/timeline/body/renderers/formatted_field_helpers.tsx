@@ -8,12 +8,12 @@ import { EuiLink, EuiFlexGroup, EuiFlexItem, EuiIcon, EuiToolTip } from '@elasti
 import { isString, isEmpty } from 'lodash/fp';
 import React from 'react';
 
-import { DefaultDraggable } from '../../../draggables';
-import { getEmptyTagValue } from '../../../empty_value';
-import { getRuleDetailsUrl } from '../../../link_to/redirect_to_detection_engine';
-import { TruncatableText } from '../../../truncatable_text';
+import { DefaultDraggable } from '../../../../../common/components/draggables';
+import { getEmptyTagValue } from '../../../../../common/components/empty_value';
+import { getRuleDetailsUrl } from '../../../../../common/components/link_to/redirect_to_detection_engine';
+import { TruncatableText } from '../../../../../common/components/truncatable_text';
 
-import { isUrlInvalid } from '../../../../pages/detection_engine/rules/components/step_about_rule/helpers';
+import { isUrlInvalid } from '../../../../../alerts/components/rules/step_about_rule/helpers';
 import endPointSvg from '../../../../utils/logo_endpoint/64_color.svg';
 
 import * as i18n from './translations';

@@ -7,9 +7,9 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { FlowTarget, GetIpOverviewQuery, HostEcsFields } from '../../graphql/types';
-import { TestProviders } from '../../mock';
-import { getEmptyValue } from '../empty_value';
+import { FlowTarget, GetIpOverviewQuery, HostEcsFields } from '../../../graphql/types';
+import { TestProviders } from '../../../common/mock';
+import { getEmptyValue } from '../../../common/components/empty_value';
 
 import {
   autonomousSystemRenderer,
@@ -22,8 +22,8 @@ import {
   DEFAULT_MORE_MAX_HEIGHT,
   MoreContainer,
 } from './field_renderers';
-import { mockData } from '../page/network/ip_overview/mock';
-import { useMountAppended } from '../../utils/use_mount_appended';
+import { mockData } from '../../../common/components/page/network/ip_overview/mock';
+import { useMountAppended } from '../../../common/utils/use_mount_appended';
 
 type AutonomousSystem = GetIpOverviewQuery.AutonomousSystem;
 

@@ -8,9 +8,9 @@ import { EuiFlexItem } from '@elastic/eui';
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { TestProviders } from '../../../../../mock';
+import { TestProviders } from '../../../../../../common/mock';
 import { SessionUserHostWorkingDir } from './session_user_host_working_dir';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
 describe('SessionUserHostWorkingDir', () => {
   const mount = useMountAppended();

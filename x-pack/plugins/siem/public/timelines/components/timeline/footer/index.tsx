@@ -22,13 +22,13 @@ import { FormattedMessage } from '@kbn/i18n/react';
 import React, { FC, useCallback, useEffect, useState, useMemo } from 'react';
 import styled from 'styled-components';
 
-import { LoadingPanel } from '../../loading';
+import { LoadingPanel } from '../../../../common/components/loading';
 import { OnChangeItemsPerPage, OnLoadMore } from '../events';
 
 import { LastUpdatedAt } from './last_updated';
 import * as i18n from './translations';
 import { useTimelineTypeContext } from '../timeline_context';
-import { useEventDetailsWidthContext } from '../../events_viewer/event_details_width_context';
+import { useEventDetailsWidthContext } from '../../../../common/components/events_viewer/event_details_width_context';
 
 export const isCompactFooter = (width: number): boolean => width < 600;
 

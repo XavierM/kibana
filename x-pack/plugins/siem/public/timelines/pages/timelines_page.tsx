@@ -4,17 +4,16 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import ApolloClient from 'apollo-client';
-import React, { useState, useCallback } from 'react';
-import styled from 'styled-components';
-
 import { EuiButton } from '@elastic/eui';
-import { HeaderPage } from '../../components/header_page';
-import { StatefulOpenTimeline } from '../../components/open_timeline';
-import { WrapperPage } from '../../components/wrapper_page';
-import { SpyRoute } from '../../utils/route/spy_routes';
+import ApolloClient from 'apollo-client';
+import React, { useCallback, useState } from 'react';
+import styled from 'styled-components';
+import { HeaderPage } from '../../common/components/header_page';
+import { WrapperPage } from '../../common/components/wrapper_page';
+import { useKibana } from '../../common/lib/kibana';
+import { SpyRoute } from '../../common/utils/route/spy_routes';
+import { StatefulOpenTimeline } from '../components/open_timeline';
 import * as i18n from './translations';
-import { useKibana } from '../../lib/kibana';
 
 const TimelinesContainer = styled.div`
   width: 100%;

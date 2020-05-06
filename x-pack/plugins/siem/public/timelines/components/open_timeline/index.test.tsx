@@ -10,18 +10,18 @@ import { MockedProvider } from 'react-apollo/test-utils';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { wait } from '../../lib/helpers';
-import { TestProviderWithoutDragAndDrop, apolloClient } from '../../mock/test_providers';
-import { mockOpenTimelineQueryResults } from '../../mock/timeline_results';
-import { DEFAULT_SEARCH_RESULTS_PER_PAGE } from '../../pages/timelines/timelines_page';
+import { wait } from '../../../common/lib/helpers';
+import { TestProviderWithoutDragAndDrop, apolloClient } from '../../../common/mock/test_providers';
+import { mockOpenTimelineQueryResults } from '../../../common/mock/timeline_results';
+import { DEFAULT_SEARCH_RESULTS_PER_PAGE } from '../../pages/timelines_page';
 
 import { NotePreviews } from './note_previews';
 import { OPEN_TIMELINE_CLASS_NAME } from './helpers';
 import { StatefulOpenTimeline } from '.';
-import { useGetAllTimeline, getAllTimeline } from '../../containers/timeline/all';
-jest.mock('../../lib/kibana');
-jest.mock('../../containers/timeline/all', () => {
-  const originalModule = jest.requireActual('../../containers/timeline/all');
+import { useGetAllTimeline, getAllTimeline } from '../../containers/all';
+jest.mock('../../../common/lib/kibana');
+jest.mock('../../containers/all', () => {
+  const originalModule = jest.requireActual('../../containers/all');
   return {
     useGetAllTimeline: jest.fn(),
     getAllTimeline: originalModule.getAllTimeline,

@@ -9,7 +9,7 @@ import {
   ActionType,
   CasesConfigurationMapping,
   ThirdPartyField,
-} from '../../../../containers/case/configure/types';
+} from '../../containers/configure/types';
 
 export const setActionTypeToMapping = (
   caseField: CaseField,

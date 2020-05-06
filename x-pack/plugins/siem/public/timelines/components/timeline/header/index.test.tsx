@@ -7,18 +7,18 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { mockIndexPattern } from '../../../mock';
-import { createKibanaCoreStartMock } from '../../../mock/kibana_core';
-import { TestProviders } from '../../../mock/test_providers';
-import { FilterManager } from '../../../../../../../src/plugins/data/public';
+import { mockIndexPattern } from '../../../../common/mock';
+import { createKibanaCoreStartMock } from '../../../../common/mock/kibana_core';
+import { TestProviders } from '../../../../common/mock/test_providers';
+import { FilterManager } from '../../../../../../../../src/plugins/data/public';
 import { mockDataProviders } from '../data_providers/mock/mock_data_providers';
-import { useMountAppended } from '../../../utils/use_mount_appended';
+import { useMountAppended } from '../../../../common/utils/use_mount_appended';
 
 import { TimelineHeader } from '.';
 
 const mockUiSettingsForFilterManager = createKibanaCoreStartMock().uiSettings;
 
-jest.mock('../../../lib/kibana');
+jest.mock('../../../../common/lib/kibana');
 
 describe('Header', () => {
   const indexPattern = mockIndexPattern;
