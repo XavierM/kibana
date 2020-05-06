@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { getEmptyTagValue } from '../../../empty_value';
+import { getEmptyTagValue } from '../../../../../common/components/empty_value';
 import { ColumnRenderer } from './column_renderer';
 
 export const unknownColumnRenderer: ColumnRenderer = {

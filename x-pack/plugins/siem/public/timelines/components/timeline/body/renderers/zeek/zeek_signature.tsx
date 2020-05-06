@@ -9,11 +9,14 @@ import { get } from 'lodash/fp';
 import React from 'react';
 import styled from 'styled-components';
 
-import { Ecs } from '../../../../../graphql/types';
-import { DragEffects, DraggableWrapper } from '../../../../drag_and_drop/draggable_wrapper';
-import { escapeDataProviderId } from '../../../../drag_and_drop/helpers';
-import { ExternalLinkIcon } from '../../../../external_link_icon';
-import { GoogleLink, ReputationLink } from '../../../../links';
+import { Ecs } from '../../../../../../graphql/types';
+import {
+  DragEffects,
+  DraggableWrapper,
+} from '../../../../../../common/components/drag_and_drop/draggable_wrapper';
+import { escapeDataProviderId } from '../../../../../../common/components/drag_and_drop/helpers';
+import { ExternalLinkIcon } from '../../../../../../common/components/external_link_icon';
+import { GoogleLink, ReputationLink } from '../../../../../../common/components/links';
 import { Provider } from '../../../data_providers/provider';
 import { IS_OPERATOR } from '../../../data_providers/data_provider';
 

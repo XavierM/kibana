@@ -7,8 +7,8 @@
 import { EuiModal, EuiOverlayMask } from '@elastic/eui';
 import React from 'react';
 
-import { TimelineModel } from '../../../store/timeline/model';
-import { useApolloClient } from '../../../utils/apollo_context';
+import { TimelineModel } from '../../../../common/store/timeline/model';
+import { useApolloClient } from '../../../../common/utils/apollo_context';
 
 import * as i18n from '../translations';
 import { ActionTimelineToShow } from '../types';

@@ -10,16 +10,16 @@ import { connect, ConnectedProps } from 'react-redux';
 
 import { Dispatch } from 'redux';
 import { defaultHeaders } from '../timeline/body/column_headers/default_headers';
-import { deleteTimelineMutation } from '../../containers/timeline/delete/persist.gql_query';
-import { useGetAllTimeline } from '../../containers/timeline/all';
-import { DeleteTimelineMutation, SortFieldTimeline, Direction } from '../../graphql/types';
-import { State, timelineSelectors } from '../../store';
-import { ColumnHeaderOptions, TimelineModel } from '../../store/timeline/model';
-import { timelineDefaults } from '../../store/timeline/defaults';
+import { deleteTimelineMutation } from '../../containers/delete/persist.gql_query';
+import { useGetAllTimeline } from '../../containers/all';
+import { DeleteTimelineMutation, SortFieldTimeline, Direction } from '../../../graphql/types';
+import { State, timelineSelectors } from '../../../common/store';
+import { ColumnHeaderOptions, TimelineModel } from '../../../common/store/timeline/model';
+import { timelineDefaults } from '../../../common/store/timeline/defaults';
 import {
   createTimeline as dispatchCreateNewTimeline,
   updateIsLoading as dispatchUpdateIsLoading,
-} from '../../store/timeline/actions';
+} from '../../../common/store/timeline/actions';
 import { OpenTimeline } from './open_timeline';
 import { OPEN_TIMELINE_CLASS_NAME, queryTimelineById, dispatchUpdateTimeline } from './helpers';
 import { OpenTimelineModalBody } from './open_timeline_modal/open_timeline_modal_body';

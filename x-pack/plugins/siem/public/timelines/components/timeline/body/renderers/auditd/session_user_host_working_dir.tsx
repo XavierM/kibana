@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import { DraggableBadge } from '../../../../draggables';
+import { DraggableBadge } from '../../../../../../common/components/draggables';
 
 import * as i18n from './translations';
 import { TokensFlexItem } from '../helpers';

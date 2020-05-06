@@ -8,9 +8,9 @@ import { mount } from 'enzyme';
 import React from 'react';
 import { ActionCreator } from 'typescript-fsa';
 
-import { mockBrowserFields } from '../../containers/source/mock';
-import { TestProviders } from '../../mock';
-import { ColumnHeaderOptions } from '../../store/timeline/model';
+import { mockBrowserFields } from '../../../common/containers/source/mock';
+import { TestProviders } from '../../../common/mock';
+import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
 
 import { FIELD_BROWSER_HEIGHT, FIELD_BROWSER_WIDTH } from './helpers';
 

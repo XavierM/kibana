@@ -8,16 +8,19 @@ import { EuiFlexGroup, EuiFlexItem, EuiToolTip } from '@elastic/eui';
 import { isNumber, isString, isEmpty } from 'lodash/fp';
 import React from 'react';
 
-import { DefaultDraggable } from '../../../draggables';
-import { Bytes, BYTES_FORMAT } from '../../../bytes';
-import { Duration, EVENT_DURATION_FIELD_NAME } from '../../../duration';
-import { getOrEmptyTagFromValue, getEmptyTagValue } from '../../../empty_value';
-import { FormattedDate } from '../../../formatted_date';
-import { FormattedIp } from '../../../formatted_ip';
-import { HostDetailsLink } from '../../../links';
+import { DefaultDraggable } from '../../../../../common/components/draggables';
+import { Bytes, BYTES_FORMAT } from './bytes';
+import { Duration, EVENT_DURATION_FIELD_NAME } from '../../../../../common/components/duration';
+import {
+  getOrEmptyTagFromValue,
+  getEmptyTagValue,
+} from '../../../../../common/components/empty_value';
+import { FormattedDate } from '../../../../../common/components/formatted_date';
+import { FormattedIp } from '../../../../../common/components/formatted_ip';
+import { HostDetailsLink } from '../../../../../common/components/links';
 
-import { Port, PORT_NAMES } from '../../../port';
-import { TruncatableText } from '../../../truncatable_text';
+import { Port, PORT_NAMES } from '../../../../../common/components/port';
+import { TruncatableText } from '../../../../../common/components/truncatable_text';
 import {
   DATE_FIELD_TYPE,
   HOST_NAME_FIELD_NAME,

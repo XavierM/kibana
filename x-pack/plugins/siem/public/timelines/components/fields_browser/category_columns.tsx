@@ -10,12 +10,12 @@ import { EuiIcon, EuiFlexGroup, EuiFlexItem, EuiLink, EuiText, EuiToolTip } from
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import { BrowserFields } from '../../containers/source';
-import { getColumnsWithTimestamp } from '../event_details/helpers';
-import { CountBadge } from '../page';
+import { BrowserFields } from '../../../common/containers/source';
+import { getColumnsWithTimestamp } from '../../../common/components/event_details/helpers';
+import { CountBadge } from '../../../common/components/page';
 import { OnUpdateColumns } from '../timeline/events';
 import { TimelineContext } from '../timeline/timeline_context';
-import { WithHoverActions } from '../with_hover_actions';
+import { WithHoverActions } from '../../../common/components/with_hover_actions';
 import { LoadingSpinner, getCategoryPaneCategoryClassName, getFieldCount } from './helpers';
 import * as i18n from './translations';
 

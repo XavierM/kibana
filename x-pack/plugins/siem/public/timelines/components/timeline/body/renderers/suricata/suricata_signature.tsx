@@ -8,15 +8,18 @@ import { EuiBadge, EuiFlexGroup, EuiFlexItem, EuiToolTip } from '@elastic/eui';
 import React from 'react';
 import styled from 'styled-components';
 
-import { DragEffects, DraggableWrapper } from '../../../../drag_and_drop/draggable_wrapper';
-import { escapeDataProviderId } from '../../../../drag_and_drop/helpers';
-import { ExternalLinkIcon } from '../../../../external_link_icon';
-import { GoogleLink } from '../../../../links';
+import {
+  DragEffects,
+  DraggableWrapper,
+} from '../../../../../../common/components/drag_and_drop/draggable_wrapper';
+import { escapeDataProviderId } from '../../../../../../common/components/drag_and_drop/helpers';
+import { ExternalLinkIcon } from '../../../../../../common/components/external_link_icon';
+import { GoogleLink } from '../../../../../../common/components/links';
 import { Provider } from '../../../data_providers/provider';
 
 import { TokensFlexItem } from '../helpers';
 import { getBeginningTokens } from './suricata_links';
-import { DefaultDraggable } from '../../../../draggables';
+import { DefaultDraggable } from '../../../../../../common/components/draggables';
 import { IS_OPERATOR } from '../../../data_providers/data_provider';
 
 export const SURICATA_SIGNATURE_FIELD_NAME = 'suricata.eve.alert.signature';

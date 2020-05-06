@@ -8,7 +8,7 @@ import { mount, shallow } from 'enzyme';
 import { getOr } from 'lodash/fp';
 import React from 'react';
 
-import { TestProviders } from '../../../mock/test_providers';
+import { TestProviders } from '../../../../common/mock/test_providers';
 
 import { FooterComponent, PagingControlComponent } from './index';
 import { mockData } from './mock';

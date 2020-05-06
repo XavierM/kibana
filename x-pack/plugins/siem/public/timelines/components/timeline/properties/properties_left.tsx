@@ -10,8 +10,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Description, Name, NotesButton, StarIcon } from './helpers';
 import { AssociateNote, UpdateNote } from '../../notes/helpers';
-import { Note } from '../../../lib/note';
-import { SuperDatePicker } from '../../super_date_picker';
+import { Note } from '../../../../common/lib/note';
+import { SuperDatePicker } from '../../../../common/components/super_date_picker';
 
 import * as i18n from './translations';
 

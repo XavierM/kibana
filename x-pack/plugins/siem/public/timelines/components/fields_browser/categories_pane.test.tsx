@@ -9,7 +9,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import euiDarkVars from '@elastic/eui/dist/eui_theme_dark.json';
 
-import { mockBrowserFields } from '../../containers/source/mock';
+import { mockBrowserFields } from '../../../common/containers/source/mock';
 
 import { CATEGORY_PANE_WIDTH } from './helpers';
 import { CategoriesPane } from './categories_pane';

@@ -7,11 +7,11 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { BrowserFields } from '../../../../../containers/source';
-import { mockBrowserFields } from '../../../../../containers/source/mock';
-import { Ecs } from '../../../../../graphql/types';
-import { getMockNetflowData, TestProviders } from '../../../../../mock';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { BrowserFields } from '../../../../../../common/containers/source';
+import { mockBrowserFields } from '../../../../../../common/containers/source/mock';
+import { Ecs } from '../../../../../../graphql/types';
+import { getMockNetflowData, TestProviders } from '../../../../../../common/mock';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
 import {
   eventActionMatches,

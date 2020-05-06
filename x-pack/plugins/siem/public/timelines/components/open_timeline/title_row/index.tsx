@@ -9,7 +9,7 @@ import React from 'react';
 
 import * as i18n from '../translations';
 import { OpenTimelineProps } from '../types';
-import { HeaderSection } from '../../header_section';
+import { HeaderSection } from '../../../../common/components/header_section';
 
 type Props = Pick<OpenTimelineProps, 'onAddTimelinesToFavorites' | 'title'> & {
   /** The number of timelines currently selected */

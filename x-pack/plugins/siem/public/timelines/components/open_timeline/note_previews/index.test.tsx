@@ -11,7 +11,7 @@ import { mountWithIntl } from 'test_utils/enzyme_helpers';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { mockTimelineResults } from '../../../mock/timeline_results';
+import { mockTimelineResults } from '../../../../common/mock/timeline_results';
 import { OpenTimelineResult, TimelineResultNote } from '../types';
 import { NotePreviews } from '.';
 

@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { mockBrowserFields } from '../../../containers/source/mock';
+import { mockBrowserFields } from '../../../../common/containers/source/mock';
 
 import { defaultHeaders } from './column_headers/default_headers';
 import { getColumnHeaders } from './column_headers/helpers';

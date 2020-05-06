@@ -5,11 +5,11 @@
  */
 
 import { SetStateAction, Dispatch } from 'react';
-import { AllTimelinesVariables } from '../../containers/timeline/all';
-import { TimelineModel } from '../../store/timeline/model';
-import { NoteResult } from '../../graphql/types';
-import { Refetch } from '../../store/inputs/model';
-import { TimelineType } from '../../../common/types/timeline';
+import { AllTimelinesVariables } from '../../containers/all';
+import { TimelineModel } from '../../../common/store/timeline/model';
+import { NoteResult } from '../../../graphql/types';
+import { Refetch } from '../../../common/store/inputs/model';
+import { TimelineType } from '../../../../common/types/timeline';
 
 /** The users who added a timeline to favorites */
 export interface FavoriteTimelineResult {

@@ -8,7 +8,7 @@ import { EuiPanel, EuiTabbedContent, EuiTextArea } from '@elastic/eui';
 import React from 'react';
 import styled from 'styled-components';
 
-import { Markdown } from '../../markdown';
+import { Markdown } from '../../../../common/components/markdown';
 import { UpdateInternalNewNote } from '../helpers';
 import * as i18n from '../translations';
 

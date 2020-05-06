@@ -4,15 +4,16 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { TimelinesPageComponent } from './timelines_page';
-import { useKibana } from '../../lib/kibana';
+import ApolloClient from 'apollo-client';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import ApolloClient from 'apollo-client';
+
+import { useKibana } from '../../common/lib/kibana';
+import { TimelinesPageComponent } from './timelines_page';
 
 jest.mock('../../pages/overview/events_by_dataset');
 
-jest.mock('../../lib/kibana', () => {
+jest.mock('../../common/lib/kibana', () => {
   return {
     useKibana: jest.fn(),
   };
@@ -21,7 +22,7 @@ describe('TimelinesPageComponent', () => {
   const mockAppollloClient = {} as ApolloClient<object>;
   let wrapper: ShallowWrapper;
 
-  describe('If the user is authorised', () => {
+  describe('If the user is authorized', () => {
     beforeAll(() => {
       ((useKibana as unknown) as jest.Mock).mockReturnValue({
         services: {

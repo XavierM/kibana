@@ -8,7 +8,7 @@ import { EuiButton, EuiButtonEmpty, EuiFlexGroup, EuiFlexItem } from '@elastic/e
 import React, { useCallback } from 'react';
 import styled from 'styled-components';
 
-import { MarkdownHint } from '../../markdown/markdown_hint';
+import { MarkdownHint } from '../../../../common/components/markdown/markdown_hint';
 import {
   AssociateNote,
   GetNewNoteId,

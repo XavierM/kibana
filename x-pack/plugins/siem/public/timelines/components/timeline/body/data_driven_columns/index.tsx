@@ -7,8 +7,8 @@
 import React from 'react';
 import { getOr } from 'lodash/fp';
 
-import { Ecs, TimelineNonEcsData } from '../../../../graphql/types';
-import { ColumnHeaderOptions } from '../../../../store/timeline/model';
+import { Ecs, TimelineNonEcsData } from '../../../../../graphql/types';
+import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
 import { OnColumnResized } from '../../events';
 import { EventsTd, EventsTdContent, EventsTdGroupData } from '../../styles';
 import { ColumnRenderer } from '../renderers/column_renderer';

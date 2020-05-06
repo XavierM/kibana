@@ -10,14 +10,14 @@ import { mountWithIntl } from 'test_utils/enzyme_helpers';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { mockTimelineResults } from '../../../mock/timeline_results';
+import { mockTimelineResults } from '../../../../common/mock/timeline_results';
 import { OpenTimelineResult } from '../types';
 import { TimelinesTable, TimelinesTableProps } from '.';
 import { getMockTimelinesTableProps } from './mocks';
 
 import * as i18n from '../translations';
 
-jest.mock('../../../lib/kibana');
+jest.mock('../../../../common/lib/kibana');
 
 describe('TimelinesTable', () => {
   const theme = () => ({ eui: euiDarkVars, darkMode: true });

@@ -8,9 +8,9 @@ import { shallow } from 'enzyme';
 import { cloneDeep } from 'lodash/fp';
 import React from 'react';
 
-import { BrowserFields } from '../../../../../containers/source';
-import { mockBrowserFields } from '../../../../../containers/source/mock';
-import { Ecs } from '../../../../../graphql/types';
+import { BrowserFields } from '../../../../../../common/containers/source';
+import { mockBrowserFields } from '../../../../../../common/containers/source/mock';
+import { Ecs } from '../../../../../../graphql/types';
 import {
   mockDnsEvent,
   mockFimFileCreatedEvent,
@@ -19,7 +19,7 @@ import {
   mockSocketOpenedEvent,
   mockTimelineData,
   TestProviders,
-} from '../../../../../mock';
+} from '../../../../../../common/mock';
 import {
   mockEndgameAdminLogon,
   mockEndgameCreationEvent,
@@ -34,8 +34,8 @@ import {
   mockEndgameTerminationEvent,
   mockEndgameUserLogoff,
   mockEndgameUserLogon,
-} from '../../../../../mock/mock_endgame_ecs_data';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+} from '../../../../../../common/mock/mock_endgame_ecs_data';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 import { RowRenderer } from '../row_renderer';
 import {
   createDnsRowRenderer,

@@ -8,10 +8,10 @@ import { EuiFlexGroup, EuiSpacer } from '@elastic/eui';
 import { get } from 'lodash/fp';
 import React from 'react';
 
-import { BrowserFields } from '../../../../../containers/source';
-import { Ecs } from '../../../../../graphql/types';
-import { DraggableBadge } from '../../../../draggables';
-import { OverflowField } from '../../../../tables/helpers';
+import { BrowserFields } from '../../../../../../common/containers/source';
+import { Ecs } from '../../../../../../graphql/types';
+import { DraggableBadge } from '../../../../../../common/components/draggables';
+import { OverflowField } from '../../../../../../common/components/tables/helpers';
 
 import * as i18n from './translations';
 import { NetflowRenderer } from '../netflow';
@@ -20,7 +20,7 @@ import { Details, TokensFlexItem } from '../helpers';
 import { ProcessDraggable } from '../process_draggable';
 import { Package } from './package';
 import { AuthSsh } from './auth_ssh';
-import { Badge } from '../../../../page';
+import { Badge } from '../../../../../../common/components/page';
 
 interface Props {
   contextId: string;

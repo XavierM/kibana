@@ -6,8 +6,8 @@
 
 import React from 'react';
 
-import { BrowserFields } from '../../../../containers/source';
-import { Ecs } from '../../../../graphql/types';
+import { BrowserFields } from '../../../../../common/containers/source';
+import { Ecs } from '../../../../../graphql/types';
 import { EventsTrSupplement } from '../../styles';
 
 interface RowRendererContainerProps {

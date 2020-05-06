@@ -10,9 +10,9 @@ import React from 'react';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { ThemeProvider } from 'styled-components';
 
-import { wait } from '../../../lib/helpers';
-import { TestProviderWithoutDragAndDrop } from '../../../mock/test_providers';
-import { mockOpenTimelineQueryResults } from '../../../mock/timeline_results';
+import { wait } from '../../../../common/lib/helpers';
+import { TestProviderWithoutDragAndDrop } from '../../../../common/mock/test_providers';
+import { mockOpenTimelineQueryResults } from '../../../../common/mock/timeline_results';
 import * as i18n from '../translations';
 
 import { OpenTimelineModalButton } from './open_timeline_modal_button';

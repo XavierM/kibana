@@ -10,9 +10,9 @@ import { isString } from 'lodash/fp';
 import React, { useCallback, useMemo } from 'react';
 import styled from 'styled-components';
 
-import { getEmptyString } from '../../empty_value';
-import { WithCopyToClipboard } from '../../../lib/clipboard/with_copy_to_clipboard';
-import { WithHoverActions } from '../../with_hover_actions';
+import { getEmptyString } from '../../../../common/components/empty_value';
+import { WithCopyToClipboard } from '../../../../common/lib/clipboard/with_copy_to_clipboard';
+import { WithHoverActions } from '../../../../common/components/with_hover_actions';
 
 import { EXISTS_OPERATOR, QueryOperator } from './data_provider';
 

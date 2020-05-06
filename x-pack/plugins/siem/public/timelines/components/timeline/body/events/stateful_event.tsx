@@ -8,14 +8,14 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import uuid from 'uuid';
 import VisibilitySensor from 'react-visibility-sensor';
 
-import { BrowserFields } from '../../../../containers/source';
-import { TimelineDetailsQuery } from '../../../../containers/timeline/details';
-import { TimelineItem, DetailItem, TimelineNonEcsData } from '../../../../graphql/types';
-import { requestIdleCallbackViaScheduler } from '../../../../lib/helpers/scheduler';
-import { Note } from '../../../../lib/note';
-import { ColumnHeaderOptions } from '../../../../store/timeline/model';
+import { BrowserFields } from '../../../../../common/containers/source';
+import { TimelineDetailsQuery } from '../../../../containers/details';
+import { TimelineItem, DetailItem, TimelineNonEcsData } from '../../../../../graphql/types';
+import { requestIdleCallbackViaScheduler } from '../../../../../common/lib/helpers/scheduler';
+import { Note } from '../../../../../common/lib/note';
+import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
 import { AddNoteToEvent, UpdateNote } from '../../../notes/helpers';
-import { SkeletonRow } from '../../../skeleton_row';
+import { SkeletonRow } from '../../skeleton_row';
 import {
   OnColumnResized,
   OnPinEvent,
@@ -31,7 +31,7 @@ import { getRowRenderer } from '../renderers/get_row_renderer';
 import { RowRenderer } from '../renderers/row_renderer';
 import { getEventType } from '../helpers';
 import { NoteCards } from '../../../notes/note_cards';
-import { useEventDetailsWidthContext } from '../../../events_viewer/event_details_width_context';
+import { useEventDetailsWidthContext } from '../../../../../common/components/events_viewer/event_details_width_context';
 import { EventColumnView } from './event_column_view';
 
 interface Props {

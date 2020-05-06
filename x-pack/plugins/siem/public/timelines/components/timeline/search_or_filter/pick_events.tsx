@@ -8,7 +8,7 @@ import { EuiHealth, EuiSuperSelect } from '@elastic/eui';
 import React, { memo } from 'react';
 import styled from 'styled-components';
 
-import { EventType } from '../../../store/timeline/model';
+import { EventType } from '../../../../common/store/timeline/model';
 import * as i18n from './translations';
 
 interface EventTypeOptionItem {

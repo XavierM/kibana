@@ -6,8 +6,8 @@
 
 import { mount } from 'enzyme';
 import React from 'react';
-import { mockBrowserFields } from '../../containers/source/mock';
-import { TestProviders } from '../../mock';
+import { mockBrowserFields } from '../../../common/containers/source/mock';
+import { TestProviders } from '../../../common/mock';
 import { defaultHeaders } from '../timeline/body/column_headers/default_headers';
 import { Header } from './header';
 

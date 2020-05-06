@@ -4,9 +4,9 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { Direction } from '../../../../../graphql/types';
-import { assertUnreachable } from '../../../../../lib/helpers';
-import { ColumnHeaderOptions } from '../../../../../store/timeline/model';
+import { Direction } from '../../../../../../graphql/types';
+import { assertUnreachable } from '../../../../../../common/lib/helpers';
+import { ColumnHeaderOptions } from '../../../../../../common/store/timeline/model';
 import { Sort, SortDirection } from '../../sort';
 
 interface GetNewSortDirectionOnClickParams {

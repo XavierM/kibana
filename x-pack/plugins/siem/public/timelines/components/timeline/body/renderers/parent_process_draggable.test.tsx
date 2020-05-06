@@ -6,10 +6,10 @@
 
 import React from 'react';
 
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../../../common/mock';
 
 import { ParentProcessDraggable } from './parent_process_draggable';
-import { useMountAppended } from '../../../../utils/use_mount_appended';
+import { useMountAppended } from '../../../../../common/utils/use_mount_appended';
 
 describe('ParentProcessDraggable', () => {
   const mount = useMountAppended();

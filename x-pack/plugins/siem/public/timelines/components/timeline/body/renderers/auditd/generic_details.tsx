@@ -8,9 +8,9 @@ import { EuiFlexGroup, EuiSpacer } from '@elastic/eui';
 import { get } from 'lodash/fp';
 import React from 'react';
 
-import { BrowserFields } from '../../../../../containers/source';
-import { Ecs } from '../../../../../graphql/types';
-import { DraggableBadge } from '../../../../draggables';
+import { BrowserFields } from '../../../../../../common/containers/source';
+import { Ecs } from '../../../../../../graphql/types';
+import { DraggableBadge } from '../../../../../../common/components/draggables';
 
 import * as i18n from './translations';
 import { NetflowRenderer } from '../netflow';

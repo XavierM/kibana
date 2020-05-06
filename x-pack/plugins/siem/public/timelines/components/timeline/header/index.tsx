@@ -20,7 +20,7 @@ import {
   OnToggleDataProviderExcluded,
 } from '../events';
 import { StatefulSearchOrFilter } from '../search_or_filter';
-import { BrowserFields } from '../../../containers/source';
+import { BrowserFields } from '../../../../common/containers/source';
 
 import * as i18n from './translations';
 

@@ -7,9 +7,9 @@
 import React, { useMemo } from 'react';
 import uuid from 'uuid';
 
-import { TimelineNonEcsData, Ecs } from '../../../../graphql/types';
-import { Note } from '../../../../lib/note';
-import { ColumnHeaderOptions } from '../../../../store/timeline/model';
+import { TimelineNonEcsData, Ecs } from '../../../../../graphql/types';
+import { Note } from '../../../../../common/lib/note';
+import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
 import { AssociateNote, UpdateNote } from '../../../notes/helpers';
 import { OnColumnResized, OnPinEvent, OnRowSelected, OnUnPinEvent } from '../../events';
 import { EventsTdContent, EventsTrData } from '../../styles';

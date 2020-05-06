@@ -6,13 +6,13 @@
 
 import React from 'react';
 
-import { mockBrowserFields } from '../../containers/source/mock';
+import { mockBrowserFields } from '../../../common/containers/source/mock';
 
 import { Category } from './category';
 import { getFieldItems } from './field_items';
 import { FIELDS_PANE_WIDTH } from './helpers';
-import { TestProviders } from '../../mock';
-import { useMountAppended } from '../../utils/use_mount_appended';
+import { TestProviders } from '../../../common/mock';
+import { useMountAppended } from '../../../common/utils/use_mount_appended';
 
 import * as i18n from './translations';
 

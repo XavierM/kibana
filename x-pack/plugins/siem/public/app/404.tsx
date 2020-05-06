@@ -7,7 +7,7 @@
 import React from 'react';
 import { FormattedMessage } from '@kbn/i18n/react';
 
-import { WrapperPage } from '../components/wrapper_page';
+import { WrapperPage } from '../common/components/wrapper_page';
 
 export const NotFoundPage = React.memo(() => (
   <WrapperPage>

@@ -8,13 +8,13 @@ import { mount } from 'enzyme';
 import React from 'react';
 import { Provider as ReduxStoreProvider } from 'react-redux';
 
-import { mockGlobalState, apolloClientObservable } from '../../../mock';
-import { createStore, State } from '../../../store';
-import { useThrottledResizeObserver } from '../../utils';
+import { mockGlobalState, apolloClientObservable } from '../../../../common/mock';
+import { createStore, State } from '../../../../common/store';
+import { useThrottledResizeObserver } from '../../../../common/components/utils';
 
 import { Properties, showDescriptionThreshold, showNotesThreshold } from '.';
 
-jest.mock('../../../lib/kibana');
+jest.mock('../../../../common/lib/kibana');
 
 let mockedWidth = 1000;
 jest.mock('../../utils');

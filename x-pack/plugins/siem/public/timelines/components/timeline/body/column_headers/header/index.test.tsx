@@ -7,9 +7,9 @@
 import { mount, shallow } from 'enzyme';
 import React from 'react';
 
-import { Direction } from '../../../../../graphql/types';
-import { TestProviders } from '../../../../../mock';
-import { ColumnHeaderType } from '../../../../../store/timeline/model';
+import { Direction } from '../../../../../../graphql/types';
+import { TestProviders } from '../../../../../../common/mock';
+import { ColumnHeaderType } from '../../../../../../common/store/timeline/model';
 import { Sort } from '../../sort';
 import { CloseButton } from '../actions';
 import { defaultHeaders } from '../default_headers';

@@ -11,16 +11,16 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { mountWithIntl } from 'test_utils/enzyme_helpers';
 
-import { getEmptyValue } from '../../empty_value';
+import { getEmptyValue } from '../../../../common/components/empty_value';
 import { OpenTimelineResult } from '../types';
-import { mockTimelineResults } from '../../../mock/timeline_results';
+import { mockTimelineResults } from '../../../../common/mock/timeline_results';
 import { NotePreviews } from '../note_previews';
 import { TimelinesTable, TimelinesTableProps } from '.';
 
 import * as i18n from '../translations';
 import { getMockTimelinesTableProps } from './mocks';
 
-jest.mock('../../../lib/kibana');
+jest.mock('../../../../common/lib/kibana');
 
 describe('#getCommonColumns', () => {
   const theme = () => ({ eui: euiDarkVars, darkMode: true });

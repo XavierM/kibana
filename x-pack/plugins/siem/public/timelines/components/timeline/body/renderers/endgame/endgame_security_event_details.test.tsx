@@ -11,15 +11,15 @@
 
 import React from 'react';
 
-import { TestProviders } from '../../../../../mock';
-import { mockBrowserFields } from '../../../../../../public/containers/source/mock';
+import { TestProviders } from '../../../../../../common/mock';
+import { mockBrowserFields } from '../../../../../../common/containers/source/mock';
 import {
   mockEndgameAdminLogon,
   mockEndgameExplicitUserLogon,
   mockEndgameUserLogon,
   mockEndgameUserLogoff,
-} from '../../../../../../public/mock/mock_endgame_ecs_data';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+} from '../../../../../../common/mock/mock_endgame_ecs_data';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
 import { EndgameSecurityEventDetails } from './endgame_security_event_details';
 

@@ -8,9 +8,9 @@ import { EuiSpacer } from '@elastic/eui';
 import { get } from 'lodash/fp';
 import React from 'react';
 
-import { BrowserFields } from '../../../../../containers/source';
+import { BrowserFields } from '../../../../../../common/containers/source';
 import { Details } from '../helpers';
-import { Ecs } from '../../../../../graphql/types';
+import { Ecs } from '../../../../../../graphql/types';
 import { NetflowRenderer } from '../netflow';
 
 import { DnsRequestEventDetailsLine } from './dns_request_event_details_line';

@@ -9,7 +9,7 @@ import { mountWithIntl } from 'test_utils/enzyme_helpers';
 import { ThemeProvider } from 'styled-components';
 import euiDarkVars from '@elastic/eui/dist/eui_theme_dark.json';
 
-import { Note } from '../../../lib/note';
+import { Note } from '../../../../common/lib/note';
 
 import { NoteCards } from '.';
 

@@ -17,11 +17,11 @@ import {
 import { NewTimeline, Description, NotesButton, NewCase } from './helpers';
 import { OpenTimelineModalButton } from '../../open_timeline/open_timeline_modal/open_timeline_modal_button';
 import { OpenTimelineModal } from '../../open_timeline/open_timeline_modal';
-import { InspectButton, InspectButtonContainer } from '../../inspect';
+import { InspectButton, InspectButtonContainer } from '../../../../common/components/inspect';
 
 import * as i18n from './translations';
 import { AssociateNote } from '../../notes/helpers';
-import { Note } from '../../../lib/note';
+import { Note } from '../../../../common/lib/note';
 
 export const PropertiesRightStyle = styled(EuiFlexGroup)`
   margin-right: 5px;

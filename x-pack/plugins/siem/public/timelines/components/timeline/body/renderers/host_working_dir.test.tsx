@@ -7,8 +7,8 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { mockTimelineData, TestProviders } from '../../../../mock';
-import { useMountAppended } from '../../../../utils/use_mount_appended';
+import { mockTimelineData, TestProviders } from '../../../../../common/mock';
+import { useMountAppended } from '../../../../../common/utils/use_mount_appended';
 import { HostWorkingDir } from './host_working_dir';
 
 describe('HostWorkingDir', () => {

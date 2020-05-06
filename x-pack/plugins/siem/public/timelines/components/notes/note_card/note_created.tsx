@@ -8,7 +8,7 @@ import { FormattedRelative } from '@kbn/i18n/react';
 import React from 'react';
 import styled from 'styled-components';
 
-import { LocalizedDateTooltip } from '../../localized_date_tooltip';
+import { LocalizedDateTooltip } from '../../../../common/components/localized_date_tooltip';
 
 const NoteCreatedContainer = styled.span`
   user-select: none;

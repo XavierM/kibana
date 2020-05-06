@@ -9,8 +9,8 @@ import React, { useEffect, useCallback } from 'react';
 import { noop } from 'lodash/fp';
 import styled from 'styled-components';
 
-import { BrowserFields } from '../../containers/source';
-import { ColumnHeaderOptions } from '../../store/timeline/model';
+import { BrowserFields } from '../../../common/containers/source';
+import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
 import { CategoriesPane } from './categories_pane';
 import { FieldsPane } from './fields_pane';
 import { Header } from './header';

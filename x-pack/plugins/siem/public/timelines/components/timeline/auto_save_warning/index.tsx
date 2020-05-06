@@ -14,13 +14,13 @@ import { getOr } from 'lodash/fp';
 import React from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 
-import { State, timelineSelectors } from '../../../store';
-import { setTimelineRangeDatePicker as dispatchSetTimelineRangeDatePicker } from '../../../store/inputs/actions';
+import { State, timelineSelectors } from '../../../../common/store';
+import { setTimelineRangeDatePicker as dispatchSetTimelineRangeDatePicker } from '../../../../common/store/inputs/actions';
 
 import * as i18n from './translations';
-import { timelineActions } from '../../../store/timeline';
-import { AutoSavedWarningMsg } from '../../../store/timeline/types';
-import { useStateToaster } from '../../toasters';
+import { timelineActions } from '../../../../common/store/timeline';
+import { AutoSavedWarningMsg } from '../../../../common/store/timeline/types';
+import { useStateToaster } from '../../../../common/components/toasters';
 
 const AutoSaveWarningMsgComponent = React.memo<PropsFromRedux>(
   ({

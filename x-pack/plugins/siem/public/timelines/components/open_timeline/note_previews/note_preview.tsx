@@ -9,9 +9,9 @@ import { FormattedRelative } from '@kbn/i18n/react';
 import React from 'react';
 import styled from 'styled-components';
 
-import { getEmptyValue, defaultToEmptyTag } from '../../empty_value';
-import { FormattedDate } from '../../formatted_date';
-import { Markdown } from '../../markdown';
+import { getEmptyValue, defaultToEmptyTag } from '../../../../common/components/empty_value';
+import { FormattedDate } from '../../../../common/components/formatted_date';
+import { Markdown } from '../../../../common/components/markdown';
 import * as i18n from '../translations';
 import { TimelineResultNote } from '../types';
 

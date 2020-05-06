@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { mockBrowserFields } from '../../containers/source/mock';
+import { mockBrowserFields } from '../../../common/containers/source/mock';
 
 import {
   categoryHasFields,
@@ -15,7 +15,7 @@ import {
   getFieldCount,
   filterBrowserFieldsByFieldName,
 } from './helpers';
-import { BrowserFields } from '../../containers/source';
+import { BrowserFields } from '../../../common/containers/source';
 
 const timelineId = 'test';
 

@@ -8,7 +8,7 @@ import { EuiLoadingSpinner } from '@elastic/eui';
 import { filter, get, pickBy } from 'lodash/fp';
 import styled from 'styled-components';
 
-import { BrowserField, BrowserFields } from '../../containers/source';
+import { BrowserField, BrowserFields } from '../../../common/containers/source';
 import {
   DEFAULT_CATEGORY_NAME,
   defaultHeaders,

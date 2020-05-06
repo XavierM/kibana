@@ -9,7 +9,7 @@ import { rgba } from 'polished';
 import React, { useCallback } from 'react';
 import styled from 'styled-components';
 
-import { AndOrBadge } from '../../and_or_badge';
+import { AndOrBadge } from '../and_or_badge';
 import {
   OnChangeDataProviderKqlQuery,
   OnChangeDroppableAndProvider,
@@ -19,7 +19,7 @@ import {
   OnToggleDataProviderExcluded,
 } from '../events';
 
-import { BrowserFields } from '../../../containers/source';
+import { BrowserFields } from '../../../../common/containers/source';
 
 import { DataProvider } from './data_provider';
 import { ProviderItemAnd } from './provider_item_and';

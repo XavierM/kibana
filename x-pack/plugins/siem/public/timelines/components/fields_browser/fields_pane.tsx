@@ -8,8 +8,8 @@ import { EuiFlexGroup, EuiFlexItem } from '@elastic/eui';
 import React from 'react';
 import styled from 'styled-components';
 
-import { BrowserFields } from '../../containers/source';
-import { ColumnHeaderOptions } from '../../store/timeline/model';
+import { BrowserFields } from '../../../common/containers/source';
+import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
 
 import { Category } from './category';
 import { FieldBrowserProps } from './types';

@@ -8,9 +8,9 @@ import { EuiPanel, EuiToolTip } from '@elastic/eui';
 import React, { useCallback, useMemo } from 'react';
 import styled from 'styled-components';
 
-import { WithCopyToClipboard } from '../../../lib/clipboard/with_copy_to_clipboard';
-import { Markdown } from '../../markdown';
-import { WithHoverActions } from '../../with_hover_actions';
+import { WithCopyToClipboard } from '../../../../common/lib/clipboard/with_copy_to_clipboard';
+import { Markdown } from '../../../../common/components/markdown';
+import { WithHoverActions } from '../../../../common/components/with_hover_actions';
 import * as i18n from '../translations';
 
 const BodyContainer = styled(EuiPanel)`

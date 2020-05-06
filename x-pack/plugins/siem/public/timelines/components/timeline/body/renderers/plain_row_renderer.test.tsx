@@ -10,9 +10,9 @@ import { cloneDeep } from 'lodash';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { mockBrowserFields } from '../../../../containers/source/mock';
-import { Ecs } from '../../../../graphql/types';
-import { mockTimelineData } from '../../../../mock';
+import { mockBrowserFields } from '../../../../../common/containers/source/mock';
+import { Ecs } from '../../../../../graphql/types';
+import { mockTimelineData } from '../../../../../common/mock';
 import { plainRowRenderer } from './plain_row_renderer';
 
 describe('plain_row_renderer', () => {

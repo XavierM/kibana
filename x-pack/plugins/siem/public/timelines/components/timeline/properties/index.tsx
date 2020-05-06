@@ -6,9 +6,9 @@
 
 import React, { useState, useCallback, useMemo } from 'react';
 
-import { useThrottledResizeObserver } from '../../utils';
-import { Note } from '../../../lib/note';
-import { InputsModelId } from '../../../store/inputs/constants';
+import { useThrottledResizeObserver } from '../../../../common/components/utils';
+import { Note } from '../../../../common/lib/note';
+import { InputsModelId } from '../../../../common/store/inputs/constants';
 import { AssociateNote, UpdateNote } from '../../notes/helpers';
 
 import { TimelineProperties } from './styles';

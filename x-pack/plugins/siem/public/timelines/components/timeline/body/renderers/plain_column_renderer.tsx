@@ -7,9 +7,9 @@
 import { head } from 'lodash/fp';
 import React from 'react';
 
-import { TimelineNonEcsData } from '../../../../graphql/types';
-import { ColumnHeaderOptions } from '../../../../store/timeline/model';
-import { getEmptyTagValue } from '../../../empty_value';
+import { TimelineNonEcsData } from '../../../../../graphql/types';
+import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
+import { getEmptyTagValue } from '../../../../../common/components/empty_value';
 import { ColumnRenderer } from './column_renderer';
 import { FormattedFieldValue } from './formatted_field';
 import { parseValue } from './parse_value';

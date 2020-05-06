@@ -10,11 +10,11 @@ import { mountWithIntl } from 'test_utils/enzyme_helpers';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { mockTimelineResults } from '../../../mock/timeline_results';
+import { mockTimelineResults } from '../../../../common/mock/timeline_results';
 import { TimelinesTable, TimelinesTableProps } from '.';
 import { OpenTimelineResult } from '../types';
 import { getMockTimelinesTableProps } from './mocks';
-jest.mock('../../../lib/kibana');
+jest.mock('../../../../common/lib/kibana');
 
 describe('#getActionsColumns', () => {
   const theme = () => ({ eui: euiDarkVars, darkMode: true });

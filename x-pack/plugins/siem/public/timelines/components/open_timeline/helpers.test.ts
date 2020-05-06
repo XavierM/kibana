@@ -10,19 +10,19 @@ import {
   mockTimelineResults,
   mockTimelineResult,
   mockTimelineModel,
-} from '../../mock/timeline_results';
-import { timelineDefaults } from '../../store/timeline/defaults';
-import { setTimelineRangeDatePicker as dispatchSetTimelineRangeDatePicker } from '../../store/inputs/actions';
+} from '../../../common/mock/timeline_results';
+import { timelineDefaults } from '../../../common/store/timeline/defaults';
+import { setTimelineRangeDatePicker as dispatchSetTimelineRangeDatePicker } from '../../../common/store/inputs/actions';
 import {
   setKqlFilterQueryDraft as dispatchSetKqlFilterQueryDraft,
   applyKqlFilterQuery as dispatchApplyKqlFilterQuery,
   addTimeline as dispatchAddTimeline,
   addNote as dispatchAddGlobalTimelineNote,
-} from '../../store/timeline/actions';
+} from '../../../common/store/timeline/actions';
 import {
   addNotes as dispatchAddNotes,
   updateNote as dispatchUpdateNote,
-} from '../../store/app/actions';
+} from '../../../common/store/app/actions';
 import {
   defaultTimelineToTimelineModel,
   getNotesCount,
@@ -32,14 +32,14 @@ import {
   dispatchUpdateTimeline,
 } from './helpers';
 import { OpenTimelineResult, DispatchUpdateTimeline } from './types';
-import { KueryFilterQueryKind } from '../../store/model';
-import { Note } from '../../lib/note';
+import { KueryFilterQueryKind } from '../../../common/store/model';
+import { Note } from '../../../common/lib/note';
 import moment from 'moment';
 import sinon from 'sinon';
 
-jest.mock('../../store/inputs/actions');
-jest.mock('../../store/timeline/actions');
-jest.mock('../../store/app/actions');
+jest.mock('../../../common/store/inputs/actions');
+jest.mock('../../../common/store/timeline/actions');
+jest.mock('../../../common/store/app/actions');
 jest.mock('uuid', () => {
   return {
     v1: jest.fn(() => 'uuid.v1()'),

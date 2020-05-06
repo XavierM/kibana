@@ -8,9 +8,9 @@ import { shallow } from 'enzyme';
 import { cloneDeep } from 'lodash/fp';
 import React from 'react';
 
-import { Ecs } from '../../../../../graphql/types';
-import { mockTimelineData, TestProviders } from '../../../../../mock';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { Ecs } from '../../../../../../graphql/types';
+import { mockTimelineData, TestProviders } from '../../../../../../common/mock';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 import {
   ZeekSignature,
   extractStateValue,

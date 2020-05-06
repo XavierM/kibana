@@ -12,19 +12,27 @@ import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 
-import { BrowserField, BrowserFields } from '../../containers/source';
-import { ColumnHeaderOptions } from '../../store/timeline/model';
-import { DragEffects } from '../drag_and_drop/draggable_wrapper';
-import { DroppableWrapper } from '../drag_and_drop/droppable_wrapper';
-import { getDraggableFieldId, getDroppableId, DRAG_TYPE_FIELD } from '../drag_and_drop/helpers';
-import { DraggableFieldBadge } from '../draggables/field_badge';
-import { getEmptyValue } from '../empty_value';
-import { getColumnsWithTimestamp, getExampleText, getIconFromType } from '../event_details/helpers';
-import { SelectableText } from '../selectable_text';
+import { BrowserField, BrowserFields } from '../../../common/containers/source';
+import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
+import { DragEffects } from '../../../common/components/drag_and_drop/draggable_wrapper';
+import { DroppableWrapper } from '../../../common/components/drag_and_drop/droppable_wrapper';
+import {
+  getDraggableFieldId,
+  getDroppableId,
+  DRAG_TYPE_FIELD,
+} from '../../../common/components/drag_and_drop/helpers';
+import { DraggableFieldBadge } from '../../../common/components/draggables/field_badge';
+import { getEmptyValue } from '../../../common/components/empty_value';
+import {
+  getColumnsWithTimestamp,
+  getExampleText,
+  getIconFromType,
+} from '../../../common/components/event_details/helpers';
+import { SelectableText } from '../../../common/components/selectable_text';
 import { defaultColumnHeaderType } from '../timeline/body/column_headers/default_headers';
 import { DEFAULT_COLUMN_MIN_WIDTH } from '../timeline/body/constants';
 import { OnUpdateColumns } from '../timeline/events';
-import { TruncatableText } from '../truncatable_text';
+import { TruncatableText } from '../../../common/components/truncatable_text';
 import { FieldName } from './field_name';
 import * as i18n from './translations';
 

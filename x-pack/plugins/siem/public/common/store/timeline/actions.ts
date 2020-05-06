@@ -6,7 +6,7 @@
 
 import actionCreatorFactory from 'typescript-fsa';
 
-import { Filter } from '../../../../../../src/plugins/data/public';
+import { Filter } from '../../../../../../../src/plugins/data/public';
 import { Sort } from '../../components/timeline/body/sort';
 import {
   DataProvider,
@@ -15,7 +15,7 @@ import {
 import { KueryFilterQuery, SerializedFilterQuery } from '../types';
 
 import { EventType, KqlMode, TimelineModel, ColumnHeaderOptions } from './model';
-import { TimelineNonEcsData } from '../../graphql/types';
+import { TimelineNonEcsData } from '../../../graphql/types';
 
 const actionCreator = actionCreatorFactory('x-pack/siem/local/timeline');
 

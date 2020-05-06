@@ -23,15 +23,15 @@ import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { Note } from '../../../lib/note';
+import { Note } from '../../../../common/lib/note';
 import { Notes } from '../../notes';
 import { AssociateNote, UpdateNote } from '../../notes/helpers';
 import { NOTES_PANEL_WIDTH } from './notes_size';
 import { ButtonContainer, DescriptionContainer, LabelText, NameField, StyledStar } from './styles';
 import * as i18n from './translations';
-import { SiemPageName } from '../../../pages/home/types';
-import { timelineSelectors } from '../../../store/timeline';
-import { State } from '../../../store';
+import { SiemPageName } from '../../../../app/home/types';
+import { timelineSelectors } from '../../../../common/store/timeline';
+import { State } from '../../../../common/store';
 
 export const historyToolTip = 'The chronological history of actions related to this timeline';
 export const streamLiveToolTip = 'Update the Timeline as new data arrives';

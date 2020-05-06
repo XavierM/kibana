@@ -7,11 +7,11 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { BrowserFields } from '../../../../../containers/source';
-import { mockBrowserFields } from '../../../../../containers/source/mock';
-import { mockTimelineData, TestProviders } from '../../../../../mock';
+import { BrowserFields } from '../../../../../../common/containers/source';
+import { mockBrowserFields } from '../../../../../../common/containers/source/mock';
+import { mockTimelineData, TestProviders } from '../../../../../../common/mock';
 import { AuditdGenericDetails, AuditdGenericLine } from './generic_details';
-import { useMountAppended } from '../../../../../utils/use_mount_appended';
+import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
 describe('GenericDetails', () => {
   const mount = useMountAppended();

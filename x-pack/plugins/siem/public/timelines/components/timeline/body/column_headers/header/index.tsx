@@ -7,7 +7,7 @@
 import { noop } from 'lodash/fp';
 import React, { useCallback } from 'react';
 
-import { ColumnHeaderOptions } from '../../../../../store/timeline/model';
+import { ColumnHeaderOptions } from '../../../../../../common/store/timeline/model';
 import { OnColumnRemoved, OnColumnSorted, OnFilterChange } from '../../../events';
 import { Sort } from '../../sort';
 import { Actions } from '../actions';

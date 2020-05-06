@@ -8,12 +8,12 @@ import React, { useEffect, useCallback, useMemo } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import deepEqual from 'fast-deep-equal';
 
-import { WithSource } from '../../containers/source';
-import { useSignalIndex } from '../../containers/detection_engine/signals/use_signal_index';
-import { inputsModel, inputsSelectors, State, timelineSelectors } from '../../store';
-import { timelineActions } from '../../store/actions';
-import { ColumnHeaderOptions, TimelineModel } from '../../store/timeline/model';
-import { timelineDefaults } from '../../store/timeline/defaults';
+import { WithSource } from '../../../common/containers/source';
+import { useSignalIndex } from '../../../alerts/container/detection_engine/signals/use_signal_index';
+import { inputsModel, inputsSelectors, State, timelineSelectors } from '../../../common/store';
+import { timelineActions } from '../../../common/store/actions';
+import { ColumnHeaderOptions, TimelineModel } from '../../../common/store/timeline/model';
+import { timelineDefaults } from '../../../common/store/timeline/defaults';
 import { defaultHeaders } from './body/column_headers/default_headers';
 import {
   OnChangeDataProviderKqlQuery,

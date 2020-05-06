@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import { DraggableBadge } from '../../../draggables';
+import { DraggableBadge } from '../../../../../common/components/draggables';
 
 import { isNillEmptyOrNotFinite } from './helpers';
 import * as i18n from './translations';

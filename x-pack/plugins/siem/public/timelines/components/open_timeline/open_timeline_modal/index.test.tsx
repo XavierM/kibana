@@ -10,14 +10,14 @@ import React from 'react';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { ThemeProvider } from 'styled-components';
 
-import { wait } from '../../../lib/helpers';
-import { TestProviderWithoutDragAndDrop } from '../../../mock/test_providers';
-import { mockOpenTimelineQueryResults } from '../../../mock/timeline_results';
-import { useGetAllTimeline, getAllTimeline } from '../../../containers/timeline/all';
+import { wait } from '../../../../common/lib/helpers';
+import { TestProviderWithoutDragAndDrop } from '../../../../common/mock/test_providers';
+import { mockOpenTimelineQueryResults } from '../../../../common/mock/timeline_results';
+import { useGetAllTimeline, getAllTimeline } from '../../../containers//all';
 
 import { OpenTimelineModal } from '.';
 
-jest.mock('../../../lib/kibana');
+jest.mock('../../../../common/lib/kibana');
 jest.mock('../../../utils/apollo_context', () => ({
   useApolloClient: () => ({}),
 }));

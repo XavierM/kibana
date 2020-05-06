@@ -10,8 +10,8 @@ import { mountWithIntl } from 'test_utils/enzyme_helpers';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { getEmptyValue } from '../../empty_value';
-import { mockTimelineResults } from '../../../mock/timeline_results';
+import { getEmptyValue } from '../../../../common/components/empty_value';
+import { mockTimelineResults } from '../../../../common/mock/timeline_results';
 import { OpenTimelineResult } from '../types';
 
 import { TimelinesTable, TimelinesTableProps } from '.';
@@ -19,7 +19,7 @@ import { TimelinesTable, TimelinesTableProps } from '.';
 import * as i18n from '../translations';
 import { getMockTimelinesTableProps } from './mocks';
 
-jest.mock('../../../lib/kibana');
+jest.mock('../../../../common/lib/kibana');
 
 describe('#getExtendedColumns', () => {
   const theme = () => ({ eui: euiDarkVars, darkMode: true });

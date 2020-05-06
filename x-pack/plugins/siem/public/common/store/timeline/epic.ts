@@ -28,9 +28,9 @@ import {
   takeUntil,
 } from 'rxjs/operators';
 
-import { esFilters, Filter, MatchAllFilter } from '../../../../../../src/plugins/data/public';
-import { TimelineInput, ResponseTimeline, TimelineResult } from '../../graphql/types';
-import { AppApolloClient } from '../../lib/lib';
+import { esFilters, Filter, MatchAllFilter } from '../../../../../../../src/plugins/data/public';
+import { TimelineInput, ResponseTimeline, TimelineResult } from '../../../graphql/types';
+import { AppApolloClient } from '../../../common/lib/lib';
 import { addError } from '../app/actions';
 import { NotesById } from '../app/model';
 import { inputsModel } from '../inputs';

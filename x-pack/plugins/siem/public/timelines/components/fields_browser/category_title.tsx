@@ -8,9 +8,9 @@ import { EuiFlexGroup, EuiFlexItem, EuiTitle } from '@elastic/eui';
 import React from 'react';
 import styled from 'styled-components';
 
-import { BrowserFields } from '../../containers/source';
+import { BrowserFields } from '../../../common/containers/source';
 import { getFieldBrowserCategoryTitleClassName, getFieldCount } from './helpers';
-import { CountBadge } from '../page';
+import { CountBadge } from '../../../common/components/page';
 
 const CountBadgeContainer = styled.div`
   position: relative;

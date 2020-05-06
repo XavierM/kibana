@@ -8,8 +8,8 @@ import { EuiSpacer } from '@elastic/eui';
 import React from 'react';
 import styled from 'styled-components';
 
-import { BrowserFields } from '../../../../../containers/source';
-import { Ecs } from '../../../../../graphql/types';
+import { BrowserFields } from '../../../../../../common/containers/source';
+import { Ecs } from '../../../../../../graphql/types';
 
 import { NetflowRenderer } from '../netflow';
 import { ZeekSignature } from './zeek_signature';

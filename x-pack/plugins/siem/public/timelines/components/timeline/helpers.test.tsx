@@ -5,12 +5,12 @@
  */
 
 import { cloneDeep } from 'lodash/fp';
-import { mockIndexPattern } from '../../mock';
+import { mockIndexPattern } from '../../../common/mock';
 
 import { mockDataProviders } from './data_providers/mock/mock_data_providers';
 import { buildGlobalQuery, combineQueries } from './helpers';
-import { mockBrowserFields } from '../../containers/source/mock';
-import { EsQueryConfig, Filter, esFilters } from '../../../../../../src/plugins/data/public';
+import { mockBrowserFields } from '../../../common/containers/source/mock';
+import { EsQueryConfig, Filter, esFilters } from '../../../../../../../src/plugins/data/public';
 
 const cleanUpKqlQuery = (str: string) => str.replace(/\n/g, '').replace(/\s\s+/g, ' ');
 const startDate = new Date('2018-03-23T18:49:23.132Z').valueOf();

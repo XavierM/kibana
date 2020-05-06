@@ -7,16 +7,16 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { createKibanaCoreStartMock } from '../../../mock/kibana_core';
-import { TestProviders } from '../../../mock/test_providers';
-import { DroppableWrapper } from '../../drag_and_drop/droppable_wrapper';
-import { FilterManager } from '../../../../../../../src/plugins/data/public';
+import { createKibanaCoreStartMock } from '../../../../common/mock/kibana_core';
+import { TestProviders } from '../../../../common/mock/test_providers';
+import { DroppableWrapper } from '../../../../common/components/drag_and_drop/droppable_wrapper';
+import { FilterManager } from '../../../../../../../../src/plugins/data/public';
 import { TimelineContext } from '../timeline_context';
 
 import { mockDataProviders } from './mock/mock_data_providers';
 import { getDraggableId, Providers } from './providers';
 import { DELETE_CLASS_NAME, ENABLE_CLASS_NAME, EXCLUDE_CLASS_NAME } from './provider_item_actions';
-import { useMountAppended } from '../../../utils/use_mount_appended';
+import { useMountAppended } from '../../../../common/utils/use_mount_appended';
 
 const mockUiSettingsForFilterManager = createKibanaCoreStartMock().uiSettings;
 

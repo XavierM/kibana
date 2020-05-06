@@ -15,7 +15,7 @@ import {
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { Note } from '../../lib/note';
+import { Note } from '../../../common/lib/note';
 
 import { AddNote } from './add_note';
 import { columns } from './columns';

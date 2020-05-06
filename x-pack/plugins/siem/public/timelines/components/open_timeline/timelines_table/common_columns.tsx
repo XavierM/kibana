@@ -15,8 +15,8 @@ import { isUntitled } from '../helpers';
 import { NotePreviews } from '../note_previews';
 import * as i18n from '../translations';
 import { OnOpenTimeline, OnToggleShowNotes, OpenTimelineResult } from '../types';
-import { getEmptyTagValue } from '../../empty_value';
-import { FormattedRelativePreferenceDate } from '../../formatted_date';
+import { getEmptyTagValue } from '../../../../common/components/empty_value';
+import { FormattedRelativePreferenceDate } from '../../../../common/components/formatted_date';
 
 /**
  * Returns the column definitions (passed as the `columns` prop to

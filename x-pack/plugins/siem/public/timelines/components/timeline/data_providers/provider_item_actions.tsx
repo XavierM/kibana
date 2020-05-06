@@ -12,7 +12,7 @@ import {
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 
-import { BrowserFields } from '../../../containers/source';
+import { BrowserFields } from '../../../../common/containers/source';
 import { OnDataProviderEdited } from '../events';
 import { QueryOperator, EXISTS_OPERATOR } from './data_provider';
 import { StatefulEditDataProvider } from '../../edit_data_provider';

@@ -10,22 +10,22 @@ import { Action } from 'typescript-fsa';
 import uuid from 'uuid';
 
 import { Dispatch } from 'redux';
-import { oneTimelineQuery } from '../../containers/timeline/one/index.gql_query';
-import { TimelineResult, GetOneTimeline, NoteResult } from '../../graphql/types';
+import { oneTimelineQuery } from '../../containers/one/index.gql_query';
+import { TimelineResult, GetOneTimeline, NoteResult } from '../../../graphql/types';
 import {
   addNotes as dispatchAddNotes,
   updateNote as dispatchUpdateNote,
-} from '../../store/app/actions';
-import { setTimelineRangeDatePicker as dispatchSetTimelineRangeDatePicker } from '../../store/inputs/actions';
+} from '../../../common/store/app/actions';
+import { setTimelineRangeDatePicker as dispatchSetTimelineRangeDatePicker } from '../../../common/store/inputs/actions';
 import {
   setKqlFilterQueryDraft as dispatchSetKqlFilterQueryDraft,
   applyKqlFilterQuery as dispatchApplyKqlFilterQuery,
   addTimeline as dispatchAddTimeline,
   addNote as dispatchAddGlobalTimelineNote,
-} from '../../store/timeline/actions';
+} from '../../../common/store/timeline/actions';
 
-import { ColumnHeaderOptions, TimelineModel } from '../../store/timeline/model';
-import { timelineDefaults } from '../../store/timeline/defaults';
+import { ColumnHeaderOptions, TimelineModel } from '../../../common/store/timeline/model';
+import { timelineDefaults } from '../../../common/store/timeline/defaults';
 import {
   defaultColumnHeaderType,
   defaultHeaders,
@@ -36,7 +36,7 @@ import {
 } from '../timeline/body/constants';
 
 import { OpenTimelineResult, UpdateTimeline, DispatchUpdateTimeline } from './types';
-import { getTimeRangeSettings } from '../../utils/default_date_settings';
+import { getTimeRangeSettings } from '../../../common/utils/default_date_settings';
 import { createNote } from '../notes/helpers';
 
 export const OPEN_TIMELINE_CLASS_NAME = 'open-timeline';
