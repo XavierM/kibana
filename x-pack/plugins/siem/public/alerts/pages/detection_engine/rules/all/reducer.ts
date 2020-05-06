@@ -9,7 +9,7 @@ import {
   FilterOptions,
   PaginationOptions,
   Rule,
-} from '../../../../container/detection_engine/rules';
+} from '../../../../containers/detection_engine/rules';
 
 type LoadingRuleAction = 'duplicate' | 'enable' | 'disable' | 'export' | 'delete' | null;
 export interface State {

@@ -6,7 +6,8 @@
 
 import { isEmpty } from 'lodash/fp';
 
-import { ChromeBreadcrumb } from '../../../../../../../src/core/public';
+// eslint-disable-next-line @kbn/eslint/no-restricted-paths
+import { ChromeBreadcrumb } from '../../../../../../../../src/core/public';
 import {
   getDetectionEngineUrl,
   getDetectionEngineTabUrl,
@@ -14,10 +15,10 @@ import {
   getRuleDetailsUrl,
   getCreateRuleUrl,
   getEditRuleUrl,
-} from '../../../components/link_to/redirect_to_detection_engine';
+} from '../../../../common/components/link_to/redirect_to_detection_engine';
 import * as i18nDetections from '../translations';
 import * as i18nRules from './translations';
-import { RouteSpyState } from '../../../utils/route/types';
+import { RouteSpyState } from '../../../../common/utils/route/types';
 
 const getTabBreadcrumb = (pathname: string, search: string[]) => {
   const tabPath = pathname.split('/')[2];

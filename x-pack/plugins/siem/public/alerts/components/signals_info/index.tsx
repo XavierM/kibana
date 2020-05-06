@@ -8,7 +8,7 @@ import { EuiLoadingSpinner } from '@elastic/eui';
 import { FormattedRelative } from '@kbn/i18n/react';
 import React, { useState, useEffect } from 'react';
 
-import { useQuerySignals } from '../../container/detection_engine/signals/use_query';
+import { useQuerySignals } from '../../containers/detection_engine/signals/use_query';
 import { buildLastSignalsQuery } from './query.dsl';
 import { Aggs } from './types';
 

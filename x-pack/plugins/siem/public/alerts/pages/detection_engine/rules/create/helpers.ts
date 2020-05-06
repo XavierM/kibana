@@ -12,7 +12,7 @@ import { NOTIFICATION_THROTTLE_NO_ACTIONS } from '../../../../../../common/const
 import { transformAlertToRuleAction } from '../../../../../../common/detection_engine/transform_actions';
 import { RuleType } from '../../../../../../common/detection_engine/types';
 import { isMlRule } from '../../../../../../common/detection_engine/ml_helpers';
-import { NewRule } from '../../../../container/detection_engine/rules';
+import { NewRule } from '../../../../containers/detection_engine/rules';
 
 import {
   AboutStepRule,

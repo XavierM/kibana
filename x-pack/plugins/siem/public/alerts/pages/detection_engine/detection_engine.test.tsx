@@ -8,13 +8,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { useParams } from 'react-router-dom';
 
-import '../../mock/match_media';
-import { setAbsoluteRangeDatePicker } from '../../store/inputs/actions';
+import '../../../common/mock/match_media';
+import { setAbsoluteRangeDatePicker } from '../../../common/store/inputs/actions';
 import { DetectionEnginePageComponent } from './detection_engine';
-import { useUserInfo } from '../../components/components/user_info';
+import { useUserInfo } from '../../components/user_info';
 
-jest.mock('./components/user_info');
-jest.mock('../../lib/kibana');
+jest.mock('../../components/user_info');
+jest.mock('../../../common/lib/kibana');
 jest.mock('react-router-dom', () => {
   const originalModule = jest.requireActual('react-router-dom');
 

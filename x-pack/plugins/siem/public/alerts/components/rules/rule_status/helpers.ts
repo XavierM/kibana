@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { RuleStatusType } from '../../../container/detection_engine/rules';
+import { RuleStatusType } from '../../../containers/detection_engine/rules';
 
 export const getStatusColor = (status: RuleStatusType | string | null) =>
   status == null

@@ -8,7 +8,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { DetectionEngineNoIndex } from './detection_engine_no_signal_index';
-jest.mock('../../lib/kibana');
+jest.mock('../../../common/lib/kibana');
 
 describe('DetectionEngineNoIndex', () => {
   it('renders correctly', () => {

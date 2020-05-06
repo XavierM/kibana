@@ -16,7 +16,7 @@ import styled from 'styled-components';
 import React, { useCallback, useState, useEffect } from 'react';
 
 import * as i18n from '../../../pages/detection_engine/rules/translations';
-import { enableRules } from '../../../container/detection_engine/rules';
+import { enableRules } from '../../../containers/detection_engine/rules';
 import { enableRulesAction } from '../../../pages/detection_engine/rules/all/actions';
 import { Action } from '../../../pages/detection_engine/rules/all/reducer';
 import { useStateToaster, displayErrorToast } from '../../../../common/components/toasters';

@@ -11,7 +11,7 @@ import { connect, ConnectedProps } from 'react-redux';
 import { Dispatch } from 'redux';
 
 import { Filter, esQuery } from '../../../../../../../src/plugins/data/public';
-import { useFetchIndexPatterns } from '../../container/detection_engine/rules/fetch_index_patterns';
+import { useFetchIndexPatterns } from '../../containers/detection_engine/rules/fetch_index_patterns';
 import { StatefulEventsViewer } from '../../../common/components/events_viewer';
 import { HeaderSection } from '../../../common/components/header_section';
 import { combineQueries } from '../../../timelines/components/timeline/helpers';

@@ -9,7 +9,7 @@ import React, { useCallback, useRef, useState, useMemo } from 'react';
 import { Redirect } from 'react-router-dom';
 import styled, { StyledComponent } from 'styled-components';
 
-import { usePersistRule } from '../../../../container/detection_engine/rules';
+import { usePersistRule } from '../../../../containers/detection_engine/rules';
 
 import { DETECTION_ENGINE_PAGE_NAME } from '../../../../../common/components/link_to/redirect_to_detection_engine';
 import { WrapperPage } from '../../../../../common/components/wrapper_page';

@@ -8,7 +8,7 @@ import dateMath from '@elastic/datemath';
 import { getOr, isEmpty } from 'lodash/fp';
 import moment from 'moment';
 
-import { updateSignalStatus } from '../../container/detection_engine/signals/api';
+import { updateSignalStatus } from '../../containers/detection_engine/signals/api';
 import { SendSignalToTimelineActionProps, UpdateSignalStatusActionProps } from './types';
 import { TimelineNonEcsData, GetOneTimeline, TimelineResult, Ecs } from '../../../graphql/types';
 import { oneTimelineQuery } from '../../../timelines/container/one/index.gql_query';

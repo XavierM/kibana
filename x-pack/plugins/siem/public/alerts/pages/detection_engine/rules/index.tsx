@@ -8,21 +8,21 @@ import { EuiButton, EuiFlexGroup, EuiFlexItem } from '@elastic/eui';
 import React, { useCallback, useRef, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 
-import { usePrePackagedRules, importRules } from '../../../container/detection_engine/rules';
+import { usePrePackagedRules, importRules } from '../../../containers/detection_engine/rules';
 import {
   DETECTION_ENGINE_PAGE_NAME,
   getDetectionEngineUrl,
   getCreateRuleUrl,
-} from '../../../components/link_to/redirect_to_detection_engine';
-import { DetectionEngineHeaderPage } from '../../../components/components/detection_engine_header_page';
-import { WrapperPage } from '../../../components/wrapper_page';
-import { SpyRoute } from '../../../utils/route/spy_routes';
+} from '../../../../common/components/link_to/redirect_to_detection_engine';
+import { DetectionEngineHeaderPage } from '../../../components/detection_engine_header_page';
+import { WrapperPage } from '../../../../common/components/wrapper_page';
+import { SpyRoute } from '../../../../common/utils/route/spy_routes';
 
-import { useUserInfo } from '../../../components/components/user_info';
+import { useUserInfo } from '../../../components/user_info';
 import { AllRules } from './all';
-import { ImportDataModal } from '../../../components/import_data_modal';
-import { ReadOnlyCallOut } from './components/read_only_callout';
-import { UpdatePrePackagedRulesCallOut } from './components/pre_packaged_rules/update_callout';
+import { ImportDataModal } from '../../../../common/components/import_data_modal';
+import { ReadOnlyCallOut } from '../../../components/rules/read_only_callout';
+import { UpdatePrePackagedRulesCallOut } from '../../../components/rules/pre_packaged_rules/update_callout';
 import { getPrePackagedRuleStatus, redirectToDetections, userHasNoPermissions } from './helpers';
 import * as i18n from './translations';
 

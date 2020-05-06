@@ -15,7 +15,7 @@ import {
 import React, { memo, useCallback, useEffect, useState } from 'react';
 import deepEqual from 'fast-deep-equal';
 
-import { useRuleStatus, RuleInfoStatus } from '../../../container/detection_engine/rules';
+import { useRuleStatus, RuleInfoStatus } from '../../../containers/detection_engine/rules';
 import { FormattedDate } from '../../../../common/components/formatted_date';
 import { getEmptyTagValue } from '../../../../common/components/empty_value';
 import { getStatusColor } from './helpers';

@@ -8,7 +8,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { DetectionEngineEmptyPage } from './detection_engine_empty_page';
-jest.mock('../../lib/kibana');
+jest.mock('../../../common/lib/kibana');
 
 describe('DetectionEngineEmptyPage', () => {
   it('renders correctly', () => {

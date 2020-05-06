@@ -6,7 +6,7 @@
 
 import { showAllOthersBucket } from '../../../../common/constants';
 import { HistogramData, SignalsAggregation, SignalsBucket, SignalsGroupBucket } from './types';
-import { SignalSearchResponse } from '../../container/detection_engine/signals/types';
+import { SignalSearchResponse } from '../../containers/detection_engine/signals/types';
 import * as i18n from './translations';
 
 export const formatSignalsData = (

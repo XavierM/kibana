@@ -10,34 +10,37 @@ import { useParams } from 'react-router-dom';
 import { StickyContainer } from 'react-sticky';
 import { connect, ConnectedProps } from 'react-redux';
 
-import { GlobalTime } from '../../container/global_time';
-import { indicesExistOrDataTemporarilyUnavailable, WithSource } from '../../container/source';
-import { AlertsTable } from '../../components/alerts_viewer/alerts_table';
-import { FiltersGlobal } from '../../components/filters_global';
+import { GlobalTime } from '../../../common/containers/global_time';
+import {
+  indicesExistOrDataTemporarilyUnavailable,
+  WithSource,
+} from '../../../common/containers/source';
+import { AlertsTable } from '../../../common/components/alerts_viewer/alerts_table';
+import { FiltersGlobal } from '../../../common/components/filters_global';
 import {
   getDetectionEngineTabUrl,
   getRulesUrl,
-} from '../../components/link_to/redirect_to_detection_engine';
-import { SiemSearchBar } from '../../components/search_bar';
-import { WrapperPage } from '../../components/wrapper_page';
-import { SiemNavigation } from '../../components/navigation';
-import { NavTab } from '../../components/navigation/types';
-import { State } from '../../store';
-import { inputsSelectors } from '../../store/inputs';
-import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../store/inputs/actions';
-import { SpyRoute } from '../../utils/route/spy_routes';
-import { InputsRange } from '../../store/inputs/model';
-import { AlertsByCategory } from '../overview/alerts_by_category';
-import { useSignalInfo } from '../../components/components/signals_info';
-import { SignalsTable } from '../../components/components/signals';
-import { NoApiIntegrationKeyCallOut } from '../../components/components/no_api_integration_callout';
-import { NoWriteSignalsCallOut } from '../../components/components/no_write_signals_callout';
-import { SignalsHistogramPanel } from '../../components/components/signals_histogram_panel';
-import { signalsHistogramOptions } from '../../components/components/signals_histogram_panel/config';
-import { useUserInfo } from '../../components/components/user_info';
+} from '../../../common/components/link_to/redirect_to_detection_engine';
+import { SiemSearchBar } from '../../../common/components/search_bar';
+import { WrapperPage } from '../../../common/components/wrapper_page';
+import { SiemNavigation } from '../../../common/components/navigation';
+import { NavTab } from '../../../common/components/navigation/types';
+import { State } from '../../../common/store';
+import { inputsSelectors } from '../../../common/store/inputs';
+import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../../common/store/inputs/actions';
+import { SpyRoute } from '../../../common/utils/route/spy_routes';
+import { InputsRange } from '../../../common/store/inputs/model';
+import { AlertsByCategory } from '../../../overview/components/alerts_by_category';
+import { useSignalInfo } from '../../components/signals_info';
+import { SignalsTable } from '../../components/signals';
+import { NoApiIntegrationKeyCallOut } from '../../components/no_api_integration_callout';
+import { NoWriteSignalsCallOut } from '../../components/no_write_signals_callout';
+import { SignalsHistogramPanel } from '../../components/signals_histogram_panel';
+import { signalsHistogramOptions } from '../../components/signals_histogram_panel/config';
+import { useUserInfo } from '../../components/user_info';
 import { DetectionEngineEmptyPage } from './detection_engine_empty_page';
 import { DetectionEngineNoIndex } from './detection_engine_no_signal_index';
-import { DetectionEngineHeaderPage } from '../../components/components/detection_engine_header_page';
+import { DetectionEngineHeaderPage } from '../../components/detection_engine_header_page';
 import { DetectionEngineUserUnauthenticated } from './detection_engine_user_unauthenticated';
 import * as i18n from './translations';
 import { DetectionEngineTab } from './types';

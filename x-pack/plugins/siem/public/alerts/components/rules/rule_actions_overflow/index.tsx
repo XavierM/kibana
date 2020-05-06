@@ -16,7 +16,7 @@ import styled from 'styled-components';
 
 import { noop } from 'lodash/fp';
 import { useHistory } from 'react-router-dom';
-import { Rule, exportRules } from '../../../container/detection_engine/rules';
+import { Rule, exportRules } from '../../../containers/detection_engine/rules';
 import * as i18n from './translations';
 import * as i18nActions from '../../../pages/detection_engine/rules/translations';
 import { displaySuccessToast, useStateToaster } from '../../../../common/components/toasters';

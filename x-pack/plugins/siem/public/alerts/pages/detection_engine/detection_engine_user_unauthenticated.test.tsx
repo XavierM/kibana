@@ -8,7 +8,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { DetectionEngineUserUnauthenticated } from './detection_engine_user_unauthenticated';
-jest.mock('../../lib/kibana');
+jest.mock('../../../common/lib/kibana');
 
 describe('DetectionEngineUserUnauthenticated', () => {
   it('renders correctly', () => {

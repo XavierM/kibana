@@ -20,7 +20,7 @@ import * as H from 'history';
 import React, { Dispatch } from 'react';
 
 import { isMlRule } from '../../../../../../common/detection_engine/ml_helpers';
-import { Rule, RuleStatus } from '../../../../container/detection_engine/rules';
+import { Rule, RuleStatus } from '../../../../containers/detection_engine/rules';
 import { getEmptyTagValue } from '../../../../../common/components/empty_value';
 import { FormattedDate } from '../../../../../common/components/formatted_date';
 import { getRuleDetailsUrl } from '../../../../../common/components/link_to/redirect_to_detection_engine';

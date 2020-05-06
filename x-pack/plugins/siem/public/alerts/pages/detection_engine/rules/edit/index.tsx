@@ -19,19 +19,19 @@ import { FormattedMessage } from '@kbn/i18n/react';
 import React, { FC, memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 
-import { useRule, usePersistRule } from '../../../../container/detection_engine/rules';
+import { useRule, usePersistRule } from '../../../../containers/detection_engine/rules';
 import { WrapperPage } from '../../../../../common/components/wrapper_page';
 import { DETECTION_ENGINE_PAGE_NAME } from '../../../../../common/components/link_to/redirect_to_detection_engine';
 import { displaySuccessToast, useStateToaster } from '../../../../../common/components/toasters';
-import { SpyRoute } from '../../../../utils/route/spy_routes';
-import { useUserInfo } from '../../../../../common/components/components/user_info';
-import { DetectionEngineHeaderPage } from '../../../../../common/components/components/detection_engine_header_page';
-import { FormHook, FormData } from '../../../../shared_imports';
-import { StepPanel } from '../components/step_panel';
-import { StepAboutRule } from '../components/step_about_rule';
-import { StepDefineRule } from '../components/step_define_rule';
-import { StepScheduleRule } from '../components/step_schedule_rule';
-import { StepRuleActions } from '../components/step_rule_actions';
+import { SpyRoute } from '../../../../../common/utils/route/spy_routes';
+import { useUserInfo } from '../../../../components/user_info';
+import { DetectionEngineHeaderPage } from '../../../../components/detection_engine_header_page';
+import { FormHook, FormData } from '../../../../../shared_imports';
+import { StepPanel } from '../../../../components/rules/step_panel';
+import { StepAboutRule } from '../../../../components/rules/step_about_rule';
+import { StepDefineRule } from '../../../../components/rules/step_define_rule';
+import { StepScheduleRule } from '../../../../components/rules/step_schedule_rule';
+import { StepRuleActions } from '../../../../components/rules/step_rule_actions';
 import { formatRule } from '../create/helpers';
 import {
   getStepsData,

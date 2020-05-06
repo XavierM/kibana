@@ -17,8 +17,8 @@ import {
   userHasNoPermissions,
 } from './helpers';
 import { mockRuleWithEverything, mockRule } from './all/__mocks__/mock';
-import { esFilters } from '../../../../../../../src/plugins/data/public';
-import { Rule } from '../../../container/detection_engine/rules';
+import { esFilters } from '../../../../../../../../src/plugins/data/public';
+import { Rule } from '../../../containers/detection_engine/rules';
 import {
   AboutStepRule,
   AboutStepRuleDetails,

@@ -10,12 +10,12 @@ import moment from 'moment';
 import memoizeOne from 'memoize-one';
 import { useLocation } from 'react-router-dom';
 
-import { RuleAlertAction, RuleType } from '../../../../common/detection_engine/types';
-import { isMlRule } from '../../../../common/detection_engine/ml_helpers';
-import { transformRuleToAlertAction } from '../../../../common/detection_engine/transform_actions';
-import { Filter } from '../../../../../../../src/plugins/data/public';
-import { Rule } from '../../../container/detection_engine/rules';
-import { FormData, FormHook, FormSchema } from '../../../shared_imports';
+import { RuleAlertAction, RuleType } from '../../../../../common/detection_engine/types';
+import { isMlRule } from '../../../../../common/detection_engine/ml_helpers';
+import { transformRuleToAlertAction } from '../../../../../common/detection_engine/transform_actions';
+import { Filter } from '../../../../../../../../src/plugins/data/public';
+import { Rule } from '../../../containers/detection_engine/rules';
+import { FormData, FormHook, FormSchema } from '../../../../shared_imports';
 import {
   AboutStepRule,
   AboutStepRuleDetails,

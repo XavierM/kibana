@@ -15,7 +15,7 @@ import {
   exportRulesAction,
 } from './actions';
 import { ActionToaster, displayWarningToast } from '../../../../../common/components/toasters';
-import { Rule } from '../../../../container/detection_engine/rules';
+import { Rule } from '../../../../containers/detection_engine/rules';
 import * as detectionI18n from '../../translations';
 
 interface GetBatchItems {

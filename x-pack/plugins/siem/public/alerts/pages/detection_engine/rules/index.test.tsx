@@ -8,11 +8,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { RulesPage } from './index';
-import { useUserInfo } from '../../../components/components/user_info';
-import { usePrePackagedRules } from '../../../container/detection_engine/rules';
+import { useUserInfo } from '../../../components/user_info';
+import { usePrePackagedRules } from '../../../containers/detection_engine/rules';
 
 jest.mock('../components/user_info');
-jest.mock('../../../container/detection_engine/rules');
+jest.mock('../../../containers/detection_engine/rules');
 
 describe('RulesPage', () => {
   beforeAll(() => {
