@@ -11,9 +11,9 @@ import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { useQuery } from '../../../containers/matrix_histogram';
-import { wait } from '../../../lib/helpers';
-import { mockIndexPattern, TestProviders } from '../../../mock';
+import { useQuery } from '../../common/containers/matrix_histogram';
+import { wait } from '../../common/lib/helpers';
+import { mockIndexPattern, TestProviders } from '../../common/mock';
 
 import { AlertsByCategory } from '.';
 

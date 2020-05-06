@@ -7,8 +7,8 @@
 import React from 'react';
 
 import * as i18nCommon from '../../common/translations';
-import { EmptyPage } from '../../../components/empty_page';
-import { useKibana } from '../../../lib/kibana';
+import { EmptyPage } from '../../common/components/empty_page';
+import { useKibana } from '../../common/lib/kibana';
 
 const OverviewEmptyComponent: React.FC = () => {
   const { http, docLinks } = useKibana().services;

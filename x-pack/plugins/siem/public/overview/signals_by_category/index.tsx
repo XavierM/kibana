@@ -6,13 +6,13 @@
 
 import React, { useCallback } from 'react';
 
-import { SignalsHistogramPanel } from '../../detection_engine/components/signals_histogram_panel';
-import { signalsHistogramOptions } from '../../detection_engine/components/signals_histogram_panel/config';
-import { useSignalIndex } from '../../../containers/detection_engine/signals/use_signal_index';
-import { SetAbsoluteRangeDatePicker } from '../../network/types';
-import { Filter, IIndexPattern, Query } from '../../../../../../../src/plugins/data/public';
-import { inputsModel } from '../../../store';
-import { InputsModelId } from '../../../store/inputs/constants';
+import { SignalsHistogramPanel } from '../../alerts/components/signals_histogram_panel';
+import { signalsHistogramOptions } from '../../alerts/components/signals_histogram_panel/config';
+import { useSignalIndex } from '../../alerts/container/detection_engine/signals/use_signal_index';
+import { SetAbsoluteRangeDatePicker } from '../../network/pages/types';
+import { Filter, IIndexPattern, Query } from '../../../../../../src/plugins/data/public';
+import { inputsModel } from '../../common/store';
+import { InputsModelId } from '../../common/store/inputs/constants';
 import * as i18n from '../translations';
 
 const DEFAULT_QUERY: Query = { query: '', language: 'kuery' };

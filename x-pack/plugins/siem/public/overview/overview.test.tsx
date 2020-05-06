@@ -11,8 +11,8 @@ import { MockedProvider } from 'react-apollo/test-utils';
 import { MemoryRouter } from 'react-router-dom';
 
 import '../../mock/match_media';
-import { TestProviders } from '../../mock';
-import { mocksSource } from '../../containers/source/mock';
+import { TestProviders } from '../common/mock';
+import { mocksSource } from '../common/containers/source/mock';
 import { Overview } from './index';
 
 jest.mock('../../lib/kibana');

@@ -18,7 +18,7 @@ import { TIMELINE_URL, TIMELINE_IMPORT_URL, TIMELINE_EXPORT_URL } from '../../..
 import { KibanaServices } from '../../common/lib/kibana';
 import { ExportSelectedData } from '../../common/components/generic_downloader';
 
-import { createToasterPlainError } from '../../cases/container/utils';
+import { createToasterPlainError } from '../../cases/containers/utils';
 import { ImportDataProps, ImportDataResponse } from '../../alerts/container/detection_engine/rules';
 
 interface RequestPostTimeline {

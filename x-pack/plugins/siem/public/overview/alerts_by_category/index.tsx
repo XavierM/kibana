@@ -9,29 +9,24 @@ import numeral from '@elastic/numeral';
 import React, { useEffect, useMemo } from 'react';
 import { Position } from '@elastic/charts';
 
-import { DEFAULT_NUMBER_FORMAT } from '../../../../common/constants';
-import { SHOWING, UNIT } from '../../../components/alerts_viewer/translations';
-import { getDetectionEngineAlertUrl } from '../../../components/link_to/redirect_to_detection_engine';
-import { MatrixHistogramContainer } from '../../../components/matrix_histogram';
-import { useKibana, useUiSetting$ } from '../../../lib/kibana';
-import { convertToBuildEsQuery } from '../../../lib/keury';
-import {
-  Filter,
-  esQuery,
-  IIndexPattern,
-  Query,
-} from '../../../../../../../src/plugins/data/public';
-import { inputsModel } from '../../../store';
-import { HostsType } from '../../../store/hosts/model';
+import { DEFAULT_NUMBER_FORMAT } from '../../../common/constants';
+import { SHOWING, UNIT } from '../../common/components/alerts_viewer/translations';
+import { getDetectionEngineAlertUrl } from '../../common/components/link_to/redirect_to_detection_engine';
+import { MatrixHistogramContainer } from '../../common/components/matrix_histogram';
+import { useKibana, useUiSetting$ } from '../../common/lib/kibana';
+import { convertToBuildEsQuery } from '../../common/lib/keury';
+import { Filter, esQuery, IIndexPattern, Query } from '../../../../../../src/plugins/data/public';
+import { inputsModel } from '../../common/store';
+import { HostsType } from '../../common/store/hosts/model';
 
 import * as i18n from '../translations';
 import {
   alertsStackByOptions,
   histogramConfigs,
-} from '../../../components/alerts_viewer/histogram_configs';
-import { MatrixHisrogramConfigs } from '../../../components/matrix_histogram/types';
-import { useGetUrlSearch } from '../../../components/navigation/use_get_url_search';
-import { navTabs } from '../../home/home_navigations';
+} from '../../common/components/alerts_viewer/histogram_configs';
+import { MatrixHisrogramConfigs } from '../../common/components/matrix_histogram/types';
+import { useGetUrlSearch } from '../../common/components/navigation/use_get_url_search';
+import { navTabs } from '../../app/home/home_navigations';
 
 const ID = 'alertsByCategoryOverview';
 

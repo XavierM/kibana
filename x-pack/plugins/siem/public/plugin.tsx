@@ -12,6 +12,7 @@ import {
   CoreStart,
   PluginInitializerContext,
   Plugin as IPlugin,
+  // eslint-disable-next-line @kbn/eslint/no-restricted-paths
 } from '../../../../src/core/public';
 import {
   HomePublicPluginSetup,
@@ -29,9 +30,9 @@ import {
 } from '../../triggers_actions_ui/public';
 import { SecurityPluginSetup } from '../../security/public';
 import { APP_ID, APP_NAME, APP_PATH, APP_ICON } from '../common/constants';
-import { initTelemetry } from './lib/telemetry';
-import { KibanaServices } from './lib/kibana/services';
-import { serviceNowActionType } from './lib/connectors';
+import { initTelemetry } from './common/lib/telemetry';
+import { KibanaServices } from './common/lib/kibana/services';
+import { serviceNowActionType } from './common/lib/connectors';
 
 export interface SetupPlugins {
   home: HomePublicPluginSetup;
