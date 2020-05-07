@@ -22,7 +22,7 @@ import {
   useKpiMatrixStatus,
   StatItems,
 } from '../../../../components/stat_items';
-import { KpiNetworkData } from '../../../../graphql/types';
+import { KpiNetworkData } from '../../../../../graphql/types';
 
 import * as i18n from './translations';
 import { UpdateDateRange } from '../../../charts/common';
@@ -165,34 +165,34 @@ export const KpiNetworkComponent = React.memo<KpiNetworkProps>(
         </EuiFlexItem>
       </FlexGroup>
     ) : (
-      <EuiFlexGroup wrap>
-        <EuiFlexItem grow={1}>
-          {_chunk(kipsPerRow, fieldTitleMatrixMapping).map((mappingsPerLine, idx) => (
-            <React.Fragment key={`kpi-network-row-${idx}`}>
-              {idx % kipsPerRow === 1 && <EuiSpacer size="l" />}
-              <KpiNetworkBaseComponent
-                data={data}
-                id={id}
-                fieldsMapping={mappingsPerLine}
-                from={from}
-                to={to}
-                narrowDateRange={narrowDateRange}
-              />
-            </React.Fragment>
-          ))}
-        </EuiFlexItem>
-        <EuiFlexItem grow={1}>
-          <KpiNetworkBaseComponent
-            data={data}
-            id={id}
-            fieldsMapping={fieldTitleChartMapping}
-            from={from}
-            to={to}
-            narrowDateRange={narrowDateRange}
-          />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    );
+        <EuiFlexGroup wrap>
+          <EuiFlexItem grow={1}>
+            {_chunk(kipsPerRow, fieldTitleMatrixMapping).map((mappingsPerLine, idx) => (
+              <React.Fragment key={`kpi-network-row-${idx}`}>
+                {idx % kipsPerRow === 1 && <EuiSpacer size="l" />}
+                <KpiNetworkBaseComponent
+                  data={data}
+                  id={id}
+                  fieldsMapping={mappingsPerLine}
+                  from={from}
+                  to={to}
+                  narrowDateRange={narrowDateRange}
+                />
+              </React.Fragment>
+            ))}
+          </EuiFlexItem>
+          <EuiFlexItem grow={1}>
+            <KpiNetworkBaseComponent
+              data={data}
+              id={id}
+              fieldsMapping={fieldTitleChartMapping}
+              from={from}
+              to={to}
+              narrowDateRange={narrowDateRange}
+            />
+          </EuiFlexItem>
+        </EuiFlexGroup>
+      );
   }
 );
 

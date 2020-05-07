@@ -10,13 +10,13 @@ import { connect, ConnectedProps } from 'react-redux';
 import { GlobalTime } from '../../containers/global_time';
 import { BrowserFields, WithSource } from '../../containers/source';
 import { useKibana } from '../../lib/kibana';
-import { esQuery, Filter, Query } from '../../../../../../src/plugins/data/public';
+import { esQuery, Filter, Query } from '../../../../../../../src/plugins/data/public';
 import { inputsModel, inputsSelectors, State, timelineSelectors } from '../../store';
 import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../store/inputs/actions';
 import { timelineDefaults } from '../../store/timeline/defaults';
 import { TimelineModel } from '../../store/timeline/model';
-import { combineQueries } from '../timeline/helpers';
-import { useTimelineTypeContext } from '../timeline/timeline_context';
+import { combineQueries } from '../../../timelines/components/timeline/helpers';
+import { useTimelineTypeContext } from '../../../timelines/components/timeline/timeline_context';
 
 import { getOptions } from './helpers';
 import { TopN } from './top_n';

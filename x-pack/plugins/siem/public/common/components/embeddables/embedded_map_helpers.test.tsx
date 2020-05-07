@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { embeddablePluginMock } from '../../../../../../src/plugins/embeddable/public/mocks';
+import { embeddablePluginMock } from '../../../../../../../src/plugins/embeddable/public/mocks';
 import { createEmbeddable, findMatchingIndexPatterns } from './embedded_map_helpers';
 import { createPortalNode } from 'react-reverse-portal';
 import {

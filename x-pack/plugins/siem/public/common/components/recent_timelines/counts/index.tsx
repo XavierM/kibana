@@ -8,8 +8,11 @@ import { EuiFlexGroup, EuiFlexItem, EuiIcon, EuiText, EuiToolTip } from '@elasti
 import React from 'react';
 import styled from 'styled-components';
 
-import { getPinnedEventCount, getNotesCount } from '../../open_timeline/helpers';
-import { OpenTimelineResult } from '../../open_timeline/types';
+import {
+  getPinnedEventCount,
+  getNotesCount,
+} from '../../../../timelines/components/open_timeline/helpers';
+import { OpenTimelineResult } from '../../../../timelines/components/open_timeline/types';
 
 import * as i18n from '../translations';
 

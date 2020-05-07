@@ -8,7 +8,7 @@ import React from 'react';
 
 import { useKibana } from '../../common/lib/kibana';
 import { EmptyPage } from '../../common/components/empty_page';
-import * as i18n from '../translations';
+import * as i18n from '../../common/translations';
 
 export const NetworkEmptyPage = React.memo(() => {
   const { http, docLinks } = useKibana().services;

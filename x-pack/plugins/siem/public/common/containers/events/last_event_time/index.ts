@@ -7,7 +7,7 @@
 import { get } from 'lodash/fp';
 import React, { useEffect, useState } from 'react';
 
-import { DEFAULT_INDEX_KEY } from '../../../../constants';
+import { DEFAULT_INDEX_KEY } from '../../../../../common/constants';
 import {
   GetLastEventTimeQuery,
   LastEventIndexKey,

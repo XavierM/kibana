@@ -10,7 +10,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { DetailItem } from '../../../graphql/types';
-import { omitTypenameAndEmpty } from '../timeline/body/helpers';
+import { omitTypenameAndEmpty } from '../../../timelines/components/timeline/body/helpers';
 
 interface Props {
   data: DetailItem[];

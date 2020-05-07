@@ -15,7 +15,7 @@ import { DescriptionListStyled } from '../../page';
 import { FeatureProperty } from '../types';
 import { HostDetailsLink, IPDetailsLink } from '../../links';
 import { DefaultFieldRenderer } from '../../field_renderers/field_renderers';
-import { FlowTarget } from '../../../graphql/types';
+import { FlowTarget } from '../../../../graphql/types';
 
 interface PointToolTipContentProps {
   contextId: string;

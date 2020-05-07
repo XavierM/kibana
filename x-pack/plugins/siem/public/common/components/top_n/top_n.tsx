@@ -9,8 +9,8 @@ import React, { useCallback, useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { ActionCreator } from 'typescript-fsa';
 
-import { EventsByDataset } from '../../pages/overview/events_by_dataset';
-import { SignalsByCategory } from '../../pages/overview/signals_by_category';
+import { EventsByDataset } from '../../../overview/components/events_by_dataset';
+import { SignalsByCategory } from '../../../overview/components/signals_by_category';
 import { Filter, IIndexPattern, Query } from '../../../../../../../src/plugins/data/public';
 import { inputsModel } from '../../store';
 import { InputsModelId } from '../../store/inputs/constants';

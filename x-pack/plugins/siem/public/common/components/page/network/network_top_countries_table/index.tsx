@@ -17,7 +17,7 @@ import {
   NetworkTopCountriesEdges,
   NetworkTopTablesFields,
   NetworkTopTablesSortField,
-} from '../../../../graphql/types';
+} from '../../../../../graphql/types';
 import { networkModel, networkSelectors, State } from '../../../../store';
 import { Criteria, ItemsPerRow, PaginatedTable } from '../../../paginated_table';
 
@@ -91,7 +91,7 @@ const NetworkTopCountriesTableComponent = React.memo<NetworkTopCountriesTablePro
 
     const field =
       sort.field === NetworkTopTablesFields.bytes_out ||
-      sort.field === NetworkTopTablesFields.bytes_in
+        sort.field === NetworkTopTablesFields.bytes_in
         ? `node.network.${sort.field}`
         : `node.${flowTargeted}.${sort.field}`;
 

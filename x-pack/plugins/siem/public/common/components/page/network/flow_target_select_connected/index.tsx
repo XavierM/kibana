@@ -10,11 +10,11 @@ import React, { useCallback } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { FlowDirection, FlowTarget } from '../../../../graphql/types';
+import { FlowDirection, FlowTarget } from '../../../../../graphql/types';
 import * as i18nIp from '../ip_overview/translations';
 
 import { FlowTargetSelect } from '../../../flow_controls/flow_target_select';
-import { IpOverviewId } from '../../../field_renderers/field_renderers';
+import { IpOverviewId } from '../../../../../timelines/components/field_renderers/field_renderers';
 
 const SelectTypeItem = styled(EuiFlexItem)`
   min-width: 180px;

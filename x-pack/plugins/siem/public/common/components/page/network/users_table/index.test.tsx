@@ -10,7 +10,7 @@ import React from 'react';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { Provider as ReduxStoreProvider } from 'react-redux';
 
-import { FlowTarget } from '../../../../graphql/types';
+import { FlowTarget } from '../../../../../graphql/types';
 import { apolloClientObservable, mockGlobalState, TestProviders } from '../../../../mock';
 import { useMountAppended } from '../../../../utils/use_mount_appended';
 import { createStore, networkModel, State } from '../../../../store';

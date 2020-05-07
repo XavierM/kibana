@@ -11,7 +11,7 @@ import { ColumnHeaderOptions } from '../../store/timeline/model';
 import {
   DEFAULT_DATE_COLUMN_MIN_WIDTH,
   DEFAULT_COLUMN_MIN_WIDTH,
-} from '../timeline/body/constants';
+} from '../../../timelines/components/timeline/body/constants';
 import { ToStringArray } from '../../../graphql/types';
 
 import * as i18n from './translations';
@@ -80,12 +80,12 @@ export const getColumnsWithTimestamp = ({
 
   return timestamp != null && categoryFields.length
     ? uniqBy('id', [
-      getColumnHeaderFromBrowserField({
-        browserField: timestamp,
-        width: DEFAULT_DATE_COLUMN_MIN_WIDTH,
-      }),
-      ...categoryFields.map(f => getColumnHeaderFromBrowserField({ browserField: f })),
-    ])
+        getColumnHeaderFromBrowserField({
+          browserField: timestamp,
+          width: DEFAULT_DATE_COLUMN_MIN_WIDTH,
+        }),
+        ...categoryFields.map(f => getColumnHeaderFromBrowserField({ browserField: f })),
+      ])
     : [];
 };
 

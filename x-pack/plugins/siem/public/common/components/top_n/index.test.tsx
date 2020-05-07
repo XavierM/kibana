@@ -12,7 +12,10 @@ import { apolloClientObservable, mockGlobalState, TestProviders } from '../../mo
 import { createKibanaCoreStartMock } from '../../mock/kibana_core';
 import { FilterManager } from '../../../../../../../src/plugins/data/public';
 import { createStore, State } from '../../store';
-import { TimelineContext, TimelineTypeContext } from '../timeline/timeline_context';
+import {
+  TimelineContext,
+  TimelineTypeContext,
+} from '../../../timelines/components/timeline/timeline_context';
 
 import { Props } from './top_n';
 import { ACTIVE_TIMELINE_REDUX_ID, StatefulTopN } from '.';

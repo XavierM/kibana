@@ -24,7 +24,7 @@ import { RecentTimelines } from './recent_timelines';
 import * as i18n from './translations';
 import { FilterMode } from './types';
 import { useGetUrlSearch } from '../navigation/use_get_url_search';
-import { navTabs } from '../../pages/home/home_navigations';
+import { navTabs } from '../../../app/home/home_navigations';
 import { getTimelinesUrl } from '../link_to/redirect_to_timelines';
 
 interface OwnProps {
@@ -89,12 +89,12 @@ const StatefulRecentTimelinesComponent = React.memo<Props>(
         {loading ? (
           loadingPlaceholders
         ) : (
-          <RecentTimelines
-            noTimelinesMessage={noTimelinesMessage}
-            onOpenTimeline={onOpenTimeline}
-            timelines={timelines}
-          />
-        )}
+            <RecentTimelines
+              noTimelinesMessage={noTimelinesMessage}
+              onOpenTimeline={onOpenTimeline}
+              timelines={timelines}
+            />
+          )}
         <EuiHorizontalRule margin="s" />
         <EuiText size="xs">{linkAllTimelines}</EuiText>
       </>

@@ -14,7 +14,7 @@ import { useMountAppended } from '../../utils/use_mount_appended';
 
 import { mockEventViewerResponse } from './mock';
 import { StatefulEventsViewer } from '.';
-import { useFetchIndexPatterns } from '../../containers/detection_engine/rules/fetch_index_patterns';
+import { useFetchIndexPatterns } from '../../../alerts/containers/detection_engine/rules/fetch_index_patterns';
 import { mockBrowserFields } from '../../containers/source/mock';
 import { eventsDefaultModel } from './default_model';
 

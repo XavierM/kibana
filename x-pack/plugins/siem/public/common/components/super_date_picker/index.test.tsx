@@ -8,7 +8,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import { Provider as ReduxStoreProvider } from 'react-redux';
 
-import { DEFAULT_TIMEPICKER_QUICK_RANGES } from '../../../common/constants';
+import { DEFAULT_TIMEPICKER_QUICK_RANGES } from '../../../../../../../common/constants';
 import { useUiSetting$ } from '../../lib/kibana';
 import { apolloClientObservable, mockGlobalState } from '../../mock';
 import { createUseUiSetting$Mock } from '../../mock/kibana_react';

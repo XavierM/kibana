@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { KpiNetworkData } from '../../../../graphql/types';
+import { KpiNetworkData } from '../../../../../graphql/types';
 import { StatItems } from '../../../stat_items';
 
 export const mockNarrowDateRange = jest.fn();

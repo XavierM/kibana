@@ -8,7 +8,7 @@
 
 import React from 'react';
 import moment from 'moment';
-import { TlsNode } from '../../../../graphql/types';
+import { TlsNode } from '../../../../../graphql/types';
 import { Columns } from '../../../paginated_table';
 
 import { getRowItemDraggables, getRowItemDraggable } from '../../../tables/helpers';

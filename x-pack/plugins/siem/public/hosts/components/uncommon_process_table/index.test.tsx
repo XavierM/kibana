@@ -15,7 +15,7 @@ import { useMountAppended } from '../../../common/utils/use_mount_appended';
 
 import { getArgs, UncommonProcessTable, getUncommonColumnsCurated } from '.';
 import { mockData } from './mock';
-import { HostsType } from '../../../common/store/model';
+import { HostsType } from '../../../common/store/model/hosts';
 import * as i18n from './translations';
 
 describe('Uncommon Process Table Component', () => {
