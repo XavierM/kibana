@@ -24,7 +24,7 @@ import {
   Rule,
   PaginationOptions,
   exportRules,
-} from '../../../../containers/detection_engine/rules';
+} from '../../../../../alerts/containers/detection_engine/rules';
 import { HeaderSection } from '../../../../../common/components/header_section';
 import {
   UtilityBar,

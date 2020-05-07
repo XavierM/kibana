@@ -11,7 +11,7 @@ import {
   NetworkTopTablesSortField,
   TlsSortField,
   UsersSortField,
-} from '../../graphql/types';
+} from '../../../graphql/types';
 
 export enum NetworkType {
   page = 'page',

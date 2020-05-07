@@ -7,7 +7,7 @@
 import { EuiText } from '@elastic/eui';
 import React from 'react';
 
-import * as RuleI18n from '../../translations';
+import * as RuleI18n from '../../../pages/detection_engine/rules/translations';
 
 export const OptionalFieldLabel = (
   <EuiText color="subdued" size="xs">

@@ -5,9 +5,9 @@
  */
 import React from 'react';
 import { getOr } from 'lodash/fp';
-import { manageQuery } from '../../../components/page/manage_query';
-import { TlsQuery } from '../../../containers/tls';
-import { TlsTable } from '../../../components/page/network/tls_table';
+import { manageQuery } from '../../../common/components/page/manage_query';
+import { TlsQuery } from '../../../network/containers/tls';
+import { TlsTable } from '../../../common/components/page/network/tls_table';
 import { TlsQueryTabBodyProps } from './types';
 
 const TlsTableManage = manageQuery(TlsTable);

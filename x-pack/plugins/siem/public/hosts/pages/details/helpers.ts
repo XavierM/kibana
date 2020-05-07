@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { escapeQueryValue } from '../../../lib/keury';
+import { escapeQueryValue } from '../../../common/lib/keury';
 import { Filter } from '../../../../../../../src/plugins/data/public';
 
 /** Returns the kqlQueryExpression for the `Events` widget on the `Host Details` page */

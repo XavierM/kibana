@@ -6,10 +6,10 @@
 
 import React from 'react';
 import { getOr } from 'lodash/fp';
-import { manageQuery } from '../../../components/page/manage_query';
+import { manageQuery } from '../../../common/components/page/manage_query';
 import { NetworkWithIndexComponentsQueryTableProps } from './types';
-import { NetworkTopCountriesQuery } from '../../../containers/network_top_countries';
-import { NetworkTopCountriesTable } from '../../../components/page/network/network_top_countries_table';
+import { NetworkTopCountriesQuery } from '../../containers/network_top_countries';
+import { NetworkTopCountriesTable } from '../../../common/components/page/network/network_top_countries_table';
 
 const NetworkTopCountriesTableManage = manageQuery(NetworkTopCountriesTable);
 

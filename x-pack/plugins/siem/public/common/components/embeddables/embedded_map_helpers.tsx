@@ -10,21 +10,21 @@ import { OutPortal, PortalNode } from 'react-reverse-portal';
 import minimatch from 'minimatch';
 import { IndexPatternMapping, SetQuery } from './types';
 import { getLayerList } from './map_config';
-import { MAP_SAVED_OBJECT_TYPE } from '../../../../maps/public';
+import { MAP_SAVED_OBJECT_TYPE } from '../../../../../maps/public';
 import {
   MapEmbeddable,
   RenderTooltipContentParams,
   MapEmbeddableInput,
-} from '../../../../../legacy/plugins/maps/public';
+} from '../../../../../../legacy/plugins/maps/public';
 import * as i18n from './translations';
-import { Query, Filter } from '../../../../../../src/plugins/data/public';
+import { Query, Filter } from '../../../../../../../src/plugins/data/public';
 import {
   EmbeddableStart,
   isErrorEmbeddable,
   EmbeddableOutput,
   ViewMode,
   ErrorEmbeddable,
-} from '../../../../../../src/plugins/embeddable/public';
+} from '../../../../../../../src/plugins/embeddable/public';
 import { IndexPatternSavedObject } from '../../hooks/types';
 
 /**

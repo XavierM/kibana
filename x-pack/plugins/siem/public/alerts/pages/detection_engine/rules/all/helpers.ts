@@ -7,7 +7,7 @@
 import {
   BulkRuleResponse,
   RuleResponseBuckets,
-} from '../../../../containers/detection_engine/rules';
+} from '../../../../../alerts/containers/detection_engine/rules';
 
 /**
  * Separates rules/errors from bulk rules API response (create/update/delete)

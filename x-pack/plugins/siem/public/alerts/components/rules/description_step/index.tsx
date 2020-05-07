@@ -18,7 +18,7 @@ import {
 } from '../../../../../../../../src/plugins/data/public';
 import { DEFAULT_TIMELINE_TITLE } from '../../../../timelines/components/timeline/translations';
 import { useKibana } from '../../../../common/lib/kibana';
-import { IMitreEnterpriseAttack } from '../../types';
+import { IMitreEnterpriseAttack } from '../../../pages/detection_engine/rules/types';
 import { FieldValueTimeline } from '../pick_timeline';
 import { FormSchema } from '../../../../shared_imports';
 import { ListItems } from './types';

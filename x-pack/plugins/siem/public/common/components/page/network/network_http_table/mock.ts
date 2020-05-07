@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { NetworkHttpData } from '../../../../graphql/types';
+import { NetworkHttpData } from '../../../../../graphql/types';
 
 export const mockData: { NetworkHttp: NetworkHttpData } = {
   NetworkHttp: {

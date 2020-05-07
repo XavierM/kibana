@@ -5,15 +5,15 @@
  */
 
 import React, { useEffect } from 'react';
-import { StatefulEventsViewer } from '../../../components/events_viewer';
+import { StatefulEventsViewer } from '../../../common/components/events_viewer';
 import { HostsComponentsQueryProps } from './types';
-import { hostsModel } from '../../../store/hosts';
-import { eventsDefaultModel } from '../../../components/events_viewer/default_model';
+import { hostsModel } from '../../../common/store/hosts';
+import { eventsDefaultModel } from '../../../common/components/events_viewer/default_model';
 import {
   MatrixHistogramOption,
   MatrixHisrogramConfigs,
-} from '../../../components/matrix_histogram/types';
-import { MatrixHistogramContainer } from '../../../components/matrix_histogram';
+} from '../../../common/components/matrix_histogram/types';
+import { MatrixHistogramContainer } from '../../../common/components/matrix_histogram';
 import * as i18n from '../translations';
 import { HistogramType } from '../../../graphql/types';
 

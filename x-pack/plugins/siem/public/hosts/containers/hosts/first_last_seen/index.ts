@@ -12,7 +12,7 @@ import { DEFAULT_INDEX_KEY } from '../../../../../common/constants';
 import { useUiSetting$ } from '../../../../common/lib/kibana';
 import { GetHostFirstLastSeenQuery } from '../../../../graphql/types';
 import { inputsModel } from '../../../../common/store';
-import { QueryTemplateProps } from '../../../../common/components/query_template';
+import { QueryTemplateProps } from '../../../../common/containers/query_template';
 
 import { HostFirstLastSeenGqlQuery } from './first_last_seen.gql_query';
 

@@ -10,7 +10,7 @@ import { getBreadcrumbsForRoute, setBreadcrumbs } from '.';
 import { HostsTableType } from '../../../store/hosts/model';
 import { RouteSpyState, SiemRouteType } from '../../../utils/route/types';
 import { TabNavigationProps } from '../tab_navigation/types';
-import { NetworkRouteType } from '../../../pages/network/navigation/types';
+import { NetworkRouteType } from '../../../../network/pages/navigation/types';
 
 const setBreadcrumbsMock = jest.fn();
 const chromeMock = {

@@ -10,7 +10,7 @@ import {
   Filter,
   FilterManager,
 } from '../../../../../../../../src/plugins/data/public';
-import { IMitreEnterpriseAttack } from '../../types';
+import { IMitreEnterpriseAttack } from '../../../pages/detection_engine/rules/types';
 
 export interface ListItems {
   title: NonNullable<ReactNode>;

@@ -18,7 +18,7 @@ import {
 import { UrlInputsModel } from '../../store/inputs/model';
 import { TimelineUrl } from '../../store/timeline/model';
 import { RouteSpyState } from '../../utils/route/types';
-import { DispatchUpdateTimeline } from '../open_timeline/types';
+import { DispatchUpdateTimeline } from '../../../timelines/components/open_timeline/types';
 import { NavTab } from '../navigation/types';
 
 import { CONSTANTS, UrlStateType } from './constants';

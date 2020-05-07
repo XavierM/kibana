@@ -10,7 +10,7 @@ import { has } from 'lodash/fp';
 import React, { useCallback, useMemo } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 
-import { hostsActions, hostsModel, hostsSelectors } from '../../store';
+import { hostsActions, hostsModel, hostsSelectors } from '../../../common/store/hosts';
 import { AuthenticationsEdges } from '../../../graphql/types';
 import { State } from '../../../common/store';
 import {

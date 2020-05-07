@@ -22,7 +22,7 @@ import {
   SOURCE_BYTES_FIELD_NAME,
   SOURCE_PACKETS_FIELD_NAME,
 } from '../source_destination/source_destination_arrows';
-import * as i18n from '../timeline/body/renderers/translations';
+import * as i18n from '../../../timelines/components/timeline/body/renderers/translations';
 
 import { SourceDestination } from '.';
 import {

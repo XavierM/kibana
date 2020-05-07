@@ -11,8 +11,8 @@ import { ColumnHeaderOptions } from '../../store/timeline/model';
 import {
   DEFAULT_DATE_COLUMN_MIN_WIDTH,
   DEFAULT_COLUMN_MIN_WIDTH,
-} from '../timeline/body/constants';
-import { ToStringArray } from '../../graphql/types';
+} from '../../../timelines/components/timeline/body/constants';
+import { ToStringArray } from '../../../graphql/types';
 
 import * as i18n from './translations';
 

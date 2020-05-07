@@ -7,10 +7,10 @@
 import React from 'react';
 import { getOr } from 'lodash/fp';
 
-import { NetworkTopNFlowTable } from '../../../components/page/network';
-import { NetworkTopNFlowQuery } from '../../../containers/network_top_n_flow';
-import { networkModel } from '../../../store';
-import { manageQuery } from '../../../components/page/manage_query';
+import { NetworkTopNFlowTable } from '../../../common/components/page/network';
+import { NetworkTopNFlowQuery } from '../../../network/containers/network_top_n_flow';
+import { networkModel } from '../../../common/store';
+import { manageQuery } from '../../../common/components/page/manage_query';
 
 import { IPsQueryTabBodyProps } from './types';
 

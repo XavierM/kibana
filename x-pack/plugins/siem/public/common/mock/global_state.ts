@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { DEFAULT_TIMELINE_WIDTH } from '../components/timeline/body/constants';
+import { DEFAULT_TIMELINE_WIDTH } from '../../timelines/components/timeline/body/constants';
 import {
   Direction,
   FlowTarget,
@@ -13,7 +13,7 @@ import {
   NetworkTopTablesFields,
   TlsFields,
   UsersFields,
-} from '../graphql/types';
+} from '../../graphql/types';
 import { networkModel, State } from '../store';
 
 import { defaultHeaders } from './header';
@@ -22,7 +22,7 @@ import {
   DEFAULT_TO,
   DEFAULT_INTERVAL_TYPE,
   DEFAULT_INTERVAL_VALUE,
-} from '../../common/constants';
+} from '../../../common/constants';
 
 export const mockGlobalState: State = {
   app: {

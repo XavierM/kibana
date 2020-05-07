@@ -11,20 +11,23 @@ import { StickyContainer } from 'react-sticky';
 import { Query, Filter } from 'src/plugins/data/public';
 import styled from 'styled-components';
 
-import { AlertsByCategory } from './alerts_by_category';
-import { FiltersGlobal } from '../common/components/filters_global';
-import { SiemSearchBar } from '../common/components/search_bar';
-import { WrapperPage } from '../common/components/wrapper_page';
-import { GlobalTime } from '../common/containers/global_time';
-import { WithSource, indicesExistOrDataTemporarilyUnavailable } from '../common/containers/source';
-import { EventsByDataset } from './events_by_dataset';
-import { EventCounts } from './event_counts';
-import { OverviewEmpty } from './overview_empty';
-import { StatefulSidebar } from './sidebar';
-import { SignalsByCategory } from './signals_by_category';
-import { inputsSelectors, State } from '../common/store';
-import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../common/store/inputs/actions';
-import { SpyRoute } from '../common/utils/route/spy_routes';
+import { AlertsByCategory } from '../components/alerts_by_category';
+import { FiltersGlobal } from '../../common/components/filters_global';
+import { SiemSearchBar } from '../../common/components/search_bar';
+import { WrapperPage } from '../../common/components/wrapper_page';
+import { GlobalTime } from '../../common/containers/global_time';
+import {
+  WithSource,
+  indicesExistOrDataTemporarilyUnavailable,
+} from '../../common/containers/source';
+import { EventsByDataset } from '../components/events_by_dataset';
+import { EventCounts } from '../components/event_counts';
+import { OverviewEmpty } from '../components/overview_empty';
+import { StatefulSidebar } from '../components/sidebar';
+import { SignalsByCategory } from '../components/signals_by_category';
+import { inputsSelectors, State } from '../../common/store';
+import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../common/store/inputs/actions';
+import { SpyRoute } from '../../common/utils/route/spy_routes';
 
 const DEFAULT_QUERY: Query = { query: '', language: 'kuery' };
 const NO_FILTERS: Filter[] = [];

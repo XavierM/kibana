@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { FlowTarget, UsersItem } from '../../../../graphql/types';
+import { FlowTarget, UsersItem } from '../../../../../graphql/types';
 import { defaultToEmptyTag } from '../../../empty_value';
 import { Columns } from '../../../paginated_table';
 

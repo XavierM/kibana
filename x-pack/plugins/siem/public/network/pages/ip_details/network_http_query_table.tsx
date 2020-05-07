@@ -6,10 +6,10 @@
 
 import React from 'react';
 import { getOr } from 'lodash/fp';
-import { manageQuery } from '../../../components/page/manage_query';
+import { manageQuery } from '../../../common/components/page/manage_query';
 import { OwnProps } from './types';
-import { NetworkHttpQuery } from '../../../containers/network_http';
-import { NetworkHttpTable } from '../../../components/page/network/network_http_table';
+import { NetworkHttpQuery } from '../../containers/network_http';
+import { NetworkHttpTable } from '../../../common/components/page/network/network_http_table';
 
 const NetworkHttpTableManage = manageQuery(NetworkHttpTable);
 

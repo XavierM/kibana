@@ -9,13 +9,13 @@ import { getOr } from 'lodash/fp';
 import React from 'react';
 
 import { TestProviders } from '../../../common/mock';
-import { hostsModel } from '../../store';
+import { hostsModel } from '../../../common/store';
 import { getEmptyValue } from '../../../common/components/empty_value';
 import { useMountAppended } from '../../../common/utils/use_mount_appended';
 
 import { getArgs, UncommonProcessTable, getUncommonColumnsCurated } from '.';
 import { mockData } from './mock';
-import { HostsType } from '../../store/model';
+import { HostsType } from '../../../common/store/hosts/model';
 import * as i18n from './translations';
 
 describe('Uncommon Process Table Component', () => {

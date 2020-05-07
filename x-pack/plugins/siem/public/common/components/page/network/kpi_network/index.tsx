@@ -22,7 +22,7 @@ import {
   useKpiMatrixStatus,
   StatItems,
 } from '../../../../components/stat_items';
-import { KpiNetworkData } from '../../../../graphql/types';
+import { KpiNetworkData } from '../../../../../graphql/types';
 
 import * as i18n from './translations';
 import { UpdateDateRange } from '../../../charts/common';

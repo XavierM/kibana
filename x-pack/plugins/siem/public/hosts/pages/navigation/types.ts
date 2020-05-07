@@ -6,12 +6,12 @@
 
 import { ESTermQuery } from '../../../../common/typed_json';
 import { Filter, IIndexPattern } from '../../../../../../../src/plugins/data/public';
-import { NarrowDateRange } from '../../../components/ml/types';
-import { InspectQuery, Refetch } from '../../../store/inputs/model';
+import { NarrowDateRange } from '../../../common/components/ml/types';
+import { InspectQuery, Refetch } from '../../../common/store/inputs/model';
 
-import { HostsTableType, HostsType } from '../../../store/hosts/model';
-import { NavTab } from '../../../components/navigation/types';
-import { UpdateDateRange } from '../../../components/charts/common';
+import { HostsTableType, HostsType } from '../../../common/store/hosts/model';
+import { NavTab } from '../../../common/components/navigation/types';
+import { UpdateDateRange } from '../../../common/components/charts/common';
 
 export type KeyHostsNavTabWithoutMlPermission = HostsTableType.hosts &
   HostsTableType.authentications &

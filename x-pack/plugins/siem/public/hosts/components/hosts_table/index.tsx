@@ -8,7 +8,7 @@ import React, { useMemo, useCallback } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { IIndexPattern } from 'src/plugins/data/public';
 
-import { hostsActions } from '../../store/actions';
+import { hostsActions } from '../../../common/store/actions';
 import {
   Direction,
   HostFields,
@@ -19,7 +19,7 @@ import {
   OsFields,
 } from '../../../graphql/types';
 import { assertUnreachable } from '../../../common/lib/helpers';
-import { hostsModel, hostsSelectors, State } from '../../store';
+import { hostsModel, hostsSelectors, State } from '../../../common/store';
 import {
   Columns,
   Criteria,

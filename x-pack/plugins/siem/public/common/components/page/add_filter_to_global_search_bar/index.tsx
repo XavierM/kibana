@@ -7,7 +7,7 @@
 import { EuiButtonIcon, EuiToolTip } from '@elastic/eui';
 import React, { useCallback } from 'react';
 
-import { Filter } from '../../../../../../../src/plugins/data/public';
+import { Filter } from '../../../../../../../../src/plugins/data/public';
 import { WithHoverActions } from '../../with_hover_actions';
 import { useKibana } from '../../../lib/kibana';
 

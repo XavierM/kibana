@@ -18,7 +18,7 @@ import {
 } from './helpers';
 import { mockRuleWithEverything, mockRule } from './all/__mocks__/mock';
 import { esFilters } from '../../../../../../../../src/plugins/data/public';
-import { Rule } from '../../../containers/detection_engine/rules';
+import { Rule } from '../../../../alerts/containers/detection_engine/rules';
 import {
   AboutStepRule,
   AboutStepRuleDetails,

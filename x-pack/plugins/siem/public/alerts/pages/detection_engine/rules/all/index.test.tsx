@@ -67,7 +67,7 @@ jest.mock('./reducer', () => {
   };
 });
 
-jest.mock('../../../../containers/detection_engine/rules', () => {
+jest.mock('../../../../../alerts/containers/detection_engine/rules', () => {
   return {
     useRules: jest.fn().mockReturnValue([
       false,

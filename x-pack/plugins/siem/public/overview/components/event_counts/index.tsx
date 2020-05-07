@@ -8,14 +8,19 @@ import { EuiFlexGroup, EuiFlexItem } from '@elastic/eui';
 import React from 'react';
 import styled from 'styled-components';
 
-import { OverviewHost } from '../../common/components/page/overview/overview_host';
-import { OverviewNetwork } from '../../common/components/page/overview/overview_network';
-import { filterHostData } from '../../hosts/pages/navigation/alerts_query_tab_body';
-import { useKibana } from '../../common/lib/kibana';
-import { convertToBuildEsQuery } from '../../common/lib/keury';
-import { filterNetworkData } from '../../network/pages/navigation/alerts_query_tab_body';
-import { Filter, esQuery, IIndexPattern, Query } from '../../../../../../src/plugins/data/public';
-import { inputsModel } from '../../common/store';
+import { OverviewHost } from '../../../common/components/page/overview/overview_host';
+import { OverviewNetwork } from '../../../common/components/page/overview/overview_network';
+import { filterHostData } from '../../../hosts/pages/navigation/alerts_query_tab_body';
+import { useKibana } from '../../../common/lib/kibana';
+import { convertToBuildEsQuery } from '../../../common/lib/keury';
+import { filterNetworkData } from '../../../network/pages/navigation/alerts_query_tab_body';
+import {
+  Filter,
+  esQuery,
+  IIndexPattern,
+  Query,
+} from '../../../../../../../src/plugins/data/public';
+import { inputsModel } from '../../../common/store';
 
 const HorizontalSpacer = styled(EuiFlexItem)`
   width: 24px;

@@ -6,7 +6,7 @@
 
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
 
-import { Direction, HostsFields } from '../../graphql/types';
+import { Direction, HostsFields } from '../../../graphql/types';
 import { DEFAULT_TABLE_ACTIVE_PAGE, DEFAULT_TABLE_LIMIT } from '../constants';
 
 import {

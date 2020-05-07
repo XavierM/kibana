@@ -13,7 +13,7 @@ import {
   duplicateRules,
   enableRules,
   Rule,
-} from '../../../../containers/detection_engine/rules';
+} from '../../../../../alerts/containers/detection_engine/rules';
 import { Action } from './reducer';
 
 import {

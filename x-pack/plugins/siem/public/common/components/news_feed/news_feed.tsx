@@ -7,7 +7,7 @@
 import React from 'react';
 
 import { LoadingPlaceholders } from '../page/overview/loading_placeholders';
-import { NEWS_FEED_TITLE } from '../../pages/overview/translations';
+import { NEWS_FEED_TITLE } from '../../../overview/pages/translations';
 import { SidebarHeader } from '../sidebar_header';
 
 import { NoNews } from './no_news';

@@ -7,7 +7,7 @@
 import { isEmpty } from 'lodash/fp';
 import { useEffect, useMemo, useState, useRef } from 'react';
 
-import { DEFAULT_INDEX_KEY } from '../../../common/constants';
+import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
 import { MatrixHistogramQueryProps } from '../../components/matrix_histogram/types';
 import { errorToToaster, useStateToaster } from '../../components/toasters';
 import { useUiSetting$ } from '../../lib/kibana';
@@ -15,7 +15,7 @@ import { createFilter } from '../helpers';
 import { useApolloClient } from '../../utils/apollo_context';
 import { inputsModel } from '../../store';
 import { MatrixHistogramGqlQuery } from './index.gql_query';
-import { GetMatrixHistogramQuery, MatrixOverTimeHistogramData } from '../../graphql/types';
+import { GetMatrixHistogramQuery, MatrixOverTimeHistogramData } from '../../../graphql/types';
 
 export const useQuery = <Hit, Aggs, TCache = object>({
   endDate,

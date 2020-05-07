@@ -6,10 +6,9 @@
 
 import React from 'react';
 
-import { EmptyPage } from '../../components/empty_page';
-import { useKibana } from '../../lib/kibana';
-
-import * as i18n from '../common/translations';
+import { EmptyPage } from '../../common/components/empty_page';
+import { useKibana } from '../../common/lib/kibana';
+import * as i18n from '../../common/translations';
 
 export const HostsEmptyPage = React.memo(() => {
   const { http, docLinks } = useKibana().services;

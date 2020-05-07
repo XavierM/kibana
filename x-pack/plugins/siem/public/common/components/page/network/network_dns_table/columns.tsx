@@ -7,14 +7,14 @@
 import numeral from '@elastic/numeral';
 import React from 'react';
 
-import { NetworkDnsFields, NetworkDnsItem } from '../../../../graphql/types';
+import { NetworkDnsFields, NetworkDnsItem } from '../../../../../graphql/types';
 import { DragEffects, DraggableWrapper } from '../../../drag_and_drop/draggable_wrapper';
 import { escapeDataProviderId } from '../../../drag_and_drop/helpers';
 import { defaultToEmptyTag, getEmptyTagValue } from '../../../empty_value';
 import { Columns } from '../../../paginated_table';
-import { IS_OPERATOR } from '../../../timeline/data_providers/data_provider';
+import { IS_OPERATOR } from '../../../../../timelines/components/timeline/data_providers/data_provider';
 import { PreferenceFormattedBytes } from '../../../formatted_bytes';
-import { Provider } from '../../../timeline/data_providers/provider';
+import { Provider } from '../../../../../timelines/components/timeline/data_providers/provider';
 
 import * as i18n from './translations';
 export type NetworkDnsColumns = [

@@ -4,10 +4,10 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { esFilters } from '../../../../../../../../../src/plugins/data/public';
-import { Rule, RuleError } from '../../../../../containers/detection_engine/rules';
+import { esFilters } from '../../../../../../../../../../src/plugins/data/public';
+import { Rule, RuleError } from '../../../../../../alerts/containers/detection_engine/rules';
 import { AboutStepRule, ActionsStepRule, DefineStepRule, ScheduleStepRule } from '../../types';
-import { FieldValueQueryBar } from '../../components/query_bar';
+import { FieldValueQueryBar } from '../../../../../../alerts/components/rules/query_bar';
 
 export const mockQueryBar: FieldValueQueryBar = {
   query: {

@@ -6,14 +6,14 @@
 
 import React, { useCallback } from 'react';
 
-import { SignalsHistogramPanel } from '../../alerts/components/signals_histogram_panel';
-import { signalsHistogramOptions } from '../../alerts/components/signals_histogram_panel/config';
-import { useSignalIndex } from '../../alerts/container/detection_engine/signals/use_signal_index';
-import { SetAbsoluteRangeDatePicker } from '../../network/pages/types';
-import { Filter, IIndexPattern, Query } from '../../../../../../src/plugins/data/public';
-import { inputsModel } from '../../common/store';
-import { InputsModelId } from '../../common/store/inputs/constants';
-import * as i18n from '../translations';
+import { SignalsHistogramPanel } from '../../../alerts/components/signals_histogram_panel';
+import { signalsHistogramOptions } from '../../../alerts/components/signals_histogram_panel/config';
+import { useSignalIndex } from '../../../alerts/containers/detection_engine/signals/use_signal_index';
+import { SetAbsoluteRangeDatePicker } from '../../../network/pages/types';
+import { Filter, IIndexPattern, Query } from '../../../../../../../src/plugins/data/public';
+import { inputsModel } from '../../../common/store';
+import { InputsModelId } from '../../../common/store/inputs/constants';
+import * as i18n from '../../pages/translations';
 
 const DEFAULT_QUERY: Query = { query: '', language: 'kuery' };
 const DEFAULT_STACK_BY = 'signal.rule.threat.tactic.name';

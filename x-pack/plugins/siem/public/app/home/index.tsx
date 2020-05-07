@@ -10,24 +10,27 @@ import styled from 'styled-components';
 
 import { useThrottledResizeObserver } from '../../common/components/utils';
 import { DragDropContextWrapper } from '../../common/components/drag_and_drop/drag_drop_context_wrapper';
-import { Flyout } from '../../common/components/flyout';
+import { Flyout } from '../../timelines/components/flyout';
 import { HeaderGlobal } from '../../common/components/header_global';
 import { HelpMenu } from '../../common/components/help_menu';
 import { LinkToPage } from '../../common/components/link_to';
 import { MlHostConditionalContainer } from '../../common/components/ml/conditional_links/ml_host_conditional_container';
 import { MlNetworkConditionalContainer } from '../../common/components/ml/conditional_links/ml_network_conditional_container';
-import { AutoSaveWarningMsg } from '../../common/components/timeline/auto_save_warning';
+import { AutoSaveWarningMsg } from '../../timelines/components/timeline/auto_save_warning';
 import { UseUrlState } from '../../common/components/url_state';
-import { WithSource, indicesExistOrDataTemporarilyUnavailable } from '../../containers/source';
-import { SpyRoute } from '../../utils/route/spy_routes';
-import { useShowTimeline } from '../../utils/timeline/use_show_timeline';
+import {
+  WithSource,
+  indicesExistOrDataTemporarilyUnavailable,
+} from '../../common/containers/source';
+import { SpyRoute } from '../../common/utils/route/spy_routes';
+import { useShowTimeline } from '../../common/utils/timeline/use_show_timeline';
 import { NotFoundPage } from '../404';
-import { DetectionEngineContainer } from '../detection_engine';
-import { HostsContainer } from '../hosts';
-import { NetworkContainer } from '../network';
-import { Overview } from '../overview';
-import { Case } from '../case';
-import { Timelines } from '../timelines';
+import { DetectionEngineContainer } from '../../alerts/pages/detection_engine';
+import { HostsContainer } from '../../hosts/pages';
+import { NetworkContainer } from '../../network/pages';
+import { Overview } from '../../overview';
+import { Case } from '../../cases/pages';
+import { Timelines } from '../../timelines/pages';
 import { navTabs } from './home_navigations';
 import { SiemPageName } from './types';
 

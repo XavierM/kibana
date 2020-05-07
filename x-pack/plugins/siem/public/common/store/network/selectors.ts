@@ -7,7 +7,7 @@
 import { createSelector } from 'reselect';
 import { get } from 'lodash/fp';
 
-import { FlowTargetSourceDest } from '../../graphql/types';
+import { FlowTargetSourceDest } from '../../../graphql/types';
 import { State } from '../reducer';
 import { initialNetworkState } from './reducer';
 import {

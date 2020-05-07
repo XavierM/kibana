@@ -15,7 +15,10 @@ import {
 import React from 'react';
 
 import { RecentTimelineHeader } from './header';
-import { OnOpenTimeline, OpenTimelineResult } from '../open_timeline/types';
+import {
+  OnOpenTimeline,
+  OpenTimelineResult,
+} from '../../../timelines/components/open_timeline/types';
 import { WithHoverActions } from '../with_hover_actions';
 
 import { RecentTimelineCounts } from './counts';

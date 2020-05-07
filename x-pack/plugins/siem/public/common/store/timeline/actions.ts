@@ -7,11 +7,11 @@
 import actionCreatorFactory from 'typescript-fsa';
 
 import { Filter } from '../../../../../../../src/plugins/data/public';
-import { Sort } from '../../components/timeline/body/sort';
+import { Sort } from '../../../timelines/components/timeline/body/sort';
 import {
   DataProvider,
   QueryOperator,
-} from '../../components/timeline/data_providers/data_provider';
+} from '../../../timelines/components/timeline/data_providers/data_provider';
 import { KueryFilterQuery, SerializedFilterQuery } from '../types';
 
 import { EventType, KqlMode, TimelineModel, ColumnHeaderOptions } from './model';

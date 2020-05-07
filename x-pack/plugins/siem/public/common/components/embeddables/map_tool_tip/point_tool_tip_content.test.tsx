@@ -12,7 +12,7 @@ import { TestProviders } from '../../../mock';
 import { getEmptyStringTag } from '../../empty_value';
 import { HostDetailsLink, IPDetailsLink } from '../../links';
 import { useMountAppended } from '../../../utils/use_mount_appended';
-import { FlowTarget } from '../../../graphql/types';
+import { FlowTarget } from '../../../../graphql/types';
 
 describe('PointToolTipContent', () => {
   const mount = useMountAppended();

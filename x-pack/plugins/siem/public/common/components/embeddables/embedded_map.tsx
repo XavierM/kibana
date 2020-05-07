@@ -9,8 +9,11 @@ import React, { useEffect, useState } from 'react';
 import { createPortalNode, InPortal } from 'react-reverse-portal';
 import styled, { css } from 'styled-components';
 
-import { EmbeddablePanel, ErrorEmbeddable } from '../../../../../../src/plugins/embeddable/public';
-import { DEFAULT_INDEX_KEY } from '../../../common/constants';
+import {
+  EmbeddablePanel,
+  ErrorEmbeddable,
+} from '../../../../../../../src/plugins/embeddable/public';
+import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
 import { getIndexPatternTitleIdMapping } from '../../hooks/api/helpers';
 import { useIndexPatterns } from '../../hooks/use_index_patterns';
 import { Loader } from '../loader';
@@ -22,10 +25,10 @@ import { IndexPatternsMissingPrompt } from './index_patterns_missing_prompt';
 import { MapToolTip } from './map_tool_tip/map_tool_tip';
 import * as i18n from './translations';
 import { SetQuery } from './types';
-import { MapEmbeddable } from '../../../../../legacy/plugins/maps/public';
-import { Query, Filter } from '../../../../../../src/plugins/data/public';
+import { MapEmbeddable } from '../../../../../../legacy/plugins/maps/public';
+import { Query, Filter } from '../../../../../../../src/plugins/data/public';
 import { useKibana, useUiSetting$ } from '../../lib/kibana';
-import { getSavedObjectFinder } from '../../../../../../src/plugins/saved_objects/public';
+import { getSavedObjectFinder } from '../../../../../../../src/plugins/saved_objects/public';
 
 interface EmbeddableMapProps {
   maintainRatio?: boolean;

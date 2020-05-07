@@ -7,14 +7,14 @@
 import React, { useMemo } from 'react';
 import { Redirect, Route, Switch, RouteComponentProps } from 'react-router-dom';
 
-import { useMlCapabilities } from '../../components/ml_popover/hooks/use_ml_capabilities';
-import { hasMlUserPermissions } from '../../components/ml/permissions/has_ml_user_permissions';
+import { useMlCapabilities } from '../../common/components/ml_popover/hooks/use_ml_capabilities';
+import { hasMlUserPermissions } from '../../common/components/ml/permissions/has_ml_user_permissions';
 import { FlowTarget } from '../../graphql/types';
 
 import { IPDetails } from './ip_details';
 import { Network } from './network';
-import { GlobalTime } from '../../containers/global_time';
-import { SiemPageName } from '../home/types';
+import { GlobalTime } from '../../common/containers/global_time';
+import { SiemPageName } from '../../app/home/types';
 import { getNetworkRoutePath } from './navigation';
 import { NetworkRouteType } from './navigation/types';
 

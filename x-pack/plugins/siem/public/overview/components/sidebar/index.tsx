@@ -6,8 +6,8 @@
 
 import React, { useState } from 'react';
 
-import { FilterMode as RecentTimelinesFilterMode } from '../../common/components/recent_timelines/types';
-import { FilterMode as RecentCasesFilterMode } from '../../common/components/recent_cases/types';
+import { FilterMode as RecentTimelinesFilterMode } from '../../../common/components/recent_timelines/types';
+import { FilterMode as RecentCasesFilterMode } from '../../../common/components/recent_cases/types';
 
 import { Sidebar } from './sidebar';
 

@@ -9,8 +9,8 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
 import { HostsTableType } from '../../store/hosts/model';
-import { NetworkRouteType } from '../../pages/network/navigation/types';
-import { FlowTarget } from '../../graphql/types';
+import { NetworkRouteType } from '../../../network/pages/navigation/types';
+import { FlowTarget } from '../../../graphql/types';
 
 export type SiemRouteType = HostsTableType | NetworkRouteType;
 export interface RouteSpyState {

@@ -11,9 +11,12 @@ import { DragEffects, DraggableWrapper } from '../drag_and_drop/draggable_wrappe
 import { escapeDataProviderId } from '../drag_and_drop/helpers';
 import { getOrEmptyTagFromValue } from '../empty_value';
 import { IPDetailsLink } from '../links';
-import { parseQueryValue } from '../timeline/body/renderers/parse_query_value';
-import { DataProvider, IS_OPERATOR } from '../timeline/data_providers/data_provider';
-import { Provider } from '../timeline/data_providers/provider';
+import { parseQueryValue } from '../../../timelines/components/timeline/body/renderers/parse_query_value';
+import {
+  DataProvider,
+  IS_OPERATOR,
+} from '../../../timelines/components/timeline/data_providers/data_provider';
+import { Provider } from '../../../timelines/components/timeline/data_providers/provider';
 
 const getUniqueId = ({
   contextId,

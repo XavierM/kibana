@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import { NetworkDirectionEcs } from '../../graphql/types';
+import { NetworkDirectionEcs } from '../../../graphql/types';
 import { DraggableBadge } from '../draggables';
 import { NETWORK_DIRECTION_FIELD_NAME } from '../source_destination/field_names';
 

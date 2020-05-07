@@ -8,7 +8,7 @@ import React, { useRef } from 'react';
 import { shallow } from 'enzyme';
 
 import { AllRulesTables } from './index';
-import { AllRulesTabs } from '../../all';
+import { AllRulesTabs } from '../../../pages/detection_engine/rules/all';
 
 describe('AllRulesTables', () => {
   it('renders correctly', () => {

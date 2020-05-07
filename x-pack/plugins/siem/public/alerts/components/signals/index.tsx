@@ -11,15 +11,15 @@ import { connect, ConnectedProps } from 'react-redux';
 import { Dispatch } from 'redux';
 
 import { Filter, esQuery } from '../../../../../../../src/plugins/data/public';
-import { useFetchIndexPatterns } from '../../containers/detection_engine/rules/fetch_index_patterns';
+import { useFetchIndexPatterns } from '../../../alerts/containers/detection_engine/rules/fetch_index_patterns';
 import { StatefulEventsViewer } from '../../../common/components/events_viewer';
 import { HeaderSection } from '../../../common/components/header_section';
 import { combineQueries } from '../../../timelines/components/timeline/helpers';
 import { useKibana } from '../../../common/lib/kibana';
 import { inputsSelectors, State, inputsModel } from '../../../common/store';
-import { timelineActions, timelineSelectors } from '../../../timelines/store/timeline';
-import { TimelineModel } from '../../../timelines/store/timeline/model';
-import { timelineDefaults } from '../../../timelines/store/timeline/defaults';
+import { timelineActions, timelineSelectors } from '../../../common/store/timeline';
+import { TimelineModel } from '../../../common/store/timeline/model';
+import { timelineDefaults } from '../../../common/store/timeline/defaults';
 import { useApolloClient } from '../../../common/utils/apollo_context';
 
 import { updateSignalStatusAction } from './actions';
@@ -45,7 +45,7 @@ import {
   UpdateSignalsStatusCallback,
   UpdateSignalsStatusProps,
 } from './types';
-import { dispatchUpdateTimeline } from '../../../../components/open_timeline/helpers';
+import { dispatchUpdateTimeline } from '../../../timelines/components/open_timeline/helpers';
 
 export const SIGNALS_PAGE_TIMELINE_ID = 'signals-page';
 

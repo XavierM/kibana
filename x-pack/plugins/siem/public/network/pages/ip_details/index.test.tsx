@@ -13,12 +13,12 @@ import { ActionCreator } from 'typescript-fsa';
 
 import '../../../mock/match_media';
 
-import { mocksSource } from '../../../containers/source/mock';
+import { mocksSource } from '../../../common/containers/source/mock';
 import { FlowTarget } from '../../../graphql/types';
-import { apolloClientObservable, mockGlobalState, TestProviders } from '../../../mock';
-import { useMountAppended } from '../../../utils/use_mount_appended';
-import { createStore, State } from '../../../store';
-import { InputsModelId } from '../../../store/inputs/constants';
+import { apolloClientObservable, mockGlobalState, TestProviders } from '../../../common/mock';
+import { useMountAppended } from '../../../common/utils/use_mount_appended';
+import { createStore, State } from '../../../common/store';
+import { InputsModelId } from '../../../common/store/inputs/constants';
 
 import { IPDetailsComponent, IPDetails } from './index';
 

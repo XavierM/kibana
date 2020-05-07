@@ -8,11 +8,11 @@ import { EuiFlexGroup, EuiFlexItem, EuiLink, EuiSpacer, EuiText } from '@elastic
 import React from 'react';
 import styled from 'styled-components';
 
-import { Case } from '../../containers/case/types';
+import { Case } from '../../../cases/containers/types';
 import { getCaseDetailsUrl } from '../link_to/redirect_to_case';
 import { Markdown } from '../markdown';
 import { useGetUrlSearch } from '../navigation/use_get_url_search';
-import { navTabs } from '../../pages/home/home_navigations';
+import { navTabs } from '../../../app/home/home_navigations';
 import { IconWithCount } from '../recent_timelines/counts';
 
 import * as i18n from './translations';

@@ -10,7 +10,7 @@ import React from 'react';
 import { Provider as ReduxStoreProvider } from 'react-redux';
 
 import { apolloClientObservable, mockGlobalState } from '../../../common/mock';
-import { createStore, hostsModel, State } from '../../store';
+import { createStore, hostsModel, State } from '../../../common/store';
 
 import { mockData } from './mock';
 import * as i18n from './translations';

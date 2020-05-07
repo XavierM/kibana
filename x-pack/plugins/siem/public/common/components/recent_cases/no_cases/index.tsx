@@ -9,7 +9,7 @@ import React, { useMemo } from 'react';
 
 import { getCreateCaseUrl } from '../../link_to/redirect_to_case';
 import { useGetUrlSearch } from '../../navigation/use_get_url_search';
-import { navTabs } from '../../../pages/home/home_navigations';
+import { navTabs } from '../../../../app/home/home_navigations';
 
 import * as i18n from '../translations';
 
