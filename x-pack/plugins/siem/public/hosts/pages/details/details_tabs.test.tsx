@@ -9,13 +9,13 @@ import { IIndexPattern } from 'src/plugins/data/public';
 import { MemoryRouter } from 'react-router-dom';
 import useResizeObserver from 'use-resize-observer/polyfilled';
 
-import { mockIndexPattern } from '../../../mock/index_pattern';
-import { TestProviders } from '../../../mock/test_providers';
+import { mockIndexPattern } from '../../../common/mock/index_pattern';
+import { TestProviders } from '../../../common/mock/test_providers';
 import { HostDetailsTabs } from './details_tabs';
 import { HostDetailsTabsProps, SetAbsoluteRangeDatePicker } from './types';
 import { hostDetailsPagePath } from '../types';
 import { type } from './utils';
-import { useMountAppended } from '../../../utils/use_mount_appended';
+import { useMountAppended } from '../../../common/utils/use_mount_appended';
 import { getHostDetailsPageFilters } from './helpers';
 
 jest.mock('../../../containers/source', () => ({

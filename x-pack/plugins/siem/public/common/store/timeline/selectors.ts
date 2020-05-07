@@ -44,9 +44,9 @@ export const getEventsByIdSelector = () => createSelector(selectTimeline, timeli
 export const getKqlFilterQuerySelector = () =>
   createSelector(selectTimeline, timeline =>
     timeline &&
-      timeline.kqlQuery &&
-      timeline.kqlQuery.filterQuery &&
-      timeline.kqlQuery.filterQuery.kuery
+    timeline.kqlQuery &&
+    timeline.kqlQuery.filterQuery &&
+    timeline.kqlQuery.filterQuery.kuery
       ? timeline.kqlQuery.filterQuery.kuery.expression
       : null
   );
@@ -59,9 +59,9 @@ export const getKqlFilterQueryDraftSelector = () =>
 export const getKqlFilterKuerySelector = () =>
   createSelector(selectTimeline, timeline =>
     timeline &&
-      timeline.kqlQuery &&
-      timeline.kqlQuery.filterQuery &&
-      timeline.kqlQuery.filterQuery.kuery
+    timeline.kqlQuery &&
+    timeline.kqlQuery.filterQuery &&
+    timeline.kqlQuery.filterQuery.kuery
       ? timeline.kqlQuery.filterQuery.kuery
       : null
   );

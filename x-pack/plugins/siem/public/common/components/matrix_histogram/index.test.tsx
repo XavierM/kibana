@@ -11,7 +11,7 @@ import React from 'react';
 
 import { MatrixHistogram } from '.';
 import { useQuery } from '../../containers/matrix_histogram';
-import { HistogramType } from '../../graphql/types';
+import { HistogramType } from '../../../graphql/types';
 jest.mock('../../lib/kibana');
 
 jest.mock('./matrix_loader', () => {

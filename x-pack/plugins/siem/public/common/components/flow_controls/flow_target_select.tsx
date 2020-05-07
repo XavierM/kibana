@@ -7,7 +7,7 @@
 import { EuiSuperSelect } from '@elastic/eui';
 import React from 'react';
 
-import { FlowDirection, FlowTarget } from '../../graphql/types';
+import { FlowDirection, FlowTarget } from '../../../graphql/types';
 
 import * as i18n from './translations';
 
@@ -57,18 +57,18 @@ const FlowTargetSelectComponent: React.FC<FlowTargetSelectProps> = ({
   displayTextOverride = [],
   updateFlowTargetAction,
 }) => (
-  <EuiSuperSelect
-    options={
-      selectedDirection
-        ? toggleTargetOptions(id, displayTextOverride).filter(option =>
+    <EuiSuperSelect
+      options={
+        selectedDirection
+          ? toggleTargetOptions(id, displayTextOverride).filter(option =>
             option.directions.includes(selectedDirection)
           )
-        : toggleTargetOptions(id, displayTextOverride)
-    }
-    valueOfSelected={selectedTarget}
-    onChange={updateFlowTargetAction}
-    isLoading={isLoading}
-  />
-);
+          : toggleTargetOptions(id, displayTextOverride)
+      }
+      valueOfSelected={selectedTarget}
+      onChange={updateFlowTargetAction}
+      isLoading={isLoading}
+    />
+  );
 
 export const FlowTargetSelect = React.memo(FlowTargetSelectComponent);

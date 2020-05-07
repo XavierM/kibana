@@ -9,7 +9,7 @@ import { connect, ConnectedProps } from 'react-redux';
 import deepEqual from 'fast-deep-equal';
 
 import { networkActions } from '../../../../store/network';
-import { TlsEdges, TlsSortField, TlsFields, Direction } from '../../../../graphql/types';
+import { TlsEdges, TlsSortField, TlsFields, Direction } from '../../../../../graphql/types';
 import { networkModel, networkSelectors, State } from '../../../../store';
 import { Criteria, ItemsPerRow, PaginatedTable, SortingBasicTable } from '../../../paginated_table';
 import { getTlsColumns } from './columns';

@@ -9,7 +9,7 @@ import { set } from 'lodash/fp';
 import React from 'react';
 import styled from 'styled-components';
 
-import { DetailItem } from '../../graphql/types';
+import { DetailItem } from '../../../graphql/types';
 import { omitTypenameAndEmpty } from '../timeline/body/helpers';
 
 interface Props {

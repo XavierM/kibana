@@ -21,7 +21,7 @@ import {
   getIPDetailsUrl,
   getCreateCaseUrl,
 } from '../link_to';
-import { FlowTarget, FlowTargetSourceDest } from '../../graphql/types';
+import { FlowTarget, FlowTargetSourceDest } from '../../../graphql/types';
 import { useUiSetting$ } from '../../lib/kibana';
 import { isUrlInvalid } from '../../pages/detection_engine/rules/components/step_about_rule/helpers';
 import { ExternalLinkIcon } from '../external_link_icon';
@@ -37,10 +37,10 @@ const HostDetailsLinkComponent: React.FC<{ children?: React.ReactNode; hostName:
   children,
   hostName,
 }) => (
-  <EuiLink href={getHostDetailsUrl(encodeURIComponent(hostName))}>
-    {children ? children : hostName}
-  </EuiLink>
-);
+    <EuiLink href={getHostDetailsUrl(encodeURIComponent(hostName))}>
+      {children ? children : hostName}
+    </EuiLink>
+  );
 
 const whitelistUrlSchemes = ['http://', 'https://'];
 export const ExternalLink = React.memo<{
@@ -226,76 +226,76 @@ const ReputationLinkComponent: React.FC<{
   domain,
   direction = 'row',
 }) => {
-  const [ipReputationLinksSetting] = useUiSetting$<ReputationLinkSetting[]>(
-    IP_REPUTATION_LINKS_SETTING
-  );
+    const [ipReputationLinksSetting] = useUiSetting$<ReputationLinkSetting[]>(
+      IP_REPUTATION_LINKS_SETTING
+    );
 
-  const ipReputationLinks: ReputationLinkSetting[] = useMemo(
-    () =>
-      ipReputationLinksSetting
-        ?.slice(0, allItemsLimit)
-        .filter(
-          ({ url_template, name }) =>
-            !isNil(url_template) && !isNil(name) && !isUrlInvalid(url_template)
-        )
-        .map(({ name, url_template }: { name: string; url_template: string }) => ({
-          name: isDefaultReputationLink(name) ? defaultNameMapping[name] : name,
-          url_template: url_template.replace(`{{ip}}`, encodeURIComponent(domain)),
-        })),
-    [ipReputationLinksSetting, domain, defaultNameMapping, allItemsLimit]
-  );
+    const ipReputationLinks: ReputationLinkSetting[] = useMemo(
+      () =>
+        ipReputationLinksSetting
+          ?.slice(0, allItemsLimit)
+          .filter(
+            ({ url_template, name }) =>
+              !isNil(url_template) && !isNil(name) && !isUrlInvalid(url_template)
+          )
+          .map(({ name, url_template }: { name: string; url_template: string }) => ({
+            name: isDefaultReputationLink(name) ? defaultNameMapping[name] : name,
+            url_template: url_template.replace(`{{ip}}`, encodeURIComponent(domain)),
+          })),
+      [ipReputationLinksSetting, domain, defaultNameMapping, allItemsLimit]
+    );
 
-  return ipReputationLinks?.length > 0 ? (
-    <section>
-      <EuiFlexGroup
-        gutterSize="none"
-        justifyContent="center"
-        direction={direction}
-        alignItems="center"
-        data-test-subj="reputationLinkGroup"
-      >
-        <EuiFlexItem grow={true}>
-          {ipReputationLinks
-            ?.slice(0, overflowIndexStart)
-            .map(({ name, url_template: urlTemplate }: ReputationLinkSetting, id) => (
-              <ExternalLink
-                allItemsLimit={ipReputationLinks.length}
-                idx={id}
-                overflowIndexStart={overflowIndexStart}
-                url={urlTemplate}
-                data-test-subj="externalLinkComponent"
-                key={`reputationLink-${id}`}
-              >
-                <>{showDomain ? domain : name ?? domain}</>
-              </ExternalLink>
-            ))}
-        </EuiFlexItem>
+    return ipReputationLinks?.length > 0 ? (
+      <section>
+        <EuiFlexGroup
+          gutterSize="none"
+          justifyContent="center"
+          direction={direction}
+          alignItems="center"
+          data-test-subj="reputationLinkGroup"
+        >
+          <EuiFlexItem grow={true}>
+            {ipReputationLinks
+              ?.slice(0, overflowIndexStart)
+              .map(({ name, url_template: urlTemplate }: ReputationLinkSetting, id) => (
+                <ExternalLink
+                  allItemsLimit={ipReputationLinks.length}
+                  idx={id}
+                  overflowIndexStart={overflowIndexStart}
+                  url={urlTemplate}
+                  data-test-subj="externalLinkComponent"
+                  key={`reputationLink-${id}`}
+                >
+                  <>{showDomain ? domain : name ?? domain}</>
+                </ExternalLink>
+              ))}
+          </EuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <DefaultFieldRendererOverflow
-            rowItems={ipReputationLinks}
-            idPrefix="moreReputationLink"
-            render={rowItem => {
-              return (
-                isReputationLink(rowItem) && (
-                  <ExternalLink
-                    url={rowItem.url_template}
-                    overflowIndexStart={overflowIndexStart}
-                    allItemsLimit={allItemsLimit}
-                  >
-                    <>{rowItem.name ?? domain}</>
-                  </ExternalLink>
-                )
-              );
-            }}
-            moreMaxHeight={DEFAULT_MORE_MAX_HEIGHT}
-            overflowIndexStart={overflowIndexStart}
-          />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </section>
-  ) : null;
-};
+          <EuiFlexItem grow={false}>
+            <DefaultFieldRendererOverflow
+              rowItems={ipReputationLinks}
+              idPrefix="moreReputationLink"
+              render={rowItem => {
+                return (
+                  isReputationLink(rowItem) && (
+                    <ExternalLink
+                      url={rowItem.url_template}
+                      overflowIndexStart={overflowIndexStart}
+                      allItemsLimit={allItemsLimit}
+                    >
+                      <>{rowItem.name ?? domain}</>
+                    </ExternalLink>
+                  )
+                );
+              }}
+              moreMaxHeight={DEFAULT_MORE_MAX_HEIGHT}
+              overflowIndexStart={overflowIndexStart}
+            />
+          </EuiFlexItem>
+        </EuiFlexGroup>
+      </section>
+    ) : null;
+  };
 
 ReputationLinkComponent.displayName = 'ReputationLinkComponent';
 

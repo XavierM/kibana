@@ -12,25 +12,37 @@ import { compose } from 'redux';
 
 import { DocumentNode } from 'graphql';
 import { ScaleType } from '@elastic/charts';
-import { DEFAULT_INDEX_KEY } from '../../../common/constants';
+import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
 import {
   GetNetworkDnsQuery,
   NetworkDnsEdges,
   NetworkDnsSortField,
   PageInfoPaginated,
   MatrixOverOrdinalHistogramData,
-} from '../../graphql/types';
-import { inputsModel, networkModel, networkSelectors, State, inputsSelectors } from '../../store';
-import { withKibana, WithKibanaProps } from '../../lib/kibana';
-import { generateTablePaginationOptions } from '../../components/paginated_table/helpers';
-import { createFilter, getDefaultFetchPolicy } from '../helpers';
-import { QueryTemplatePaginated, QueryTemplatePaginatedProps } from '../query_template_paginated';
+} from '../../../graphql/types';
+import {
+  inputsModel,
+  networkModel,
+  networkSelectors,
+  State,
+  inputsSelectors,
+} from '../../../common/store';
+import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
+import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
+import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
+import {
+  QueryTemplatePaginated,
+  QueryTemplatePaginatedProps,
+} from '../../../common/containers/query_template_paginated';
 import { networkDnsQuery } from './index.gql_query';
-import { DEFAULT_TABLE_ACTIVE_PAGE, DEFAULT_TABLE_LIMIT } from '../../store/constants';
-import { MatrixHistogram } from '../../components/matrix_histogram';
-import { MatrixHistogramOption, GetSubTitle } from '../../components/matrix_histogram/types';
-import { UpdateDateRange } from '../../components/charts/common';
-import { SetQuery } from '../../pages/hosts/navigation/types';
+import { DEFAULT_TABLE_ACTIVE_PAGE, DEFAULT_TABLE_LIMIT } from '../../../common/store/constants';
+import { MatrixHistogram } from '../../../common/components/matrix_histogram';
+import {
+  MatrixHistogramOption,
+  GetSubTitle,
+} from '../../../common/components/matrix_histogram/types';
+import { UpdateDateRange } from '../../../common/components/charts/common';
+import { SetQuery } from '../../../hosts/pages/navigation/types';
 
 const ID = 'networkDnsQuery';
 export const HISTOGRAM_ID = 'networkDnsHistogramQuery';

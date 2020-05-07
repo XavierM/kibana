@@ -16,11 +16,20 @@ import {
   GetAuthenticationsQuery,
   PageInfoPaginated,
 } from '../../../graphql/types';
-import { hostsModel, hostsSelectors, inputsModel, State, inputsSelectors } from '../../store';
-import { createFilter, getDefaultFetchPolicy } from '../helpers';
+import {
+  hostsModel,
+  hostsSelectors,
+  inputsModel,
+  State,
+  inputsSelectors,
+} from '../../../common/store';
+import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
 import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
 import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
-import { QueryTemplatePaginated, QueryTemplatePaginatedProps } from '../query_template_paginated';
+import {
+  QueryTemplatePaginated,
+  QueryTemplatePaginatedProps,
+} from '../../../common/containers/query_template_paginated';
 
 import { authenticationsQuery } from './index.gql_query';
 

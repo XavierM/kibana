@@ -12,7 +12,7 @@ import { Epic } from 'redux-observable';
 import { from, Observable, empty } from 'rxjs';
 import { filter, mergeMap, withLatestFrom, startWith, takeUntil } from 'rxjs/operators';
 
-import { persistTimelineFavoriteMutation } from '../../containers/timeline/favorite/persist.gql_query';
+import { persistTimelineFavoriteMutation } from '../../../timelines/containers/favorite/persist.gql_query';
 import { PersistTimelineFavoriteMutation, ResponseFavoriteTimeline } from '../../../graphql/types';
 import { addError } from '../app/actions';
 import {

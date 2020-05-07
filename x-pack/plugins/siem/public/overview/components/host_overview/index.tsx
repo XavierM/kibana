@@ -27,7 +27,10 @@ import { useMlCapabilities } from '../../../common/components/ml_popover/hooks/u
 import { AnomalyScores } from '../../../common/components/ml/score/anomaly_scores';
 import { Anomalies, NarrowDateRange } from '../../../common/components/ml/types';
 import { DescriptionListStyled, OverviewWrapper } from '../../../common/components/page';
-import { FirstLastSeenHost, FirstLastSeenHostType } from '../first_last_seen_host';
+import {
+  FirstLastSeenHost,
+  FirstLastSeenHostType,
+} from '../../../hosts/components/first_last_seen_host';
 
 import * as i18n from './translations';
 

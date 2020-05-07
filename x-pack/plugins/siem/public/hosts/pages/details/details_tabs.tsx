@@ -7,11 +7,11 @@
 import React, { useCallback } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { scoreIntervalToDateTime } from '../../../components/ml/score/score_interval_to_datetime';
-import { Anomaly } from '../../../components/ml/types';
-import { HostsTableType } from '../../../store/hosts/model';
-import { AnomaliesQueryTabBody } from '../../../containers/anomalies/anomalies_query_tab_body';
-import { AnomaliesHostTable } from '../../../components/ml/tables/anomalies_host_table';
+import { scoreIntervalToDateTime } from '../../../common/components/ml/score/score_interval_to_datetime';
+import { Anomaly } from '../../../common/components/ml/types';
+import { HostsTableType } from '../../../common/store/hosts/model';
+import { AnomaliesQueryTabBody } from '../../../common/containers/anomalies/anomalies_query_tab_body';
+import { AnomaliesHostTable } from '../../../common/components/ml/tables/anomalies_host_table';
 
 import { HostDetailsTabsProps } from './types';
 import { type } from './utils';

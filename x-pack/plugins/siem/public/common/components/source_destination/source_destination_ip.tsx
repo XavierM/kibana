@@ -11,7 +11,7 @@ import deepEqual from 'fast-deep-equal';
 
 import { DESTINATION_IP_FIELD_NAME, SOURCE_IP_FIELD_NAME } from '../ip';
 import { DESTINATION_PORT_FIELD_NAME, SOURCE_PORT_FIELD_NAME, Port } from '../port';
-import * as i18n from '../timeline/body/renderers/translations';
+import * as i18n from '../../../timelines/components/timeline/body/renderers/translations';
 
 import { GeoFields } from './geo_fields';
 import { IpWithPort } from './ip_with_port';

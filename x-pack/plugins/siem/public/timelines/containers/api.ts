@@ -19,7 +19,10 @@ import { KibanaServices } from '../../common/lib/kibana';
 import { ExportSelectedData } from '../../common/components/generic_downloader';
 
 import { createToasterPlainError } from '../../cases/containers/utils';
-import { ImportDataProps, ImportDataResponse } from '../../alerts/container/detection_engine/rules';
+import {
+  ImportDataProps,
+  ImportDataResponse,
+} from '../../alerts/containers/detection_engine/rules';
 
 interface RequestPostTimeline {
   timeline: SavedTimeline;

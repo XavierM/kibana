@@ -7,7 +7,7 @@
 import React, { useMemo } from 'react';
 
 import { Filter } from '../../../../../../../src/plugins/data/public';
-import { AlertsView } from '../../../components/alerts_viewer';
+import { AlertsView } from '../../../common/components/alerts_viewer';
 import { AlertsComponentQueryProps } from './types';
 
 export const filterHostData: Filter[] = [

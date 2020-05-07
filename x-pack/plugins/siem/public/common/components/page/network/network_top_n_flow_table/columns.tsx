@@ -14,15 +14,15 @@ import {
   FlowTargetSourceDest,
   NetworkTopNFlowEdges,
   TopNetworkTablesEcsField,
-} from '../../../../graphql/types';
+} from '../../../../../graphql/types';
 import { networkModel } from '../../../../store';
 import { DragEffects, DraggableWrapper } from '../../../drag_and_drop/draggable_wrapper';
 import { escapeDataProviderId } from '../../../drag_and_drop/helpers';
 import { getEmptyTagValue } from '../../../empty_value';
 import { IPDetailsLink } from '../../../links';
 import { Columns } from '../../../paginated_table';
-import { IS_OPERATOR } from '../../../timeline/data_providers/data_provider';
-import { Provider } from '../../../timeline/data_providers/provider';
+import { IS_OPERATOR } from '../../../../../timelines/components/timeline/data_providers/data_provider';
+import { Provider } from '../../../../../timelines/components/timeline/data_providers/provider';
 import * as i18n from './translations';
 import { getRowItemDraggable, getRowItemDraggables } from '../../../tables/helpers';
 import { PreferenceFormattedBytes } from '../../../formatted_bytes';

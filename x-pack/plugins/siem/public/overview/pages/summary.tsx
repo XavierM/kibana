@@ -8,7 +8,7 @@ import React from 'react';
 import { EuiFlexItem, EuiLink, EuiText } from '@elastic/eui';
 import { FormattedMessage } from '@kbn/i18n/react';
 
-import { useKibana } from '../common/lib/kibana';
+import { useKibana } from '../../common/lib/kibana';
 
 export const Summary = React.memo(() => {
   const docLinks = useKibana().services.docLinks;

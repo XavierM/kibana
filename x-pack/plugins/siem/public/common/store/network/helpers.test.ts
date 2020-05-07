@@ -11,7 +11,7 @@ import {
   NetworkTopTablesFields,
   TlsFields,
   UsersFields,
-} from '../../graphql/types';
+} from '../../../graphql/types';
 import { DEFAULT_TABLE_LIMIT } from '../constants';
 import { NetworkModel, NetworkTableType, IpDetailsTableType, NetworkType } from './model';
 import { setNetworkQueriesActivePageToZero } from './helpers';

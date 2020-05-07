@@ -10,7 +10,7 @@ import React, { useMemo } from 'react';
 
 import { ColumnHeaderOptions } from '../../store/timeline/model';
 import { BrowserFields, getAllFieldsByName } from '../../containers/source';
-import { DetailItem } from '../../graphql/types';
+import { DetailItem } from '../../../graphql/types';
 import { OnUpdateColumns } from '../timeline/events';
 
 import { getColumns } from './columns';

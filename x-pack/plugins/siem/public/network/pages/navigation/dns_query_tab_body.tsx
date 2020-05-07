@@ -7,19 +7,19 @@
 import React, { useEffect, useCallback, useMemo } from 'react';
 import { getOr } from 'lodash/fp';
 
-import { NetworkDnsTable } from '../../../components/page/network/network_dns_table';
-import { NetworkDnsQuery, HISTOGRAM_ID } from '../../../containers/network_dns';
-import { manageQuery } from '../../../components/page/manage_query';
+import { NetworkDnsTable } from '../../../common/components/page/network/network_dns_table';
+import { NetworkDnsQuery, HISTOGRAM_ID } from '../../../network/containers/network_dns';
+import { manageQuery } from '../../../common/components/page/manage_query';
 
 import { NetworkComponentQueryProps } from './types';
-import { networkModel } from '../../../store';
+import { networkModel } from '../../../common/store';
 
 import {
   MatrixHistogramOption,
   MatrixHisrogramConfigs,
-} from '../../../components/matrix_histogram/types';
+} from '../../../common/components/matrix_histogram/types';
 import * as i18n from '../translations';
-import { MatrixHistogramContainer } from '../../../components/matrix_histogram';
+import { MatrixHistogramContainer } from '../../../common/components/matrix_histogram';
 import { HistogramType } from '../../../graphql/types';
 
 const NetworkDnsTableManage = manageQuery(NetworkDnsTable);

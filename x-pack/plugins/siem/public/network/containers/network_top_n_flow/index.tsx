@@ -10,19 +10,28 @@ import { Query } from 'react-apollo';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import { DEFAULT_INDEX_KEY } from '../../../common/constants';
+import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
 import {
   FlowTargetSourceDest,
   GetNetworkTopNFlowQuery,
   NetworkTopNFlowEdges,
   NetworkTopTablesSortField,
   PageInfoPaginated,
-} from '../../graphql/types';
-import { withKibana, WithKibanaProps } from '../../lib/kibana';
-import { inputsModel, inputsSelectors, networkModel, networkSelectors, State } from '../../store';
-import { generateTablePaginationOptions } from '../../components/paginated_table/helpers';
-import { createFilter, getDefaultFetchPolicy } from '../helpers';
-import { QueryTemplatePaginated, QueryTemplatePaginatedProps } from '../query_template_paginated';
+} from '../../../graphql/types';
+import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
+import {
+  inputsModel,
+  inputsSelectors,
+  networkModel,
+  networkSelectors,
+  State,
+} from '../../../common/store';
+import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
+import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
+import {
+  QueryTemplatePaginated,
+  QueryTemplatePaginatedProps,
+} from '../../../common/containers/query_template_paginated';
 import { networkTopNFlowQuery } from './index.gql_query';
 
 const ID = 'networkTopNFlowQuery';

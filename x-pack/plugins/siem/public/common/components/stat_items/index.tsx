@@ -18,7 +18,7 @@ import { get, getOr } from 'lodash/fp';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-import { KpiHostsData, KpiNetworkData } from '../../graphql/types';
+import { KpiHostsData, KpiNetworkData } from '../../../graphql/types';
 import { AreaChart } from '../charts/areachart';
 import { BarChart } from '../charts/barchart';
 import { ChartSeriesData, ChartData, ChartSeriesConfigs, UpdateDateRange } from '../charts/common';
@@ -89,7 +89,7 @@ export const areachartConfigs = (config?: {
     yTickFormatter: numberFormatter,
   },
   settings: {
-    onBrushEnd: getOr(() => {}, 'onBrushEnd', config),
+    onBrushEnd: getOr(() => { }, 'onBrushEnd', config),
   },
   customHeight: statItemChartCustomHeight,
 });
@@ -104,7 +104,7 @@ export const barchartConfigs = (config?: { onElementClick?: ElementClickListener
     xTickFormatter: numberFormatter,
   },
   settings: {
-    onElementClick: getOr(() => {}, 'onElementClick', config),
+    onElementClick: getOr(() => { }, 'onElementClick', config),
     rotation: statItemBarchartRotation,
   },
   customHeight: statItemChartCustomHeight,

@@ -11,7 +11,7 @@ import { ActionCreator } from 'typescript-fsa';
 
 import { EventsByDataset } from '../../pages/overview/events_by_dataset';
 import { SignalsByCategory } from '../../pages/overview/signals_by_category';
-import { Filter, IIndexPattern, Query } from '../../../../../../src/plugins/data/public';
+import { Filter, IIndexPattern, Query } from '../../../../../../../src/plugins/data/public';
 import { inputsModel } from '../../store';
 import { InputsModelId } from '../../store/inputs/constants';
 import { EventType } from '../../store/timeline/model';

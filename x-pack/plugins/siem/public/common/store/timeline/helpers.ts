@@ -7,13 +7,13 @@
 import { getOr, omit, uniq, isEmpty, isEqualWith, union } from 'lodash/fp';
 
 import { Filter } from '../../../../../../../src/plugins/data/public';
-import { getColumnWidthFromType } from '../../components/timeline/body/column_headers/helpers';
-import { Sort } from '../../components/timeline/body/sort';
+import { getColumnWidthFromType } from '../../../timelines/components/timeline/body/column_headers/helpers';
+import { Sort } from '../../../timelines/components/timeline/body/sort';
 import {
   DataProvider,
   QueryOperator,
   QueryMatch,
-} from '../../components/timeline/data_providers/data_provider';
+} from '../../../timelines/components/timeline/data_providers/data_provider';
 import { KueryFilterQuery, SerializedFilterQuery } from '../model';
 
 import { timelineDefaults } from './defaults';

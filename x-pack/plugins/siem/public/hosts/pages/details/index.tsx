@@ -9,30 +9,33 @@ import React, { useEffect, useCallback, useMemo } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { StickyContainer } from 'react-sticky';
 
-import { FiltersGlobal } from '../../../components/filters_global';
-import { HeaderPage } from '../../../components/header_page';
-import { LastEventTime } from '../../../components/last_event_time';
-import { AnomalyTableProvider } from '../../../components/ml/anomaly/anomaly_table_provider';
-import { hostToCriteria } from '../../../components/ml/criteria/host_to_criteria';
-import { hasMlUserPermissions } from '../../../components/ml/permissions/has_ml_user_permissions';
-import { useMlCapabilities } from '../../../components/ml_popover/hooks/use_ml_capabilities';
-import { scoreIntervalToDateTime } from '../../../components/ml/score/score_interval_to_datetime';
-import { SiemNavigation } from '../../../components/navigation';
-import { KpiHostsComponent } from '../../../components/page/hosts';
-import { HostOverview } from '../../../components/page/hosts/host_overview';
-import { manageQuery } from '../../../components/page/manage_query';
-import { SiemSearchBar } from '../../../components/search_bar';
-import { WrapperPage } from '../../../components/wrapper_page';
-import { HostOverviewByNameQuery } from '../../../containers/hosts/overview';
-import { KpiHostDetailsQuery } from '../../../containers/kpi_host_details';
-import { indicesExistOrDataTemporarilyUnavailable, WithSource } from '../../../containers/source';
+import { FiltersGlobal } from '../../../common/components/filters_global';
+import { HeaderPage } from '../../../common/components/header_page';
+import { LastEventTime } from '../../../common/components/last_event_time';
+import { AnomalyTableProvider } from '../../../common/components/ml/anomaly/anomaly_table_provider';
+import { hostToCriteria } from '../../../common/components/ml/criteria/host_to_criteria';
+import { hasMlUserPermissions } from '../../../common/components/ml/permissions/has_ml_user_permissions';
+import { useMlCapabilities } from '../../../common/components/ml_popover/hooks/use_ml_capabilities';
+import { scoreIntervalToDateTime } from '../../../common/components/ml/score/score_interval_to_datetime';
+import { SiemNavigation } from '../../../common/components/navigation';
+import { KpiHostsComponent } from '../../components/kpi_hosts';
+import { HostOverview } from '../../../overview/components/host_overview';
+import { manageQuery } from '../../../common/components/page/manage_query';
+import { SiemSearchBar } from '../../../common/components/search_bar';
+import { WrapperPage } from '../../../common/components/wrapper_page';
+import { HostOverviewByNameQuery } from '../../containers/hosts/overview';
+import { KpiHostDetailsQuery } from '../../containers/kpi_host_details';
+import {
+  indicesExistOrDataTemporarilyUnavailable,
+  WithSource,
+} from '../../../common/containers/source';
 import { LastEventIndexKey } from '../../../graphql/types';
-import { useKibana } from '../../../lib/kibana';
-import { convertToBuildEsQuery } from '../../../lib/keury';
-import { inputsSelectors, State } from '../../../store';
-import { setHostDetailsTablesActivePageToZero as dispatchHostDetailsTablesActivePageToZero } from '../../../store/hosts/actions';
-import { setAbsoluteRangeDatePicker as dispatchAbsoluteRangeDatePicker } from '../../../store/inputs/actions';
-import { SpyRoute } from '../../../utils/route/spy_routes';
+import { useKibana } from '../../../common/lib/kibana';
+import { convertToBuildEsQuery } from '../../../common/lib/keury';
+import { inputsSelectors, State } from '../../../common/store';
+import { setHostDetailsTablesActivePageToZero as dispatchHostDetailsTablesActivePageToZero } from '../../../common/store/hosts/actions';
+import { setAbsoluteRangeDatePicker as dispatchAbsoluteRangeDatePicker } from '../../../common/store/inputs/actions';
+import { SpyRoute } from '../../../common/utils/route/spy_routes';
 import { esQuery, Filter } from '../../../../../../../src/plugins/data/public';
 
 import { HostsEmptyPage } from '../hosts_empty_page';

@@ -13,7 +13,7 @@ import { ThemeProvider } from 'styled-components';
 import { wait } from '../../../../common/lib/helpers';
 import { TestProviderWithoutDragAndDrop } from '../../../../common/mock/test_providers';
 import { mockOpenTimelineQueryResults } from '../../../../common/mock/timeline_results';
-import { useGetAllTimeline, getAllTimeline } from '../../../containers//all';
+import { useGetAllTimeline, getAllTimeline } from '../../../containers/all';
 
 import { OpenTimelineModal } from '.';
 
@@ -21,8 +21,8 @@ jest.mock('../../../../common/lib/kibana');
 jest.mock('../../../utils/apollo_context', () => ({
   useApolloClient: () => ({}),
 }));
-jest.mock('../../../containers/timeline/all', () => {
-  const originalModule = jest.requireActual('../../../containers/timeline/all');
+jest.mock('../../../containers/all', () => {
+  const originalModule = jest.requireActual('../../../containers/all');
   return {
     useGetAllTimeline: jest.fn(),
     getAllTimeline: originalModule.getAllTimeline,

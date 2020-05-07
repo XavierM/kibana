@@ -8,11 +8,11 @@ import ApolloClient from 'apollo-client';
 import { get } from 'lodash/fp';
 import React, { useEffect, useState } from 'react';
 
-import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
-import { useUiSetting$ } from '../../../lib/kibana';
-import { GetHostFirstLastSeenQuery } from '../../../graphql/types';
-import { inputsModel } from '../../../store';
-import { QueryTemplateProps } from '../../query_template';
+import { DEFAULT_INDEX_KEY } from '../../../../../common/constants';
+import { useUiSetting$ } from '../../../../common/lib/kibana';
+import { GetHostFirstLastSeenQuery } from '../../../../graphql/types';
+import { inputsModel } from '../../../../common/store';
+import { QueryTemplateProps } from '../../../../common/containers/query_template';
 
 import { HostFirstLastSeenGqlQuery } from './first_last_seen.gql_query';
 

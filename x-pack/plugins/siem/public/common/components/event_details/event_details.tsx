@@ -9,7 +9,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { BrowserFields } from '../../containers/source';
-import { DetailItem } from '../../graphql/types';
+import { DetailItem } from '../../../graphql/types';
 import { ColumnHeaderOptions } from '../../store/timeline/model';
 import { OnUpdateColumns } from '../timeline/events';
 import { EventFieldsBrowser } from './event_fields_browser';

@@ -4,9 +4,9 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { allTimelinesQuery } from '../../containers/timeline/all/index.gql_query';
+import { allTimelinesQuery } from '../../../timelines/containers/all/index.gql_query';
 import { Direction } from '../../../graphql/types';
-import { DEFAULT_SORT_FIELD } from '../../components/open_timeline/constants';
+import { DEFAULT_SORT_FIELD } from '../../../timelines/components/open_timeline/constants';
 
 export const refetchQueries = [
   {

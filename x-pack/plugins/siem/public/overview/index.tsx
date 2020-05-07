@@ -6,7 +6,7 @@
 
 import React, { memo } from 'react';
 
-import { StatefulOverview } from './overview';
+import { StatefulOverview } from './pages/overview';
 
 export const Overview = memo(() => <StatefulOverview />);
 

@@ -6,10 +6,10 @@
 
 import { getOr } from 'lodash/fp';
 import React from 'react';
-import { HostsQuery } from '../../../containers/hosts';
+import { HostsQuery } from '../../containers/hosts';
 import { HostsComponentsQueryProps } from './types';
-import { HostsTable } from '../../../components/page/hosts';
-import { manageQuery } from '../../../components/page/manage_query';
+import { HostsTable } from '../../components/hosts_table';
+import { manageQuery } from '../../../common/components/page/manage_query';
 
 const HostsTableManage = manageQuery(HostsTable);
 

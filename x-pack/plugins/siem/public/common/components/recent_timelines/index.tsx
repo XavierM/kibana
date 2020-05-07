@@ -10,10 +10,13 @@ import React, { useCallback, useMemo, useEffect } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { Dispatch } from 'redux';
 
-import { useGetAllTimeline } from '../../containers/timeline/all';
-import { SortFieldTimeline, Direction } from '../../graphql/types';
-import { queryTimelineById, dispatchUpdateTimeline } from '../open_timeline/helpers';
-import { OnOpenTimeline } from '../open_timeline/types';
+import { useGetAllTimeline } from '../../../timelines/containers/all';
+import { SortFieldTimeline, Direction } from '../../../graphql/types';
+import {
+  queryTimelineById,
+  dispatchUpdateTimeline,
+} from '../../../timelines/components/open_timeline/helpers';
+import { OnOpenTimeline } from '../../../timelines/components/open_timeline/types';
 import { LoadingPlaceholders } from '../page/overview/loading_placeholders';
 import { updateIsLoading as dispatchUpdateIsLoading } from '../../store/timeline/actions';
 

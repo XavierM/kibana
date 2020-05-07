@@ -10,13 +10,13 @@ import {
   IS_OPERATOR,
   DataProvider,
   DataProvidersAnd,
-} from '../../components/timeline/data_providers/data_provider';
-import { defaultColumnHeaderType } from '../../components/timeline/body/column_headers/default_headers';
+} from '../../../timelines/components/timeline/data_providers/data_provider';
+import { defaultColumnHeaderType } from '../../../timelines/components/timeline/body/column_headers/default_headers';
 import {
   DEFAULT_COLUMN_MIN_WIDTH,
   DEFAULT_TIMELINE_WIDTH,
-} from '../../components/timeline/body/constants';
-import { getColumnWidthFromType } from '../../components/timeline/body/column_headers/helpers';
+} from '../../../timelines/components/timeline/body/constants';
+import { getColumnWidthFromType } from '../../../timelines/components/timeline/body/column_headers/helpers';
 import { Direction } from '../../../graphql/types';
 import { defaultHeaders } from '../../mock';
 

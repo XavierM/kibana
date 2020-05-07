@@ -12,7 +12,7 @@ import deepEqual from 'fast-deep-equal';
 
 import { BrowserFields } from '../../containers/source';
 import { TimelineQuery } from '../../containers/timeline';
-import { Direction } from '../../graphql/types';
+import { Direction } from '../../../graphql/types';
 import { useKibana } from '../../lib/kibana';
 import { ColumnHeaderOptions, KqlMode } from '../../store/timeline/model';
 import { HeaderSection } from '../header_section';
@@ -147,9 +147,9 @@ const EventsViewerComponent: React.FC<Props> = ({
 
               const subtitle = `${
                 i18n.SHOWING
-              }: ${totalCountMinusDeleted.toLocaleString()} ${timelineTypeContext.unit?.(
-                totalCountMinusDeleted
-              ) ?? i18n.UNIT(totalCountMinusDeleted)}`;
+                }: ${totalCountMinusDeleted.toLocaleString()} ${timelineTypeContext.unit?.(
+                  totalCountMinusDeleted
+                ) ?? i18n.UNIT(totalCountMinusDeleted)}`;
 
               return (
                 <>

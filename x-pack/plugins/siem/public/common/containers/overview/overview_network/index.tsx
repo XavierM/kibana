@@ -9,8 +9,8 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import { connect, ConnectedProps } from 'react-redux';
 
-import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
-import { GetOverviewNetworkQuery, OverviewNetworkData } from '../../../graphql/types';
+import { DEFAULT_INDEX_KEY } from '../../../../../common/constants';
+import { GetOverviewNetworkQuery, OverviewNetworkData } from '../../../../graphql/types';
 import { useUiSetting } from '../../../lib/kibana';
 import { State } from '../../../store';
 import { inputsModel, inputsSelectors } from '../../../store/inputs';

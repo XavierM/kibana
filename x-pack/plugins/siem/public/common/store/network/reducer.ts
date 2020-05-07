@@ -13,7 +13,7 @@ import {
   NetworkTopTablesFields,
   TlsFields,
   UsersFields,
-} from '../../graphql/types';
+} from '../../../graphql/types';
 import { DEFAULT_TABLE_ACTIVE_PAGE, DEFAULT_TABLE_LIMIT } from '../constants';
 
 import {

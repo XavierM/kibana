@@ -5,7 +5,7 @@
  */
 import * as i18n from './translations';
 import { MatrixHistogramOption, MatrixHisrogramConfigs } from '../matrix_histogram/types';
-import { HistogramType } from '../../graphql/types';
+import { HistogramType } from '../../../graphql/types';
 
 export const alertsStackByOptions: MatrixHistogramOption[] = [
   {

@@ -16,7 +16,7 @@ import {
 } from '../../../common/components/stat_items';
 import { kpiHostsMapping } from './kpi_hosts_mapping';
 import { kpiHostDetailsMapping } from './kpi_host_details_mapping';
-import { UpdateDateRange } from '../../../charts/common';
+import { UpdateDateRange } from '../../../common/components/charts/common';
 
 const kpiWidgetHeight = 247;
 

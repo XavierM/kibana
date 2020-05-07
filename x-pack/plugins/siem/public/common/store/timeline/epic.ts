@@ -71,8 +71,8 @@ import { isNotNull } from './helpers';
 import { dispatcherTimelinePersistQueue } from './epic_dispatcher_timeline_persistence_queue';
 import { myEpicTimelineId } from './my_epic_timeline_id';
 import { ActionTimeline, TimelineById } from './types';
-import { persistTimeline } from '../../containers/timeline/api';
-import { ALL_TIMELINE_QUERY_ID } from '../../containers/timeline/all';
+import { persistTimeline } from '../../../timelines/containers/api';
+import { ALL_TIMELINE_QUERY_ID } from '../../../timelines/containers/all';
 
 interface TimelineEpicDependencies<State> {
   timelineByIdSelector: (state: State) => TimelineById;

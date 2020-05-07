@@ -5,7 +5,7 @@
  */
 
 import { ONE_MILLISECOND_AS_NANOSECONDS } from '../components/formatted_duration/helpers';
-import { Ecs } from '../graphql/types';
+import { Ecs } from '../../graphql/types';
 
 /** Returns mock data for testing the Netflow component */
 export const getMockNetflowData = (): Ecs => ({

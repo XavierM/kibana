@@ -9,18 +9,18 @@ import { Route, Switch } from 'react-router-dom';
 import { EuiFlexItem, EuiSpacer } from '@elastic/eui';
 
 import { FlowTargetSourceDest } from '../../../graphql/types';
-import { scoreIntervalToDateTime } from '../../../components/ml/score/score_interval_to_datetime';
+import { scoreIntervalToDateTime } from '../../../common/components/ml/score/score_interval_to_datetime';
 
 import { IPsQueryTabBody } from './ips_query_tab_body';
 import { CountriesQueryTabBody } from './countries_query_tab_body';
 import { HttpQueryTabBody } from './http_query_tab_body';
-import { AnomaliesQueryTabBody } from '../../../containers/anomalies/anomalies_query_tab_body';
-import { AnomaliesNetworkTable } from '../../../components/ml/tables/anomalies_network_table';
+import { AnomaliesQueryTabBody } from '../../../common/containers/anomalies/anomalies_query_tab_body';
+import { AnomaliesNetworkTable } from '../../../common/components/ml/tables/anomalies_network_table';
 import { DnsQueryTabBody } from './dns_query_tab_body';
 import { ConditionalFlexGroup } from './conditional_flex_group';
 import { NetworkRoutesProps, NetworkRouteType } from './types';
 import { TlsQueryTabBody } from './tls_query_tab_body';
-import { Anomaly } from '../../../components/ml/types';
+import { Anomaly } from '../../../common/components/ml/types';
 import { NetworkAlertsQueryTabBody } from './alerts_query_tab_body';
 
 export const NetworkRoutes = React.memo<NetworkRoutesProps>(

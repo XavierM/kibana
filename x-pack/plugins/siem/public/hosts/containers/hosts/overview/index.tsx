@@ -10,14 +10,14 @@ import { Query } from 'react-apollo';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
-import { inputsModel, inputsSelectors, State } from '../../../store';
-import { getDefaultFetchPolicy } from '../../helpers';
-import { QueryTemplate, QueryTemplateProps } from '../../query_template';
-import { withKibana, WithKibanaProps } from '../../../lib/kibana';
+import { DEFAULT_INDEX_KEY } from '../../../../../common/constants';
+import { inputsModel, inputsSelectors, State } from '../../../../common/store';
+import { getDefaultFetchPolicy } from '../../../../common/containers/helpers';
+import { QueryTemplate, QueryTemplateProps } from '../../../../common/containers/query_template';
+import { withKibana, WithKibanaProps } from '../../../../common/lib/kibana';
 
 import { HostOverviewQuery } from './host_overview.gql_query';
-import { GetHostOverviewQuery, HostItem } from '../../../graphql/types';
+import { GetHostOverviewQuery, HostItem } from '../../../../graphql/types';
 
 const ID = 'hostOverviewQuery';
 

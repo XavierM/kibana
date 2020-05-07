@@ -12,12 +12,12 @@ import { MockedProvider } from 'react-apollo/test-utils';
 
 import { Filter } from '../../../../../../src/plugins/data/common/es_query';
 import '../../mock/match_media';
-import { mocksSource } from '../../containers/source/mock';
-import { wait } from '../../lib/helpers';
-import { apolloClientObservable, TestProviders, mockGlobalState } from '../../mock';
-import { SiemNavigation } from '../../components/navigation';
-import { inputsActions } from '../../store/inputs';
-import { State, createStore } from '../../store';
+import { mocksSource } from '../../common/containers/source/mock';
+import { wait } from '../../common/lib/helpers';
+import { apolloClientObservable, TestProviders, mockGlobalState } from '../../common/mock';
+import { SiemNavigation } from '../../common/components/navigation';
+import { inputsActions } from '../../common/store/inputs';
+import { State, createStore } from '../../common/store';
 import { HostsComponentProps } from './types';
 import { Hosts } from './hosts';
 import { HostsTabs } from './hosts_tabs';

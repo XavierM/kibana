@@ -7,8 +7,8 @@
 import { EuiText, EuiLink } from '@elastic/eui';
 import React, { useCallback } from 'react';
 
-import { isUntitled } from '../../open_timeline/helpers';
-import { OnOpenTimeline, OpenTimelineResult } from '../../open_timeline/types';
+import { isUntitled } from '../../../../timelines/components/open_timeline/helpers';
+import { OnOpenTimeline, OpenTimelineResult } from '../../../../timelines/components/open_timeline/types';
 import * as i18n from '../translations';
 
 export const RecentTimelineHeader = React.memo<{

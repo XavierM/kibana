@@ -8,7 +8,7 @@ import { EuiIcon, EuiLoadingSpinner, EuiToolTip } from '@elastic/eui';
 import { FormattedMessage } from '@kbn/i18n/react';
 import React, { memo } from 'react';
 
-import { LastEventIndexKey } from '../../graphql/types';
+import { LastEventIndexKey } from '../../../graphql/types';
 import { useLastEventTimeQuery } from '../../containers/events/last_event_time';
 import { getEmptyTagValue } from '../empty_value';
 import { FormattedRelativePreferenceDate } from '../formatted_date';
@@ -46,15 +46,15 @@ export const LastEventTime = memo<LastEventTimeProps>(({ hostName, indexKey, ip 
       {!loading && lastSeen != null && new Date(lastSeen).toString() === 'Invalid Date'
         ? lastSeen
         : !loading &&
-          lastSeen != null && (
-            <FormattedMessage
-              id="xpack.siem.headerPage.pageSubtitle"
-              defaultMessage="Last event: {beat}"
-              values={{
-                beat: <FormattedRelativePreferenceDate value={lastSeen} />,
-              }}
-            />
-          )}
+        lastSeen != null && (
+          <FormattedMessage
+            id="xpack.siem.headerPage.pageSubtitle"
+            defaultMessage="Last event: {beat}"
+            values={{
+              beat: <FormattedRelativePreferenceDate value={lastSeen} />,
+            }}
+          />
+        )}
       {!loading && lastSeen == null && getEmptyTagValue()}
     </>
   );

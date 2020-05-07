@@ -10,17 +10,26 @@ import { Query } from 'react-apollo';
 import { connect, ConnectedProps } from 'react-redux';
 import { compose } from 'redux';
 
-import { DEFAULT_INDEX_KEY } from '../../../common/constants';
+import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
 import {
   GetUncommonProcessesQuery,
   PageInfoPaginated,
   UncommonProcessesEdges,
-} from '../../graphql/types';
-import { hostsModel, hostsSelectors, inputsModel, State, inputsSelectors } from '../../store';
-import { withKibana, WithKibanaProps } from '../../lib/kibana';
-import { generateTablePaginationOptions } from '../../components/paginated_table/helpers';
-import { createFilter, getDefaultFetchPolicy } from '../helpers';
-import { QueryTemplatePaginated, QueryTemplatePaginatedProps } from '../query_template_paginated';
+} from '../../../graphql/types';
+import {
+  hostsModel,
+  hostsSelectors,
+  inputsModel,
+  State,
+  inputsSelectors,
+} from '../../../common/store';
+import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
+import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
+import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
+import {
+  QueryTemplatePaginated,
+  QueryTemplatePaginatedProps,
+} from '../../../common/containers/query_template_paginated';
 
 import { uncommonProcessesQuery } from './index.gql_query';
 

@@ -12,7 +12,7 @@ import { Epic } from 'redux-observable';
 import { from, Observable, empty } from 'rxjs';
 import { filter, mergeMap, startWith, withLatestFrom, takeUntil } from 'rxjs/operators';
 
-import { persistTimelinePinnedEventMutation } from '../../containers/timeline/pinned_event/persist.gql_query';
+import { persistTimelinePinnedEventMutation } from '../../../timelines/containers/pinned_event/persist.gql_query';
 import { PersistTimelinePinnedEventMutation, PinnedEvent } from '../../../graphql/types';
 import { addError } from '../app/actions';
 import { inputsModel } from '../inputs';
@@ -52,7 +52,7 @@ export const epicPersistPinnedEvent = (
         pinnedEventId:
           timeline[action.payload.id].pinnedEventsSaveObject[action.payload.eventId] != null
             ? timeline[action.payload.id].pinnedEventsSaveObject[action.payload.eventId]
-              .pinnedEventId
+                .pinnedEventId
             : null,
         eventId: action.payload.eventId,
         timelineId: myEpicTimelineId.getTimelineId(),
@@ -73,38 +73,38 @@ export const epicPersistPinnedEvent = (
       return [
         response != null
           ? updateTimeline({
-            id: action.payload.id,
-            timeline: {
-              ...savedTimeline,
-              savedObjectId:
-                savedTimeline.savedObjectId == null && response.timelineId != null
-                  ? response.timelineId
-                  : savedTimeline.savedObjectId,
-              version:
-                savedTimeline.version == null && response.timelineVersion != null
-                  ? response.timelineVersion
-                  : savedTimeline.version,
-              pinnedEventIds: {
-                ...savedTimeline.pinnedEventIds,
-                [action.payload.eventId]: true,
+              id: action.payload.id,
+              timeline: {
+                ...savedTimeline,
+                savedObjectId:
+                  savedTimeline.savedObjectId == null && response.timelineId != null
+                    ? response.timelineId
+                    : savedTimeline.savedObjectId,
+                version:
+                  savedTimeline.version == null && response.timelineVersion != null
+                    ? response.timelineVersion
+                    : savedTimeline.version,
+                pinnedEventIds: {
+                  ...savedTimeline.pinnedEventIds,
+                  [action.payload.eventId]: true,
+                },
+                pinnedEventsSaveObject: {
+                  ...savedTimeline.pinnedEventsSaveObject,
+                  [action.payload.eventId]: response,
+                },
               },
-              pinnedEventsSaveObject: {
-                ...savedTimeline.pinnedEventsSaveObject,
-                [action.payload.eventId]: response,
-              },
-            },
-          })
+            })
           : updateTimeline({
-            id: action.payload.id,
-            timeline: {
-              ...savedTimeline,
-              pinnedEventIds: omit(action.payload.eventId, savedTimeline.pinnedEventIds),
-              pinnedEventsSaveObject: omit(
-                action.payload.eventId,
-                savedTimeline.pinnedEventsSaveObject
-              ),
-            },
-          }),
+              id: action.payload.id,
+              timeline: {
+                ...savedTimeline,
+                pinnedEventIds: omit(action.payload.eventId, savedTimeline.pinnedEventIds),
+                pinnedEventsSaveObject: omit(
+                  action.payload.eventId,
+                  savedTimeline.pinnedEventsSaveObject
+                ),
+              },
+            }),
         ...callOutMsg,
         endTimelineSaving({
           id: action.payload.id,

@@ -7,13 +7,13 @@
 import { ESTermQuery } from '../../../../common/typed_json';
 import { IIndexPattern } from '../../../../../../../src/plugins/data/common';
 
-import { NavTab } from '../../../components/navigation/types';
+import { NavTab } from '../../../common/components/navigation/types';
 import { FlowTargetSourceDest } from '../../../graphql/types';
-import { networkModel } from '../../../store';
-import { GlobalTimeArgs } from '../../../containers/global_time';
+import { networkModel } from '../../../common/store';
+import { GlobalTimeArgs } from '../../../common/containers/global_time';
 
 import { SetAbsoluteRangeDatePicker } from '../types';
-import { NarrowDateRange } from '../../../components/ml/types';
+import { NarrowDateRange } from '../../../common/components/ml/types';
 
 interface QueryTabBodyProps extends Pick<GlobalTimeArgs, 'setQuery' | 'deleteQuery'> {
   skip: boolean;

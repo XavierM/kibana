@@ -8,7 +8,7 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
 import { SiemPageName } from '../../pages/home/types';
-import { FlowTarget, FlowTargetSourceDest } from '../../graphql/types';
+import { FlowTarget, FlowTargetSourceDest } from '../../../graphql/types';
 
 import { appendSearch } from './helpers';
 import { RedirectWrapper } from './redirect_wrapper';
@@ -25,14 +25,14 @@ export const RedirectToNetworkPage = ({
   },
   location: { search },
 }: NetworkComponentProps) => (
-  <RedirectWrapper
-    to={
-      detailName
-        ? `/${SiemPageName.network}/ip/${detailName}/${flowTarget}${search}`
-        : `/${SiemPageName.network}${search}`
-    }
-  />
-);
+    <RedirectWrapper
+      to={
+        detailName
+          ? `/${SiemPageName.network}/ip/${detailName}/${flowTarget}${search}`
+          : `/${SiemPageName.network}${search}`
+      }
+    />
+  );
 
 const baseNetworkUrl = `#/link-to/${SiemPageName.network}`;
 export const getNetworkUrl = (search?: string) => `${baseNetworkUrl}${appendSearch(search)}`;
