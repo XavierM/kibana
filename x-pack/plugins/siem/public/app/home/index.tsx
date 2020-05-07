@@ -25,12 +25,12 @@ import {
 import { SpyRoute } from '../../common/utils/route/spy_routes';
 import { useShowTimeline } from '../../common/utils/timeline/use_show_timeline';
 import { NotFoundPage } from '../404';
-import { DetectionEngineContainer } from '../../alerts/detection_engine';
-import { HostsContainer } from '../../hosts';
-import { NetworkContainer } from '../../network';
+import { DetectionEngineContainer } from '../../alerts/pages/detection_engine';
+import { HostsContainer } from '../../hosts/pages';
+import { NetworkContainer } from '../../network/pages';
 import { Overview } from '../../overview';
-import { Case } from '../../cases';
-import { Timelines } from '../../timelines';
+import { Case } from '../../cases/pages';
+import { Timelines } from '../../timelines/pages';
 import { navTabs } from './home_navigations';
 import { SiemPageName } from './types';
 

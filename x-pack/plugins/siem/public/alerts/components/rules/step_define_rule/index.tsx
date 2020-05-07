@@ -13,7 +13,7 @@ import { DEFAULT_INDEX_KEY } from '../../../../../common/constants';
 import { isMlRule } from '../../../../../common/detection_engine/ml_helpers';
 import { IIndexPattern } from '../../../../../../../../src/plugins/data/public';
 import { useFetchIndexPatterns } from '../../../../alerts/containers/detection_engine/rules';
-import { DEFAULT_TIMELINE_TITLE } from '../../../../timelines/components/translations';
+import { DEFAULT_TIMELINE_TITLE } from '../../../../timelines/components/timeline/translations';
 import { useMlCapabilities } from '../../../../common/components/ml_popover/hooks/use_ml_capabilities';
 import { useUiSetting$ } from '../../../../common/lib/kibana';
 import { setFieldValue } from '../../../pages/detection_engine/rules/helpers';

@@ -25,10 +25,10 @@ import {
   ActionType,
   ConnectorAddFlyout,
   ConnectorEditFlyout,
-} from '../../../../../../../triggers_actions_ui/public';
+} from '../../../../../triggers_actions_ui/public';
 
 // eslint-disable-next-line @kbn/eslint/no-restricted-paths
-import { ActionConnectorTableItem } from '../../../../../../../triggers_actions_ui/public/types';
+import { ActionConnectorTableItem } from '../../../../../triggers_actions_ui/public/types';
 import { getCaseUrl } from '../../../common/components/link_to';
 import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
 import { CCMapsCombinedActionAttributes } from '../../containers/configure/types';
@@ -36,7 +36,7 @@ import { Connectors } from './connectors';
 import { ClosureOptions } from './closure_options';
 import { Mapping } from './mapping';
 import { SectionWrapper } from '../wrappers';
-import { navTabs } from '../../../../app/home/home_navigations';
+import { navTabs } from '../../../app/home/home_navigations';
 import * as i18n from './translations';
 
 const FormWrapper = styled.div`

@@ -17,7 +17,7 @@ import { isEmpty } from 'lodash/fp';
 import React, { ChangeEvent, useCallback, useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 
-import * as RuleI18n from '../../translations';
+import * as RuleI18n from '../../../pages/detection_engine/rules/translations';
 import { FieldHook, getFieldValidityAndErrorMessage } from '../../../../shared_imports';
 
 interface AddItemProps {
