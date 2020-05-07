@@ -5,7 +5,7 @@
  */
 import { isEmpty } from 'lodash/fp';
 
-import { IMitreAttack } from '../../types';
+import { IMitreAttack } from '../../../pages/detection_engine/rules/types';
 
 export const isMitreAttackInvalid = (
   tacticName: string | null | undefined,

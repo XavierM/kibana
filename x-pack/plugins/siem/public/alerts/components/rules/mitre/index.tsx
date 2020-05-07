@@ -19,10 +19,10 @@ import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 
 import { tacticsOptions, techniquesOptions } from '../../../mitre/mitre_tactics_techniques';
-import * as Rulei18n from '../../translations';
+import * as Rulei18n from '../../../pages/detection_engine/rules/translations';
 import { FieldHook, getFieldValidityAndErrorMessage } from '../../../../shared_imports';
 import { threatDefault } from '../step_about_rule/default_value';
-import { IMitreEnterpriseAttack } from '../../types';
+import { IMitreEnterpriseAttack } from '../../../pages/detection_engine/rules/types';
 import { MyAddItemButton } from '../add_item_form';
 import { isMitreAttackInvalid } from './helpers';
 import * as i18n from './translations';

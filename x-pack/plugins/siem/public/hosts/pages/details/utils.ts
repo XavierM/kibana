@@ -6,7 +6,8 @@
 
 import { get, isEmpty } from 'lodash/fp';
 
-import { ChromeBreadcrumb } from '../../../../../../../../src/core/public';
+// eslint-disable-next-line @kbn/eslint/no-restricted-paths
+import { ChromeBreadcrumb } from '../../../../../../../src/core/public';
 import { hostsModel } from '../../../common/store';
 import { HostsTableType } from '../../../common/store/hosts/model';
 import {

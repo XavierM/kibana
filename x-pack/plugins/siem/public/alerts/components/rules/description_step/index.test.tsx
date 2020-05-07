@@ -14,14 +14,18 @@ import {
 } from '.';
 
 import { esFilters, Filter, FilterManager } from '../../../../../../../../src/plugins/data/public';
-import { mockAboutStepRule, mockDefineStepRule } from '../../all/__mocks__/mock';
+import {
+  mockAboutStepRule,
+  mockDefineStepRule,
+} from '../../../pages/detection_engine/rules/all/__mocks__/mock';
+// eslint-disable-next-line @kbn/eslint/no-restricted-paths
 import { coreMock } from '../../../../../../../../src/core/public/mocks';
 import { DEFAULT_TIMELINE_TITLE } from '../../../../timelines/components/timeline/translations';
 import * as i18n from './translations';
 
 import { schema } from '../step_about_rule/schema';
 import { ListItems } from './types';
-import { AboutStepRule } from '../../types';
+import { AboutStepRule } from '../../../pages/detection_engine/rules/types';
 
 jest.mock('../../../../common/lib/kibana');
 

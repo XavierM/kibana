@@ -14,14 +14,14 @@ import {
 import React, { useMemo, memo } from 'react';
 import styled from 'styled-components';
 
-import { EuiBasicTableOnChange } from '../../types';
-import * as i18n from '../../translations';
+import { EuiBasicTableOnChange } from '../../../pages/detection_engine/rules/types';
+import * as i18n from '../../../pages/detection_engine/rules/translations';
 import {
   RulesColumns,
   RuleStatusRowItemType,
 } from '../../../pages/detection_engine/rules/all/columns';
-import { Rule, Rules } from '../../../../containers/rules';
-import { AllRulesTabs } from '../../all';
+import { Rule, Rules } from '../../../containers/detection_engine/rules/types';
+import { AllRulesTabs } from '../../../pages/detection_engine/rules/all';
 
 // EuiBasicTable give me a hardtime with adding the ref attributes so I went the easy way
 // after few hours of fight with typescript !!!! I lost :(

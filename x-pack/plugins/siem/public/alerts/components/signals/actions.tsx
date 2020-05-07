@@ -11,8 +11,8 @@ import moment from 'moment';
 import { updateSignalStatus } from '../../containers/detection_engine/signals/api';
 import { SendSignalToTimelineActionProps, UpdateSignalStatusActionProps } from './types';
 import { TimelineNonEcsData, GetOneTimeline, TimelineResult, Ecs } from '../../../graphql/types';
-import { oneTimelineQuery } from '../../../timelines/container/one/index.gql_query';
-import { timelineDefaults } from '../../../timelines/store/timeline/defaults';
+import { oneTimelineQuery } from '../../../timelines/containers/one/index.gql_query';
+import { timelineDefaults } from '../../../common/store/timeline/defaults';
 import {
   omitTypenameInTimeline,
   formatTimelineResultToModel,

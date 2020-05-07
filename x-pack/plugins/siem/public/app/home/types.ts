@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { NavTab } from '../../components/navigation/types';
+import { NavTab } from '../../common/components/navigation/types';
 
 export enum SiemPageName {
   overview = 'overview',
