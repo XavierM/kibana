@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { NewRule } from '../../../../containers/detection_engine/rules';
+import { NewRule } from '../../../../../alerts/containers/detection_engine/rules';
 import {
   DefineStepRuleJson,
   ScheduleStepRuleJson,

@@ -31,7 +31,7 @@ import {
 } from '../../../../../common/components/link_to/redirect_to_detection_engine';
 import { SiemSearchBar } from '../../../../../common/components/search_bar';
 import { WrapperPage } from '../../../../../common/components/wrapper_page';
-import { useRule } from '../../../../containers/detection_engine/rules';
+import { useRule } from '../../../../../alerts/containers/detection_engine/rules';
 
 import {
   indicesExistOrDataTemporarilyUnavailable,

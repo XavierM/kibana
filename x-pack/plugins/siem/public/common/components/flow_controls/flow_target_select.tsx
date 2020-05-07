@@ -57,18 +57,18 @@ const FlowTargetSelectComponent: React.FC<FlowTargetSelectProps> = ({
   displayTextOverride = [],
   updateFlowTargetAction,
 }) => (
-    <EuiSuperSelect
-      options={
-        selectedDirection
-          ? toggleTargetOptions(id, displayTextOverride).filter(option =>
+  <EuiSuperSelect
+    options={
+      selectedDirection
+        ? toggleTargetOptions(id, displayTextOverride).filter(option =>
             option.directions.includes(selectedDirection)
           )
-          : toggleTargetOptions(id, displayTextOverride)
-      }
-      valueOfSelected={selectedTarget}
-      onChange={updateFlowTargetAction}
-      isLoading={isLoading}
-    />
-  );
+        : toggleTargetOptions(id, displayTextOverride)
+    }
+    valueOfSelected={selectedTarget}
+    onChange={updateFlowTargetAction}
+    isLoading={isLoading}
+  />
+);
 
 export const FlowTargetSelect = React.memo(FlowTargetSelectComponent);

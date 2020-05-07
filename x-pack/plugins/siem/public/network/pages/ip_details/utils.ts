@@ -6,6 +6,7 @@
 
 import { get, isEmpty } from 'lodash/fp';
 
+// eslint-disable-next-line @kbn/eslint/no-restricted-paths
 import { ChromeBreadcrumb } from '../../../../../../../src/core/public';
 import { decodeIpv6 } from '../../../common/lib/helpers';
 import {

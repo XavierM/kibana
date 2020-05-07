@@ -14,7 +14,7 @@ import { RuleAlertAction, RuleType } from '../../../../../common/detection_engin
 import { isMlRule } from '../../../../../common/detection_engine/ml_helpers';
 import { transformRuleToAlertAction } from '../../../../../common/detection_engine/transform_actions';
 import { Filter } from '../../../../../../../../src/plugins/data/public';
-import { Rule } from '../../../containers/detection_engine/rules';
+import { Rule } from '../../../../alerts/containers/detection_engine/rules';
 import { FormData, FormHook, FormSchema } from '../../../../shared_imports';
 import {
   AboutStepRule,

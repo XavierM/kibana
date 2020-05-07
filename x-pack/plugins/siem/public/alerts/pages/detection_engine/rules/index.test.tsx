@@ -9,10 +9,10 @@ import { shallow } from 'enzyme';
 
 import { RulesPage } from './index';
 import { useUserInfo } from '../../../components/user_info';
-import { usePrePackagedRules } from '../../../containers/detection_engine/rules';
+import { usePrePackagedRules } from '../../../../alerts/containers/detection_engine/rules';
 
 jest.mock('../components/user_info');
-jest.mock('../../../containers/detection_engine/rules');
+jest.mock('../../../../alerts/containers/detection_engine/rules');
 
 describe('RulesPage', () => {
   beforeAll(() => {

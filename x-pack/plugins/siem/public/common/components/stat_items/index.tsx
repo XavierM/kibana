@@ -89,7 +89,7 @@ export const areachartConfigs = (config?: {
     yTickFormatter: numberFormatter,
   },
   settings: {
-    onBrushEnd: getOr(() => { }, 'onBrushEnd', config),
+    onBrushEnd: getOr(() => {}, 'onBrushEnd', config),
   },
   customHeight: statItemChartCustomHeight,
 });
@@ -104,7 +104,7 @@ export const barchartConfigs = (config?: { onElementClick?: ElementClickListener
     xTickFormatter: numberFormatter,
   },
   settings: {
-    onElementClick: getOr(() => { }, 'onElementClick', config),
+    onElementClick: getOr(() => {}, 'onElementClick', config),
     rotation: statItemBarchartRotation,
   },
   customHeight: statItemChartCustomHeight,

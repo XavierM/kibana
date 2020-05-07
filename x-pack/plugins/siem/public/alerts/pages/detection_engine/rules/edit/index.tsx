@@ -19,7 +19,7 @@ import { FormattedMessage } from '@kbn/i18n/react';
 import React, { FC, memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 
-import { useRule, usePersistRule } from '../../../../containers/detection_engine/rules';
+import { useRule, usePersistRule } from '../../../../../alerts/containers/detection_engine/rules';
 import { WrapperPage } from '../../../../../common/components/wrapper_page';
 import { DETECTION_ENGINE_PAGE_NAME } from '../../../../../common/components/link_to/redirect_to_detection_engine';
 import { displaySuccessToast, useStateToaster } from '../../../../../common/components/toasters';

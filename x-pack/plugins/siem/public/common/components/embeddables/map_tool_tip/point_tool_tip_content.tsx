@@ -14,7 +14,7 @@ import { getEmptyTagValue, getOrEmptyTagFromValue } from '../../empty_value';
 import { DescriptionListStyled } from '../../page';
 import { FeatureProperty } from '../types';
 import { HostDetailsLink, IPDetailsLink } from '../../links';
-import { DefaultFieldRenderer } from '../../field_renderers/field_renderers';
+import { DefaultFieldRenderer } from '../../../../timelines/components/field_renderers/field_renderers';
 import { FlowTarget } from '../../../../graphql/types';
 
 interface PointToolTipContentProps {

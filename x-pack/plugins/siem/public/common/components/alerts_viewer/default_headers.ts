@@ -8,7 +8,7 @@ import { defaultColumnHeaderType } from '../../../timelines/components/timeline/
 import {
   DEFAULT_COLUMN_MIN_WIDTH,
   DEFAULT_DATE_COLUMN_MIN_WIDTH,
-} from '../timeline/body/constants';
+} from '../../../timelines/components/timeline/body/constants';
 import { ColumnHeaderOptions, SubsetTimelineModel } from '../../store/timeline/model';
 import { timelineDefaults } from '../../store/timeline/defaults';
 

@@ -46,15 +46,15 @@ export const LastEventTime = memo<LastEventTimeProps>(({ hostName, indexKey, ip 
       {!loading && lastSeen != null && new Date(lastSeen).toString() === 'Invalid Date'
         ? lastSeen
         : !loading &&
-        lastSeen != null && (
-          <FormattedMessage
-            id="xpack.siem.headerPage.pageSubtitle"
-            defaultMessage="Last event: {beat}"
-            values={{
-              beat: <FormattedRelativePreferenceDate value={lastSeen} />,
-            }}
-          />
-        )}
+          lastSeen != null && (
+            <FormattedMessage
+              id="xpack.siem.headerPage.pageSubtitle"
+              defaultMessage="Last event: {beat}"
+              values={{
+                beat: <FormattedRelativePreferenceDate value={lastSeen} />,
+              }}
+            />
+          )}
       {!loading && lastSeen == null && getEmptyTagValue()}
     </>
   );
