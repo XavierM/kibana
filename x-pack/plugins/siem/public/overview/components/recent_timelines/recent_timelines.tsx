@@ -19,7 +19,7 @@ import {
   OnOpenTimeline,
   OpenTimelineResult,
 } from '../../../timelines/components/open_timeline/types';
-import { WithHoverActions } from '../with_hover_actions';
+import { WithHoverActions } from '../../../common/components/with_hover_actions';
 
 import { RecentTimelineCounts } from './counts';
 import * as i18n from './translations';

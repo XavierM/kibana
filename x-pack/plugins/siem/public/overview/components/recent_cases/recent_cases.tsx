@@ -9,9 +9,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Case } from '../../../cases/containers/types';
-import { getCaseDetailsUrl } from '../link_to/redirect_to_case';
-import { Markdown } from '../markdown';
-import { useGetUrlSearch } from '../navigation/use_get_url_search';
+import { getCaseDetailsUrl } from '../../../common/components/link_to/redirect_to_case';
+import { Markdown } from '../../../common/components/markdown';
+import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
 import { navTabs } from '../../../app/home/home_navigations';
 import { IconWithCount } from '../recent_timelines/counts';
 

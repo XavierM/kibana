@@ -10,7 +10,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { DefaultDraggable } from '../../../../common/components/draggables';
-import { EVENT_DURATION_FIELD_NAME } from '../../../../common/components/duration';
+import { EVENT_DURATION_FIELD_NAME } from '../../duration';
 import { FormattedDate } from '../../../../common/components/formatted_date';
 import { FormattedDuration } from '../../../../common/components/formatted_duration';
 

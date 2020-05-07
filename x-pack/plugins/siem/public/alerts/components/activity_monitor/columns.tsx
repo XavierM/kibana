@@ -14,7 +14,7 @@ import {
   EuiTableActionsColumnType,
 } from '@elastic/eui';
 import React from 'react';
-import { getEmptyTagValue } from '../../../../common/components/empty_value';
+import { getEmptyTagValue } from '../../../common/components/empty_value';
 import { ColumnTypes } from './types';
 
 const actions: EuiTableActionsColumnType<ColumnTypes>['actions'] = [

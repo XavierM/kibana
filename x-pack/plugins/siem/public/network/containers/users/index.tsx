@@ -12,11 +12,20 @@ import { compose } from 'redux';
 
 import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
 import { GetUsersQuery, FlowTarget, PageInfoPaginated, UsersEdges } from '../../../graphql/types';
-import { inputsModel, networkModel, networkSelectors, State, inputsSelectors } from '../../store';
-import { withKibana, WithKibanaProps } from '../../lib/kibana';
-import { createFilter, getDefaultFetchPolicy } from '../helpers';
-import { generateTablePaginationOptions } from '../../components/paginated_table/helpers';
-import { QueryTemplatePaginated, QueryTemplatePaginatedProps } from '../query_template_paginated';
+import {
+  inputsModel,
+  networkModel,
+  networkSelectors,
+  State,
+  inputsSelectors,
+} from '../../../common/store';
+import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
+import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
+import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
+import {
+  QueryTemplatePaginated,
+  QueryTemplatePaginatedProps,
+} from '../../../common/containers/query_template_paginated';
 
 import { usersQuery } from './index.gql_query';
 

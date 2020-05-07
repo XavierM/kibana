@@ -6,14 +6,14 @@
 
 import { EuiBasicTable, EuiPanel, EuiSpacer } from '@elastic/eui';
 import React, { useState, useCallback } from 'react';
-import { HeaderSection } from '../../../../common/components/header_section';
+import { HeaderSection } from '../../../common/components/header_section';
 import {
   UtilityBar,
   UtilityBarAction,
   UtilityBarGroup,
   UtilityBarSection,
   UtilityBarText,
-} from '../../../../common/components/utility_bar';
+} from '../../../common/components/utility_bar';
 import { columns } from './columns';
 import { ColumnTypes, PageTypes, SortTypes } from './types';
 

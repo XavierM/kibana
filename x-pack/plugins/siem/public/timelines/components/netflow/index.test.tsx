@@ -14,8 +14,8 @@ import { TestProviders } from '../../../common/mock/test_providers';
 import {
   TLS_CLIENT_CERTIFICATE_FINGERPRINT_SHA1_FIELD_NAME,
   TLS_SERVER_CERTIFICATE_FINGERPRINT_SHA1_FIELD_NAME,
-} from '../../../common/components/certificate_fingerprint';
-import { EVENT_DURATION_FIELD_NAME } from '../../../common/components/duration';
+} from '../certificate_fingerprint';
+import { EVENT_DURATION_FIELD_NAME } from '../duration';
 import { ID_FIELD_NAME } from '../../../common/components/event_details/event_id';
 import { DESTINATION_IP_FIELD_NAME, SOURCE_IP_FIELD_NAME } from '../../../common/components/ip';
 import { JA3_HASH_FIELD_NAME } from '../ja3_fingerprint';

@@ -8,7 +8,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { AddItem } from './index';
-import { useFormFieldMock } from '../../../../../../public/mock/test_providers';
+import { useFormFieldMock } from '../../../../common/mock/test_providers';
 
 describe('AddItem', () => {
   it('renders correctly', () => {

@@ -12,7 +12,7 @@ import {
   CertificateFingerprint,
   TLS_CLIENT_CERTIFICATE_FINGERPRINT_SHA1_FIELD_NAME,
   TLS_SERVER_CERTIFICATE_FINGERPRINT_SHA1_FIELD_NAME,
-} from '../../../../common/components/certificate_fingerprint';
+} from '../../certificate_fingerprint';
 import { JA3_HASH_FIELD_NAME, Ja3Fingerprint } from '../../ja3_fingerprint';
 
 /**

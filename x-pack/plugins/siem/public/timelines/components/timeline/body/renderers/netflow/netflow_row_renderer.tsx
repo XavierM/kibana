@@ -14,7 +14,7 @@ import { asArrayIfExists } from '../../../../../../common/lib/helpers';
 import {
   TLS_CLIENT_CERTIFICATE_FINGERPRINT_SHA1_FIELD_NAME,
   TLS_SERVER_CERTIFICATE_FINGERPRINT_SHA1_FIELD_NAME,
-} from '../../../../../../common/components/certificate_fingerprint';
+} from '../../../../certificate_fingerprint';
 import { EVENT_DURATION_FIELD_NAME } from '../../../../../../common/components/duration';
 import { ID_FIELD_NAME } from '../../../../../../common/components/event_details/event_id';
 import {

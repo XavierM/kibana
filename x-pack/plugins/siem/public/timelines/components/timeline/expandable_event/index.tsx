@@ -11,7 +11,7 @@ import { BrowserFields } from '../../../../common/containers/source';
 import { ColumnHeaderOptions } from '../../../../common/store/timeline/model';
 import { DetailItem } from '../../../../graphql/types';
 import { StatefulEventDetails } from '../../../../common/components/event_details/stateful_event_details';
-import { LazyAccordion } from '../../../../common/components/lazy_accordion';
+import { LazyAccordion } from '../../lazy_accordion';
 import { OnUpdateColumns } from '../events';
 
 const ExpandableDetails = styled.div<{ hideExpandButton: boolean }>`
