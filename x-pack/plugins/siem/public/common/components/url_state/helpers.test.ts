@@ -3,7 +3,7 @@
  * or more contributor license agreements. Licensed under the Elastic License;
  * you may not use this file except in compliance with the Elastic License.
  */
-import { navTabs } from '../../pages/home/home_navigations';
+import { navTabs } from '../../../app/home/home_navigations';
 import { getTitle } from './helpers';
 import { HostsType } from '../../store/hosts/model';
 

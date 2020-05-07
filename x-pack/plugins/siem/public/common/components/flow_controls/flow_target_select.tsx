@@ -7,7 +7,7 @@
 import { EuiSuperSelect } from '@elastic/eui';
 import React from 'react';
 
-import { FlowDirection, FlowTarget } from '../../graphql/types';
+import { FlowDirection, FlowTarget } from '../../../graphql/types';
 
 import * as i18n from './translations';
 

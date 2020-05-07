@@ -7,7 +7,7 @@
 import { bucketRulesResponse, showRulesTable } from './helpers';
 import { mockRule, mockRuleError } from './__mocks__/mock';
 import uuid from 'uuid';
-import { Rule, RuleError } from '../../../../containers/detection_engine/rules';
+import { Rule, RuleError } from '../../../../../alerts/containers/detection_engine/rules';
 
 describe('AllRulesTable Helpers', () => {
   const mockRule1: Readonly<Rule> = mockRule(uuid.v4());

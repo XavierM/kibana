@@ -13,7 +13,7 @@ import { apolloClientObservable, mockGlobalState, TestProviders } from '../../..
 import { OverviewHost } from '.';
 import { createStore, State } from '../../../../store';
 import { overviewHostQuery } from '../../../../containers/overview/overview_host/index.gql_query';
-import { GetOverviewHostQuery } from '../../../../graphql/types';
+import { GetOverviewHostQuery } from '../../../../../graphql/types';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { wait } from '../../../../lib/helpers';
 

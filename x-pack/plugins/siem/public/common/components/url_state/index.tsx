@@ -15,7 +15,7 @@ import { useRouteSpy } from '../../utils/route/use_route_spy';
 
 import { UrlStateContainerPropTypes, UrlStateProps } from './types';
 import { useUrlStateHooks } from './use_url_state';
-import { dispatchUpdateTimeline } from '../open_timeline/helpers';
+import { dispatchUpdateTimeline } from '../../../timelines/components/open_timeline/helpers';
 import { dispatchSetInitialStateFromUrl } from './initialize_redux_by_url';
 import { makeMapStateToProps } from './helpers';
 

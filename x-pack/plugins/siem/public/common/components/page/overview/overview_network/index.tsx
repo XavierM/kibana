@@ -10,8 +10,8 @@ import numeral from '@elastic/numeral';
 import { FormattedMessage } from '@kbn/i18n/react';
 import React, { useMemo } from 'react';
 
-import { DEFAULT_NUMBER_FORMAT } from '../../../../../common/constants';
-import { ESQuery } from '../../../../../common/typed_json';
+import { DEFAULT_NUMBER_FORMAT } from '../../../../../../common/constants';
+import { ESQuery } from '../../../../../../common/typed_json';
 import { HeaderSection } from '../../../header_section';
 import { useUiSetting$ } from '../../../../lib/kibana';
 import { manageQuery } from '../../../page/manage_query';
@@ -24,7 +24,7 @@ import { getOverviewNetworkStats, OverviewNetworkStats } from '../overview_netwo
 import { getNetworkUrl } from '../../../link_to';
 import { InspectButtonContainer } from '../../../inspect';
 import { useGetUrlSearch } from '../../../navigation/use_get_url_search';
-import { navTabs } from '../../../../pages/home/home_navigations';
+import { navTabs } from '../../../../../app/home/home_navigations';
 
 export interface OverviewNetworkProps {
   startDate: number;

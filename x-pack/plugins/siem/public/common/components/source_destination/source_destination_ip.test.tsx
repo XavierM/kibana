@@ -13,7 +13,7 @@ import { TestProviders } from '../../mock/test_providers';
 import { ID_FIELD_NAME } from '../event_details/event_id';
 import { DESTINATION_IP_FIELD_NAME, SOURCE_IP_FIELD_NAME } from '../ip';
 import { DESTINATION_PORT_FIELD_NAME, SOURCE_PORT_FIELD_NAME } from '../port';
-import * as i18n from '../timeline/body/renderers/translations';
+import * as i18n from '../../../timelines/components/timeline/body/renderers/translations';
 import { useMountAppended } from '../../utils/use_mount_appended';
 
 import {

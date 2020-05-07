@@ -21,8 +21,8 @@ jest.mock('../../../../common/lib/kibana');
 jest.mock('../../../utils/apollo_context', () => ({
   useApolloClient: () => ({}),
 }));
-jest.mock('../../../containers/timeline/all', () => {
-  const originalModule = jest.requireActual('../../../containers/timeline/all');
+jest.mock('../../../../timelines/containers/all', () => {
+  const originalModule = jest.requireActual('../../../../timelines/containers/all');
   return {
     useGetAllTimeline: jest.fn(),
     getAllTimeline: originalModule.getAllTimeline,

@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import { FormattedFieldValue } from '../timeline/body/renderers/formatted_field';
+import { FormattedFieldValue } from '../../../timelines/components/timeline/body/renderers/formatted_field';
 
 export const SOURCE_IP_FIELD_NAME = 'source.ip';
 export const DESTINATION_IP_FIELD_NAME = 'destination.ip';

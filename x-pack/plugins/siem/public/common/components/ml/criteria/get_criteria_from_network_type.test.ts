@@ -6,7 +6,7 @@
 
 import { getCriteriaFromNetworkType } from './get_criteria_from_network_type';
 import { NetworkType } from '../../../store/network/model';
-import { FlowTarget } from '../../../graphql/types';
+import { FlowTarget } from '../../../../graphql/types';
 
 describe('get_criteria_from_network_type', () => {
   test('returns network names from criteria if the network type is details and it is source', () => {

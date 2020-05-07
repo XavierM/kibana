@@ -16,8 +16,8 @@ import {
 import { isEqual } from 'lodash/fp';
 import * as i18n from '../../translations';
 
-import { FilterOptions } from '../../../../../containers/detection_engine/rules';
-import { useTags } from '../../../../../containers/detection_engine/rules/use_tags';
+import { FilterOptions } from '../../../../../../alerts/containers/detection_engine/rules';
+import { useTags } from '../../../../../../alerts/containers/detection_engine/rules/use_tags';
 import { TagsFilterPopover } from './tags_filter_popover';
 
 interface RulesTableFiltersProps {

@@ -17,7 +17,7 @@ import {
   NetworkTopCountriesEdges,
   NetworkTopTablesFields,
   NetworkTopTablesSortField,
-} from '../../../../graphql/types';
+} from '../../../../../graphql/types';
 import { networkModel, networkSelectors, State } from '../../../../store';
 import { Criteria, ItemsPerRow, PaginatedTable } from '../../../paginated_table';
 

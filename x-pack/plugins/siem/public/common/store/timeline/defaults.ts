@@ -5,8 +5,8 @@
  */
 
 import { Direction } from '../../../graphql/types';
-import { DEFAULT_TIMELINE_WIDTH } from '../../components/timeline/body/constants';
-import { defaultHeaders } from '../../components/timeline/body/column_headers/default_headers';
+import { DEFAULT_TIMELINE_WIDTH } from '../../../timelines/components/timeline/body/constants';
+import { defaultHeaders } from '../../../timelines/components/timeline/body/column_headers/default_headers';
 import { SubsetTimelineModel, TimelineModel } from './model';
 
 export const timelineDefaults: SubsetTimelineModel & Pick<TimelineModel, 'filters'> = {

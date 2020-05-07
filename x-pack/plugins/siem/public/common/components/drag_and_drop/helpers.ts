@@ -12,9 +12,9 @@ import { ActionCreator } from 'typescript-fsa';
 import { BrowserField, BrowserFields, getAllFieldsByName } from '../../containers/source';
 import { IdToDataProvider } from '../../store/drag_and_drop/model';
 import { ColumnHeaderOptions } from '../../store/timeline/model';
-import { DEFAULT_COLUMN_MIN_WIDTH } from '../timeline/body/constants';
+import { DEFAULT_COLUMN_MIN_WIDTH } from '../../../timelines/components/timeline/body/constants';
 
-import { DataProvider } from '../timeline/data_providers/data_provider';
+import { DataProvider } from '../../../timelines/components/timeline/data_providers/data_provider';
 import { dragAndDropActions, timelineActions } from '../../store/actions';
 
 export const draggableIdPrefix = 'draggableId';

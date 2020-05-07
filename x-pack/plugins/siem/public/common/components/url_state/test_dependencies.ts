@@ -5,9 +5,9 @@
  */
 
 import { ActionCreator } from 'typescript-fsa';
-import { DispatchUpdateTimeline } from '../open_timeline/types';
-import { navTabs } from '../../pages/home/home_navigations';
-import { SiemPageName } from '../../pages/home/types';
+import { DispatchUpdateTimeline } from '../../../timelines/components/open_timeline/types';
+import { navTabs } from '../../../app/home/home_navigations';
+import { SiemPageName } from '../../../app/home/types';
 import { hostsModel, networkModel } from '../../store';
 import { inputsActions } from '../../store/actions';
 import { HostsTableType } from '../../store/hosts/model';
@@ -15,7 +15,7 @@ import { HostsTableType } from '../../store/hosts/model';
 import { CONSTANTS } from './constants';
 import { dispatchSetInitialStateFromUrl } from './initialize_redux_by_url';
 import { UrlStateContainerPropTypes, LocationTypes } from './types';
-import { Query } from '../../../../../../src/plugins/data/public';
+import { Query } from '../../../../../../../src/plugins/data/public';
 
 type Action = 'PUSH' | 'POP' | 'REPLACE';
 const pop: Action = 'POP';

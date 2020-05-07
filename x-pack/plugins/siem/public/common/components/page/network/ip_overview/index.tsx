@@ -9,10 +9,10 @@ import darkTheme from '@elastic/eui/dist/eui_theme_dark.json';
 import lightTheme from '@elastic/eui/dist/eui_theme_light.json';
 import React from 'react';
 
-import { DEFAULT_DARK_MODE } from '../../../../../common/constants';
-import { DescriptionList } from '../../../../../common/utility_types';
+import { DEFAULT_DARK_MODE } from '../../../../../../common/constants';
+import { DescriptionList } from '../../../../../../common/utility_types';
 import { useUiSetting$ } from '../../../../lib/kibana';
-import { FlowTarget, IpOverviewData, Overview } from '../../../../graphql/types';
+import { FlowTarget, IpOverviewData, Overview } from '../../../../../graphql/types';
 import { networkModel } from '../../../../store';
 import { getEmptyTagValue } from '../../../empty_value';
 
@@ -24,7 +24,7 @@ import {
   locationRenderer,
   reputationRenderer,
   whoisRenderer,
-} from '../../../field_renderers/field_renderers';
+} from '../../../../../timelines/components/field_renderers/field_renderers';
 import * as i18n from './translations';
 import { DescriptionListStyled, OverviewWrapper } from '../../index';
 import { Loader } from '../../../loader';

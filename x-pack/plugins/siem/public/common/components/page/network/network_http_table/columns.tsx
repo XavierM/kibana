@@ -8,7 +8,7 @@
 
 import React from 'react';
 import numeral from '@elastic/numeral';
-import { NetworkHttpEdges, NetworkHttpFields, NetworkHttpItem } from '../../../../graphql/types';
+import { NetworkHttpEdges, NetworkHttpFields, NetworkHttpItem } from '../../../../../graphql/types';
 import { escapeDataProviderId } from '../../../drag_and_drop/helpers';
 import { getEmptyTagValue } from '../../../empty_value';
 import { IPDetailsLink } from '../../../links';

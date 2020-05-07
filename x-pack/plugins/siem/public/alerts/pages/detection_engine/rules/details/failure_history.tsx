@@ -15,7 +15,10 @@ import {
 } from '@elastic/eui';
 import React, { memo } from 'react';
 
-import { useRuleStatus, RuleInfoStatus } from '../../../../containers/detection_engine/rules';
+import {
+  useRuleStatus,
+  RuleInfoStatus,
+} from '../../../../../alerts/containers/detection_engine/rules';
 import { HeaderSection } from '../../../../../common/components/header_section';
 import * as i18n from './translations';
 import { FormattedDate } from '../../../../../common/components/formatted_date';

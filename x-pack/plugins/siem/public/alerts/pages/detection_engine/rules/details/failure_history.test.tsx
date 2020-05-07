@@ -9,8 +9,8 @@ import { shallow } from 'enzyme';
 
 import { TestProviders } from '../../../../../common/mock';
 import { FailureHistory } from './failure_history';
-import { useRuleStatus } from '../../../../containers/detection_engine/rules';
-jest.mock('../../../../containers/detection_engine/rules');
+import { useRuleStatus } from '../../../../../alerts/containers/detection_engine/rules';
+jest.mock('../../../../../alerts/containers/detection_engine/rules');
 
 describe('FailureHistory', () => {
   beforeAll(() => {
