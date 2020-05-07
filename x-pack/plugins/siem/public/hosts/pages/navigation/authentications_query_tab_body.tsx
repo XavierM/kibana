@@ -6,18 +6,18 @@
 
 import { getOr } from 'lodash/fp';
 import React, { useEffect } from 'react';
-import { AuthenticationTable } from '../../../components/page/hosts/authentications_table';
-import { manageQuery } from '../../../components/page/manage_query';
-import { AuthenticationsQuery } from '../../../containers/authentications';
+import { AuthenticationTable } from '../../components/authentications_table';
+import { manageQuery } from '../../../common/components/page/manage_query';
+import { AuthenticationsQuery } from '../../containers/authentications';
 import { HostsComponentsQueryProps } from './types';
-import { hostsModel } from '../../../store/hosts';
+import { hostsModel } from '../../../common/store/hosts';
 import {
   MatrixHistogramOption,
   MatrixHistogramMappingTypes,
   MatrixHisrogramConfigs,
-} from '../../../components/matrix_histogram/types';
-import { MatrixHistogramContainer } from '../../../components/matrix_histogram';
-import { KpiHostsChartColors } from '../../../components/page/hosts/kpi_hosts/types';
+} from '../../../common/components/matrix_histogram/types';
+import { MatrixHistogramContainer } from '../../../common/components/matrix_histogram';
+import { KpiHostsChartColors } from '../../components/kpi_hosts/types';
 import * as i18n from '../translations';
 import { HistogramType } from '../../../graphql/types';
 

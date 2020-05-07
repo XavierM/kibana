@@ -11,15 +11,15 @@ import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { useQuery } from '../../common/containers/matrix_histogram';
-import { wait } from '../../common/lib/helpers';
-import { mockIndexPattern, TestProviders } from '../../common/mock';
+import { useQuery } from '../../../common/containers/matrix_histogram';
+import { wait } from '../../../common/lib/helpers';
+import { mockIndexPattern, TestProviders } from '../../../common/mock';
 
 import { AlertsByCategory } from '.';
 
-jest.mock('../../../lib/kibana');
+jest.mock('../../../../lib/kibana');
 
-jest.mock('../../../containers/matrix_histogram', () => {
+jest.mock('../../../../containers/matrix_histogram', () => {
   return {
     useQuery: jest.fn(),
   };

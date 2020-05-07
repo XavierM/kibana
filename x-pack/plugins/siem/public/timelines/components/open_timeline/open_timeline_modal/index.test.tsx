@@ -13,7 +13,7 @@ import { ThemeProvider } from 'styled-components';
 import { wait } from '../../../../common/lib/helpers';
 import { TestProviderWithoutDragAndDrop } from '../../../../common/mock/test_providers';
 import { mockOpenTimelineQueryResults } from '../../../../common/mock/timeline_results';
-import { useGetAllTimeline, getAllTimeline } from '../../../containers//all';
+import { useGetAllTimeline, getAllTimeline } from '../../../containers/all';
 
 import { OpenTimelineModal } from '.';
 

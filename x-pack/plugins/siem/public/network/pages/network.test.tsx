@@ -12,10 +12,10 @@ import { MockedProvider } from 'react-apollo/test-utils';
 
 import '../../mock/match_media';
 import { Filter } from '../../../../../../src/plugins/data/common/es_query';
-import { mocksSource } from '../../containers/source/mock';
-import { TestProviders, mockGlobalState, apolloClientObservable } from '../../mock';
-import { State, createStore } from '../../store';
-import { inputsActions } from '../../store/inputs';
+import { mocksSource } from '../../common/containers/source/mock';
+import { TestProviders, mockGlobalState, apolloClientObservable } from '../../common/mock';
+import { State, createStore } from '../../common/store';
+import { inputsActions } from '../../common/store/inputs';
 import { Network } from './network';
 import { NetworkRoutes } from './navigation';
 

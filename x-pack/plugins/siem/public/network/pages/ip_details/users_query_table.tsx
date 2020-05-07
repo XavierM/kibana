@@ -6,10 +6,10 @@
 
 import React from 'react';
 import { getOr } from 'lodash/fp';
-import { manageQuery } from '../../../components/page/manage_query';
-import { UsersQuery } from '../../../containers/users';
+import { manageQuery } from '../../../common/components/page/manage_query';
+import { UsersQuery } from '../../../common/containers/users';
 import { NetworkComponentsQueryProps } from './types';
-import { UsersTable } from '../../../components/page/network/users_table';
+import { UsersTable } from '../../../common/components/page/network/users_table';
 
 const UsersTableManage = manageQuery(UsersTable);
 

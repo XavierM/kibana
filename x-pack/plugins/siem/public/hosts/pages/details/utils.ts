@@ -6,13 +6,16 @@
 
 import { get, isEmpty } from 'lodash/fp';
 
-import { ChromeBreadcrumb } from '../../../../../../../src/core/public';
-import { hostsModel } from '../../../store';
-import { HostsTableType } from '../../../store/hosts/model';
-import { getHostsUrl, getHostDetailsUrl } from '../../../components/link_to/redirect_to_hosts';
+import { ChromeBreadcrumb } from '../../../../../../../../src/core/public';
+import { hostsModel } from '../../../common/store';
+import { HostsTableType } from '../../../common/store/hosts/model';
+import {
+  getHostsUrl,
+  getHostDetailsUrl,
+} from '../../../common/components/link_to/redirect_to_hosts';
 
 import * as i18n from '../translations';
-import { HostRouteSpyState } from '../../../utils/route/types';
+import { HostRouteSpyState } from '../../../common/utils/route/types';
 
 export const type = hostsModel.HostsType.details;
 

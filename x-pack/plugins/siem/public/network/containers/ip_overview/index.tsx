@@ -9,12 +9,12 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import { connect, ConnectedProps } from 'react-redux';
 
-import { DEFAULT_INDEX_KEY } from '../../../common/constants';
-import { GetIpOverviewQuery, IpOverviewData } from '../../graphql/types';
-import { networkModel, inputsModel, inputsSelectors, State } from '../../store';
-import { useUiSetting } from '../../lib/kibana';
-import { createFilter, getDefaultFetchPolicy } from '../helpers';
-import { QueryTemplateProps } from '../query_template';
+import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
+import { GetIpOverviewQuery, IpOverviewData } from '../../../graphql/types';
+import { networkModel, inputsModel, inputsSelectors, State } from '../../../common/store';
+import { useUiSetting } from '../../../common/lib/kibana';
+import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
+import { QueryTemplateProps } from '../../../common/containers/query_template';
 
 import { ipOverviewQuery } from './index.gql_query';
 

@@ -10,26 +10,31 @@ import numeral from '@elastic/numeral';
 import React, { useEffect, useMemo } from 'react';
 import uuid from 'uuid';
 
-import { DEFAULT_NUMBER_FORMAT } from '../../../common/constants';
-import { SHOWING, UNIT } from '../../common/components/events_viewer/translations';
-import { getTabsOnHostsUrl } from '../../common/components/link_to/redirect_to_hosts';
-import { MatrixHistogramContainer } from '../../common/components/matrix_histogram';
+import { DEFAULT_NUMBER_FORMAT } from '../../../../common/constants';
+import { SHOWING, UNIT } from '../../../common/components/events_viewer/translations';
+import { getTabsOnHostsUrl } from '../../../common/components/link_to/redirect_to_hosts';
+import { MatrixHistogramContainer } from '../../../common/components/matrix_histogram';
 import {
   MatrixHisrogramConfigs,
   MatrixHistogramOption,
-} from '../../common/components/matrix_histogram/types';
-import { useGetUrlSearch } from '../../common/components/navigation/use_get_url_search';
-import { navTabs } from '../../app/home/home_navigations';
-import { eventsStackByOptions } from '../../hosts/pages/navigation';
-import { convertToBuildEsQuery } from '../../common/lib/keury';
-import { useKibana, useUiSetting$ } from '../../common/lib/kibana';
-import { histogramConfigs } from '../../hosts/pages/navigation/events_query_tab_body';
-import { Filter, esQuery, IIndexPattern, Query } from '../../../../../../src/plugins/data/public';
-import { inputsModel } from '../../common/store';
-import { HostsTableType, HostsType } from '../../common/store/hosts/model';
-import { InputsModelId } from '../../common/store/inputs/constants';
+} from '../../../common/components/matrix_histogram/types';
+import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
+import { navTabs } from '../../../app/home/home_navigations';
+import { eventsStackByOptions } from '../../../hosts/pages/navigation';
+import { convertToBuildEsQuery } from '../../../common/lib/keury';
+import { useKibana, useUiSetting$ } from '../../../common/lib/kibana';
+import { histogramConfigs } from '../../../hosts/pages/navigation/events_query_tab_body';
+import {
+  Filter,
+  esQuery,
+  IIndexPattern,
+  Query,
+} from '../../../../../../../src/plugins/data/public';
+import { inputsModel } from '../../../common/store';
+import { HostsTableType, HostsType } from '../../../common/store/hosts/model';
+import { InputsModelId } from '../../../common/store/inputs/constants';
 
-import * as i18n from '../translations';
+import * as i18n from '../../pages/translations';
 
 const NO_FILTERS: Filter[] = [];
 const DEFAULT_QUERY: Query = { query: '', language: 'kuery' };

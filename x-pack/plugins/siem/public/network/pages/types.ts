@@ -6,8 +6,8 @@
 
 import { RouteComponentProps } from 'react-router-dom';
 import { ActionCreator } from 'typescript-fsa';
-import { InputsModelId } from '../../store/inputs/constants';
-import { GlobalTimeArgs } from '../../containers/global_time';
+import { InputsModelId } from '../../common/store/inputs/constants';
+import { GlobalTimeArgs } from '../../common/containers/global_time';
 
 export type SetAbsoluteRangeDatePicker = ActionCreator<{
   id: InputsModelId;

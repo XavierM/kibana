@@ -11,21 +11,30 @@ import { Query } from 'react-apollo';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import { DEFAULT_INDEX_KEY } from '../../../common/constants';
+import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
 import {
   Direction,
   GetHostsTableQuery,
   HostsEdges,
   HostsFields,
   PageInfoPaginated,
-} from '../../graphql/types';
-import { hostsModel, hostsSelectors, inputsModel, State, inputsSelectors } from '../../store';
-import { createFilter, getDefaultFetchPolicy } from '../helpers';
-import { QueryTemplatePaginated, QueryTemplatePaginatedProps } from '../query_template_paginated';
-import { withKibana, WithKibanaProps } from '../../lib/kibana';
+} from '../../../graphql/types';
+import {
+  hostsModel,
+  hostsSelectors,
+  inputsModel,
+  State,
+  inputsSelectors,
+} from '../../../common/store';
+import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
+import {
+  QueryTemplatePaginated,
+  QueryTemplatePaginatedProps,
+} from '../../../common/containers/query_template_paginated';
+import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
 
 import { HostsTableQuery } from './hosts_table.gql_query';
-import { generateTablePaginationOptions } from '../../components/paginated_table/helpers';
+import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
 
 const ID = 'hostsQuery';
 

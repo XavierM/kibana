@@ -10,33 +10,36 @@ import { connect, ConnectedProps } from 'react-redux';
 import { StickyContainer } from 'react-sticky';
 
 import { useParams } from 'react-router-dom';
-import { FiltersGlobal } from '../../components/filters_global';
-import { HeaderPage } from '../../components/header_page';
-import { LastEventTime } from '../../components/last_event_time';
-import { hasMlUserPermissions } from '../../components/ml/permissions/has_ml_user_permissions';
-import { SiemNavigation } from '../../components/navigation';
-import { KpiHostsComponent } from '../../components/page/hosts';
-import { manageQuery } from '../../components/page/manage_query';
-import { SiemSearchBar } from '../../components/search_bar';
-import { WrapperPage } from '../../components/wrapper_page';
-import { KpiHostsQuery } from '../../containers/kpi_hosts';
-import { indicesExistOrDataTemporarilyUnavailable, WithSource } from '../../containers/source';
+import { FiltersGlobal } from '../../common/components/filters_global';
+import { HeaderPage } from '../../common/components/header_page';
+import { LastEventTime } from '../../common/components/last_event_time';
+import { hasMlUserPermissions } from '../../common/components/ml/permissions/has_ml_user_permissions';
+import { SiemNavigation } from '../../common/components/navigation';
+import { KpiHostsComponent } from '../components/kpi_hosts';
+import { manageQuery } from '../../common/components/page/manage_query';
+import { SiemSearchBar } from '../../common/components/search_bar';
+import { WrapperPage } from '../../common/components/wrapper_page';
+import { KpiHostsQuery } from '../containers/kpi_hosts';
+import {
+  indicesExistOrDataTemporarilyUnavailable,
+  WithSource,
+} from '../../common/containers/source';
 import { LastEventIndexKey } from '../../graphql/types';
-import { useKibana } from '../../lib/kibana';
-import { convertToBuildEsQuery } from '../../lib/keury';
-import { inputsSelectors, State, hostsModel } from '../../store';
-import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../store/inputs/actions';
+import { useKibana } from '../../common/lib/kibana';
+import { convertToBuildEsQuery } from '../../common/lib/keury';
+import { inputsSelectors, State, hostsModel } from '../../common/store';
+import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../common/store/inputs/actions';
 
-import { SpyRoute } from '../../utils/route/spy_routes';
+import { SpyRoute } from '../../common/utils/route/spy_routes';
 import { esQuery } from '../../../../../../src/plugins/data/public';
-import { useMlCapabilities } from '../../components/ml_popover/hooks/use_ml_capabilities';
+import { useMlCapabilities } from '../../common/components/ml_popover/hooks/use_ml_capabilities';
 import { HostsEmptyPage } from './hosts_empty_page';
 import { HostsTabs } from './hosts_tabs';
 import { navTabsHosts } from './nav_tabs';
 import * as i18n from './translations';
 import { HostsComponentProps } from './types';
 import { filterHostData } from './navigation';
-import { HostsTableType } from '../../store/hosts/model';
+import { HostsTableType } from '../../common/store/hosts/model';
 
 const KpiHostsComponentManage = manageQuery(KpiHostsComponent);
 

@@ -8,20 +8,20 @@ import { EuiFlexGroup, EuiFlexItem, EuiSpacer } from '@elastic/eui';
 import React, { useMemo } from 'react';
 import styled from 'styled-components';
 
-import { ENABLE_NEWS_FEED_SETTING, NEWS_FEED_URL_SETTING } from '../../../common/constants';
-import { Filters as RecentCasesFilters } from '../../common/components/recent_cases/filters';
-import { Filters as RecentTimelinesFilters } from '../../common/components/recent_timelines/filters';
-import { StatefulRecentCases } from '../../common/components/recent_cases';
-import { StatefulRecentTimelines } from '../../common/components/recent_timelines';
-import { StatefulNewsFeed } from '../../common/components/news_feed';
-import { FilterMode as RecentTimelinesFilterMode } from '../../common/components/recent_timelines/types';
-import { FilterMode as RecentCasesFilterMode } from '../../common/components/recent_cases/types';
-import { DEFAULT_FILTER_OPTIONS } from '../../cases/containers/use_get_cases';
-import { SidebarHeader } from '../../common/components/sidebar_header';
-import { useCurrentUser } from '../../common/lib/kibana';
-import { useApolloClient } from '../../common/utils/apollo_context';
+import { ENABLE_NEWS_FEED_SETTING, NEWS_FEED_URL_SETTING } from '../../../../common/constants';
+import { Filters as RecentCasesFilters } from '../../../common/components/recent_cases/filters';
+import { Filters as RecentTimelinesFilters } from '../../../common/components/recent_timelines/filters';
+import { StatefulRecentCases } from '../../../common/components/recent_cases';
+import { StatefulRecentTimelines } from '../../../common/components/recent_timelines';
+import { StatefulNewsFeed } from '../../../common/components/news_feed';
+import { FilterMode as RecentTimelinesFilterMode } from '../../../common/components/recent_timelines/types';
+import { FilterMode as RecentCasesFilterMode } from '../../../common/components/recent_cases/types';
+import { DEFAULT_FILTER_OPTIONS } from '../../../cases/containers/use_get_cases';
+import { SidebarHeader } from '../../../common/components/sidebar_header';
+import { useCurrentUser } from '../../../common/lib/kibana';
+import { useApolloClient } from '../../../common/utils/apollo_context';
 
-import * as i18n from '../translations';
+import * as i18n from '../../pages/translations';
 
 const SidebarFlexGroup = styled(EuiFlexGroup)`
   width: 305px;

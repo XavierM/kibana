@@ -11,23 +11,26 @@ import { useParams } from 'react-router-dom';
 import { StickyContainer } from 'react-sticky';
 
 import { esQuery } from '../../../../../../src/plugins/data/public';
-import { EmbeddedMap } from '../../components/embeddables/embedded_map';
-import { FiltersGlobal } from '../../components/filters_global';
-import { HeaderPage } from '../../components/header_page';
-import { LastEventTime } from '../../components/last_event_time';
-import { SiemNavigation } from '../../components/navigation';
-import { manageQuery } from '../../components/page/manage_query';
-import { KpiNetworkComponent } from '../../components/page/network';
-import { SiemSearchBar } from '../../components/search_bar';
-import { WrapperPage } from '../../components/wrapper_page';
-import { KpiNetworkQuery } from '../../containers/kpi_network';
-import { indicesExistOrDataTemporarilyUnavailable, WithSource } from '../../containers/source';
+import { EmbeddedMap } from '../../common/components/embeddables/embedded_map';
+import { FiltersGlobal } from '../../common/components/filters_global';
+import { HeaderPage } from '../../common/components/header_page';
+import { LastEventTime } from '../../common/components/last_event_time';
+import { SiemNavigation } from '../../common/components/navigation';
+import { manageQuery } from '../../common/components/page/manage_query';
+import { KpiNetworkComponent } from '../../common/components/page/network';
+import { SiemSearchBar } from '../../common/components/search_bar';
+import { WrapperPage } from '../../common/components/wrapper_page';
+import { KpiNetworkQuery } from '../../network/containers/kpi_network';
+import {
+  indicesExistOrDataTemporarilyUnavailable,
+  WithSource,
+} from '../../common/containers/source';
 import { LastEventIndexKey } from '../../graphql/types';
-import { useKibana } from '../../lib/kibana';
-import { convertToBuildEsQuery } from '../../lib/keury';
-import { networkModel, State, inputsSelectors } from '../../store';
-import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../store/inputs/actions';
-import { SpyRoute } from '../../utils/route/spy_routes';
+import { useKibana } from '../../common/lib/kibana';
+import { convertToBuildEsQuery } from '../../common/lib/keury';
+import { networkModel, State, inputsSelectors } from '../../common/store';
+import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../common/store/inputs/actions';
+import { SpyRoute } from '../../common/utils/route/spy_routes';
 import { navTabsNetwork, NetworkRoutes, NetworkRoutesLoading } from './navigation';
 import { filterNetworkData } from './navigation/alerts_query_tab_body';
 import { NetworkEmptyPage } from './network_empty_page';

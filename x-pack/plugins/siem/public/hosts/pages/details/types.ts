@@ -6,13 +6,13 @@
 
 import { ActionCreator } from 'typescript-fsa';
 import { Query, IIndexPattern, Filter } from 'src/plugins/data/public';
-import { InputsModelId } from '../../../store/inputs/constants';
-import { HostComponentProps } from '../../../components/link_to/redirect_to_hosts';
-import { HostsTableType } from '../../../store/hosts/model';
+import { InputsModelId } from '../../../common/store/inputs/constants';
+import { HostComponentProps } from '../../../common/components/link_to/redirect_to_hosts';
+import { HostsTableType } from '../../../common/store/hosts/model';
 import { HostsQueryProps } from '../types';
-import { NavTab } from '../../../components/navigation/types';
+import { NavTab } from '../../../common/components/navigation/types';
 import { KeyHostsNavTabWithoutMlPermission } from '../navigation/types';
-import { hostsModel } from '../../../store';
+import { hostsModel } from '../../../common/store';
 
 interface HostDetailsComponentReduxProps {
   query: Query;

@@ -6,13 +6,17 @@
 
 import { get, isEmpty } from 'lodash/fp';
 
+// eslint-disable-next-line @kbn/eslint/no-restricted-paths
 import { ChromeBreadcrumb } from '../../../../../../../src/core/public';
-import { decodeIpv6 } from '../../../lib/helpers';
-import { getNetworkUrl, getIPDetailsUrl } from '../../../components/link_to/redirect_to_network';
-import { networkModel } from '../../../store/network';
+import { decodeIpv6 } from '../../../common/lib/helpers';
+import {
+  getNetworkUrl,
+  getIPDetailsUrl,
+} from '../../../common/components/link_to/redirect_to_network';
+import { networkModel } from '../../../common/store/network';
 import * as i18n from '../translations';
 import { NetworkRouteType } from '../navigation/types';
-import { NetworkRouteSpyState } from '../../../utils/route/types';
+import { NetworkRouteSpyState } from '../../../common/utils/route/types';
 
 export const type = networkModel.NetworkType.details;
 const TabNameMappedToI18nKey: Record<NetworkRouteType, string> = {

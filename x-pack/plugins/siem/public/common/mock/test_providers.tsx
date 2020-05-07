@@ -20,7 +20,7 @@ import { ThemeProvider } from 'styled-components';
 import { createStore, State } from '../store';
 import { mockGlobalState } from './global_state';
 import { createKibanaContextProviderMock } from './kibana_react';
-import { FieldHook, useForm } from '../shared_imports';
+import { FieldHook, useForm } from '../../shared_imports';
 
 const state: State = mockGlobalState;
 

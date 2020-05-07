@@ -17,7 +17,7 @@ import {
 } from '../../../common/mock';
 import { useMountAppended } from '../../../common/utils/use_mount_appended';
 import { createStore, hostsModel, State } from '../../../common/store';
-import { HostsTableType } from '../../store/hosts/model';
+import { HostsTableType } from '../../../common/store/hosts/model';
 import { HostsTable } from './index';
 import { mockData } from './mock';
 

@@ -6,7 +6,7 @@
 
 import * as i18n from './translations';
 import { KpiHostsChartColors } from './types';
-import { StatItems } from '.../../../common/components/stat_items';
+import { StatItems } from '../../../common/components/stat_items';
 
 export const kpiHostsMapping: Readonly<StatItems[]> = [
   {

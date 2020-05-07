@@ -6,10 +6,10 @@
 
 import { getOr } from 'lodash/fp';
 import React from 'react';
-import { UncommonProcessesQuery } from '../../../containers/uncommon_processes';
+import { UncommonProcessesQuery } from '../../containers/uncommon_processes';
 import { HostsComponentsQueryProps } from './types';
-import { UncommonProcessTable } from '../../../components/page/hosts';
-import { manageQuery } from '../../../components/page/manage_query';
+import { UncommonProcessTable } from '../../components/uncommon_process_table';
+import { manageQuery } from '../../../common/components/page/manage_query';
 
 const UncommonProcessTableManage = manageQuery(UncommonProcessTable);
 
