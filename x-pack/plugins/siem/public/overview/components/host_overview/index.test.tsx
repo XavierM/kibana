@@ -6,11 +6,11 @@
 
 import { shallow } from 'enzyme';
 import React from 'react';
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 
 import { HostOverview } from './index';
 import { mockData } from './mock';
-import { mockAnomalies } from '../../../ml/mock';
+import { mockAnomalies } from '../../../common/components/ml/mock';
 
 describe('Host Summary Component', () => {
   describe('rendering', () => {

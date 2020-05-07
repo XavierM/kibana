@@ -8,7 +8,7 @@ import React, { useMemo, useCallback } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { IIndexPattern } from 'src/plugins/data/public';
 
-import { hostsActions } from '../../../../store/actions';
+import { hostsActions } from '../../store/actions';
 import {
   Direction,
   HostFields,
@@ -17,16 +17,16 @@ import {
   HostsFields,
   HostsSortField,
   OsFields,
-} from '../../../../graphql/types';
-import { assertUnreachable } from '../../../../lib/helpers';
-import { hostsModel, hostsSelectors, State } from '../../../../store';
+} from '../../../graphql/types';
+import { assertUnreachable } from '../../../common/lib/helpers';
+import { hostsModel, hostsSelectors, State } from '../../store';
 import {
   Columns,
   Criteria,
   ItemsPerRow,
   PaginatedTable,
   SortingBasicTable,
-} from '../../../paginated_table';
+} from '../../../common/components/paginated_table';
 
 import { getHostsColumns } from './columns';
 import * as i18n from './translations';

@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { AuthenticationsData } from '../../../../graphql/types';
+import { AuthenticationsData } from '../../../graphql/types';
 
 export const mockData: { Authentications: AuthenticationsData } = {
   Authentications: {

@@ -9,16 +9,16 @@
 import React, { useCallback, useMemo } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 
-import { hostsActions } from '../../../../store/actions';
-import { UncommonProcessesEdges, UncommonProcessItem } from '../../../../graphql/types';
-import { hostsModel, hostsSelectors, State } from '../../../../store';
-import { defaultToEmptyTag, getEmptyValue } from '../../../empty_value';
-import { HostDetailsLink } from '../../../links';
-import { Columns, ItemsPerRow, PaginatedTable } from '../../../paginated_table';
+import { hostsActions } from '../../store/actions';
+import { UncommonProcessesEdges, UncommonProcessItem } from '../../../graphql/types';
+import { hostsModel, hostsSelectors, State } from '../../store';
+import { defaultToEmptyTag, getEmptyValue } from '../../../common/components/empty_value';
+import { HostDetailsLink } from '../../../common/components/links';
+import { Columns, ItemsPerRow, PaginatedTable } from '../../../common/components/paginated_table';
 
 import * as i18n from './translations';
-import { getRowItemDraggables } from '../../../tables/helpers';
-import { HostsType } from '../../../../store/hosts/model';
+import { getRowItemDraggables } from '../../../common/components/tables/helpers';
+import { HostsType } from '../../store/hosts/model';
 const tableType = hostsModel.HostsTableType.uncommonProcesses;
 interface OwnProps {
   data: UncommonProcessesEdges[];

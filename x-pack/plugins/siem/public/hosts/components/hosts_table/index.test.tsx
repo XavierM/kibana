@@ -14,10 +14,10 @@ import {
   mockIndexPattern,
   mockGlobalState,
   TestProviders,
-} from '../../../../mock';
-import { useMountAppended } from '../../../../utils/use_mount_appended';
-import { createStore, hostsModel, State } from '../../../../store';
-import { HostsTableType } from '../../../../store/hosts/model';
+} from '../../../common/mock';
+import { useMountAppended } from '../../../common/utils/use_mount_appended';
+import { createStore, hostsModel, State } from '../../../common/store';
+import { HostsTableType } from '../../store/hosts/model';
 import { HostsTable } from './index';
 import { mockData } from './mock';
 

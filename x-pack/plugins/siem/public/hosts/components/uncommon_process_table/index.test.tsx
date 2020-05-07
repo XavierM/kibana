@@ -8,14 +8,14 @@ import { shallow } from 'enzyme';
 import { getOr } from 'lodash/fp';
 import React from 'react';
 
-import { TestProviders } from '../../../../mock';
-import { hostsModel } from '../../../../store';
-import { getEmptyValue } from '../../../empty_value';
-import { useMountAppended } from '../../../../utils/use_mount_appended';
+import { TestProviders } from '../../../common/mock';
+import { hostsModel } from '../../store';
+import { getEmptyValue } from '../../../common/components/empty_value';
+import { useMountAppended } from '../../../common/utils/use_mount_appended';
 
 import { getArgs, UncommonProcessTable, getUncommonColumnsCurated } from '.';
 import { mockData } from './mock';
-import { HostsType } from '../../../../store/hosts/model';
+import { HostsType } from '../../store/model';
 import * as i18n from './translations';
 
 describe('Uncommon Process Table Component', () => {

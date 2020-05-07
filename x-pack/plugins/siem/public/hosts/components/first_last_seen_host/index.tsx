@@ -8,9 +8,9 @@ import { EuiIcon, EuiLoadingSpinner, EuiText, EuiToolTip } from '@elastic/eui';
 import React from 'react';
 import { ApolloConsumer } from 'react-apollo';
 
-import { useFirstLastSeenHostQuery } from '../../../../containers/hosts/first_last_seen';
-import { getEmptyTagValue } from '../../../empty_value';
-import { FormattedRelativePreferenceDate } from '../../../formatted_date';
+import { useFirstLastSeenHostQuery } from '../../containers/hosts/first_last_seen';
+import { getEmptyTagValue } from '../../../common/components/empty_value';
+import { FormattedRelativePreferenceDate } from '../../../common/components/formatted_date';
 
 export enum FirstLastSeenHostType {
   FIRST_SEEN = 'first-seen',

@@ -6,14 +6,20 @@
 
 import { EuiIcon, EuiToolTip } from '@elastic/eui';
 import React from 'react';
-import { DragEffects, DraggableWrapper } from '../../../drag_and_drop/draggable_wrapper';
-import { escapeDataProviderId } from '../../../drag_and_drop/helpers';
-import { getEmptyTagValue } from '../../../empty_value';
-import { HostDetailsLink } from '../../../links';
-import { FormattedRelativePreferenceDate } from '../../../formatted_date';
-import { IS_OPERATOR } from '../../../timeline/data_providers/data_provider';
-import { Provider } from '../../../timeline/data_providers/provider';
-import { AddFilterToGlobalSearchBar, createFilter } from '../../add_filter_to_global_search_bar';
+import {
+  DragEffects,
+  DraggableWrapper,
+} from '../../../common/components/drag_and_drop/draggable_wrapper';
+import { escapeDataProviderId } from '../../../common/components/drag_and_drop/helpers';
+import { getEmptyTagValue } from '../../../common/components/empty_value';
+import { HostDetailsLink } from '../../../common/components/links';
+import { FormattedRelativePreferenceDate } from '../../../common/components/formatted_date';
+import { IS_OPERATOR } from '../../../timelines/components/timeline/data_providers/data_provider';
+import { Provider } from '../../../timelines/components/timeline/data_providers/provider';
+import {
+  AddFilterToGlobalSearchBar,
+  createFilter,
+} from '../../../common/components/page/add_filter_to_global_search_bar';
 import { HostsTableColumns } from './';
 
 import * as i18n from './translations';

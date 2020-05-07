@@ -5,28 +5,13 @@
  */
 
 import * as i18n from './translations';
-import { StatItems } from '../../../stat_items';
+import { StatItems } from '../../../common/components/stat_items';
 import { KpiHostsChartColors } from './types';
 
-export const kpiHostsMapping: Readonly<StatItems[]> = [
-  {
-    key: 'hosts',
-    index: 0,
-    fields: [
-      {
-        key: 'hosts',
-        value: null,
-        color: KpiHostsChartColors.hosts,
-        icon: 'storage',
-      },
-    ],
-    enableAreaChart: true,
-    grow: 2,
-    description: i18n.HOSTS,
-  },
+export const kpiHostDetailsMapping: Readonly<StatItems[]> = [
   {
     key: 'authentication',
-    index: 1,
+    index: 0,
     fields: [
       {
         key: 'authSuccess',
@@ -47,12 +32,12 @@ export const kpiHostsMapping: Readonly<StatItems[]> = [
     ],
     enableAreaChart: true,
     enableBarChart: true,
-    grow: 4,
+    grow: 1,
     description: i18n.USER_AUTHENTICATIONS,
   },
   {
     key: 'uniqueIps',
-    index: 2,
+    index: 1,
     fields: [
       {
         key: 'uniqueSourceIps',
@@ -73,7 +58,7 @@ export const kpiHostsMapping: Readonly<StatItems[]> = [
     ],
     enableAreaChart: true,
     enableBarChart: true,
-    grow: 4,
+    grow: 1,
     description: i18n.UNIQUE_IPS,
   },
 ];
