@@ -22,7 +22,7 @@ import { FormattedMessage } from '@kbn/i18n/react';
 import React, { FC, useCallback, useEffect, useState, useMemo } from 'react';
 import styled from 'styled-components';
 
-import { LoadingPanel } from '../../../../common/components/loading';
+import { LoadingPanel } from '../../loading';
 import { OnChangeItemsPerPage, OnLoadMore } from '../events';
 
 import { LastUpdatedAt } from './last_updated';

@@ -17,15 +17,15 @@ import {
   dispatchUpdateTimeline,
 } from '../../../timelines/components/open_timeline/helpers';
 import { OnOpenTimeline } from '../../../timelines/components/open_timeline/types';
-import { LoadingPlaceholders } from '../page/overview/loading_placeholders';
-import { updateIsLoading as dispatchUpdateIsLoading } from '../../store/timeline/actions';
+import { LoadingPlaceholders } from '../../../common/components/page/overview/loading_placeholders';
+import { updateIsLoading as dispatchUpdateIsLoading } from '../../../common/store/timeline/actions';
 
 import { RecentTimelines } from './recent_timelines';
 import * as i18n from './translations';
 import { FilterMode } from './types';
-import { useGetUrlSearch } from '../navigation/use_get_url_search';
+import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
 import { navTabs } from '../../../app/home/home_navigations';
-import { getTimelinesUrl } from '../link_to/redirect_to_timelines';
+import { getTimelinesUrl } from '../../../common/components/link_to/redirect_to_timelines';
 
 interface OwnProps {
   apolloClient: ApolloClient<{}>;

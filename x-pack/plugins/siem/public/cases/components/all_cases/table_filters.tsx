@@ -18,7 +18,7 @@ import * as i18n from './translations';
 import { FilterOptions } from '../../containers/types';
 import { useGetTags } from '../../containers/use_get_tags';
 import { useGetReporters } from '../../containers/use_get_reporters';
-import { FilterPopover } from '../../../common/components/filter_popover';
+import { FilterPopover } from '../filter_popover';
 
 interface CasesTableFiltersProps {
   countClosedCases: number | null;

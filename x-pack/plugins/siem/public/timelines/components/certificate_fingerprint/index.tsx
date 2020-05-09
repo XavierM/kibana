@@ -8,9 +8,9 @@ import { EuiText } from '@elastic/eui';
 import React from 'react';
 import styled from 'styled-components';
 
-import { DraggableBadge } from '../draggables';
-import { ExternalLinkIcon } from '../external_link_icon';
-import { CertificateFingerprintLink } from '../links';
+import { DraggableBadge } from '../../../common/components/draggables';
+import { ExternalLinkIcon } from '../../../common/components/external_link_icon';
+import { CertificateFingerprintLink } from '../../../common/components/links';
 
 import * as i18n from './translations';
 

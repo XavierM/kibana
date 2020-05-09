@@ -16,7 +16,7 @@ import {
   getEmptyTagValue,
 } from '../../../../../common/components/empty_value';
 import { FormattedDate } from '../../../../../common/components/formatted_date';
-import { FormattedIp } from '../../../../../common/components/formatted_ip';
+import { FormattedIp } from '../../../../components/formatted_ip';
 import { HostDetailsLink } from '../../../../../common/components/links';
 
 import { Port, PORT_NAMES } from '../../../../../common/components/port';

@@ -9,9 +9,9 @@ import React, { useEffect, useMemo, useRef } from 'react';
 
 import { FilterOptions, QueryParams } from '../../../cases/containers/types';
 import { DEFAULT_QUERY_PARAMS, useGetCases } from '../../../cases/containers/use_get_cases';
-import { getCaseUrl } from '../link_to/redirect_to_case';
-import { useGetUrlSearch } from '../navigation/use_get_url_search';
-import { LoadingPlaceholders } from '../page/overview/loading_placeholders';
+import { getCaseUrl } from '../../../common/components/link_to/redirect_to_case';
+import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
+import { LoadingPlaceholders } from '../../../common/components/page/overview/loading_placeholders';
 import { navTabs } from '../../../app/home/home_navigations';
 
 import { NoCases } from './no_cases';
