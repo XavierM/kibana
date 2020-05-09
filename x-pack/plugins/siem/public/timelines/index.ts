@@ -3,3 +3,22 @@
  * or more contributor license agreements. Licensed under the Elastic License;
  * you may not use this file except in compliance with the Elastic License.
  */
+
+import { SecuritySubPlugins } from '../app/types';
+import { getTimelinesRoutes } from './routes';
+import { initialTimelineState, timelineReducer } from './store/timeline/reducer';
+import { TimelineState } from './store/timeline/types';
+
+export class Timelines {
+  public setup() {}
+
+  public start(): SecuritySubPlugins<TimelineState> {
+    return {
+      routes: getTimelinesRoutes(),
+      store: {
+        initialState: { timeline: initialTimelineState },
+        reducer: { timeline: timelineReducer },
+      },
+    };
+  }
+}

@@ -4,7 +4,9 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { NavTab } from '../../common/components/navigation/types';
+import { Reducer, AnyAction } from 'redux';
+
+import { NavTab } from '../common/components/navigation/types';
 
 export enum SiemPageName {
   overview = 'overview',
@@ -24,3 +26,13 @@ export type SiemNavTabKey =
   | SiemPageName.case;
 
 export type SiemNavTab = Record<SiemNavTabKey, NavTab>;
+
+export interface SecuritySubPluginStore<T = unknown> {
+  initialState: Record<string, T>;
+  reducer: Record<string, Reducer<T, AnyAction>>;
+}
+
+export interface SecuritySubPlugins<T = unknown> {
+  routes: React.ReactElement[];
+  store: SecuritySubPluginStore<T> | {};
+}

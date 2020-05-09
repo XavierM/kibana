@@ -5,19 +5,15 @@
  */
 
 import { SecuritySubPlugins } from '../app/types';
-import { getHostsRoutes } from './routes';
-import { initialHostsState, hostsReducer, HostsState } from './store';
+import { getOverviewRoutes } from './routes';
 
-export class Hosts {
+export class Overview {
   public setup() {}
 
-  public start(): SecuritySubPlugins<HostsState> {
+  public start(): SecuritySubPlugins {
     return {
-      routes: getHostsRoutes(),
-      store: {
-        initialState: { hosts: initialHostsState },
-        reducer: { hosts: hostsReducer },
-      },
+      routes: getOverviewRoutes(),
+      store: {},
     };
   }
 }

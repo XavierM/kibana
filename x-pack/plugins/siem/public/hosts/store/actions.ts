@@ -6,7 +6,7 @@
 
 import actionCreatorFactory from 'typescript-fsa';
 
-import { HostsSortField } from '../../../graphql/types';
+import { HostsSortField } from '../../graphql/types';
 
 import { HostsTableType, HostsType } from './model';
 const actionCreator = actionCreatorFactory('x-pack/siem/local/hosts');

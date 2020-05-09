@@ -8,20 +8,21 @@ import { History } from 'history';
 import React, { FC, memo } from 'react';
 import { Route, Router, Switch } from 'react-router-dom';
 
-import { NotFoundPage } from './app/404';
-import { HomePage } from './app/home';
-import { ManageRoutesSpy } from './common/utils/route/manage_spy_routes';
+import { NotFoundPage } from './404';
+import { HomePage } from './home';
+import { ManageRoutesSpy } from '../common/utils/route/manage_spy_routes';
 
 interface RouterProps {
   history: History;
+  subPluginRoutes: JSX.Element[];
 }
 
-const PageRouterComponent: FC<RouterProps> = ({ history }) => (
+const PageRouterComponent: FC<RouterProps> = ({ history, subPluginRoutes }) => (
   <ManageRoutesSpy>
     <Router history={history}>
       <Switch>
         <Route path="/">
-          <HomePage />
+          <HomePage subPlugins={subPluginRoutes} />
         </Route>
         <Route>
           <NotFoundPage />

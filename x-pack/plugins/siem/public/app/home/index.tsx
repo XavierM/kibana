@@ -25,14 +25,8 @@ import {
 import { SpyRoute } from '../../common/utils/route/spy_routes';
 import { useShowTimeline } from '../../common/utils/timeline/use_show_timeline';
 import { NotFoundPage } from '../404';
-import { DetectionEngineContainer } from '../../alerts/pages/detection_engine';
-import { HostsContainer } from '../../hosts/pages';
-import { NetworkContainer } from '../../network/pages';
-import { Overview } from '../../overview';
-import { Case } from '../../cases/pages';
-import { Timelines } from '../../timelines/pages';
 import { navTabs } from './home_navigations';
-import { SiemPageName } from './types';
+import { SiemPageName } from '../types';
 
 const WrappedByAutoSizer = styled.div`
   height: 100%;
@@ -57,7 +51,11 @@ const calculateFlyoutHeight = ({
   windowHeight: number;
 }): number => Math.max(0, windowHeight - globalHeaderSize);
 
-export const HomePage: React.FC = () => {
+interface HomePageProps {
+  subPlugins: JSX.Element[];
+}
+
+export const HomePage: React.FC<HomePageProps> = ({ subPlugins }) => {
   const { ref: measureRef, height: windowHeight = 0 } = useThrottledResizeObserver();
   const flyoutHeight = useMemo(
     () =>
@@ -92,27 +90,7 @@ export const HomePage: React.FC = () => {
 
               <Switch>
                 <Redirect exact from="/" to={`/${SiemPageName.overview}`} />
-                <Route path={`/:pageName(${SiemPageName.overview})`} render={() => <Overview />} />
-                <Route
-                  path={`/:pageName(${SiemPageName.hosts})`}
-                  render={({ match }) => <HostsContainer url={match.url} />}
-                />
-                <Route
-                  path={`/:pageName(${SiemPageName.network})`}
-                  render={({ location, match }) => (
-                    <NetworkContainer location={location} url={match.url} />
-                  )}
-                />
-                <Route
-                  path={`/:pageName(${SiemPageName.detections})`}
-                  render={({ location, match }) => (
-                    <DetectionEngineContainer location={location} url={match.url} />
-                  )}
-                />
-                <Route
-                  path={`/:pageName(${SiemPageName.timelines})`}
-                  render={() => <Timelines />}
-                />
+                {subPlugins}
                 <Route path="/link-to" render={props => <LinkToPage {...props} />} />
                 <Route
                   path="/ml-hosts"
@@ -126,9 +104,6 @@ export const HomePage: React.FC = () => {
                     <MlNetworkConditionalContainer location={location} url={match.url} />
                   )}
                 />
-                <Route path={`/:pageName(${SiemPageName.case})`}>
-                  <Case />
-                </Route>
                 <Route render={() => <NotFoundPage />} />
               </Switch>
             </DragDropContextWrapper>

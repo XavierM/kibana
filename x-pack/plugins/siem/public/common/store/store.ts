@@ -9,12 +9,11 @@ import { Action, applyMiddleware, compose, createStore as createReduxStore, Stor
 import { createEpicMiddleware } from 'redux-observable';
 import { Observable } from 'rxjs';
 
-import { AppApolloClient } from '../lib/lib';
 import { telemetryMiddleware } from '../lib/telemetry';
 import { appSelectors } from './app';
-import { timelineSelectors } from './timeline';
+import { timelineSelectors } from '../../timelines/store/timeline';
 import { inputsSelectors } from './inputs';
-import { State, initialState, reducer } from './reducer';
+import { State, SubPluginsInitReducer, createReducer } from './reducer';
 import { createRootEpic } from './epic';
 
 type ComposeType = typeof compose;
@@ -24,8 +23,10 @@ declare global {
   }
 }
 let store: Store<State, Action> | null = null;
+export { SubPluginsInitReducer };
 export const createStore = (
-  state: State = initialState,
+  state: State,
+  pluginsReducer: SubPluginsInitReducer,
   apolloClient: Observable<AppApolloClient>
 ): Store<State, Action> => {
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -45,7 +46,7 @@ export const createStore = (
   );
 
   store = createReduxStore(
-    reducer,
+    createReducer(pluginsReducer),
     state,
     composeEnhancers(applyMiddleware(epicMiddleware, telemetryMiddleware))
   );

@@ -31,9 +31,9 @@ import {
 import { esFilters, Filter, MatchAllFilter } from '../../../../../../../src/plugins/data/public';
 import { TimelineInput, ResponseTimeline, TimelineResult } from '../../../graphql/types';
 import { AppApolloClient } from '../../../common/lib/lib';
-import { addError } from '../app/actions';
-import { NotesById } from '../app/model';
-import { inputsModel } from '../inputs';
+import { addError } from '../../../common/store/app/actions';
+import { NotesById } from '../../../common/store/app/model';
+import { inputsModel } from '../../../common/store/inputs';
 
 import {
   applyKqlFilterQuery,

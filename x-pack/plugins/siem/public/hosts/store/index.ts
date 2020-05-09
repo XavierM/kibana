@@ -4,9 +4,19 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
+import { Reducer, AnyAction } from 'redux';
 import * as hostsActions from './actions';
 import * as hostsModel from './model';
 import * as hostsSelectors from './selectors';
+import { HostsState } from './reducer';
 
 export { hostsActions, hostsModel, hostsSelectors };
 export * from './reducer';
+
+export interface HostsPluginState {
+  hosts: hostsModel.HostsModel;
+}
+
+export interface HostsPluginReducer {
+  hosts: Reducer<hostsModel.HostsModel, AnyAction>;
+}
