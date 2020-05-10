@@ -22,7 +22,7 @@ import {
   Query,
 } from '../../../../../../../src/plugins/data/public';
 import { inputsModel } from '../../../common/store';
-import { HostsType } from '../../../common/store/hosts/model';
+import { HostsType } from '../../../hosts/store/model';
 
 import * as i18n from '../../pages/translations';
 import {

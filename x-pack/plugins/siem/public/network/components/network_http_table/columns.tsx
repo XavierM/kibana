@@ -8,14 +8,17 @@
 
 import React from 'react';
 import numeral from '@elastic/numeral';
-import { NetworkHttpEdges, NetworkHttpFields, NetworkHttpItem } from '../../../../../graphql/types';
-import { escapeDataProviderId } from '../../../drag_and_drop/helpers';
-import { getEmptyTagValue } from '../../../empty_value';
-import { IPDetailsLink } from '../../../links';
-import { Columns } from '../../../paginated_table';
+import { NetworkHttpEdges, NetworkHttpFields, NetworkHttpItem } from '../../../graphql/types';
+import { escapeDataProviderId } from '../../../common/components/drag_and_drop/helpers';
+import { getEmptyTagValue } from '../../../common/components/empty_value';
+import { IPDetailsLink } from '../../../common/components/links';
+import { Columns } from '../../../common/components/paginated_table';
 
 import * as i18n from './translations';
-import { getRowItemDraggable, getRowItemDraggables } from '../../../tables/helpers';
+import {
+  getRowItemDraggable,
+  getRowItemDraggables,
+} from '../../../common/components/tables/helpers';
 export type NetworkHttpColumns = [
   Columns<NetworkHttpEdges>,
   Columns<NetworkHttpEdges>,

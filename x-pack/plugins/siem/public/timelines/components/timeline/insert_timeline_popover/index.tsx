@@ -12,7 +12,7 @@ import { useDispatch } from 'react-redux';
 import { OpenTimelineResult } from '../../open_timeline/types';
 import { SelectableTimeline } from '../selectable_timeline';
 import * as i18n from '../translations';
-import { timelineActions } from '../../../../common/store/timeline';
+import { timelineActions } from '../../../../timelines/store/timeline';
 
 interface InsertTimelinePopoverProps {
   isDisabled: boolean;

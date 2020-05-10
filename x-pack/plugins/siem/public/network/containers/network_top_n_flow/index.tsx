@@ -19,13 +19,7 @@ import {
   PageInfoPaginated,
 } from '../../../graphql/types';
 import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
-import {
-  inputsModel,
-  inputsSelectors,
-  networkModel,
-  networkSelectors,
-  State,
-} from '../../../common/store';
+import { inputsModel, inputsSelectors, State } from '../../../common/store';
 import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
 import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
 import {
@@ -33,6 +27,7 @@ import {
   QueryTemplatePaginatedProps,
 } from '../../../common/containers/query_template_paginated';
 import { networkTopNFlowQuery } from './index.gql_query';
+import { networkModel, networkSelectors } from '../../store';
 
 const ID = 'networkTopNFlowQuery';
 

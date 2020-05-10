@@ -9,12 +9,12 @@ import darkTheme from '@elastic/eui/dist/eui_theme_dark.json';
 import lightTheme from '@elastic/eui/dist/eui_theme_light.json';
 import React from 'react';
 
-import { DEFAULT_DARK_MODE } from '../../../../../../common/constants';
-import { DescriptionList } from '../../../../../../common/utility_types';
-import { useUiSetting$ } from '../../../../lib/kibana';
-import { FlowTarget, IpOverviewData, Overview } from '../../../../../graphql/types';
-import { networkModel } from '../../../../store';
-import { getEmptyTagValue } from '../../../empty_value';
+import { DEFAULT_DARK_MODE } from '../../../../common/constants';
+import { DescriptionList } from '../../../../common/utility_types';
+import { useUiSetting$ } from '../../../common/lib/kibana';
+import { FlowTarget, IpOverviewData, Overview } from '../../../graphql/types';
+import { networkModel } from '../../store';
+import { getEmptyTagValue } from '../../../common/components/empty_value';
 
 import {
   autonomousSystemRenderer,
@@ -24,15 +24,15 @@ import {
   locationRenderer,
   reputationRenderer,
   whoisRenderer,
-} from '../../../../../timelines/components/field_renderers/field_renderers';
+} from '../../../timelines/components/field_renderers/field_renderers';
 import * as i18n from './translations';
-import { DescriptionListStyled, OverviewWrapper } from '../../index';
-import { Loader } from '../../../loader';
-import { Anomalies, NarrowDateRange } from '../../../ml/types';
-import { AnomalyScores } from '../../../ml/score/anomaly_scores';
-import { useMlCapabilities } from '../../../ml_popover/hooks/use_ml_capabilities';
-import { hasMlUserPermissions } from '../../../ml/permissions/has_ml_user_permissions';
-import { InspectButton, InspectButtonContainer } from '../../../inspect';
+import { DescriptionListStyled, OverviewWrapper } from '../../../common/components/page';
+import { Loader } from '../../../common/components/loader';
+import { Anomalies, NarrowDateRange } from '../../../common/components/ml/types';
+import { AnomalyScores } from '../../../common/components/ml/score/anomaly_scores';
+import { useMlCapabilities } from '../../../common/components/ml_popover/hooks/use_ml_capabilities';
+import { hasMlUserPermissions } from '../../../common/components/ml/permissions/has_ml_user_permissions';
+import { InspectButton, InspectButtonContainer } from '../../../common/components/inspect';
 
 interface OwnProps {
   data: IpOverviewData;

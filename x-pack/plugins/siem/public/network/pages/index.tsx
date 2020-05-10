@@ -14,7 +14,7 @@ import { FlowTarget } from '../../graphql/types';
 import { IPDetails } from './ip_details';
 import { Network } from './network';
 import { GlobalTime } from '../../common/containers/global_time';
-import { SiemPageName } from '../../app/home/types';
+import { SiemPageName } from '../../app/types';
 import { getNetworkRoutePath } from './navigation';
 import { NetworkRouteType } from './navigation/types';
 

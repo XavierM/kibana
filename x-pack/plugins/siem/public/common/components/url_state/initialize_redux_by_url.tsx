@@ -16,7 +16,7 @@ import {
   AbsoluteTimeRange,
   RelativeTimeRange,
 } from '../../store/inputs/model';
-import { TimelineUrl } from '../../store/timeline/model';
+import { TimelineUrl } from '../../../timelines/store/timeline/model';
 import { CONSTANTS } from './constants';
 import { decodeRisonUrlState } from './helpers';
 import { normalizeTimeRange } from './normalize_time_range';

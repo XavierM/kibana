@@ -13,7 +13,7 @@ import deepEqual from 'fast-deep-equal';
 import { DragEffects } from '../../../../../common/components/drag_and_drop/draggable_wrapper';
 import { DraggableFieldBadge } from '../../../../../common/components/draggables/field_badge';
 import { BrowserFields } from '../../../../../common/containers/source';
-import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../../../timelines/store/timeline/model';
 import {
   DRAG_TYPE_FIELD,
   droppableTimelineColumnsPrefix,

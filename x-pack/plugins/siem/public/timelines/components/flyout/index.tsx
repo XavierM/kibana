@@ -9,14 +9,14 @@ import React, { useCallback } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import styled from 'styled-components';
 
-import { State, timelineSelectors } from '../../../common/store';
+import { State } from '../../../common/store';
 import { DataProvider } from '../timeline/data_providers/data_provider';
 import { FlyoutButton } from './button';
 import { Pane } from './pane';
-import { timelineActions } from '../../../common/store/actions';
+import { timelineActions, timelineSelectors } from '../../store/timeline';
 import { DEFAULT_TIMELINE_WIDTH } from '../timeline/body/constants';
 import { StatefulTimeline } from '../timeline';
-import { TimelineById } from '../../../common/store/timeline/types';
+import { TimelineById } from '../../store/timeline/types';
 
 export const Badge = (styled(EuiBadge)`
   position: absolute;

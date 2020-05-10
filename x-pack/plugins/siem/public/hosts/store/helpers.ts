@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { DEFAULT_TABLE_ACTIVE_PAGE } from '../constants';
+import { DEFAULT_TABLE_ACTIVE_PAGE } from '../../common/store/constants';
 
 import { HostsModel, HostsTableType, Queries, HostsType } from './model';
 

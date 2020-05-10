@@ -13,10 +13,11 @@ import deepEqual from 'fast-deep-equal';
 import { BrowserFields } from '../../../../common/containers/source';
 import { TimelineItem } from '../../../../graphql/types';
 import { Note } from '../../../../common/lib/note';
-import { appSelectors, State, timelineSelectors } from '../../../../common/store';
-import { timelineActions, appActions } from '../../../../common/store/actions';
-import { ColumnHeaderOptions, TimelineModel } from '../../../../common/store/timeline/model';
-import { timelineDefaults } from '../../../../common/store/timeline/defaults';
+import { appSelectors, State } from '../../../../common/store';
+import { appActions } from '../../../../common/store/actions';
+import { ColumnHeaderOptions, TimelineModel } from '../../../store/timeline/model';
+import { timelineDefaults } from '../../../store/timeline/defaults';
+import { timelineActions, timelineSelectors } from '../../../store/timeline';
 import { AddNoteToEvent, UpdateNote } from '../../notes/helpers';
 import {
   OnColumnRemoved,

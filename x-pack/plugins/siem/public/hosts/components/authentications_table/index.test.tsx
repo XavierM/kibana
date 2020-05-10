@@ -10,8 +10,8 @@ import React from 'react';
 import { Provider as ReduxStoreProvider } from 'react-redux';
 
 import { apolloClientObservable, mockGlobalState } from '../../../common/mock';
-import { createStore, hostsModel, State } from '../../../common/store';
-
+import { createStore, State } from '../../../common/store';
+import { hostsModel, hostsReducer } from '../../store';
 import { mockData } from './mock';
 import * as i18n from './translations';
 import { AuthenticationTable, getAuthenticationColumnsCurated } from '.';
@@ -20,10 +20,10 @@ describe('Authentication Table Component', () => {
   const loadPage = jest.fn();
   const state: State = mockGlobalState;
 
-  let store = createStore(state, apolloClientObservable);
+  let store = createStore(state, { hosts: hostsReducer }, apolloClientObservable);
 
   beforeEach(() => {
-    store = createStore(state, apolloClientObservable);
+    store = createStore(state, { hosts: hostsReducer }, apolloClientObservable);
   });
 
   describe('rendering', () => {

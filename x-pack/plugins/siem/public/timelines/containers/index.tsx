@@ -24,9 +24,9 @@ import { inputsModel, inputsSelectors, State } from '../../common/store';
 import { withKibana, WithKibanaProps } from '../../common/lib/kibana';
 import { createFilter } from '../../common/containers/helpers';
 import { QueryTemplate, QueryTemplateProps } from '../../common/containers/query_template';
-import { EventType } from '../../common/store/timeline/model';
+import { EventType } from '../../timelines/store/timeline/model';
 import { timelineQuery } from './index.gql_query';
-import { timelineActions } from '../../common/store/timeline';
+import { timelineActions } from '../../timelines/store/timeline';
 import { SIGNALS_PAGE_TIMELINE_ID } from '../../alerts/components/signals';
 
 export interface TimelineArgs {

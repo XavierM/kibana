@@ -12,7 +12,7 @@ import { updateSignalStatus } from '../../containers/detection_engine/signals/ap
 import { SendSignalToTimelineActionProps, UpdateSignalStatusActionProps } from './types';
 import { TimelineNonEcsData, GetOneTimeline, TimelineResult, Ecs } from '../../../graphql/types';
 import { oneTimelineQuery } from '../../../timelines/containers/one/index.gql_query';
-import { timelineDefaults } from '../../../common/store/timeline/defaults';
+import { timelineDefaults } from '../../../timelines/store/timeline/defaults';
 import {
   omitTypenameInTimeline,
   formatTimelineResultToModel,

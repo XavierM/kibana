@@ -31,7 +31,7 @@ import {
   Query,
 } from '../../../../../../../src/plugins/data/public';
 import { inputsModel } from '../../../common/store';
-import { HostsTableType, HostsType } from '../../../common/store/hosts/model';
+import { HostsTableType, HostsType } from '../../../hosts/store/model';
 import { InputsModelId } from '../../../common/store/inputs/constants';
 
 import * as i18n from '../../pages/translations';

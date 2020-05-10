@@ -7,9 +7,9 @@
 import React from 'react';
 import { getOr } from 'lodash/fp';
 
-import { NetworkTopCountriesTable } from '../../../common/components/page/network';
-import { NetworkTopCountriesQuery } from '../../../network/containers/network_top_countries';
-import { networkModel } from '../../../common/store';
+import { NetworkTopCountriesTable } from '../../components/network_top_countries_table';
+import { NetworkTopCountriesQuery } from '../../containers/network_top_countries';
+import { networkModel } from '../../store';
 import { manageQuery } from '../../../common/components/page/manage_query';
 
 import { IPsQueryTabBodyProps as CountriesQueryTabBodyProps } from './types';

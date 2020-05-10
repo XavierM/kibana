@@ -6,7 +6,7 @@
 import { isEmpty, noop } from 'lodash/fp';
 
 import { Ecs, TimelineItem, TimelineNonEcsData } from '../../../../graphql/types';
-import { EventType } from '../../../../common/store/timeline/model';
+import { EventType } from '../../../../timelines/store/timeline/model';
 import { OnPinEvent, OnUnPinEvent } from '../events';
 
 import * as i18n from './translations';

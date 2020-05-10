@@ -5,7 +5,7 @@
  */
 
 import { getAnomaliesNetworkTableColumnsCurated } from './get_anomalies_network_table_columns';
-import { NetworkType } from '../../../store/network/model';
+import { NetworkType } from '../../../../network/store/model';
 import * as i18n from './translations';
 import { AnomaliesByNetwork, Anomaly } from '../types';
 import { Columns } from '../../paginated_table';

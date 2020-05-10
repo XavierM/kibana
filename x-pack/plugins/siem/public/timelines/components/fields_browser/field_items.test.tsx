@@ -9,7 +9,7 @@ import React from 'react';
 
 import { mockBrowserFields } from '../../../common/containers/source/mock';
 import { TestProviders } from '../../../common/mock';
-import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../timelines/store/timeline/model';
 import { defaultColumnHeaderType } from '../timeline/body/column_headers/default_headers';
 import { DEFAULT_DATE_COLUMN_MIN_WIDTH } from '../timeline/body/constants';
 

@@ -8,22 +8,23 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { ActionCreator } from 'typescript-fsa';
 
-import { FlowTarget } from '../../../../../graphql/types';
-import { apolloClientObservable, mockGlobalState, TestProviders } from '../../../../mock';
-import { createStore, networkModel, State } from '../../../../store';
+import { FlowTarget } from '../../../graphql/types';
+import { apolloClientObservable, mockGlobalState, TestProviders } from '../../../common/mock';
+import { createStore, State } from '../../../common/store';
+import { networkModel, networkReducer } from '../../store';
 
 import { IpOverview } from './index';
 import { mockData } from './mock';
-import { mockAnomalies } from '../../../ml/mock';
-import { NarrowDateRange } from '../../../ml/types';
+import { mockAnomalies } from '../../../common/components/ml/mock';
+import { NarrowDateRange } from '../../../common/components/ml/types';
 
 describe('IP Overview Component', () => {
   const state: State = mockGlobalState;
 
-  let store = createStore(state, apolloClientObservable);
+  let store = createStore(state, { network: networkReducer }, apolloClientObservable);
 
   beforeEach(() => {
-    store = createStore(state, apolloClientObservable);
+    store = createStore(state, { network: networkReducer }, apolloClientObservable);
   });
 
   describe('rendering', () => {

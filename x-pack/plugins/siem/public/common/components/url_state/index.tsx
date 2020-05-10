@@ -9,7 +9,7 @@ import { compose, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import deepEqual from 'fast-deep-equal';
 
-import { timelineActions } from '../../store/actions';
+import { timelineActions } from '../../../timelines/store/timeline';
 import { RouteSpyState } from '../../utils/route/types';
 import { useRouteSpy } from '../../utils/route/use_route_spy';
 

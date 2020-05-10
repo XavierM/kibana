@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { UsersData } from '../../../../../graphql/types';
+import { UsersData } from '../../../graphql/types';
 
 export const mockUsersData: UsersData = {
   edges: [

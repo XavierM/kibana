@@ -21,7 +21,7 @@ import { getEntries } from '../get_entries';
 import { DraggableScore } from '../score/draggable_score';
 import { createExplorerLink } from '../links/create_explorer_link';
 import { FormattedRelativePreferenceDate } from '../../formatted_date';
-import { NetworkType } from '../../../store/network/model';
+import { NetworkType } from '../../../../network/store/model';
 import { escapeDataProviderId } from '../../drag_and_drop/helpers';
 import { FlowTarget } from '../../../../graphql/types';
 

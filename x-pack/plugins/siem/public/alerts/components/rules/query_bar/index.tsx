@@ -27,7 +27,7 @@ import { buildGlobalQuery } from '../../../../timelines/components/timeline/help
 import { getDataProviderFilter } from '../../../../timelines/components/timeline/query_bar';
 import { convertKueryToElasticSearchQuery } from '../../../../common/lib/keury';
 import { useKibana } from '../../../../common/lib/kibana';
-import { TimelineModel } from '../../../../common/store/timeline/model';
+import { TimelineModel } from '../../../../timelines/store/timeline/model';
 import { useSavedQueryServices } from '../../../../common/utils/saved_query_services';
 import { FieldHook, getFieldValidityAndErrorMessage } from '../../../../shared_imports';
 import * as i18n from './translations';

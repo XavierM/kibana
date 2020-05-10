@@ -17,13 +17,7 @@ import {
   NetworkHttpSortField,
   PageInfoPaginated,
 } from '../../../graphql/types';
-import {
-  inputsModel,
-  inputsSelectors,
-  networkModel,
-  networkSelectors,
-  State,
-} from '../../../common/store';
+import { inputsModel, inputsSelectors, State } from '../../../common/store';
 import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
 import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
 import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
@@ -31,6 +25,7 @@ import {
   QueryTemplatePaginated,
   QueryTemplatePaginatedProps,
 } from '../../../common/containers/query_template_paginated';
+import { networkModel, networkSelectors } from '../../store';
 import { networkHttpQuery } from './index.gql_query';
 
 const ID = 'networkHttpQuery';

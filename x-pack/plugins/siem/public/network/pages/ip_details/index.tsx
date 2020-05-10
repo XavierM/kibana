@@ -17,8 +17,8 @@ import { networkToCriteria } from '../../../common/components/ml/criteria/networ
 import { scoreIntervalToDateTime } from '../../../common/components/ml/score/score_interval_to_datetime';
 import { AnomaliesNetworkTable } from '../../../common/components/ml/tables/anomalies_network_table';
 import { manageQuery } from '../../../common/components/page/manage_query';
-import { FlowTargetSelectConnected } from '../../../common/components/page/network/flow_target_select_connected';
-import { IpOverview } from '../../../common/components/page/network/ip_overview';
+import { FlowTargetSelectConnected } from '../../components/flow_target_select_connected';
+import { IpOverview } from '../../components/ip_overview';
 import { SiemSearchBar } from '../../../common/components/search_bar';
 import { WrapperPage } from '../../../common/components/wrapper_page';
 import { IpOverviewQuery } from '../../containers/ip_overview';
@@ -31,9 +31,9 @@ import { useKibana } from '../../../common/lib/kibana';
 import { decodeIpv6 } from '../../../common/lib/helpers';
 import { convertToBuildEsQuery } from '../../../common/lib/keury';
 import { ConditionalFlexGroup } from '../../pages/navigation/conditional_flex_group';
-import { networkModel, State, inputsSelectors } from '../../../common/store';
+import { State, inputsSelectors } from '../../../common/store';
 import { setAbsoluteRangeDatePicker as dispatchAbsoluteRangeDatePicker } from '../../../common/store/inputs/actions';
-import { setIpDetailsTablesActivePageToZero as dispatchIpDetailsTablesActivePageToZero } from '../../../common/store/network/actions';
+import { setIpDetailsTablesActivePageToZero as dispatchIpDetailsTablesActivePageToZero } from '../../store/actions';
 import { SpyRoute } from '../../../common/utils/route/spy_routes';
 import { NetworkEmptyPage } from '../network_empty_page';
 import { NetworkHttpQueryTable } from './network_http_query_table';
@@ -44,7 +44,7 @@ import { IPDetailsComponentProps } from './types';
 import { UsersQueryTable } from './users_query_table';
 import { AnomaliesQueryTabBody } from '../../../common/containers/anomalies/anomalies_query_tab_body';
 import { esQuery } from '../../../../../../../src/plugins/data/public';
-
+import { networkModel } from '../../store';
 export { getBreadcrumbs } from './utils';
 
 const IpOverviewManage = manageQuery(IpOverview);

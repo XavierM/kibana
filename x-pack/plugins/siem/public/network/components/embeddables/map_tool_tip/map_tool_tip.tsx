@@ -15,7 +15,7 @@ import { FeatureGeometry, FeatureProperty, MapToolTipProps } from '../types';
 import { ToolTipFooter } from './tooltip_footer';
 import { LineToolTipContent } from './line_tool_tip_content';
 import { PointToolTipContent } from './point_tool_tip_content';
-import { Loader } from '../../loader';
+import { Loader } from '../../../../common/components/loader';
 import * as i18n from '../translations';
 
 export const MapToolTipComponent = ({

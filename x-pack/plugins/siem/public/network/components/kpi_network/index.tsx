@@ -21,11 +21,11 @@ import {
   StatItemsProps,
   useKpiMatrixStatus,
   StatItems,
-} from '../../../../components/stat_items';
-import { KpiNetworkData } from '../../../../../graphql/types';
+} from '../../../common/components/stat_items';
+import { KpiNetworkData } from '../../../graphql/types';
 
 import * as i18n from './translations';
-import { UpdateDateRange } from '../../../charts/common';
+import { UpdateDateRange } from '../../../common/components/charts/common';
 
 const kipsPerRow = 2;
 const kpiWidgetHeight = 228;

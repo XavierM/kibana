@@ -9,8 +9,8 @@ import numeral from '@elastic/numeral';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { DEFAULT_NUMBER_FORMAT } from '../../../../../common/constants';
-import { useUiSetting$ } from '../../../lib/kibana';
+import { DEFAULT_NUMBER_FORMAT } from '../../../common/constants';
+import { useUiSetting$ } from '../../common/lib/kibana';
 
 const ProgressContainer = styled.div`
   margin-left: 8px;

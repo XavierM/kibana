@@ -20,8 +20,8 @@ import {
   DEFAULT_COLUMN_MIN_WIDTH,
   DEFAULT_DATE_COLUMN_MIN_WIDTH,
 } from '../../../timelines/components/timeline/body/constants';
-import { ColumnHeaderOptions, SubsetTimelineModel } from '../../../common/store/timeline/model';
-import { timelineDefaults } from '../../../common/store/timeline/defaults';
+import { ColumnHeaderOptions, SubsetTimelineModel } from '../../../timelines/store/timeline/model';
+import { timelineDefaults } from '../../../timelines/store/timeline/defaults';
 
 import { FILTER_OPEN } from './signals_filter_group';
 import { sendSignalToTimelineAction, updateSignalStatusAction } from './actions';

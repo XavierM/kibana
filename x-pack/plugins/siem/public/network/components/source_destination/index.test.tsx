@@ -9,11 +9,11 @@ import { shallow } from 'enzyme';
 import { get } from 'lodash/fp';
 import React from 'react';
 
-import { asArrayIfExists } from '../../lib/helpers';
-import { getMockNetflowData } from '../../mock';
-import { TestProviders } from '../../mock/test_providers';
-import { ID_FIELD_NAME } from '../event_details/event_id';
-import { useMountAppended } from '../../utils/use_mount_appended';
+import { asArrayIfExists } from '../../../common/lib/helpers';
+import { getMockNetflowData } from '../../../common/mock';
+import { TestProviders } from '../../../common/mock/test_providers';
+import { ID_FIELD_NAME } from '../../../common/components/event_details/event_id';
+import { useMountAppended } from '../../../common/utils/use_mount_appended';
 import { DESTINATION_IP_FIELD_NAME, SOURCE_IP_FIELD_NAME } from '../ip';
 import { DESTINATION_PORT_FIELD_NAME, SOURCE_PORT_FIELD_NAME } from '../port';
 import {

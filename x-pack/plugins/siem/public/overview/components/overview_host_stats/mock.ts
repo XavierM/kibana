@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { OverviewHostData } from '../../../../../graphql/types';
+import { OverviewHostData } from '../../../graphql/types';
 
 export const mockData: { OverviewHost: OverviewHostData } = {
   OverviewHost: {

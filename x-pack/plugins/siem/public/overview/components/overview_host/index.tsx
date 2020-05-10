@@ -10,21 +10,18 @@ import numeral from '@elastic/numeral';
 import { FormattedMessage } from '@kbn/i18n/react';
 import React, { useMemo } from 'react';
 
-import { DEFAULT_NUMBER_FORMAT } from '../../../../../../common/constants';
-import { ESQuery } from '../../../../../../common/typed_json';
-import {
-  ID as OverviewHostQueryId,
-  OverviewHostQuery,
-} from '../../../../containers/overview/overview_host';
-import { HeaderSection } from '../../../header_section';
-import { useUiSetting$ } from '../../../../lib/kibana';
-import { getHostsUrl } from '../../../link_to';
+import { DEFAULT_NUMBER_FORMAT } from '../../../../common/constants';
+import { ESQuery } from '../../../../common/typed_json';
+import { ID as OverviewHostQueryId, OverviewHostQuery } from '../../containers/overview_host';
+import { HeaderSection } from '../../../common/components/header_section';
+import { useUiSetting$ } from '../../../common/lib/kibana';
+import { getHostsUrl } from '../../../common/components/link_to';
 import { getOverviewHostStats, OverviewHostStats } from '../overview_host_stats';
-import { manageQuery } from '../../../page/manage_query';
-import { inputsModel } from '../../../../store/inputs';
-import { InspectButtonContainer } from '../../../inspect';
-import { useGetUrlSearch } from '../../../navigation/use_get_url_search';
-import { navTabs } from '../../../../../app/home/home_navigations';
+import { manageQuery } from '../../../common/components/page/manage_query';
+import { inputsModel } from '../../../common/store/inputs';
+import { InspectButtonContainer } from '../../../common/components/inspect';
+import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
+import { navTabs } from '../../../app/home/home_navigations';
 
 export interface OwnProps {
   startDate: number;

@@ -27,7 +27,9 @@ import {
 } from './types';
 import { InspectButtonContainer } from '../inspect';
 
-import { State, inputsSelectors, hostsModel, networkModel } from '../../store';
+import { State, inputsSelectors } from '../../store';
+import { hostsModel } from '../../../hosts/store';
+import { networkModel } from '../../../network/store';
 
 import {
   MatrixHistogramMappingTypes,

@@ -19,6 +19,7 @@ import {
 
 import { Props } from './top_n';
 import { ACTIVE_TIMELINE_REDUX_ID, StatefulTopN } from '.';
+import { timelineReducer } from '../../../timelines/store/timeline/reducer';
 
 jest.mock('../../lib/kibana');
 
@@ -135,7 +136,7 @@ const state: State = {
     },
   },
 };
-const store = createStore(state, apolloClientObservable);
+const store = createStore(state, { timeline: timelineReducer }, apolloClientObservable);
 
 describe('StatefulTopN', () => {
   // Suppress warnings about "react-beautiful-dnd"

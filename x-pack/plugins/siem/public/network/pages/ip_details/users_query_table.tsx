@@ -9,7 +9,7 @@ import { getOr } from 'lodash/fp';
 import { manageQuery } from '../../../common/components/page/manage_query';
 import { UsersQuery } from '../../containers/users';
 import { NetworkComponentsQueryProps } from './types';
-import { UsersTable } from '../../../common/components/page/network/users_table';
+import { UsersTable } from '../../components/users_table';
 
 const UsersTableManage = manageQuery(UsersTable);
 

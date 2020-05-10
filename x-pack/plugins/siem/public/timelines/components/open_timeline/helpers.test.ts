@@ -11,14 +11,14 @@ import {
   mockTimelineResult,
   mockTimelineModel,
 } from '../../../common/mock/timeline_results';
-import { timelineDefaults } from '../../../common/store/timeline/defaults';
+import { timelineDefaults } from '../../../timelines/store/timeline/defaults';
 import { setTimelineRangeDatePicker as dispatchSetTimelineRangeDatePicker } from '../../../common/store/inputs/actions';
 import {
   setKqlFilterQueryDraft as dispatchSetKqlFilterQueryDraft,
   applyKqlFilterQuery as dispatchApplyKqlFilterQuery,
   addTimeline as dispatchAddTimeline,
   addNote as dispatchAddGlobalTimelineNote,
-} from '../../../common/store/timeline/actions';
+} from '../../../timelines/store/timeline/actions';
 import {
   addNotes as dispatchAddNotes,
   updateNote as dispatchUpdateNote,
@@ -38,7 +38,7 @@ import moment from 'moment';
 import sinon from 'sinon';
 
 jest.mock('../../../common/store/inputs/actions');
-jest.mock('../../../common/store/timeline/actions');
+jest.mock('../../../timelines/store/timeline/actions');
 jest.mock('../../../common/store/app/actions');
 jest.mock('uuid', () => {
   return {

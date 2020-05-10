@@ -14,7 +14,7 @@ import {
   TlsFields,
   UsersFields,
 } from '../../graphql/types';
-import { networkModel, State } from '../store';
+import { State } from '../store';
 
 import { defaultHeaders } from './header';
 import {
@@ -23,6 +23,7 @@ import {
   DEFAULT_INTERVAL_TYPE,
   DEFAULT_INTERVAL_VALUE,
 } from '../../../common/constants';
+import { networkModel } from '../../network/store';
 
 export const mockGlobalState: State = {
   app: {

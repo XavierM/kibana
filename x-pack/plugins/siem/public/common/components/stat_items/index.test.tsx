@@ -23,13 +23,13 @@ import {
 import { BarChart } from '../charts/barchart';
 import { AreaChart } from '../charts/areachart';
 import { EuiHorizontalRule } from '@elastic/eui';
-import { fieldTitleChartMapping } from '../page/network/kpi_network';
+import { fieldTitleChartMapping } from '../../../network/components/kpi_network';
 import {
   mockData,
   mockEnableChartsData,
   mockNoChartMappings,
   mockNarrowDateRange,
-} from '../page/network/kpi_network/mock';
+} from '../../../network/components/kpi_network/mock';
 import { mockGlobalState, apolloClientObservable } from '../../mock';
 import { State, createStore } from '../../store';
 import { Provider as ReduxStoreProvider } from 'react-redux';
@@ -49,7 +49,7 @@ jest.mock('../charts/barchart', () => {
 describe('Stat Items Component', () => {
   const theme = () => ({ eui: euiDarkVars, darkMode: true });
   const state: State = mockGlobalState;
-  const store = createStore(state, apolloClientObservable);
+  const store = createStore(state, {}, apolloClientObservable);
 
   describe.each([
     [

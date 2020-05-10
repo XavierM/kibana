@@ -8,7 +8,7 @@ import { EuiButtonIcon, EuiHighlight, EuiIcon, EuiText, EuiToolTip } from '@elas
 import React, { useCallback, useContext, useState, useMemo } from 'react';
 import styled from 'styled-components';
 
-import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../timelines/store/timeline/model';
 import { OnUpdateColumns } from '../timeline/events';
 import { TimelineContext } from '../timeline/timeline_context';
 import { WithHoverActions } from '../../../common/components/with_hover_actions';

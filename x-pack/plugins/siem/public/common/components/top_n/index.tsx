@@ -11,10 +11,11 @@ import { GlobalTime } from '../../containers/global_time';
 import { BrowserFields, WithSource } from '../../containers/source';
 import { useKibana } from '../../lib/kibana';
 import { esQuery, Filter, Query } from '../../../../../../../src/plugins/data/public';
-import { inputsModel, inputsSelectors, State, timelineSelectors } from '../../store';
+import { inputsModel, inputsSelectors, State } from '../../store';
 import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../store/inputs/actions';
-import { timelineDefaults } from '../../store/timeline/defaults';
-import { TimelineModel } from '../../store/timeline/model';
+import { timelineDefaults } from '../../../timelines/store/timeline/defaults';
+import { timelineSelectors } from '../../../timelines/store/timeline';
+import { TimelineModel } from '../../../timelines/store/timeline/model';
 import { combineQueries } from '../../../timelines/components/timeline/helpers';
 import { useTimelineTypeContext } from '../../../timelines/components/timeline/timeline_context';
 

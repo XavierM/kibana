@@ -18,13 +18,7 @@ import {
   GetTlsQuery,
   FlowTargetSourceDest,
 } from '../../../graphql/types';
-import {
-  inputsModel,
-  networkModel,
-  networkSelectors,
-  State,
-  inputsSelectors,
-} from '../../../common/store';
+import { inputsModel, State, inputsSelectors } from '../../../common/store';
 import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
 import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
 import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
@@ -32,6 +26,7 @@ import {
   QueryTemplatePaginated,
   QueryTemplatePaginatedProps,
 } from '../../../common/containers/query_template_paginated';
+import { networkModel, networkSelectors } from '../../store';
 import { tlsQuery } from './index.gql_query';
 
 const ID = 'tlsQuery';

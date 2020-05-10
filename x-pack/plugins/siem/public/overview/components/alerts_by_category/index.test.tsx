@@ -17,9 +17,9 @@ import { mockIndexPattern, TestProviders } from '../../../common/mock';
 
 import { AlertsByCategory } from '.';
 
-jest.mock('../../../../lib/kibana');
+jest.mock('../../../common/lib/kibana');
 
-jest.mock('../../../../containers/matrix_histogram', () => {
+jest.mock('../../../common/containers/matrix_histogram', () => {
   return {
     useQuery: jest.fn(),
   };

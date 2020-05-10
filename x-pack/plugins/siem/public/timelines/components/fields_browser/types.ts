@@ -5,7 +5,7 @@
  */
 
 import { BrowserFields } from '../../../common/containers/source';
-import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../timelines/store/timeline/model';
 import { OnUpdateColumns } from '../timeline/events';
 
 export type OnFieldSelected = (fieldId: string) => void;

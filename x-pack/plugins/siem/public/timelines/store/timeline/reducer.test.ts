@@ -18,7 +18,7 @@ import {
 } from '../../../timelines/components/timeline/body/constants';
 import { getColumnWidthFromType } from '../../../timelines/components/timeline/body/column_headers/helpers';
 import { Direction } from '../../../graphql/types';
-import { defaultHeaders } from '../../mock';
+import { defaultHeaders } from '../../../common/mock';
 
 import {
   addNewTimeline,

@@ -10,7 +10,7 @@ import { Redirect } from 'react-router-dom';
 import * as i18n from './translations';
 import { useDeleteCases } from '../../containers/use_delete_cases';
 import { ConfirmDeleteCaseModal } from '../confirm_delete_case';
-import { SiemPageName } from '../../../app/home/types';
+import { SiemPageName } from '../../../app/types';
 import { PropertyActions } from '../property_actions';
 import { Case } from '../../containers/types';
 

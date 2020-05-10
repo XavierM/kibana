@@ -7,7 +7,7 @@
 import { mount, shallow } from 'enzyme';
 import React from 'react';
 
-import { FlowDirection } from '../../../../../graphql/types';
+import { FlowDirection } from '../../../graphql/types';
 
 import { IsPtrIncluded } from './is_ptr_included';
 

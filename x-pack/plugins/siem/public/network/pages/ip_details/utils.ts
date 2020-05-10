@@ -13,7 +13,7 @@ import {
   getNetworkUrl,
   getIPDetailsUrl,
 } from '../../../common/components/link_to/redirect_to_network';
-import { networkModel } from '../../../common/store/network';
+import { networkModel } from '../../store';
 import * as i18n from '../translations';
 import { NetworkRouteType } from '../navigation/types';
 import { NetworkRouteSpyState } from '../../../common/utils/route/types';

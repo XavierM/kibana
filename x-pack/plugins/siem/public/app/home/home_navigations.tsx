@@ -13,7 +13,7 @@ import {
   getCaseUrl,
 } from '../../common/components/link_to';
 import * as i18n from './translations';
-import { SiemPageName, SiemNavTab } from './types';
+import { SiemPageName, SiemNavTab } from '../types';
 
 export const navTabs: SiemNavTab = {
   [SiemPageName.overview]: {

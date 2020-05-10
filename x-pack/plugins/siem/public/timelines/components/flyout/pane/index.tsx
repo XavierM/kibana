@@ -14,7 +14,7 @@ import { TimelineResizeHandle } from './timeline_resize_handle';
 import { EventDetailsWidthProvider } from '../../../../common/components/events_viewer/event_details_width_context';
 
 import * as i18n from './translations';
-import { timelineActions } from '../../../../common/store/actions';
+import { timelineActions } from '../../../store/timeline';
 
 const minWidthPixels = 550; // do not allow the flyout to shrink below this width (pixels)
 const maxWidthPercent = 95; // do not allow the flyout to grow past this percentage of the view

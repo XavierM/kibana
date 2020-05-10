@@ -9,7 +9,7 @@ import { Draggable } from 'react-beautiful-dnd';
 import { Resizable, ResizeCallback } from 're-resizable';
 import deepEqual from 'fast-deep-equal';
 
-import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../../../timelines/store/timeline/model';
 import { getDraggableFieldId } from '../../../../../common/components/drag_and_drop/helpers';
 import { OnColumnRemoved, OnColumnSorted, OnFilterChange, OnColumnResized } from '../../events';
 import { EventsTh, EventsThContent, EventsHeadingHandle } from '../../styles';

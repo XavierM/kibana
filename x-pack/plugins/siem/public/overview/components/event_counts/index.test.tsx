@@ -7,8 +7,8 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import { OverviewHostProps } from '../../../common/components/page/overview/overview_host';
-import { OverviewNetworkProps } from '../../../common/components/page/overview/overview_network';
+import { OverviewHostProps } from '../overview_host';
+import { OverviewNetworkProps } from '../overview_network';
 import { mockIndexPattern, TestProviders } from '../../../common/mock';
 
 import { EventCounts } from '.';

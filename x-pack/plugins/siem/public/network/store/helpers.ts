@@ -12,7 +12,7 @@ import {
   NetworkQueries,
   IpOverviewQueries,
 } from './model';
-import { DEFAULT_TABLE_ACTIVE_PAGE } from '../constants';
+import { DEFAULT_TABLE_ACTIVE_PAGE } from '../../common/store/constants';
 
 export const setNetworkPageQueriesActivePageToZero = (state: NetworkModel): NetworkQueries => ({
   ...state.page.queries,

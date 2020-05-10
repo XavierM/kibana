@@ -14,7 +14,7 @@ import { SignalsByCategory } from '../../../overview/components/signals_by_categ
 import { Filter, IIndexPattern, Query } from '../../../../../../../src/plugins/data/public';
 import { inputsModel } from '../../store';
 import { InputsModelId } from '../../store/inputs/constants';
-import { EventType } from '../../store/timeline/model';
+import { EventType } from '../../../timelines/store/timeline/model';
 
 import { TopNOption } from './helpers';
 import * as i18n from './translations';

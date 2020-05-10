@@ -14,8 +14,8 @@ import { filter, mergeMap, startWith, withLatestFrom, takeUntil } from 'rxjs/ope
 
 import { persistTimelinePinnedEventMutation } from '../../../timelines/containers/pinned_event/persist.gql_query';
 import { PersistTimelinePinnedEventMutation, PinnedEvent } from '../../../graphql/types';
-import { addError } from '../app/actions';
-import { inputsModel } from '../inputs';
+import { addError } from '../../../common/store/app/actions';
+import { inputsModel } from '../../../common/store/inputs';
 
 import {
   pinEvent,

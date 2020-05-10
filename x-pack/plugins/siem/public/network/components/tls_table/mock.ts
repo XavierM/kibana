@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { TlsData } from '../../../../../graphql/types';
+import { TlsData } from '../../../graphql/types';
 
 export const mockTlsData: TlsData = {
   totalCount: 2,

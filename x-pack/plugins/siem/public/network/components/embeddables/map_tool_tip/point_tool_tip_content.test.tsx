@@ -8,10 +8,10 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { FeatureProperty } from '../types';
 import { getRenderedFieldValue, PointToolTipContentComponent } from './point_tool_tip_content';
-import { TestProviders } from '../../../mock';
-import { getEmptyStringTag } from '../../empty_value';
-import { HostDetailsLink, IPDetailsLink } from '../../links';
-import { useMountAppended } from '../../../utils/use_mount_appended';
+import { TestProviders } from '../../../../common/mock';
+import { getEmptyStringTag } from '../../../../common/components/empty_value';
+import { HostDetailsLink, IPDetailsLink } from '../../../../common/components/links';
+import { useMountAppended } from '../../../../common/utils/use_mount_appended';
 import { FlowTarget } from '../../../../graphql/types';
 
 describe('PointToolTipContent', () => {

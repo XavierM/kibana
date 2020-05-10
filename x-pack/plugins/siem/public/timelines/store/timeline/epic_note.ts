@@ -14,9 +14,9 @@ import { filter, mergeMap, switchMap, withLatestFrom, startWith, takeUntil } fro
 
 import { persistTimelineNoteMutation } from '../../../timelines/containers/notes/persist.gql_query';
 import { PersistTimelineNoteMutation, ResponseNote } from '../../../graphql/types';
-import { updateNote, addError } from '../app/actions';
-import { NotesById } from '../app/model';
-import { inputsModel } from '../inputs';
+import { updateNote, addError } from '../../../common/store/app/actions';
+import { NotesById } from '../../../common/store/app/model';
+import { inputsModel } from '../../../common/store/inputs';
 
 import {
   addNote,

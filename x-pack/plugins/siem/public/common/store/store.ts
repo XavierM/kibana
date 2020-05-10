@@ -15,6 +15,7 @@ import { timelineSelectors } from '../../timelines/store/timeline';
 import { inputsSelectors } from './inputs';
 import { State, SubPluginsInitReducer, createReducer } from './reducer';
 import { createRootEpic } from './epic';
+import { AppApolloClient } from '../lib/lib';
 
 type ComposeType = typeof compose;
 declare global {
@@ -26,7 +27,7 @@ let store: Store<State, Action> | null = null;
 export { SubPluginsInitReducer };
 export const createStore = (
   state: State,
-  pluginsReducer: SubPluginsInitReducer,
+  pluginsReducer: SubPluginsInitReducer | {},
   apolloClient: Observable<AppApolloClient>
 ): Store<State, Action> => {
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

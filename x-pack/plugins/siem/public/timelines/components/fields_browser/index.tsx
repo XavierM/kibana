@@ -11,8 +11,8 @@ import { connect, ConnectedProps } from 'react-redux';
 import styled from 'styled-components';
 
 import { BrowserFields } from '../../../common/containers/source';
-import { timelineActions } from '../../../common/store/actions';
-import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
+import { timelineActions } from '../../store/timeline';
+import { ColumnHeaderOptions } from '../../../timelines/store/timeline/model';
 import { DEFAULT_CATEGORY_NAME } from '../timeline/body/column_headers/default_headers';
 import { FieldsBrowser } from './field_browser';
 import { filterBrowserFieldsByFieldName, mergeBrowserFieldsWithDefaultCategory } from './helpers';

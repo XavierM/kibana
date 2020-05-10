@@ -5,7 +5,7 @@
  */
 import { navTabs } from '../../../app/home/home_navigations';
 import { getTitle } from './helpers';
-import { HostsType } from '../../store/hosts/model';
+import { HostsType } from '../../../hosts/store/model';
 
 describe('Helpers Url_State', () => {
   describe('getTitle', () => {

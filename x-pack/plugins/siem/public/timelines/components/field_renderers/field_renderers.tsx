@@ -27,7 +27,7 @@ import {
   ReputationLinkSetting,
 } from '../../../common/components/links';
 import { Spacer } from '../../../common/components/page';
-import * as i18n from '../../../common/components/page/network/ip_overview/translations';
+import * as i18n from '../../../network/components/ip_overview/translations';
 
 const DraggableContainerFlexGroup = styled(EuiFlexGroup)`
   flex-grow: unset;

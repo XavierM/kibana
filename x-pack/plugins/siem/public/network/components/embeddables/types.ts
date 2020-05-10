@@ -5,7 +5,7 @@
  */
 
 import { RenderTooltipContentParams } from '../../../../../../legacy/plugins/maps/public';
-import { inputsModel } from '../../store/inputs';
+import { inputsModel } from '../../../common/store/inputs';
 
 export interface IndexPatternMapping {
   title: string;

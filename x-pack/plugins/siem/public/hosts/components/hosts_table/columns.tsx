@@ -19,7 +19,7 @@ import { Provider } from '../../../timelines/components/timeline/data_providers/
 import {
   AddFilterToGlobalSearchBar,
   createFilter,
-} from '../../../common/components/page/add_filter_to_global_search_bar';
+} from '../../../common/components/add_filter_to_global_search_bar';
 import { HostsTableColumns } from './';
 
 import * as i18n from './translations';

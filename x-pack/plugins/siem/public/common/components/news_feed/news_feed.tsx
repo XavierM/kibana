@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import { LoadingPlaceholders } from '../page/overview/loading_placeholders';
+import { LoadingPlaceholders } from '../../../overview/components/loading_placeholders';
 import { NEWS_FEED_TITLE } from '../../../overview/pages/translations';
 import { SidebarHeader } from '../sidebar_header';
 

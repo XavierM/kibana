@@ -13,8 +13,8 @@ import {
   NetworkTopTablesFields,
   TlsFields,
   UsersFields,
-} from '../../../graphql/types';
-import { DEFAULT_TABLE_ACTIVE_PAGE, DEFAULT_TABLE_LIMIT } from '../constants';
+} from '../../graphql/types';
+import { DEFAULT_TABLE_ACTIVE_PAGE, DEFAULT_TABLE_LIMIT } from '../../common/store/constants';
 
 import {
   setIpDetailsTablesActivePageToZero,

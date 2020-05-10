@@ -22,7 +22,7 @@ import {
 import { BrowserFields } from '../../../../common/containers/source';
 import { convertKueryToElasticSearchQuery } from '../../../../common/lib/keury';
 import { KueryFilterQuery, KueryFilterQueryKind } from '../../../../common/store';
-import { KqlMode } from '../../../../common/store/timeline/model';
+import { KqlMode } from '../../../../timelines/store/timeline/model';
 import { useSavedQueryServices } from '../../../../common/utils/saved_query_services';
 import { DispatchUpdateReduxTime } from '../../../../common/components/super_date_picker';
 import { QueryBar } from '../../../../common/components/query_bar';

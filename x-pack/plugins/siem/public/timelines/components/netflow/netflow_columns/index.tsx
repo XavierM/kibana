@@ -8,7 +8,7 @@ import { EuiFlexGroup, EuiFlexItem } from '@elastic/eui';
 import React from 'react';
 import styled from 'styled-components';
 
-import { SourceDestination } from '../../../../common/components/source_destination';
+import { SourceDestination } from '../../../../network/components/source_destination';
 
 import { DurationEventStartEnd } from './duration_event_start_end';
 import { NetflowColumnsProps } from './types';

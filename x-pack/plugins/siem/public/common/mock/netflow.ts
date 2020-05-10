@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { ONE_MILLISECOND_AS_NANOSECONDS } from '../components/formatted_duration/helpers';
+import { ONE_MILLISECOND_AS_NANOSECONDS } from '../../timelines/components/formatted_duration/helpers';
 import { Ecs } from '../../graphql/types';
 
 /** Returns mock data for testing the Netflow component */

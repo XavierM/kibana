@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { HostsTableType } from '../../common/store/hosts/model';
+import { HostsTableType } from '../store/model';
 import { navTabsHosts } from './nav_tabs';
 
 describe('navTabsHosts', () => {

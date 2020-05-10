@@ -7,7 +7,7 @@
 import { getOr } from 'lodash/fp';
 import React from 'react';
 import { manageQuery } from '../../../common/components/page/manage_query';
-import { NetworkTopNFlowTable } from '../../../common/components/page/network/network_top_n_flow_table';
+import { NetworkTopNFlowTable } from '../../components/network_top_n_flow_table';
 import { NetworkTopNFlowQuery } from '../../containers/network_top_n_flow';
 import { NetworkWithIndexComponentsQueryTableProps } from './types';
 

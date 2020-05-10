@@ -6,7 +6,7 @@
 
 import moment from 'moment';
 
-import { getEmptyValue } from '../empty_value';
+import { getEmptyValue } from '../../../common/components/empty_value';
 
 import * as i18n from './translations';
 

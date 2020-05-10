@@ -10,7 +10,7 @@ import { noop } from 'lodash/fp';
 import styled from 'styled-components';
 
 import { BrowserFields } from '../../../common/containers/source';
-import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../timelines/store/timeline/model';
 import { CategoriesPane } from './categories_pane';
 import { FieldsPane } from './fields_pane';
 import { Header } from './header';

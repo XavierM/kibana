@@ -14,7 +14,7 @@ import {
   QueryOperator,
   QueryMatch,
 } from '../../../timelines/components/timeline/data_providers/data_provider';
-import { KueryFilterQuery, SerializedFilterQuery } from '../model';
+import { KueryFilterQuery, SerializedFilterQuery } from '../../../common/store/model';
 
 import { timelineDefaults } from './defaults';
 import { ColumnHeaderOptions, KqlMode, TimelineModel, EventType } from './model';

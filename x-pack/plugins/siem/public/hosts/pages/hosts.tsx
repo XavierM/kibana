@@ -27,7 +27,7 @@ import {
 import { LastEventIndexKey } from '../../graphql/types';
 import { useKibana } from '../../common/lib/kibana';
 import { convertToBuildEsQuery } from '../../common/lib/keury';
-import { inputsSelectors, State, hostsModel } from '../../common/store';
+import { inputsSelectors, State } from '../../common/store';
 import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../common/store/inputs/actions';
 
 import { SpyRoute } from '../../common/utils/route/spy_routes';
@@ -39,7 +39,8 @@ import { navTabsHosts } from './nav_tabs';
 import * as i18n from './translations';
 import { HostsComponentProps } from './types';
 import { filterHostData } from './navigation';
-import { HostsTableType } from '../../common/store/hosts/model';
+import { hostsModel } from '../store';
+import { HostsTableType } from '../store/model';
 
 const KpiHostsComponentManage = manageQuery(KpiHostsComponent);
 

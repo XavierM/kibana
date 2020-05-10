@@ -11,20 +11,14 @@ import { Dispatch } from 'redux';
 import { isEmpty, get } from 'lodash/fp';
 import { History } from '../../../../common/lib/history';
 import { Note } from '../../../../common/lib/note';
-import {
-  appSelectors,
-  inputsModel,
-  inputsSelectors,
-  State,
-  timelineSelectors,
-} from '../../../../common/store';
+import { appSelectors, inputsModel, inputsSelectors, State } from '../../../../common/store';
 import { defaultHeaders } from '../../timeline/body/column_headers/default_headers';
 import { Properties } from '../../timeline/properties';
 import { appActions } from '../../../../common/store/app';
 import { inputsActions } from '../../../../common/store/inputs';
-import { timelineActions } from '../../../../common/store/actions';
-import { TimelineModel } from '../../../../common/store/timeline/model';
-import { timelineDefaults } from '../../../../common/store/timeline/defaults';
+import { timelineActions, timelineSelectors } from '../../../store/timeline';
+import { TimelineModel } from '../../../../timelines/store/timeline/model';
+import { timelineDefaults } from '../../../../timelines/store/timeline/defaults';
 import { InputsModelId } from '../../../../common/store/inputs/constants';
 
 interface OwnProps {

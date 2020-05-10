@@ -29,8 +29,8 @@ import { AssociateNote, UpdateNote } from '../../notes/helpers';
 import { NOTES_PANEL_WIDTH } from './notes_size';
 import { ButtonContainer, DescriptionContainer, LabelText, NameField, StyledStar } from './styles';
 import * as i18n from './translations';
-import { SiemPageName } from '../../../../app/home/types';
-import { timelineSelectors } from '../../../../common/store/timeline';
+import { SiemPageName } from '../../../../app/types';
+import { timelineSelectors } from '../../../../timelines/store/timeline';
 import { State } from '../../../../common/store';
 
 export const historyToolTip = 'The chronological history of actions related to this timeline';

@@ -8,7 +8,7 @@ import * as H from 'history';
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
-import { HostsTableType } from '../../store/hosts/model';
+import { HostsTableType } from '../../../hosts/store/model';
 import { NetworkRouteType } from '../../../network/pages/navigation/types';
 import { FlowTarget } from '../../../graphql/types';
 

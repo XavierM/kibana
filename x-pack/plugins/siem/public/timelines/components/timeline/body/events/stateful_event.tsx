@@ -13,7 +13,7 @@ import { TimelineDetailsQuery } from '../../../../containers/details';
 import { TimelineItem, DetailItem, TimelineNonEcsData } from '../../../../../graphql/types';
 import { requestIdleCallbackViaScheduler } from '../../../../../common/lib/helpers/scheduler';
 import { Note } from '../../../../../common/lib/note';
-import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../../../timelines/store/timeline/model';
 import { AddNoteToEvent, UpdateNote } from '../../../notes/helpers';
 import { SkeletonRow } from '../../skeleton_row';
 import {

@@ -7,7 +7,7 @@
 import { EuiButtonIcon } from '@elastic/eui';
 import React from 'react';
 
-import { ColumnHeaderOptions } from '../../../../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../../../../timelines/store/timeline/model';
 import { OnColumnRemoved } from '../../../events';
 import { EventsHeadingExtra, EventsLoading } from '../../../styles';
 import { useTimelineContext } from '../../../timeline_context';

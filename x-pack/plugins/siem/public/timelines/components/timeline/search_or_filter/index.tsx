@@ -21,13 +21,12 @@ import {
   KueryFilterQuery,
   SerializedFilterQuery,
   State,
-  timelineSelectors,
   inputsModel,
   inputsSelectors,
 } from '../../../../common/store';
-import { timelineActions } from '../../../../common/store/actions';
-import { KqlMode, TimelineModel, EventType } from '../../../../common/store/timeline/model';
-import { timelineDefaults } from '../../../../common/store/timeline/defaults';
+import { timelineActions, timelineSelectors } from '../../../store/timeline';
+import { KqlMode, TimelineModel, EventType } from '../../../../timelines/store/timeline/model';
+import { timelineDefaults } from '../../../../timelines/store/timeline/defaults';
 import { dispatchUpdateReduxTime } from '../../../../common/components/super_date_picker';
 import { SearchOrFilter } from './search_or_filter';
 

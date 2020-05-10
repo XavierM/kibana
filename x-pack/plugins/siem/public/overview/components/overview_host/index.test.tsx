@@ -7,17 +7,18 @@
 import { cloneDeep } from 'lodash/fp';
 import { mount } from 'enzyme';
 import React from 'react';
+import { MockedProvider } from 'react-apollo/test-utils';
 
-import { apolloClientObservable, mockGlobalState, TestProviders } from '../../../../mock';
+import { apolloClientObservable, mockGlobalState, TestProviders } from '../../../common/mock';
 
 import { OverviewHost } from '.';
-import { createStore, State } from '../../../../store';
-import { overviewHostQuery } from '../../../../containers/overview/overview_host/index.gql_query';
-import { GetOverviewHostQuery } from '../../../../../graphql/types';
-import { MockedProvider } from 'react-apollo/test-utils';
-import { wait } from '../../../../lib/helpers';
+import { createStore, State } from '../../../common/store';
+import { overviewHostQuery } from '../../containers/overview_host/index.gql_query';
+import { GetOverviewHostQuery } from '../../../graphql/types';
 
-jest.mock('../../../../lib/kibana');
+import { wait } from '../../../common/lib/helpers';
+
+jest.mock('../../../common/lib/kibana');
 
 const startDate = 1579553397080;
 const endDate = 1579639797080;
@@ -86,11 +87,11 @@ const mockOpenTimelineQueryResults: MockedProvidedQuery[] = [
 describe('OverviewHost', () => {
   const state: State = mockGlobalState;
 
-  let store = createStore(state, apolloClientObservable);
+  let store = createStore(state, {}, apolloClientObservable);
 
   beforeEach(() => {
     const myState = cloneDeep(state);
-    store = createStore(myState, apolloClientObservable);
+    store = createStore(myState, {}, apolloClientObservable);
   });
 
   test('it renders the expected widget title', () => {

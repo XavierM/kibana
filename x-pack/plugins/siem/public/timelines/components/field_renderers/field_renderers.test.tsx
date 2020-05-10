@@ -22,7 +22,7 @@ import {
   DEFAULT_MORE_MAX_HEIGHT,
   MoreContainer,
 } from './field_renderers';
-import { mockData } from '../../../common/components/page/network/ip_overview/mock';
+import { mockData } from '../../../network/components/ip_overview/mock';
 import { useMountAppended } from '../../../common/utils/use_mount_appended';
 
 type AutonomousSystem = GetIpOverviewQuery.AutonomousSystem;

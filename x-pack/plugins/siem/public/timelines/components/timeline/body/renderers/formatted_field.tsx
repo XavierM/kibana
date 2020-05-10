@@ -10,7 +10,7 @@ import React from 'react';
 
 import { DefaultDraggable } from '../../../../../common/components/draggables';
 import { Bytes, BYTES_FORMAT } from './bytes';
-import { Duration, EVENT_DURATION_FIELD_NAME } from '../../../../../common/components/duration';
+import { Duration, EVENT_DURATION_FIELD_NAME } from '../../../duration';
 import {
   getOrEmptyTagFromValue,
   getEmptyTagValue,
@@ -19,7 +19,7 @@ import { FormattedDate } from '../../../../../common/components/formatted_date';
 import { FormattedIp } from '../../../../components/formatted_ip';
 import { HostDetailsLink } from '../../../../../common/components/links';
 
-import { Port, PORT_NAMES } from '../../../../../common/components/port';
+import { Port, PORT_NAMES } from '../../../../../network/components/port';
 import { TruncatableText } from '../../../../../common/components/truncatable_text';
 import {
   DATE_FIELD_TYPE,

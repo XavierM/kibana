@@ -8,7 +8,6 @@ import React, { useMemo, useCallback } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { IIndexPattern } from 'src/plugins/data/public';
 
-import { hostsActions } from '../../../common/store/actions';
 import {
   Direction,
   HostFields,
@@ -19,7 +18,7 @@ import {
   OsFields,
 } from '../../../graphql/types';
 import { assertUnreachable } from '../../../common/lib/helpers';
-import { hostsModel, hostsSelectors, State } from '../../../common/store';
+import { State } from '../../../common/store';
 import {
   Columns,
   Criteria,
@@ -27,7 +26,7 @@ import {
   PaginatedTable,
   SortingBasicTable,
 } from '../../../common/components/paginated_table';
-
+import { hostsActions, hostsModel, hostsSelectors } from '../../store';
 import { getHostsColumns } from './columns';
 import * as i18n from './translations';
 

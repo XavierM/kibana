@@ -20,13 +20,7 @@ import {
   PageInfoPaginated,
   MatrixOverOrdinalHistogramData,
 } from '../../../graphql/types';
-import {
-  inputsModel,
-  networkModel,
-  networkSelectors,
-  State,
-  inputsSelectors,
-} from '../../../common/store';
+import { inputsModel, State, inputsSelectors } from '../../../common/store';
 import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
 import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
 import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
@@ -43,6 +37,7 @@ import {
 } from '../../../common/components/matrix_histogram/types';
 import { UpdateDateRange } from '../../../common/components/charts/common';
 import { SetQuery } from '../../../hosts/pages/navigation/types';
+import { networkModel, networkSelectors } from '../../store';
 
 const ID = 'networkDnsQuery';
 export const HISTOGRAM_ID = 'networkDnsHistogramQuery';

@@ -9,7 +9,7 @@ import { FormattedMessage } from '@kbn/i18n/react';
 import React from 'react';
 import styled from 'styled-components';
 
-import { OverviewHostData } from '../../../../../graphql/types';
+import { OverviewHostData } from '../../../graphql/types';
 import { FormattedStat, StatGroup } from '../types';
 import { StatValue } from '../stat_value';
 

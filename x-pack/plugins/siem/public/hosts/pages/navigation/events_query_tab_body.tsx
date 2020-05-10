@@ -7,7 +7,7 @@
 import React, { useEffect } from 'react';
 import { StatefulEventsViewer } from '../../../common/components/events_viewer';
 import { HostsComponentsQueryProps } from './types';
-import { hostsModel } from '../../../common/store/hosts';
+import { hostsModel } from '../../store';
 import { eventsDefaultModel } from '../../../common/components/events_viewer/default_model';
 import {
   MatrixHistogramOption,

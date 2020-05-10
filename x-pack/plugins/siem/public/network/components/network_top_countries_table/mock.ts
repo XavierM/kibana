@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { NetworkTopCountriesData } from '../../../../../graphql/types';
+import { NetworkTopCountriesData } from '../../../graphql/types';
 
 export const mockData: { NetworkTopCountries: NetworkTopCountriesData } = {
   NetworkTopCountries: {

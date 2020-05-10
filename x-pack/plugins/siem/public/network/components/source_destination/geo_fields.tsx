@@ -9,7 +9,7 @@ import { get, uniq } from 'lodash/fp';
 import React from 'react';
 import styled from 'styled-components';
 
-import { DefaultDraggable } from '../draggables';
+import { DefaultDraggable } from '../../../common/components/draggables';
 
 import { CountryFlag } from './country_flag';
 import { GeoFieldsProps, SourceDestinationType } from './types';

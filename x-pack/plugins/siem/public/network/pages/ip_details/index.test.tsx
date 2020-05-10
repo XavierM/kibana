@@ -11,7 +11,7 @@ import { Router } from 'react-router-dom';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { ActionCreator } from 'typescript-fsa';
 
-import '../../../mock/match_media';
+import '../../../common/mock/match_media';
 
 import { mocksSource } from '../../../common/containers/source/mock';
 import { FlowTarget } from '../../../graphql/types';
@@ -19,7 +19,7 @@ import { apolloClientObservable, mockGlobalState, TestProviders } from '../../..
 import { useMountAppended } from '../../../common/utils/use_mount_appended';
 import { createStore, State } from '../../../common/store';
 import { InputsModelId } from '../../../common/store/inputs/constants';
-
+import { networkReducer } from '../../store';
 import { IPDetailsComponent, IPDetails } from './index';
 
 type Action = 'PUSH' | 'POP' | 'REPLACE';
@@ -114,10 +114,10 @@ describe('Ip Details', () => {
   });
 
   const state: State = mockGlobalState;
-  let store = createStore(state, apolloClientObservable);
+  let store = createStore(state, { network: networkReducer }, apolloClientObservable);
 
   beforeEach(() => {
-    store = createStore(state, apolloClientObservable);
+    store = createStore(state, { network: networkReducer }, apolloClientObservable);
     localSource = cloneDeep(mocksSource);
   });
 

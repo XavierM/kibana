@@ -13,13 +13,14 @@ import { defaultHeaders } from '../timeline/body/column_headers/default_headers'
 import { deleteTimelineMutation } from '../../containers/delete/persist.gql_query';
 import { useGetAllTimeline } from '../../containers/all';
 import { DeleteTimelineMutation, SortFieldTimeline, Direction } from '../../../graphql/types';
-import { State, timelineSelectors } from '../../../common/store';
-import { ColumnHeaderOptions, TimelineModel } from '../../../common/store/timeline/model';
-import { timelineDefaults } from '../../../common/store/timeline/defaults';
+import { State } from '../../../common/store';
+import { ColumnHeaderOptions, TimelineModel } from '../../../timelines/store/timeline/model';
+import { timelineSelectors } from '../../../timelines/store/timeline';
+import { timelineDefaults } from '../../../timelines/store/timeline/defaults';
 import {
   createTimeline as dispatchCreateNewTimeline,
   updateIsLoading as dispatchUpdateIsLoading,
-} from '../../../common/store/timeline/actions';
+} from '../../../timelines/store/timeline/actions';
 import { OpenTimeline } from './open_timeline';
 import { OPEN_TIMELINE_CLASS_NAME, queryTimelineById, dispatchUpdateTimeline } from './helpers';
 import { OpenTimelineModalBody } from './open_timeline_modal/open_timeline_modal_body';

@@ -7,7 +7,7 @@
 import { IIndexPattern } from 'src/plugins/data/public';
 
 import { ESTermQuery } from '../../../../common/typed_json';
-import { NetworkType } from '../../../common/store/network/model';
+import { NetworkType } from '../../store/model';
 import { InspectQuery, Refetch } from '../../../common/store/inputs/model';
 import { FlowTarget, FlowTargetSourceDest } from '../../../graphql/types';
 import { GlobalTimeArgs } from '../../../common/containers/global_time';

@@ -8,7 +8,7 @@ import { EuiToolTip } from '@elastic/eui';
 import { noop } from 'lodash/fp';
 import React from 'react';
 
-import { ColumnHeaderOptions } from '../../../../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../../../../timelines/store/timeline/model';
 import { TruncatableText } from '../../../../../../common/components/truncatable_text';
 import { EventsHeading, EventsHeadingTitleButton, EventsHeadingTitleSpan } from '../../../styles';
 import { useTimelineContext } from '../../../timeline_context';

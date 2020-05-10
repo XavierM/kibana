@@ -7,7 +7,7 @@
 import { getOr } from 'lodash/fp';
 import React from 'react';
 import { manageQuery } from '../../../common/components/page/manage_query';
-import { TlsTable } from '../../../common/components/page/network/tls_table';
+import { TlsTable } from '../../components/tls_table';
 import { TlsQuery } from '../../containers/tls';
 import { TlsQueryTableComponentProps } from './types';
 

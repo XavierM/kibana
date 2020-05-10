@@ -10,7 +10,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { DirectionBadge } from '../direction';
-import { DefaultDraggable, DraggableBadge } from '../draggables';
+import { DefaultDraggable, DraggableBadge } from '../../../common/components/draggables';
 
 import * as i18n from './translations';
 import {
@@ -20,7 +20,7 @@ import {
   NETWORK_PROTOCOL_FIELD_NAME,
   NETWORK_TRANSPORT_FIELD_NAME,
 } from './field_names';
-import { PreferenceFormattedBytes } from '../formatted_bytes';
+import { PreferenceFormattedBytes } from '../../../common/components/formatted_bytes';
 
 const EuiFlexItemMarginRight = styled(EuiFlexItem)`
   margin-right: 3px;

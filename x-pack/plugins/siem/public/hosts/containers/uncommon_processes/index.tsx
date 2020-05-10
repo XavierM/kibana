@@ -16,13 +16,7 @@ import {
   PageInfoPaginated,
   UncommonProcessesEdges,
 } from '../../../graphql/types';
-import {
-  hostsModel,
-  hostsSelectors,
-  inputsModel,
-  State,
-  inputsSelectors,
-} from '../../../common/store';
+import { inputsModel, State, inputsSelectors } from '../../../common/store';
 import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
 import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
 import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
@@ -30,7 +24,7 @@ import {
   QueryTemplatePaginated,
   QueryTemplatePaginatedProps,
 } from '../../../common/containers/query_template_paginated';
-
+import { hostsModel, hostsSelectors } from '../../store';
 import { uncommonProcessesQuery } from './index.gql_query';
 
 const ID = 'uncommonProcessesQuery';

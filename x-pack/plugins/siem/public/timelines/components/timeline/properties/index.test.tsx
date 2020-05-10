@@ -11,7 +11,7 @@ import { Provider as ReduxStoreProvider } from 'react-redux';
 import { mockGlobalState, apolloClientObservable } from '../../../../common/mock';
 import { createStore, State } from '../../../../common/store';
 import { useThrottledResizeObserver } from '../../../../common/components/utils';
-
+import { timelineReducer } from '../../../store/timeline/reducer';
 import { Properties, showDescriptionThreshold, showNotesThreshold } from '.';
 
 jest.mock('../../../../common/lib/kibana');
@@ -26,11 +26,11 @@ describe('Properties', () => {
   const usersViewing = ['elastic'];
 
   const state: State = mockGlobalState;
-  let store = createStore(state, apolloClientObservable);
+  let store = createStore(state, { timeline: timelineReducer }, apolloClientObservable);
 
   beforeEach(() => {
     jest.clearAllMocks();
-    store = createStore(state, apolloClientObservable);
+    store = createStore(state, { timeline: timelineReducer }, apolloClientObservable);
     mockedWidth = 1000;
   });
 

@@ -19,20 +19,14 @@ import {
   HostsFields,
   PageInfoPaginated,
 } from '../../../graphql/types';
-import {
-  hostsModel,
-  hostsSelectors,
-  inputsModel,
-  State,
-  inputsSelectors,
-} from '../../../common/store';
+import { inputsModel, State, inputsSelectors } from '../../../common/store';
 import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
 import {
   QueryTemplatePaginated,
   QueryTemplatePaginatedProps,
 } from '../../../common/containers/query_template_paginated';
 import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
-
+import { hostsModel, hostsSelectors } from '../../store';
 import { HostsTableQuery } from './hosts_table.gql_query';
 import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
 

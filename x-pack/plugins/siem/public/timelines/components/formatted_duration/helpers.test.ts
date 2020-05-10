@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { getEmptyValue } from '../empty_value';
+import { getEmptyValue } from '../../../common/components/empty_value';
 import {
   getFormattedDurationString,
   getHumanizedDuration,

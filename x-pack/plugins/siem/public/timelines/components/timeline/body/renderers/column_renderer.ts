@@ -5,7 +5,7 @@
  */
 
 import { TimelineNonEcsData } from '../../../../../graphql/types';
-import { ColumnHeaderOptions } from '../../../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../../../timelines/store/timeline/model';
 
 export interface ColumnRenderer {
   isInstance: (columnName: string, data: TimelineNonEcsData[]) => boolean;

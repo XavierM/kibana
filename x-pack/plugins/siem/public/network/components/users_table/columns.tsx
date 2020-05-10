@@ -4,12 +4,15 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { FlowTarget, UsersItem } from '../../../../../graphql/types';
-import { defaultToEmptyTag } from '../../../empty_value';
-import { Columns } from '../../../paginated_table';
+import { FlowTarget, UsersItem } from '../../../graphql/types';
+import { defaultToEmptyTag } from '../../../common/components/empty_value';
+import { Columns } from '../../../common/components/paginated_table';
 
 import * as i18n from './translations';
-import { getRowItemDraggables, getRowItemDraggable } from '../../../tables/helpers';
+import {
+  getRowItemDraggables,
+  getRowItemDraggable,
+} from '../../../common/components/tables/helpers';
 
 export type UsersColumns = [
   Columns<UsersItem['name']>,

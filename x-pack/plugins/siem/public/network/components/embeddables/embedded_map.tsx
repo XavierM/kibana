@@ -14,10 +14,10 @@ import {
   ErrorEmbeddable,
 } from '../../../../../../../src/plugins/embeddable/public';
 import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
-import { getIndexPatternTitleIdMapping } from '../../hooks/api/helpers';
-import { useIndexPatterns } from '../../hooks/use_index_patterns';
-import { Loader } from '../loader';
-import { displayErrorToast, useStateToaster } from '../toasters';
+import { getIndexPatternTitleIdMapping } from '../../../common/hooks/api/helpers';
+import { useIndexPatterns } from '../../../common/hooks/use_index_patterns';
+import { Loader } from '../../../common/components/loader';
+import { displayErrorToast, useStateToaster } from '../../../common/components/toasters';
 import { Embeddable } from './embeddable';
 import { EmbeddableHeader } from './embeddable_header';
 import { createEmbeddable, findMatchingIndexPatterns } from './embedded_map_helpers';
@@ -27,7 +27,7 @@ import * as i18n from './translations';
 import { SetQuery } from './types';
 import { MapEmbeddable } from '../../../../../../legacy/plugins/maps/public';
 import { Query, Filter } from '../../../../../../../src/plugins/data/public';
-import { useKibana, useUiSetting$ } from '../../lib/kibana';
+import { useKibana, useUiSetting$ } from '../../../common/lib/kibana';
 import { getSavedObjectFinder } from '../../../../../../../src/plugins/saved_objects/public';
 
 interface EmbeddableMapProps {

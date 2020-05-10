@@ -14,7 +14,7 @@ import { getBreadcrumbs as getHostDetailsBreadcrumbs } from '../../../../hosts/p
 import { getBreadcrumbs as getIPDetailsBreadcrumbs } from '../../../../network/pages/ip_details';
 import { getBreadcrumbs as getCaseDetailsBreadcrumbs } from '../../../../cases/pages/utils';
 import { getBreadcrumbs as getDetectionRulesBreadcrumbs } from '../../../../alerts/pages/detection_engine/rules/utils';
-import { SiemPageName } from '../../../../app/home/types';
+import { SiemPageName } from '../../../../app/types';
 import { RouteSpyState, HostRouteSpyState, NetworkRouteSpyState } from '../../../utils/route/types';
 import { getOverviewUrl } from '../../link_to';
 

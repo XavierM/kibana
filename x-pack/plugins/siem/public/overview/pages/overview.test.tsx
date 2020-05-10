@@ -10,12 +10,12 @@ import React from 'react';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { MemoryRouter } from 'react-router-dom';
 
-import '../../mock/match_media';
+import '../../common/mock/match_media';
 import { TestProviders } from '../../common/mock';
 import { mocksSource } from '../../common/containers/source/mock';
-import { Overview } from '../index';
+import { Overview } from './index';
 
-jest.mock('../../lib/kibana');
+jest.mock('../../common/lib/kibana');
 
 // Test will fail because we will to need to mock some core services to make the test work
 // For now let's forget about SiemSearchBar and QueryBar

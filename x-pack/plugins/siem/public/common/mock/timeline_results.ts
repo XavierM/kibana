@@ -8,8 +8,8 @@ import { OpenTimelineResult } from '../../timelines/components/open_timeline/typ
 import { GetAllTimeline, SortFieldTimeline, TimelineResult, Direction } from '../../graphql/types';
 import { allTimelinesQuery } from '../../timelines/containers/all/index.gql_query';
 import { CreateTimelineProps } from '../../alerts/components/signals/types';
-import { TimelineModel } from '../store/timeline/model';
-import { timelineDefaults } from '../store/timeline/defaults';
+import { TimelineModel } from '../../timelines/store/timeline/model';
+import { timelineDefaults } from '../../timelines/store/timeline/defaults';
 import { FilterStateStore } from '../../../../../../src/plugins/data/common/es_query/filters/meta_filter';
 export interface MockedProvidedQuery {
   request: {

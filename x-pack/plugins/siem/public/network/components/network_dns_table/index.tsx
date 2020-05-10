@@ -8,15 +8,15 @@ import React, { useCallback, useMemo } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import deepEqual from 'fast-deep-equal';
 
-import { networkActions } from '../../../../store/actions';
+import { networkActions, networkModel, networkSelectors } from '../../store';
 import {
   Direction,
   NetworkDnsEdges,
   NetworkDnsFields,
   NetworkDnsSortField,
-} from '../../../../../graphql/types';
-import { networkModel, networkSelectors, State } from '../../../../store';
-import { Criteria, ItemsPerRow, PaginatedTable } from '../../../paginated_table';
+} from '../../../graphql/types';
+import { State } from '../../../common/store';
+import { Criteria, ItemsPerRow, PaginatedTable } from '../../../common/components/paginated_table';
 
 import { getNetworkDnsColumns } from './columns';
 import { IsPtrIncluded } from './is_ptr_included';

@@ -9,13 +9,14 @@ import { connect, ConnectedProps } from 'react-redux';
 import deepEqual from 'fast-deep-equal';
 
 import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
-import { inputsModel, inputsSelectors, State, timelineSelectors } from '../../store';
-import { inputsActions, timelineActions } from '../../store/actions';
+import { inputsModel, inputsSelectors, State } from '../../store';
+import { inputsActions } from '../../store/actions';
+import { timelineSelectors, timelineActions } from '../../../timelines/store/timeline';
 import {
   ColumnHeaderOptions,
   SubsetTimelineModel,
   TimelineModel,
-} from '../../store/timeline/model';
+} from '../../../timelines/store/timeline/model';
 import { OnChangeItemsPerPage } from '../../../timelines/components/timeline/events';
 import { Filter } from '../../../../../../../src/plugins/data/public';
 import { useUiSetting } from '../../lib/kibana';

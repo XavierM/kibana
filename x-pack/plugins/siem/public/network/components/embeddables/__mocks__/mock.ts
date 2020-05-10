@@ -5,7 +5,7 @@
  */
 
 import { IndexPatternMapping } from '../types';
-import { IndexPatternSavedObject } from '../../../hooks/types';
+import { IndexPatternSavedObject } from '../../../../common/hooks/types';
 
 export const mockIndexPatternIds: IndexPatternMapping[] = [
   { title: 'filebeat-*', id: '8c7323ac-97ad-4b53-ac0a-40f8f691a918' },

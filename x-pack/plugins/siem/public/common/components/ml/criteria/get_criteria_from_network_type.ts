@@ -5,7 +5,7 @@
  */
 
 import { CriteriaFields } from '../types';
-import { NetworkType } from '../../../store/network/model';
+import { NetworkType } from '../../../../network/store/model';
 import { FlowTarget } from '../../../../graphql/types';
 
 export const getCriteriaFromNetworkType = (

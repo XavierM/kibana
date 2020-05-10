@@ -16,8 +16,8 @@ import {
   getPercent,
   hasOneValue,
 } from '../arrows/helpers';
-import { DefaultDraggable } from '../draggables';
-import { PreferenceFormattedBytes } from '../formatted_bytes';
+import { DefaultDraggable } from '../../../common/components/draggables';
+import { PreferenceFormattedBytes } from '../../../common/components/formatted_bytes';
 
 import * as i18n from './translations';
 

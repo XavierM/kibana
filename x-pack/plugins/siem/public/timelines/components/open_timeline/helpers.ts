@@ -22,10 +22,10 @@ import {
   applyKqlFilterQuery as dispatchApplyKqlFilterQuery,
   addTimeline as dispatchAddTimeline,
   addNote as dispatchAddGlobalTimelineNote,
-} from '../../../common/store/timeline/actions';
+} from '../../../timelines/store/timeline/actions';
 
-import { ColumnHeaderOptions, TimelineModel } from '../../../common/store/timeline/model';
-import { timelineDefaults } from '../../../common/store/timeline/defaults';
+import { ColumnHeaderOptions, TimelineModel } from '../../../timelines/store/timeline/model';
+import { timelineDefaults } from '../../../timelines/store/timeline/defaults';
 import {
   defaultColumnHeaderType,
   defaultHeaders,

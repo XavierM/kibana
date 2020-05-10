@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import { DefaultDraggable } from '../draggables';
+import { DefaultDraggable } from '../../../common/components/draggables';
 import { FormattedDuration } from '../formatted_duration';
 
 export const EVENT_DURATION_FIELD_NAME = 'event.duration';

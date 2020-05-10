@@ -8,12 +8,15 @@
 
 import React from 'react';
 import moment from 'moment';
-import { TlsNode } from '../../../../../graphql/types';
-import { Columns } from '../../../paginated_table';
+import { TlsNode } from '../../../graphql/types';
+import { Columns } from '../../../common/components/paginated_table';
 
-import { getRowItemDraggables, getRowItemDraggable } from '../../../tables/helpers';
-import { LocalizedDateTooltip } from '../../../localized_date_tooltip';
-import { PreferenceFormattedDate } from '../../../formatted_date';
+import {
+  getRowItemDraggables,
+  getRowItemDraggable,
+} from '../../../common/components/tables/helpers';
+import { LocalizedDateTooltip } from '../../../common/components/localized_date_tooltip';
+import { PreferenceFormattedDate } from '../../../common/components/formatted_date';
 
 import * as i18n from './translations';
 

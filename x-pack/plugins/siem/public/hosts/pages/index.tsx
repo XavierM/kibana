@@ -8,10 +8,10 @@ import React from 'react';
 import { Redirect, Route, Switch, RouteComponentProps } from 'react-router-dom';
 
 import { HostDetails } from './details';
-import { HostsTableType } from '../../common/store/hosts/model';
+import { HostsTableType } from '../store/model';
 
 import { GlobalTime } from '../../common/containers/global_time';
-import { SiemPageName } from '../../app/home/types';
+import { SiemPageName } from '../../app/types';
 import { Hosts } from './hosts';
 import { hostsPagePath, hostDetailsPagePath } from './types';
 

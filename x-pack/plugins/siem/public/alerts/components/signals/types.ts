@@ -7,7 +7,7 @@
 import ApolloClient from 'apollo-client';
 
 import { Ecs } from '../../../graphql/types';
-import { TimelineModel } from '../../../common/store/timeline/model';
+import { TimelineModel } from '../../../timelines/store/timeline/model';
 import { inputsModel } from '../../../common/store';
 
 export interface SetEventsLoadingProps {

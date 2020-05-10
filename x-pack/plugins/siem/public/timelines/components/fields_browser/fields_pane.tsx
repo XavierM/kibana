@@ -9,7 +9,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { BrowserFields } from '../../../common/containers/source';
-import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../timelines/store/timeline/model';
 
 import { Category } from './category';
 import { FieldBrowserProps } from './types';

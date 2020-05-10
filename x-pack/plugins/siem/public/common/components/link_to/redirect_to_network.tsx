@@ -7,7 +7,7 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
-import { SiemPageName } from '../../../app/home/types';
+import { SiemPageName } from '../../../app/types';
 import { FlowTarget, FlowTargetSourceDest } from '../../../graphql/types';
 
 import { appendSearch } from './helpers';

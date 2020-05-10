@@ -10,10 +10,10 @@ import deepEqual from 'fast-deep-equal';
 
 import { WithSource } from '../../../common/containers/source';
 import { useSignalIndex } from '../../../alerts/containers/detection_engine/signals/use_signal_index';
-import { inputsModel, inputsSelectors, State, timelineSelectors } from '../../../common/store';
-import { timelineActions } from '../../../common/store/actions';
-import { ColumnHeaderOptions, TimelineModel } from '../../../common/store/timeline/model';
-import { timelineDefaults } from '../../../common/store/timeline/defaults';
+import { inputsModel, inputsSelectors, State } from '../../../common/store';
+import { timelineActions, timelineSelectors } from '../../store/timeline';
+import { ColumnHeaderOptions, TimelineModel } from '../../../timelines/store/timeline/model';
+import { timelineDefaults } from '../../../timelines/store/timeline/defaults';
 import { defaultHeaders } from './body/column_headers/default_headers';
 import {
   OnChangeDataProviderKqlQuery,

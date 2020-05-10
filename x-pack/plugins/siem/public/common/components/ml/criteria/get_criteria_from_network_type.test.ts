@@ -5,7 +5,7 @@
  */
 
 import { getCriteriaFromNetworkType } from './get_criteria_from_network_type';
-import { NetworkType } from '../../../store/network/model';
+import { NetworkType } from '../../../../network/store/model';
 import { FlowTarget } from '../../../../graphql/types';
 
 describe('get_criteria_from_network_type', () => {

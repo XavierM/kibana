@@ -13,7 +13,7 @@ import { Draggable } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 
 import { BrowserField, BrowserFields } from '../../../common/containers/source';
-import { ColumnHeaderOptions } from '../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../timelines/store/timeline/model';
 import { DragEffects } from '../../../common/components/drag_and_drop/draggable_wrapper';
 import { DroppableWrapper } from '../../../common/components/drag_and_drop/droppable_wrapper';
 import {

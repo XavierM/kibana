@@ -9,13 +9,13 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import { connect, ConnectedProps } from 'react-redux';
 
-import { DEFAULT_INDEX_KEY } from '../../../../../common/constants';
-import { GetOverviewNetworkQuery, OverviewNetworkData } from '../../../../graphql/types';
-import { useUiSetting } from '../../../lib/kibana';
-import { State } from '../../../store';
-import { inputsModel, inputsSelectors } from '../../../store/inputs';
-import { createFilter, getDefaultFetchPolicy } from '../../helpers';
-import { QueryTemplateProps } from '../../query_template';
+import { DEFAULT_INDEX_KEY } from '../../../../common/constants';
+import { GetOverviewNetworkQuery, OverviewNetworkData } from '../../../graphql/types';
+import { useUiSetting } from '../../../common/lib/kibana';
+import { State } from '../../../common/store';
+import { inputsModel, inputsSelectors } from '../../../common/store/inputs';
+import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
+import { QueryTemplateProps } from '../../../common/containers/query_template';
 
 import { overviewNetworkQuery } from './index.gql_query';
 

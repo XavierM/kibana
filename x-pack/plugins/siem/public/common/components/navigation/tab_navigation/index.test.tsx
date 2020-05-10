@@ -8,9 +8,9 @@ import { mount } from 'enzyme';
 import React from 'react';
 
 import { navTabs } from '../../../../app/home/home_navigations';
-import { SiemPageName } from '../../../../app/home/types';
+import { SiemPageName } from '../../../../app/types';
 import { navTabsHostDetails } from '../../../../hosts/pages/details/nav_tabs';
-import { HostsTableType } from '../../../store/hosts/model';
+import { HostsTableType } from '../../../../hosts/store/model';
 import { RouteSpyState } from '../../../utils/route/types';
 import { CONSTANTS } from '../../url_state/constants';
 import { TabNavigationComponent } from './';

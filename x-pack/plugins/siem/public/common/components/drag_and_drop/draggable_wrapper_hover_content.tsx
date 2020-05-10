@@ -10,7 +10,7 @@ import React, { useCallback, useMemo } from 'react';
 import { getAllFieldsByName, WithSource } from '../../containers/source';
 import { WithCopyToClipboard } from '../../lib/clipboard/with_copy_to_clipboard';
 import { useKibana } from '../../lib/kibana';
-import { createFilter } from '../page/add_filter_to_global_search_bar';
+import { createFilter } from '../add_filter_to_global_search_bar';
 import { useTimelineContext } from '../../../timelines/components/timeline/timeline_context';
 import { StatefulTopN } from '../top_n';
 

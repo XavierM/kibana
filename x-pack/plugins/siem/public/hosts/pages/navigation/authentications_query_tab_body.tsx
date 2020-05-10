@@ -10,7 +10,7 @@ import { AuthenticationTable } from '../../components/authentications_table';
 import { manageQuery } from '../../../common/components/page/manage_query';
 import { AuthenticationsQuery } from '../../containers/authentications';
 import { HostsComponentsQueryProps } from './types';
-import { hostsModel } from '../../../common/store/hosts';
+import { hostsModel } from '../../store';
 import {
   MatrixHistogramOption,
   MatrixHistogramMappingTypes,

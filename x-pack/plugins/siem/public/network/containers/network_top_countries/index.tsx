@@ -18,13 +18,7 @@ import {
   NetworkTopTablesSortField,
   PageInfoPaginated,
 } from '../../../graphql/types';
-import {
-  inputsModel,
-  inputsSelectors,
-  networkModel,
-  networkSelectors,
-  State,
-} from '../../../common/store';
+import { inputsModel, inputsSelectors, State } from '../../../common/store';
 import { withKibana, WithKibanaProps } from '../../../common/lib/kibana';
 import { generateTablePaginationOptions } from '../../../common/components/paginated_table/helpers';
 import { createFilter, getDefaultFetchPolicy } from '../../../common/containers/helpers';
@@ -33,6 +27,7 @@ import {
   QueryTemplatePaginatedProps,
 } from '../../../common/containers/query_template_paginated';
 import { networkTopCountriesQuery } from './index.gql_query';
+import { networkModel, networkSelectors } from '../../store';
 
 const ID = 'networkTopCountriesQuery';
 

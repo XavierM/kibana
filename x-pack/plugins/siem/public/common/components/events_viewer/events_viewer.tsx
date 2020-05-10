@@ -14,7 +14,7 @@ import { BrowserFields } from '../../containers/source';
 import { TimelineQuery } from '../../../timelines/containers';
 import { Direction } from '../../../graphql/types';
 import { useKibana } from '../../lib/kibana';
-import { ColumnHeaderOptions, KqlMode } from '../../store/timeline/model';
+import { ColumnHeaderOptions, KqlMode } from '../../../timelines/store/timeline/model';
 import { HeaderSection } from '../header_section';
 import { defaultHeaders } from '../../../timelines/components/timeline/body/column_headers/default_headers';
 import { Sort } from '../../../timelines/components/timeline/body/sort';

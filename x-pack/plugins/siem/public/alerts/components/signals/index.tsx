@@ -17,9 +17,9 @@ import { HeaderSection } from '../../../common/components/header_section';
 import { combineQueries } from '../../../timelines/components/timeline/helpers';
 import { useKibana } from '../../../common/lib/kibana';
 import { inputsSelectors, State, inputsModel } from '../../../common/store';
-import { timelineActions, timelineSelectors } from '../../../common/store/timeline';
-import { TimelineModel } from '../../../common/store/timeline/model';
-import { timelineDefaults } from '../../../common/store/timeline/defaults';
+import { timelineActions, timelineSelectors } from '../../../timelines/store/timeline';
+import { TimelineModel } from '../../../timelines/store/timeline/model';
+import { timelineDefaults } from '../../../timelines/store/timeline/defaults';
 import { useApolloClient } from '../../../common/utils/apollo_context';
 
 import { updateSignalStatusAction } from './actions';

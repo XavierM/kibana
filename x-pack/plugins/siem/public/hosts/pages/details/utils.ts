@@ -8,8 +8,8 @@ import { get, isEmpty } from 'lodash/fp';
 
 // eslint-disable-next-line @kbn/eslint/no-restricted-paths
 import { ChromeBreadcrumb } from '../../../../../../../src/core/public';
-import { hostsModel } from '../../../common/store';
-import { HostsTableType } from '../../../common/store/hosts/model';
+import { hostsModel } from '../../store';
+import { HostsTableType } from '../../store/model';
 import {
   getHostsUrl,
   getHostDetailsUrl,

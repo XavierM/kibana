@@ -16,6 +16,7 @@ import { createStore, State } from '../../store';
 
 import { SuperDatePicker, makeMapStateToProps } from '.';
 import { cloneDeep } from 'lodash/fp';
+import { timelineReducer } from '../../../timelines/store/timeline/reducer';
 
 jest.mock('../../lib/kibana');
 const mockUseUiSetting$ = useUiSetting$ as jest.Mock;
@@ -75,11 +76,11 @@ const timepickerRanges = [
 describe('SIEM Super Date Picker', () => {
   describe('#SuperDatePicker', () => {
     const state: State = mockGlobalState;
-    let store = createStore(state, apolloClientObservable);
+    let store = createStore(state, { timeline: timelineReducer }, apolloClientObservable);
 
     beforeEach(() => {
       jest.clearAllMocks();
-      store = createStore(state, apolloClientObservable);
+      store = createStore(state, { timeline: timelineReducer }, apolloClientObservable);
       mockUseUiSetting$.mockImplementation((key, defaultValue) => {
         const useUiSetting$Mock = createUseUiSetting$Mock();
 

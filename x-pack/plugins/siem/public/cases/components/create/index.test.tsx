@@ -20,7 +20,7 @@ jest.mock('../../../timelines/components/timeline/insert_timeline_popover/use_in
 jest.mock('../../containers/use_post_case');
 import { useForm } from '../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form';
 import { wait } from '../../../common/lib/helpers';
-import { SiemPageName } from '../../../app/home/types';
+import { SiemPageName } from '../../../app/types';
 jest.mock(
   '../../../../../../../src/plugins/es_ui_shared/static/forms/hook_form_lib/hooks/use_form/use_form'
 );

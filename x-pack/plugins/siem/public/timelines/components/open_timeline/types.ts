@@ -6,7 +6,7 @@
 
 import { SetStateAction, Dispatch } from 'react';
 import { AllTimelinesVariables } from '../../containers/all';
-import { TimelineModel } from '../../../common/store/timeline/model';
+import { TimelineModel } from '../../../timelines/store/timeline/model';
 import { NoteResult } from '../../../graphql/types';
 import { Refetch } from '../../../common/store/inputs/model';
 import { TimelineType } from '../../../../common/types/timeline';

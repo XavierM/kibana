@@ -12,7 +12,7 @@ import styled from 'styled-components';
 import { DefaultDraggable } from '../../../../common/components/draggables';
 import { EVENT_DURATION_FIELD_NAME } from '../../duration';
 import { FormattedDate } from '../../../../common/components/formatted_date';
-import { FormattedDuration } from '../../../../common/components/formatted_duration';
+import { FormattedDuration } from '../../formatted_duration';
 
 export const EVENT_START_FIELD_NAME = 'event.start';
 export const EVENT_END_FIELD_NAME = 'event.end';

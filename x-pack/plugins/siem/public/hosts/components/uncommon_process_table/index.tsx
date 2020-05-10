@@ -9,16 +9,16 @@
 import React, { useCallback, useMemo } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 
-import { hostsActions } from '../../../common/store/actions';
 import { UncommonProcessesEdges, UncommonProcessItem } from '../../../graphql/types';
-import { hostsModel, hostsSelectors, State } from '../../../common/store';
+import { State } from '../../../common/store';
+import { hostsActions, hostsModel, hostsSelectors } from '../../store';
 import { defaultToEmptyTag, getEmptyValue } from '../../../common/components/empty_value';
 import { HostDetailsLink } from '../../../common/components/links';
 import { Columns, ItemsPerRow, PaginatedTable } from '../../../common/components/paginated_table';
 
 import * as i18n from './translations';
 import { getRowItemDraggables } from '../../../common/components/tables/helpers';
-import { HostsType } from '../../../common/store/hosts/model';
+import { HostsType } from '../../store/model';
 const tableType = hostsModel.HostsTableType.uncommonProcesses;
 interface OwnProps {
   data: UncommonProcessesEdges[];

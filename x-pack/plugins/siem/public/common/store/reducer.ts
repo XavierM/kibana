@@ -16,7 +16,7 @@ import { TimelinePluginState, TimelinePluginReducer } from '../../timelines/stor
 
 export type SubPluginsState = HostsState;
 
-export interface State extends HostsPluginState {
+export interface State extends HostsPluginState, NetworkPluginState, TimelinePluginState {
   app: AppState;
   dragAndDrop: DragAndDropState;
   inputs: InputsState;
@@ -39,7 +39,7 @@ export const createInitialState = (pluginsInitState: SubPluginsInitState): State
   inputs: createInitialInputsState(),
 });
 
-export const createReducer = (pluginsReducer: SubPluginsInitReducer) =>
+export const createReducer = (pluginsReducer: SubPluginsInitReducer | {}) =>
   combineReducers<State>({
     app: appReducer,
     dragAndDrop: dragAndDropReducer,

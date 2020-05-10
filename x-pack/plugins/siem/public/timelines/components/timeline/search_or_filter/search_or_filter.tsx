@@ -15,7 +15,7 @@ import {
 } from '../../../../../../../../src/plugins/data/public';
 import { BrowserFields } from '../../../../common/containers/source';
 import { KueryFilterQuery, KueryFilterQueryKind } from '../../../../common/store';
-import { KqlMode, EventType } from '../../../../common/store/timeline/model';
+import { KqlMode, EventType } from '../../../../timelines/store/timeline/model';
 import { DispatchUpdateReduxTime } from '../../../../common/components/super_date_picker';
 import { DataProvider } from '../data_providers/data_provider';
 import { QueryBarTimeline } from '../query_bar';

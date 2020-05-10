@@ -9,11 +9,14 @@ import { sourceDestinationFieldMappings } from '../map_config';
 import {
   AddFilterToGlobalSearchBar,
   createFilter,
-} from '../../page/add_filter_to_global_search_bar';
-import { getEmptyTagValue, getOrEmptyTagFromValue } from '../../empty_value';
-import { DescriptionListStyled } from '../../page';
+} from '../../../../common/components/add_filter_to_global_search_bar';
+import {
+  getEmptyTagValue,
+  getOrEmptyTagFromValue,
+} from '../../../../common/components/empty_value';
+import { DescriptionListStyled } from '../../../../common/components/page';
 import { FeatureProperty } from '../types';
-import { HostDetailsLink, IPDetailsLink } from '../../links';
+import { HostDetailsLink, IPDetailsLink } from '../../../../common/components/links';
 import { DefaultFieldRenderer } from '../../../../timelines/components/field_renderers/field_renderers';
 import { FlowTarget } from '../../../../graphql/types';
 

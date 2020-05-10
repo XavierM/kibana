@@ -9,7 +9,7 @@ import React, { useMemo, useRef } from 'react';
 import { BrowserFields } from '../../../../common/containers/source';
 import { TimelineItem, TimelineNonEcsData } from '../../../../graphql/types';
 import { Note } from '../../../../common/lib/note';
-import { ColumnHeaderOptions } from '../../../../common/store/timeline/model';
+import { ColumnHeaderOptions } from '../../../../timelines/store/timeline/model';
 import { AddNoteToEvent, UpdateNote } from '../../notes/helpers';
 import {
   OnColumnRemoved,

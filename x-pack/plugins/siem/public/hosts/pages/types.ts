@@ -7,8 +7,8 @@
 import { IIndexPattern } from 'src/plugins/data/public';
 import { ActionCreator } from 'typescript-fsa';
 
-import { SiemPageName } from '../../app/home/types';
-import { hostsModel } from '../../common/store';
+import { SiemPageName } from '../../app/types';
+import { hostsModel } from '../store';
 import { GlobalTimeArgs } from '../../common/containers/global_time';
 import { InputsModelId } from '../../common/store/inputs/constants';
 

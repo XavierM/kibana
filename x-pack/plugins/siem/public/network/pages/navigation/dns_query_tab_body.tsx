@@ -7,12 +7,12 @@
 import React, { useEffect, useCallback, useMemo } from 'react';
 import { getOr } from 'lodash/fp';
 
-import { NetworkDnsTable } from '../../../common/components/page/network/network_dns_table';
-import { NetworkDnsQuery, HISTOGRAM_ID } from '../../../network/containers/network_dns';
+import { NetworkDnsTable } from '../../components/network_dns_table';
+import { NetworkDnsQuery, HISTOGRAM_ID } from '../../containers/network_dns';
 import { manageQuery } from '../../../common/components/page/manage_query';
 
 import { NetworkComponentQueryProps } from './types';
-import { networkModel } from '../../../common/store';
+import { networkModel } from '../../store';
 
 import {
   MatrixHistogramOption,

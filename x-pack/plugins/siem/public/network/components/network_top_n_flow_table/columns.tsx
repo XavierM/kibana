@@ -8,24 +8,30 @@ import { get } from 'lodash/fp';
 import numeral from '@elastic/numeral';
 import React from 'react';
 
-import { CountryFlag } from '../../../source_destination/country_flag';
+import { CountryFlag } from '../source_destination/country_flag';
 import {
   AutonomousSystemItem,
   FlowTargetSourceDest,
   NetworkTopNFlowEdges,
   TopNetworkTablesEcsField,
-} from '../../../../../graphql/types';
-import { networkModel } from '../../../../store';
-import { DragEffects, DraggableWrapper } from '../../../drag_and_drop/draggable_wrapper';
-import { escapeDataProviderId } from '../../../drag_and_drop/helpers';
-import { getEmptyTagValue } from '../../../empty_value';
-import { IPDetailsLink } from '../../../links';
-import { Columns } from '../../../paginated_table';
-import { IS_OPERATOR } from '../../../../../timelines/components/timeline/data_providers/data_provider';
-import { Provider } from '../../../../../timelines/components/timeline/data_providers/provider';
+} from '../../../graphql/types';
+import { networkModel } from '../../store';
+import {
+  DragEffects,
+  DraggableWrapper,
+} from '../../../common/components/drag_and_drop/draggable_wrapper';
+import { escapeDataProviderId } from '../../../common/components/drag_and_drop/helpers';
+import { getEmptyTagValue } from '../../../common/components/empty_value';
+import { IPDetailsLink } from '../../../common/components/links';
+import { Columns } from '../../../common/components/paginated_table';
+import { IS_OPERATOR } from '../../../timelines/components/timeline/data_providers/data_provider';
+import { Provider } from '../../../timelines/components/timeline/data_providers/provider';
 import * as i18n from './translations';
-import { getRowItemDraggable, getRowItemDraggables } from '../../../tables/helpers';
-import { PreferenceFormattedBytes } from '../../../formatted_bytes';
+import {
+  getRowItemDraggable,
+  getRowItemDraggables,
+} from '../../../common/components/tables/helpers';
+import { PreferenceFormattedBytes } from '../../../common/components/formatted_bytes';
 
 export type NetworkTopNFlowColumns = [
   Columns<NetworkTopNFlowEdges>,

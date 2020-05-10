@@ -8,7 +8,7 @@ import { Filter } from '../../../../../../../src/plugins/data/public';
 import { DataProvider } from '../../../timelines/components/timeline/data_providers/data_provider';
 import { Sort } from '../../../timelines/components/timeline/body/sort';
 import { PinnedEvent, TimelineNonEcsData } from '../../../graphql/types';
-import { KueryFilterQuery, SerializedFilterQuery } from '../model';
+import { KueryFilterQuery, SerializedFilterQuery } from '../../../common/store/model';
 
 export const DEFAULT_PAGE_COUNT = 2; // Eui Pager will not render unless this is a minimum of 2 pages
 export type KqlMode = 'filter' | 'search';

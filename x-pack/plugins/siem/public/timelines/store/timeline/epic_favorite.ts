@@ -12,9 +12,9 @@ import { Epic } from 'redux-observable';
 import { from, Observable, empty } from 'rxjs';
 import { filter, mergeMap, withLatestFrom, startWith, takeUntil } from 'rxjs/operators';
 
-import { persistTimelineFavoriteMutation } from '../../../timelines/containers/favorite/persist.gql_query';
+import { persistTimelineFavoriteMutation } from '../../containers/favorite/persist.gql_query';
 import { PersistTimelineFavoriteMutation, ResponseFavoriteTimeline } from '../../../graphql/types';
-import { addError } from '../app/actions';
+import { addError } from '../../../common/store/app/actions';
 import {
   endTimelineSaving,
   updateIsFavorite,
@@ -26,7 +26,7 @@ import { dispatcherTimelinePersistQueue } from './epic_dispatcher_timeline_persi
 import { refetchQueries } from './refetch_queries';
 import { myEpicTimelineId } from './my_epic_timeline_id';
 import { ActionTimeline, TimelineById } from './types';
-import { inputsModel } from '../inputs';
+import { inputsModel } from '../../../common/store/inputs';
 
 export const timelineFavoriteActionsType = [updateIsFavorite.type];
 

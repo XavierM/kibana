@@ -9,8 +9,8 @@ import { NarrowDateRange } from '../../../components/ml/types';
 import { UpdateDateRange } from '../../../components/charts/common';
 import { SetQuery } from '../../../../hosts/pages/navigation/types';
 import { FlowTarget } from '../../../../graphql/types';
-import { HostsType } from '../../../store/hosts/model';
-import { NetworkType } from '../../../store/network/model';
+import { HostsType } from '../../../../hosts/store/model';
+import { NetworkType } from '../../../../network/store//model';
 import { AnomaliesHostTable } from '../../../components/ml/tables/anomalies_host_table';
 import { AnomaliesNetworkTable } from '../../../components/ml/tables/anomalies_network_table';
 

@@ -54,7 +54,7 @@ describe('Flyout', () => {
 
     test('it does NOT render the fly out button when its state is set to flyout is true', () => {
       const stateShowIsTrue = set('timeline.timelineById.test.show', true, state);
-      const storeShowIsTrue = createStore(stateShowIsTrue, apolloClientObservable);
+      const storeShowIsTrue = createStore(stateShowIsTrue, {}, apolloClientObservable);
 
       const wrapper = mount(
         <TestProviders store={storeShowIsTrue}>
@@ -73,7 +73,11 @@ describe('Flyout', () => {
         mockDataProviders,
         state
       );
-      const storeWithDataProviders = createStore(stateWithDataProviders, apolloClientObservable);
+      const storeWithDataProviders = createStore(
+        stateWithDataProviders,
+        {},
+        apolloClientObservable
+      );
 
       const wrapper = mount(
         <TestProviders store={storeWithDataProviders}>
@@ -90,7 +94,11 @@ describe('Flyout', () => {
         mockDataProviders,
         state
       );
-      const storeWithDataProviders = createStore(stateWithDataProviders, apolloClientObservable);
+      const storeWithDataProviders = createStore(
+        stateWithDataProviders,
+        {},
+        apolloClientObservable
+      );
 
       const wrapper = mount(
         <TestProviders store={storeWithDataProviders}>
@@ -127,7 +135,11 @@ describe('Flyout', () => {
         mockDataProviders,
         state
       );
-      const storeWithDataProviders = createStore(stateWithDataProviders, apolloClientObservable);
+      const storeWithDataProviders = createStore(
+        stateWithDataProviders,
+        {},
+        apolloClientObservable
+      );
 
       const wrapper = mount(
         <TestProviders store={storeWithDataProviders}>

@@ -5,8 +5,7 @@
  */
 
 import actionCreatorFactory from 'typescript-fsa';
-
-import { networkModel } from '../model';
+import { networkModel } from '.';
 
 const actionCreator = actionCreatorFactory('x-pack/siem/local/network');
 

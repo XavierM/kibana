@@ -21,7 +21,7 @@ import styled from 'styled-components';
 
 import { BrowserFields } from '../../containers/source';
 import { ToStringArray } from '../../../graphql/types';
-import { ColumnHeaderOptions } from '../../store/timeline/model';
+import { ColumnHeaderOptions } from '../../../timelines/store/timeline/model';
 import { DragEffects } from '../drag_and_drop/draggable_wrapper';
 import { DroppableWrapper } from '../drag_and_drop/droppable_wrapper';
 import { getDroppableId, getDraggableFieldId, DRAG_TYPE_FIELD } from '../drag_and_drop/helpers';

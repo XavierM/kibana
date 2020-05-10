@@ -8,7 +8,7 @@ import { EuiLoadingSpinner } from '@elastic/eui';
 import { rgba } from 'polished';
 import styled, { createGlobalStyle } from 'styled-components';
 
-import { EventType } from '../../../common/store/timeline/model';
+import { EventType } from '../../../timelines/store/timeline/model';
 import { IS_TIMELINE_FIELD_DRAGGING_CLASS_NAME } from '../../../common/components/drag_and_drop/helpers';
 
 /**

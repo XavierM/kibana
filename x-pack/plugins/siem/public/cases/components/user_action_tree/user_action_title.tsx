@@ -23,7 +23,7 @@ import { LocalizedDateTooltip } from '../../../common/components/localized_date_
 import { useGetUrlSearch } from '../../../common/components/navigation/use_get_url_search';
 import { navTabs } from '../../../app/home/home_navigations';
 import { PropertyActions } from '../property_actions';
-import { SiemPageName } from '../../../app/home/types';
+import { SiemPageName } from '../../../app/types';
 import * as i18n from './translations';
 
 const MySpinner = styled(EuiLoadingSpinner)`

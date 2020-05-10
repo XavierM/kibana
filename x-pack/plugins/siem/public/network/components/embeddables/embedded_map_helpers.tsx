@@ -25,7 +25,7 @@ import {
   ViewMode,
   ErrorEmbeddable,
 } from '../../../../../../../src/plugins/embeddable/public';
-import { IndexPatternSavedObject } from '../../hooks/types';
+import { IndexPatternSavedObject } from '../../../common/hooks/types';
 
 /**
  * Creates MapEmbeddable with provided initial configuration

@@ -7,7 +7,7 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { useIndexPatterns } from '../../hooks/use_index_patterns';
+import { useIndexPatterns } from '../../../common/hooks/use_index_patterns';
 import { EmbeddedMapComponent } from './embedded_map';
 import { SetQuery } from './types';
 
@@ -15,7 +15,7 @@ const mockUseIndexPatterns = useIndexPatterns as jest.Mock;
 jest.mock('../../hooks/use_index_patterns');
 mockUseIndexPatterns.mockImplementation(() => [true, []]);
 
-jest.mock('../../lib/kibana');
+jest.mock('../../../common/lib/kibana');
 
 describe('EmbeddedMapComponent', () => {
   let setQuery: SetQuery;

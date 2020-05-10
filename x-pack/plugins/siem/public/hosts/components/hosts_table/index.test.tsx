@@ -16,8 +16,9 @@ import {
   TestProviders,
 } from '../../../common/mock';
 import { useMountAppended } from '../../../common/utils/use_mount_appended';
-import { createStore, hostsModel, State } from '../../../common/store';
-import { HostsTableType } from '../../../common/store/hosts/model';
+import { createStore, State } from '../../../common/store';
+import { hostsModel, hostsReducer } from '../../../hosts/store';
+import { HostsTableType } from '../../../hosts/store/model';
 import { HostsTable } from './index';
 import { mockData } from './mock';
 
@@ -34,11 +35,11 @@ describe('Hosts Table', () => {
   const loadPage = jest.fn();
   const state: State = mockGlobalState;
 
-  let store = createStore(state, apolloClientObservable);
+  let store = createStore(state, { hosts: hostsReducer }, apolloClientObservable);
   const mount = useMountAppended();
 
   beforeEach(() => {
-    store = createStore(state, apolloClientObservable);
+    store = createStore(state, { hosts: hostsReducer }, apolloClientObservable);
   });
 
   describe('rendering', () => {

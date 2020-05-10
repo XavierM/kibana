@@ -7,10 +7,10 @@
 import React, { useCallback, useMemo } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 
-import { networkActions } from '../../../../store/actions';
-import { Direction, NetworkHttpEdges, NetworkHttpFields } from '../../../../../graphql/types';
-import { networkModel, networkSelectors, State } from '../../../../store';
-import { Criteria, ItemsPerRow, PaginatedTable } from '../../../paginated_table';
+import { networkActions, networkModel, networkSelectors } from '../../store';
+import { Direction, NetworkHttpEdges, NetworkHttpFields } from '../../../graphql/types';
+import { State } from '../../../common/store';
+import { Criteria, ItemsPerRow, PaginatedTable } from '../../../common/components/paginated_table';
 
 import { getNetworkHttpColumns } from './columns';
 import * as i18n from './translations';

@@ -7,7 +7,7 @@
 import React from 'react';
 
 import { Route, Switch } from 'react-router-dom';
-import { SiemPageName } from '../../app/home/types';
+import { SiemPageName } from '../../app/types';
 import { CaseDetailsPage } from './case_details';
 import { CasesPage } from './case';
 import { CreateCasePage } from './create_case';

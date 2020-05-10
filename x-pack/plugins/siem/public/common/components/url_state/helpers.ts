@@ -12,10 +12,11 @@ import * as H from 'history';
 import { Query, Filter } from '../../../../../../../src/plugins/data/public';
 import { url } from '../../../../../../../src/plugins/kibana_utils/public';
 
-import { SiemPageName } from '../../../app/home/types';
-import { inputsSelectors, State, timelineSelectors } from '../../store';
+import { SiemPageName } from '../../../app/types';
+import { inputsSelectors, State } from '../../store';
 import { UrlInputsModel } from '../../store/inputs/model';
-import { TimelineUrl } from '../../store/timeline/model';
+import { TimelineUrl } from '../../../timelines/store/timeline/model';
+import { timelineSelectors } from '../../../timelines/store/timeline';
 import { formatDate } from '../super_date_picker';
 import { NavTab } from '../navigation/types';
 import { CONSTANTS, UrlStateType } from './constants';

@@ -8,11 +8,11 @@ import { ActionCreator } from 'typescript-fsa';
 import { Query, IIndexPattern, Filter } from 'src/plugins/data/public';
 import { InputsModelId } from '../../../common/store/inputs/constants';
 import { HostComponentProps } from '../../../common/components/link_to/redirect_to_hosts';
-import { HostsTableType } from '../../../common/store/hosts/model';
+import { HostsTableType } from '../../store/model';
 import { HostsQueryProps } from '../types';
 import { NavTab } from '../../../common/components/navigation/types';
 import { KeyHostsNavTabWithoutMlPermission } from '../navigation/types';
-import { hostsModel } from '../../../common/store';
+import { hostsModel } from '../../store';
 
 interface HostDetailsComponentReduxProps {
   query: Query;

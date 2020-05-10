@@ -8,9 +8,9 @@ import { mount } from 'enzyme';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 
-import { TestProviders } from '../../../../mock';
+import { TestProviders } from '../../../common/mock';
 import { FlowTargetSelectConnectedComponent } from './index';
-import { FlowTarget } from '../../../../../graphql/types';
+import { FlowTarget } from '../../../graphql/types';
 
 describe('Flow Target Select Connected', () => {
   test('renders correctly against snapshot flowTarget source', () => {

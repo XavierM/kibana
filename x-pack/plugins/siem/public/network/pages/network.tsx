@@ -11,13 +11,13 @@ import { useParams } from 'react-router-dom';
 import { StickyContainer } from 'react-sticky';
 
 import { esQuery } from '../../../../../../src/plugins/data/public';
-import { EmbeddedMap } from '../../common/components/embeddables/embedded_map';
+import { EmbeddedMap } from '../components/embeddables/embedded_map';
 import { FiltersGlobal } from '../../common/components/filters_global';
 import { HeaderPage } from '../../common/components/header_page';
 import { LastEventTime } from '../../common/components/last_event_time';
 import { SiemNavigation } from '../../common/components/navigation';
 import { manageQuery } from '../../common/components/page/manage_query';
-import { KpiNetworkComponent } from '../../common/components/page/network';
+import { KpiNetworkComponent } from '..//components/kpi_network';
 import { SiemSearchBar } from '../../common/components/search_bar';
 import { WrapperPage } from '../../common/components/wrapper_page';
 import { KpiNetworkQuery } from '../../network/containers/kpi_network';
@@ -28,9 +28,10 @@ import {
 import { LastEventIndexKey } from '../../graphql/types';
 import { useKibana } from '../../common/lib/kibana';
 import { convertToBuildEsQuery } from '../../common/lib/keury';
-import { networkModel, State, inputsSelectors } from '../../common/store';
+import { State, inputsSelectors } from '../../common/store';
 import { setAbsoluteRangeDatePicker as dispatchSetAbsoluteRangeDatePicker } from '../../common/store/inputs/actions';
 import { SpyRoute } from '../../common/utils/route/spy_routes';
+import { networkModel } from '../store';
 import { navTabsNetwork, NetworkRoutes, NetworkRoutesLoading } from './navigation';
 import { filterNetworkData } from './navigation/alerts_query_tab_body';
 import { NetworkEmptyPage } from './network_empty_page';

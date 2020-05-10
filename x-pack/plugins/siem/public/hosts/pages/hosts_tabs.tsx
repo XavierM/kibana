@@ -10,7 +10,7 @@ import { Route, Switch } from 'react-router-dom';
 import { HostsTabsProps } from './types';
 import { scoreIntervalToDateTime } from '../../common/components/ml/score/score_interval_to_datetime';
 import { Anomaly } from '../../common/components/ml/types';
-import { HostsTableType } from '../../common/store/hosts/model';
+import { HostsTableType } from '../store/model';
 import { AnomaliesQueryTabBody } from '../../common/containers/anomalies/anomalies_query_tab_body';
 import { AnomaliesHostTable } from '../../common/components/ml/tables/anomalies_host_table';
 

@@ -12,7 +12,7 @@ import styled, { css } from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { gutterTimeline } from '../../lib/helpers';
 import { navTabs } from '../../../app/home/home_navigations';
-import { SiemPageName } from '../../../app/home/types';
+import { SiemPageName } from '../../../app/types';
 import { getOverviewUrl } from '../link_to';
 import { MlPopover } from '../ml_popover/ml_popover';
 import { SiemNavigation } from '../navigation';

@@ -7,9 +7,9 @@
 import React from 'react';
 import { getOr } from 'lodash/fp';
 
-import { NetworkHttpTable } from '../../../common/components/page/network';
-import { NetworkHttpQuery } from '../../../network/containers/network_http';
-import { networkModel } from '../../../common/store';
+import { NetworkHttpTable } from '../../components/network_http_table';
+import { NetworkHttpQuery } from '../../containers/network_http';
+import { networkModel } from '../../store';
 import { manageQuery } from '../../../common/components/page/manage_query';
 
 import { HttpQueryTabBodyProps } from './types';

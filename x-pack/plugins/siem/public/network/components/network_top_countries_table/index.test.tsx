@@ -10,15 +10,16 @@ import React from 'react';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { Provider as ReduxStoreProvider } from 'react-redux';
 
-import { FlowTargetSourceDest } from '../../../../../graphql/types';
+import { FlowTargetSourceDest } from '../../../graphql/types';
 import {
   apolloClientObservable,
   mockGlobalState,
   mockIndexPattern,
   TestProviders,
-} from '../../../../mock';
-import { useMountAppended } from '../../../../utils/use_mount_appended';
-import { createStore, networkModel, State } from '../../../../store';
+} from '../../../common/mock';
+import { useMountAppended } from '../../../common/utils/use_mount_appended';
+import { createStore, State } from '../../../common/store';
+import { networkModel, networkReducer } from '../../store';
 
 import { NetworkTopCountriesTable } from '.';
 import { mockData } from './mock';
@@ -28,10 +29,10 @@ describe('NetworkTopCountries Table Component', () => {
   const state: State = mockGlobalState;
   const mount = useMountAppended();
 
-  let store = createStore(state, apolloClientObservable);
+  let store = createStore(state, { network: networkReducer }, apolloClientObservable);
 
   beforeEach(() => {
-    store = createStore(state, apolloClientObservable);
+    store = createStore(state, { network: networkReducer }, apolloClientObservable);
   });
 
   describe('rendering', () => {

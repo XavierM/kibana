@@ -6,10 +6,10 @@
 
 import React from 'react';
 
-import { DefaultDraggable } from '../draggables';
-import { getEmptyValue } from '../empty_value';
-import { ExternalLinkIcon } from '../external_link_icon';
-import { PortOrServiceNameLink } from '../links';
+import { DefaultDraggable } from '../../../common/components/draggables';
+import { getEmptyValue } from '../../../common/components/empty_value';
+import { ExternalLinkIcon } from '../../../common/components/external_link_icon';
+import { PortOrServiceNameLink } from '../../../common/components/links';
 
 export const CLIENT_PORT_FIELD_NAME = 'client.port';
 export const DESTINATION_PORT_FIELD_NAME = 'destination.port';

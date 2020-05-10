@@ -11,7 +11,7 @@ import { Router } from 'react-router-dom';
 import { MockedProvider } from 'react-apollo/test-utils';
 
 import { Filter } from '../../../../../../src/plugins/data/common/es_query';
-import '../../mock/match_media';
+import '../../common/mock/match_media';
 import { mocksSource } from '../../common/containers/source/mock';
 import { wait } from '../../common/lib/helpers';
 import { apolloClientObservable, TestProviders, mockGlobalState } from '../../common/mock';
@@ -21,13 +21,14 @@ import { State, createStore } from '../../common/store';
 import { HostsComponentProps } from './types';
 import { Hosts } from './hosts';
 import { HostsTabs } from './hosts_tabs';
+import { hostsReducer } from '../store';
 
 // Test will fail because we will to need to mock some core services to make the test work
 // For now let's forget about SiemSearchBar and QueryBar
-jest.mock('../../components/search_bar', () => ({
+jest.mock('../../common/components/search_bar', () => ({
   SiemSearchBar: () => null,
 }));
-jest.mock('../../components/query_bar', () => ({
+jest.mock('../../common/components/query_bar', () => ({
   QueryBar: () => null,
 }));
 
@@ -166,7 +167,7 @@ describe('Hosts - rendering', () => {
     ];
     localSource[0].result.data.source.status.indicesExist = true;
     const myState: State = mockGlobalState;
-    const myStore = createStore(myState, apolloClientObservable);
+    const myStore = createStore(myState, { hosts: hostsReducer }, apolloClientObservable);
     const wrapper = mount(
       <TestProviders store={myStore}>
         <MockedProvider mocks={localSource} addTypename={false}>

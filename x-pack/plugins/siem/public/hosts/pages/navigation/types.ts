@@ -9,7 +9,7 @@ import { Filter, IIndexPattern } from '../../../../../../../src/plugins/data/pub
 import { NarrowDateRange } from '../../../common/components/ml/types';
 import { InspectQuery, Refetch } from '../../../common/store/inputs/model';
 
-import { HostsTableType, HostsType } from '../../../common/store/hosts/model';
+import { HostsTableType, HostsType } from '../../store/model';
 import { NavTab } from '../../../common/components/navigation/types';
 import { UpdateDateRange } from '../../../common/components/charts/common';
 

@@ -30,7 +30,7 @@ import { schema } from './schema';
 import { InsertTimelinePopover } from '../../../timelines/components/timeline/insert_timeline_popover';
 import { useInsertTimeline } from '../../../timelines/components/timeline/insert_timeline_popover/use_insert_timeline';
 import * as i18n from '../../translations';
-import { SiemPageName } from '../../../app/home/types';
+import { SiemPageName } from '../../../app/types';
 import { MarkdownEditorForm } from '../../../common/components//markdown_editor/form';
 import { useGetTags } from '../../containers/use_get_tags';
 

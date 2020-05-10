@@ -9,21 +9,24 @@ import numeral from '@elastic/numeral';
 import React from 'react';
 import { IIndexPattern } from 'src/plugins/data/public';
 
-import { CountryFlagAndName } from '../../../source_destination/country_flag';
+import { CountryFlagAndName } from '../source_destination/country_flag';
 import {
   FlowTargetSourceDest,
   NetworkTopCountriesEdges,
   TopNetworkTablesEcsField,
-} from '../../../../../graphql/types';
-import { networkModel } from '../../../../store';
-import { DragEffects, DraggableWrapper } from '../../../drag_and_drop/draggable_wrapper';
-import { escapeDataProviderId } from '../../../drag_and_drop/helpers';
-import { getEmptyTagValue } from '../../../empty_value';
-import { Columns } from '../../../paginated_table';
-import { IS_OPERATOR } from '../../../../../timelines/components/timeline/data_providers/data_provider';
-import { Provider } from '../../../../../timelines/components/timeline/data_providers/provider';
+} from '../../../graphql/types';
+import { networkModel } from '../../store';
+import {
+  DragEffects,
+  DraggableWrapper,
+} from '../../../common/components/drag_and_drop/draggable_wrapper';
+import { escapeDataProviderId } from '../../../common/components/drag_and_drop/helpers';
+import { getEmptyTagValue } from '../../../common/components/empty_value';
+import { Columns } from '../../../common/components/paginated_table';
+import { IS_OPERATOR } from '../../../timelines/components/timeline/data_providers/data_provider';
+import { Provider } from '../../../timelines/components/timeline/data_providers/provider';
 import * as i18n from './translations';
-import { PreferenceFormattedBytes } from '../../../formatted_bytes';
+import { PreferenceFormattedBytes } from '../../../common/components/formatted_bytes';
 
 export type NetworkTopCountriesColumns = [
   Columns<NetworkTopCountriesEdges>,
