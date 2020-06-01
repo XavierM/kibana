@@ -3,6 +3,7 @@
  * or more contributor license agreements. Licensed under the Elastic License;
  * you may not use this file except in compliance with the Elastic License.
  */
+import { isEmpty } from 'lodash/fp';
 import {
   TimelineType,
   TimelineTypeLiteralWithNull,
@@ -56,7 +57,7 @@ export class TimelineObject {
   }
 
   public get isTitleExists() {
-    return this.title != null;
+    return !isEmpty(this.title);
   }
 
   public get isExists() {
@@ -77,6 +78,10 @@ export class TimelineObject {
 
   public get getVersion() {
     return this.version;
+  }
+
+  public get getId() {
+    return this.id;
   }
 
   private isVersionConflict() {

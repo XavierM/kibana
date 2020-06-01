@@ -56,7 +56,7 @@ interface OwnProps<TCache = object> {
  * CreateTemplateTimelineBtn
  * Remove the comment here to enable template timeline
  */
-export const disableTemplate = true;
+export const disableTemplate = false;
 
 export type OpenTimelineOwnProps = OwnProps &
   Pick<

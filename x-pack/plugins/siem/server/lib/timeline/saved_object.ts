@@ -147,7 +147,7 @@ export const getAllTimeline = async (
      * Remove the comment here to enable template timeline and apply the change below
      * filter: getTimelineTypeFilter(timelineType, false)
      */
-    filter: getTimelineTypeFilter(TimelineType.default, false),
+    filter: getTimelineTypeFilter(timelineType, false),
     sortField: sort != null ? sort.sortField : undefined,
     sortOrder: sort != null ? sort.sortOrder : undefined,
   };
