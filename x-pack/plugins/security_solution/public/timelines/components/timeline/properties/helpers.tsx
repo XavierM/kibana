@@ -20,7 +20,6 @@ import {
 import React, { useCallback } from 'react';
 import uuid from 'uuid';
 import styled from 'styled-components';
-import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { APP_ID } from '../../../../../common/constants';
@@ -139,6 +138,7 @@ export const Name = React.memo<NameProps>(({ timelineId, title, updateTitle }) =
 Name.displayName = 'Name';
 
 interface NewCaseProps {
+  graphEventId?: string;
   onClosePopover: () => void;
   timelineId: string;
   timelineStatus: TimelineStatus;
@@ -146,8 +146,7 @@ interface NewCaseProps {
 }
 
 export const NewCase = React.memo<NewCaseProps>(
-  ({ onClosePopover, timelineId, timelineStatus, timelineTitle }) => {
-    const history = useHistory();
+  ({ graphEventId, onClosePopover, timelineId, timelineStatus, timelineTitle }) => {
     const urlSearch = useGetUrlSearch(navTabs.case);
     const dispatch = useDispatch();
     const { savedObjectId } = useSelector((state: State) =>
@@ -159,20 +158,19 @@ export const NewCase = React.memo<NewCaseProps>(
       onClosePopover();
       dispatch(
         setInsertTimeline({
+          graphEventId,
           timelineId,
           timelineSavedObjectId: savedObjectId,
           timelineTitle: timelineTitle.length > 0 ? timelineTitle : i18n.UNTITLED_TIMELINE,
         })
       );
+
       navigateToApp(`${APP_ID}:${SecurityPageName.case}`, {
         path: getCreateCaseUrl(urlSearch),
       });
-      history.push({
-        pathname: `/${SecurityPageName.case}/create`,
-      });
 
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [dispatch, navigateToApp, onClosePopover, history, timelineId, timelineTitle, urlSearch]);
+    }, [dispatch, navigateToApp, onClosePopover, timelineId, timelineTitle, urlSearch]);
 
     return (
       <EuiButtonEmpty
