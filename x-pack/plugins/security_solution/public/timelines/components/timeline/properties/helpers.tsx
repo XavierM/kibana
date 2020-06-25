@@ -27,11 +27,10 @@ import {
   TimelineTypeLiteral,
   TimelineStatus,
   TimelineType,
+  TimelineId,
 } from '../../../../../common/types/timeline';
-import { navTabs } from '../../../../app/home/home_navigations';
 import { SecurityPageName } from '../../../../app/types';
 import { timelineSelectors } from '../../../../timelines/store/timeline';
-import { useGetUrlSearch } from '../../../../common/components/navigation/use_get_url_search';
 import { getCreateCaseUrl } from '../../../../common/components/link_to';
 import { State } from '../../../../common/store';
 import { useKibana } from '../../../../common/lib/kibana';
@@ -43,7 +42,7 @@ import { AssociateNote, UpdateNote } from '../../notes/helpers';
 import { NOTES_PANEL_WIDTH } from './notes_size';
 import { ButtonContainer, DescriptionContainer, LabelText, NameField, StyledStar } from './styles';
 import * as i18n from './translations';
-import { setInsertTimeline } from '../../../store/timeline/actions';
+import { setInsertTimeline, showTimeline } from '../../../store/timeline/actions';
 import { useCreateTimelineButton } from './use_create_timeline';
 
 export const historyToolTip = 'The chronological history of actions related to this timeline';
@@ -147,7 +146,6 @@ interface NewCaseProps {
 
 export const NewCase = React.memo<NewCaseProps>(
   ({ graphEventId, onClosePopover, timelineId, timelineStatus, timelineTitle }) => {
-    const urlSearch = useGetUrlSearch(navTabs.case);
     const dispatch = useDispatch();
     const { savedObjectId } = useSelector((state: State) =>
       timelineSelectors.selectTimeline(state, timelineId)
@@ -164,13 +162,19 @@ export const NewCase = React.memo<NewCaseProps>(
           timelineTitle: timelineTitle.length > 0 ? timelineTitle : i18n.UNTITLED_TIMELINE,
         })
       );
-
+      dispatch(showTimeline({ id: TimelineId.active, show: false }));
       navigateToApp(`${APP_ID}:${SecurityPageName.case}`, {
-        path: getCreateCaseUrl(urlSearch),
+        path: getCreateCaseUrl(),
       });
-
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [dispatch, navigateToApp, onClosePopover, timelineId, timelineTitle, urlSearch]);
+    }, [
+      dispatch,
+      graphEventId,
+      navigateToApp,
+      onClosePopover,
+      savedObjectId,
+      timelineId,
+      timelineTitle,
+    ]);
 
     return (
       <EuiButtonEmpty

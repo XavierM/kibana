@@ -11,12 +11,13 @@ import { useCreateTimelineButton } from './use_create_timeline';
 jest.mock('./use_create_timeline', () => ({
   useCreateTimelineButton: jest.fn(),
 }));
-
+const mockNavigateToApp = jest.mock();
 jest.mock('../../../../common/lib/kibana', () => {
   return {
     useKibana: jest.fn().mockReturnValue({
       services: {
         application: {
+          navigateToApp: mockNavigateToApp,
           capabilities: {
             siem: {
               crud: true,

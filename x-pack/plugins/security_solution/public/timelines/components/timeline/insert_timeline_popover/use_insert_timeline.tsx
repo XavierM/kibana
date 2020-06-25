@@ -31,16 +31,11 @@ export const useInsertTimeline = <T extends FormData>(form: FormHook<T>, fieldNa
       ].join('');
       form.setFieldValue(fieldName, newValue);
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [form]
+    [basePath, cursorPosition, fieldName, form]
   );
-  const handleCursorChange = useCallback(
-    (cp: CursorPosition) => {
-      setCursorPosition(cp);
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [cursorPosition]
-  );
+  const handleCursorChange = useCallback((cp: CursorPosition) => {
+    setCursorPosition(cp);
+  }, []);
   return {
     cursorPosition,
     handleCursorChange,

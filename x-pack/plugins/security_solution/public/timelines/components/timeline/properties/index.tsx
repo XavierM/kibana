@@ -122,9 +122,6 @@ export const Properties = React.memo<Props>(
     const onRowClick = useCallback(
       (id: string) => {
         onCloseCaseModal();
-        navigateToApp(`${APP_ID}:${SecurityPageName.case}`, {
-          path: getCaseDetailsUrl({ id }),
-        });
         dispatch(
           setInsertTimeline({
             graphEventId,
@@ -133,6 +130,9 @@ export const Properties = React.memo<Props>(
             timelineTitle: title.length > 0 ? title : i18n.UNTITLED_TIMELINE,
           })
         );
+        navigateToApp(`${APP_ID}:${SecurityPageName.case}`, {
+          path: getCaseDetailsUrl({ id }),
+        });
       },
       [currentTimeline, dispatch, graphEventId, navigateToApp, onCloseCaseModal, timelineId, title]
     );
@@ -177,6 +177,7 @@ export const Properties = React.memo<Props>(
           associateNote={associateNote}
           description={description}
           getNotesByIds={getNotesByIds}
+          graphEventId={graphEventId}
           isDataInTimeline={isDataInTimeline}
           noteIds={noteIds}
           onButtonClick={onButtonClick}
