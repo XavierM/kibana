@@ -185,10 +185,10 @@ export interface OpenTimelineProps {
 export interface UpdateTimeline {
   duplicate: boolean;
   id: string;
-  from: number;
+  from: string;
   notes: NoteResult[] | null | undefined;
   timeline: TimelineModel;
-  to: number;
+  to: string;
   ruleNote?: string;
 }
 

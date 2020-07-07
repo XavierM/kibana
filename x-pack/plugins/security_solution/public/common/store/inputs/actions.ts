@@ -19,8 +19,8 @@ export const setAbsoluteRangeDatePicker = actionCreator<{
 }>('SET_ABSOLUTE_RANGE_DATE_PICKER');
 
 export const setTimelineRangeDatePicker = actionCreator<{
-  from: number;
-  to: number;
+  from: string;
+  to: string;
 }>('SET_TIMELINE_RANGE_DATE_PICKER');
 
 export const setRelativeRangeDatePicker = actionCreator<{

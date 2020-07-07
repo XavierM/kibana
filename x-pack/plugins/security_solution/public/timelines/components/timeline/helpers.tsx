@@ -107,8 +107,8 @@ export const combineQueries = ({
   filters: Filter[];
   kqlQuery: Query;
   kqlMode: string;
-  start: number;
-  end: number;
+  start: string;
+  end: string;
   isEventViewer?: boolean;
 }): { filterQuery: string } | null => {
   const kuery: Query = { query: '', language: kqlQuery.language };

@@ -55,8 +55,8 @@ export const createTimeline = actionCreator<{
   id: string;
   dataProviders?: DataProvider[];
   dateRange?: {
-    start: number;
-    end: number;
+    start: string;
+    end: string;
   };
   filters?: Filter[];
   columns: ColumnHeaderOptions[];

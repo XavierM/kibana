@@ -92,9 +92,7 @@ export const dispatchSetInitialStateFromUrl = (
   });
 };
 
-const timeRangeToISOString = (
-  timerange: AbsoluteTimeRange | RelativeTimeRange
-): AbsoluteTimeRange | RelativeTimeRange => {
+const timeRangeToISOString = <T extends { from: string; to: string }>(timerange: T): T => {
   const range = { ...timerange };
 
   if (isNumber(range.from)) {
@@ -133,7 +131,7 @@ const updateTimerange = (newUrlStateString: string, dispatch: Dispatch) => {
 
   if (timelineType) {
     if (timelineType === 'absolute') {
-      const absoluteRange = timeRangeToISOString(
+      const absoluteRange = timeRangeToISOString<AbsoluteTimeRange>(
         normalizeTimeRange<AbsoluteTimeRange>(get('timeline.timerange', timerangeStateData))
       );
 
@@ -146,7 +144,7 @@ const updateTimerange = (newUrlStateString: string, dispatch: Dispatch) => {
     }
 
     if (timelineType === 'relative') {
-      const relativeRange = timeRangeToISOString(
+      const relativeRange = timeRangeToISOString<RelativeTimeRange>(
         normalizeTimeRange<RelativeTimeRange>(get('timeline.timerange', timerangeStateData))
       );
 
@@ -161,7 +159,7 @@ const updateTimerange = (newUrlStateString: string, dispatch: Dispatch) => {
 
   if (globalType) {
     if (globalType === 'absolute') {
-      const absoluteRange = timeRangeToISOString(
+      const absoluteRange = timeRangeToISOString<AbsoluteTimeRange>(
         normalizeTimeRange<AbsoluteTimeRange>(get('global.timerange', timerangeStateData))
       );
 
@@ -173,7 +171,7 @@ const updateTimerange = (newUrlStateString: string, dispatch: Dispatch) => {
       );
     }
     if (globalType === 'relative') {
-      const relativeRange = timeRangeToISOString(
+      const relativeRange = timeRangeToISOString<RelativeTimeRange>(
         normalizeTimeRange<RelativeTimeRange>(get('global.timerange', timerangeStateData))
       );
 

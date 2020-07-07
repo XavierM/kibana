@@ -89,8 +89,8 @@ const timelineByIdMock: TimelineById = {
     pinnedEventIds: {},
     pinnedEventsSaveObject: {},
     dateRange: {
-      start: 0,
-      end: 0,
+      start: '0',
+      end: '0',
     },
     selectedEventIds: {},
     show: true,
@@ -999,8 +999,8 @@ describe('Timeline', () => {
     test('should return a new reference and not the same reference', () => {
       const update = updateTimelineRange({
         id: 'foo',
-        start: 23,
-        end: 33,
+        start: '23',
+        end: '33',
         timelineById: timelineByIdMock,
       });
       expect(update).not.toBe(timelineByIdMock);
@@ -1009,16 +1009,16 @@ describe('Timeline', () => {
     test('should update the timeline range', () => {
       const update = updateTimelineRange({
         id: 'foo',
-        start: 23,
-        end: 33,
+        start: '23',
+        end: '33',
         timelineById: timelineByIdMock,
       });
       expect(update).toEqual(
         set(
           'foo.dateRange',
           {
-            start: 23,
-            end: 33,
+            start: '23',
+            end: '33',
           },
           timelineByIdMock
         )
@@ -1124,8 +1124,8 @@ describe('Timeline', () => {
           templateTimelineId: null,
           noteIds: [],
           dateRange: {
-            start: 0,
-            end: 0,
+            start: '0',
+            end: '0',
           },
           selectedEventIds: {},
           show: true,
@@ -1220,8 +1220,8 @@ describe('Timeline', () => {
           templateTimelineId: null,
           noteIds: [],
           dateRange: {
-            start: 0,
-            end: 0,
+            start: '0',
+            end: '0',
           },
           selectedEventIds: {},
           show: true,
@@ -1426,8 +1426,8 @@ describe('Timeline', () => {
           templateTimelineId: null,
           noteIds: [],
           dateRange: {
-            start: 0,
-            end: 0,
+            start: '0',
+            end: '0',
           },
           selectedEventIds: {},
           show: true,
@@ -1522,8 +1522,8 @@ describe('Timeline', () => {
           templateTimelineVersion: null,
           noteIds: [],
           dateRange: {
-            start: 0,
-            end: 0,
+            start: '0',
+            end: '0',
           },
           selectedEventIds: {},
           show: true,
@@ -1717,8 +1717,8 @@ describe('Timeline', () => {
           templateTimelineId: null,
           noteIds: [],
           dateRange: {
-            start: 0,
-            end: 0,
+            start: '0',
+            end: '0',
           },
           selectedEventIds: {},
           show: true,
@@ -1798,8 +1798,8 @@ describe('Timeline', () => {
           templateTimelineId: null,
           noteIds: [],
           dateRange: {
-            start: 0,
-            end: 0,
+            start: '0',
+            end: '0',
           },
           selectedEventIds: {},
           show: true,
@@ -1901,8 +1901,8 @@ describe('Timeline', () => {
           templateTimelineId: null,
           noteIds: [],
           dateRange: {
-            start: 0,
-            end: 0,
+            start: '0',
+            end: '0',
           },
           selectedEventIds: {},
           show: true,

@@ -8,7 +8,7 @@
  ** x-pack/plugins/apm/server/lib/helpers/get_bucket_size/calculate_auto.js
  */
 import moment from 'moment';
-import { get, toNumber, isNaN } from 'lodash/fp';
+import { get } from 'lodash/fp';
 const d = moment.duration;
 
 const roundingRules = [
