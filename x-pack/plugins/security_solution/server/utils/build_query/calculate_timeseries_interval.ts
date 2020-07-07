@@ -8,7 +8,7 @@
  ** x-pack/plugins/apm/server/lib/helpers/get_bucket_size/calculate_auto.js
  */
 import moment from 'moment';
-import { get } from 'lodash/fp';
+import { get, toNumber, isNaN } from 'lodash/fp';
 const d = moment.duration;
 
 const roundingRules = [
@@ -89,6 +89,6 @@ export const calculateAuto = {
   }),
 };
 
-export const calculateTimeSeriesInterval = (from: number, to: number) => {
-  return `${Math.floor((to - from) / 32)}ms`;
+export const calculateTimeSeriesInterval = (from: string, to: string) => {
+  return `${Math.floor(moment(to).diff(from) / 32)}ms`;
 };

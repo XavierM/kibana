@@ -14,8 +14,8 @@ const actionCreator = actionCreatorFactory('x-pack/security_solution/local/input
 
 export const setAbsoluteRangeDatePicker = actionCreator<{
   id: InputsModelId;
-  from: number;
-  to: number;
+  from: string;
+  to: string;
 }>('SET_ABSOLUTE_RANGE_DATE_PICKER');
 
 export const setTimelineRangeDatePicker = actionCreator<{
@@ -27,8 +27,8 @@ export const setRelativeRangeDatePicker = actionCreator<{
   id: InputsModelId;
   fromStr: string;
   toStr: string;
-  from: number;
-  to: number;
+  from: string;
+  to: string;
 }>('SET_RELATIVE_RANGE_DATE_PICKER');
 
 export const setDuration = actionCreator<{ id: InputsModelId; duration: number }>('SET_DURATION');
