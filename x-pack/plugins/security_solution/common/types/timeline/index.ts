@@ -108,8 +108,8 @@ const SavedFilterQueryQueryRuntimeType = runtimeTypes.partial({
  *  DatePicker Range Types
  */
 const SavedDateRangePickerRuntimeType = runtimeTypes.partial({
-  start: unionWithNullType(runtimeTypes.number),
-  end: unionWithNullType(runtimeTypes.number),
+  start: unionWithNullType(runtimeTypes.string),
+  end: unionWithNullType(runtimeTypes.string),
 });
 
 /*
