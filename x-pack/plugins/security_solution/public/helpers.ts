@@ -14,7 +14,7 @@ export const manageOldSiemRoutes = async (coreStart: CoreStart) => {
   const search = hashPath.length >= 1 ? hashPath[1] : '';
   const pageRoute = hashPath.length > 0 ? hashPath[0].split('/') : [];
   const pageName = pageRoute.length >= 1 ? pageRoute[1] : '';
-  const path = `/${pageRoute.slice(2).join('/') ?? ''}?${search}`;
+  const path = `${pageRoute.slice(2).join('/') ?? ''}?${search}`;
 
   switch (pageName) {
     case SecurityPageName.overview:
