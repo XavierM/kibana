@@ -10,7 +10,6 @@ import {
   EuiFocusTrap,
   EuiFlexItem,
   EuiOutsideClickDetector,
-  EuiScreenReaderOnly,
   EuiToolTip,
 } from '@elastic/eui';
 import React, { useEffect, useCallback, useRef } from 'react';
@@ -18,6 +17,7 @@ import { noop } from 'lodash/fp';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 
+import { ScreenReader } from '../../../common/components/accessibility/screenreader';
 import {
   isEscape,
   isTab,
@@ -217,9 +217,7 @@ const FieldsBrowserComponent: React.FC<Props> = ({
         width={width}
       >
         <EuiFocusTrap>
-          <EuiScreenReaderOnly data-test-subj="screenReaderOnly">
-            <p>{i18n.YOU_ARE_IN_A_POPOVER}</p>
-          </EuiScreenReaderOnly>
+          <ScreenReader data-test-subj="screenReaderOnly" text={i18n.YOU_ARE_IN_A_POPOVER} />
 
           <EuiFlexGroup gutterSize="none" justifyContent="flexEnd">
             <EuiFlexItem grow={false}>

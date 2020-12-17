@@ -4,18 +4,12 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFocusTrap,
-  EuiScreenReaderOnly,
-} from '@elastic/eui';
+import { EuiButton, EuiButtonEmpty, EuiFlexGroup, EuiFlexItem, EuiFocusTrap } from '@elastic/eui';
 import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 
+import { ScreenReader } from '../../../../common/components/accessibility/screenreader';
 import { appActions } from '../../../../common/store/app';
 import { Note } from '../../../../common/lib/note';
 import { AssociateNote, updateAndAssociateNode, UpdateInternalNewNote } from '../helpers';
@@ -85,9 +79,7 @@ export const AddNote = React.memo<{
     <AddNotesContainer onKeyDown={onKeyDown} role="dialog">
       <EuiFocusTrap>
         <div style={{ width: '100%' }}>
-          <EuiScreenReaderOnly data-test-subj="screenReaderOnly">
-            <p>{i18n.YOU_ARE_EDITING_A_NOTE}</p>
-          </EuiScreenReaderOnly>
+          <ScreenReader text={i18n.YOU_ARE_EDITING_A_NOTE} data-test-subj="screenReaderOnly" />
           <NewNote note={newNote} noteInputHeight={200} updateNewNote={updateNewNote} />
           <ButtonsContainer gutterSize="none">
             {onCancelAddNote != null ? (

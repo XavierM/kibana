@@ -25,9 +25,11 @@ import { isEventBuildingBlockType, getEventType } from '../helpers';
 import { NoteCards } from '../../../notes/note_cards';
 import { useEventDetailsWidthContext } from '../../../../../common/components/events_viewer/event_details_width_context';
 import { EventColumnView } from './event_column_view';
-import { inputsModel } from '../../../../../common/store';
+import { appSelectors, inputsModel } from '../../../../../common/store';
 import { timelineActions, timelineSelectors } from '../../../../store/timeline';
 import { activeTimeline } from '../../../../containers/active_timeline_context';
+import { TimelineResultNote } from '../../../open_timeline/types';
+import { getRowRenderer } from '../renderers/get_row_renderer';
 import { StatefulRowRenderer } from './stateful_row_renderer';
 import { NOTES_BUTTON_CLASS_NAME } from '../../properties/helpers';
 import { timelineDefaults } from '../../../../store/timeline/defaults';
@@ -93,6 +95,9 @@ const StatefulEventComponent: React.FC<Props> = ({
   const expandedEvent = useDeepEqualSelector(
     (state) => (getTimeline(state, timelineId) ?? timelineDefaults).expandedEvent
   );
+  const getNotesByIds = useMemo(() => appSelectors.notesByIdsSelector(), []);
+  const notesById = useDeepEqualSelector(getNotesByIds);
+  const noteIds: string[] = eventIdToNoteIds[event._id] || emptyNotes;
 
   const isExpanded = useMemo(() => expandedEvent && expandedEvent.eventId === event._id, [
     event._id,
@@ -156,6 +161,23 @@ const StatefulEventComponent: React.FC<Props> = ({
     [dispatch, event, isEventPinned, onPinEvent, timelineId]
   );
 
+  const notes: TimelineResultNote[] = useMemo(
+    () =>
+      appSelectors.getNotes(notesById, noteIds).map((note) => ({
+        savedObjectId: note.saveObjectId,
+        note: note.note,
+        noteId: note.id,
+        updated: (note.lastEdit ?? note.created).getTime(),
+        updatedBy: note.user,
+      })),
+    [notesById, noteIds]
+  );
+
+  const hasRowRenderers: boolean = useMemo(() => getRowRenderer(event.ecs, rowRenderers) != null, [
+    event.ecs,
+    rowRenderers,
+  ]);
+
   const RowRendererContent = useMemo(
     () => (
       <EventsTrSupplement>
@@ -206,11 +228,13 @@ const StatefulEventComponent: React.FC<Props> = ({
         isEventPinned={isEventPinned}
         isEventViewer={isEventViewer}
         loadingEventIds={loadingEventIds}
+        notesCount={notes.length}
         onEventToggled={handleOnEventToggled}
         onPinEvent={onPinEvent}
         onRowSelected={onRowSelected}
         onUnPinEvent={onUnPinEvent}
         refetch={refetch}
+        hasRowRenderers={hasRowRenderers}
         onRuleChange={onRuleChange}
         selectedEventIds={selectedEventIds}
         showCheckboxes={showCheckboxes}
@@ -228,7 +252,7 @@ const StatefulEventComponent: React.FC<Props> = ({
             ariaRowindex={ariaRowindex}
             associateNote={associateNote}
             data-test-subj="note-cards"
-            noteIds={eventIdToNoteIds[event._id] || emptyNotes}
+            notes={notes}
             showAddNote={!!showNotes[event._id]}
             toggleShowAddNote={onToggleShowNotes}
           />

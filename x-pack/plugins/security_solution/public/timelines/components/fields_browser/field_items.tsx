@@ -4,19 +4,13 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import {
-  EuiCheckbox,
-  EuiIcon,
-  EuiToolTip,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiScreenReaderOnly,
-} from '@elastic/eui';
+import { EuiCheckbox, EuiIcon, EuiToolTip, EuiFlexGroup, EuiFlexItem } from '@elastic/eui';
 import { isEmpty, uniqBy } from 'lodash/fp';
 import React, { useCallback, useRef, useState } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 
+import { ScreenReader } from '../../../common/components/accessibility/screenreader';
 import { BrowserField, BrowserFields } from '../../../common/containers/source';
 import { ColumnHeaderOptions } from '../../../timelines/store/timeline/model';
 import { useDraggableKeyboardWrapper } from '../../../common/components/drag_and_drop/draggable_keyboard_wrapper_hook';
@@ -285,9 +279,10 @@ export const getFieldItems = ({
       <div data-colindex={3} tabIndex={0}>
         <EuiToolTip content={field.description}>
           <>
-            <EuiScreenReaderOnly data-test-subj="descriptionForScreenReaderOnly">
-              <p>{i18n.DESCRIPTION_FOR_FIELD(field.name ?? '')}</p>
-            </EuiScreenReaderOnly>
+            <ScreenReader
+              data-test-subj="descriptionForScreenReaderOnly"
+              text={i18n.DESCRIPTION_FOR_FIELD(field.name ?? '')}
+            />
             <TruncatableText>
               <Description data-test-subj={`field-${field.name}-description`}>
                 {`${field.description ?? getEmptyValue()} ${getExampleText(field.example)}`}

@@ -4,8 +4,10 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { EuiScreenReaderOnly, EuiText } from '@elastic/eui';
+import { EuiText } from '@elastic/eui';
 import React from 'react';
+
+import { ScreenReader } from '../screenreader';
 
 import * as i18n from './translations';
 
@@ -25,9 +27,10 @@ const TooltipWithKeyboardShortcutComponent = ({
   <>
     <div>{content}</div>
     {additionalScreenReaderOnlyContext !== '' && (
-      <EuiScreenReaderOnly>
-        <p>{additionalScreenReaderOnlyContext}</p>
-      </EuiScreenReaderOnly>
+      <ScreenReader
+        text={additionalScreenReaderOnlyContext}
+        data-test-subj="screenReaderOnlyField"
+      />
     )}
     {showShortcut && (
       <EuiText color="subdued" size="s" textAlign="center">

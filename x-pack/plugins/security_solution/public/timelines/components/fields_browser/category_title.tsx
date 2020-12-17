@@ -4,9 +4,10 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { EuiFlexGroup, EuiFlexItem, EuiScreenReaderOnly, EuiTitle } from '@elastic/eui';
+import { EuiFlexGroup, EuiFlexItem, EuiTitle } from '@elastic/eui';
 import React from 'react';
 
+import { ScreenReader } from '../../../common/components/accessibility/screenreader';
 import { BrowserFields } from '../../../common/containers/source';
 import { getFieldBrowserCategoryTitleClassName, getFieldCount } from './helpers';
 import { CountBadge } from '../../../common/components/page';
@@ -34,9 +35,7 @@ export const CategoryTitle = React.memo<Props>(
   ({ filteredBrowserFields, categoryId, onUpdateColumns, timelineId }) => (
     <EuiFlexGroup alignItems="center" data-test-subj="category-title-container" gutterSize="none">
       <EuiFlexItem grow={false}>
-        <EuiScreenReaderOnly data-test-subj="screenReaderOnlyCategory">
-          <p>{i18n.CATEGORY}</p>
-        </EuiScreenReaderOnly>
+        <ScreenReader data-test-subj="screenReaderOnlyCategory" text={i18n.CATEGORY} />
         <EuiTitle
           className={getFieldBrowserCategoryTitleClassName({ categoryId, timelineId })}
           data-test-subj="selected-category-title"

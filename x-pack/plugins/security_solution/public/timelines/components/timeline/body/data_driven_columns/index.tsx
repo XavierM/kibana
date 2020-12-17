@@ -4,10 +4,10 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { EuiScreenReaderOnly } from '@elastic/eui';
 import React from 'react';
 import { getOr } from 'lodash/fp';
 
+import { ScreenReader } from '../../../../../common/components/accessibility/screenreader';
 import { DRAGGABLE_KEYBOARD_WRAPPER_CLASS_NAME } from '../../../../../common/components/drag_and_drop/helpers';
 import { Ecs } from '../../../../../../common/ecs';
 import { TimelineNonEcsData } from '../../../../../../common/search_strategy/timeline';
@@ -16,6 +16,7 @@ import { ARIA_COLUMN_INDEX_OFFSET } from '../../helpers';
 import { EventsTd, EVENTS_TD_CLASS_NAME, EventsTdContent, EventsTdGroupData } from '../../styles';
 import { ColumnRenderer } from '../renderers/column_renderer';
 import { getColumnRenderer } from '../renderers/get_column_renderer';
+import { getRowRenderer } from '../renderers/get_row_renderer';
 
 import * as i18n from './translations';
 
@@ -27,6 +28,8 @@ interface Props {
   columnRenderers: ColumnRenderer[];
   data: TimelineNonEcsData[];
   ecsData: Ecs;
+  hasRowRenderers: boolean;
+  notesCount: number;
   timelineId: string;
 }
 
@@ -74,7 +77,18 @@ export const onKeyDown = (keyboardEvent: React.KeyboardEvent) => {
 };
 
 export const DataDrivenColumns = React.memo<Props>(
-  ({ _id, activeTab, ariaRowindex, columnHeaders, columnRenderers, data, ecsData, timelineId }) => (
+  ({
+    _id,
+    activeTab,
+    ariaRowindex,
+    columnHeaders,
+    columnRenderers,
+    data,
+    ecsData,
+    hasRowRenderers,
+    notesCount,
+    timelineId,
+  }) => (
     <EventsTdGroupData data-test-subj="data-driven-columns">
       {columnHeaders.map((header, i) => (
         <EventsTd
@@ -86,24 +100,38 @@ export const DataDrivenColumns = React.memo<Props>(
           width={header.width}
         >
           <EventsTdContent data-test-subj="cell-container">
-            <>
-              <EuiScreenReaderOnly data-test-subj="screenReaderOnly">
-                <p>{i18n.YOU_ARE_IN_A_TABLE_CELL({ row: ariaRowindex, column: i + 2 })}</p>
-              </EuiScreenReaderOnly>
-              {getColumnRenderer(header.id, columnRenderers, data).renderColumn({
-                columnName: header.id,
-                eventId: _id,
-                field: header,
-                linkValues: getOr([], header.linkField ?? '', ecsData),
-                timelineId: activeTab != null ? `${timelineId}-${activeTab}` : timelineId,
-                truncate: true,
-                values: getMappedNonEcsValue({
-                  data,
-                  fieldName: header.id,
-                }),
-              })}
-            </>
+            <ScreenReader
+              data-test-subj="screenReaderOnly"
+              text={i18n.YOU_ARE_IN_A_TABLE_CELL({ row: ariaRowindex, column: i + 2 })}
+            />
+
+            {getColumnRenderer(header.id, columnRenderers, data).renderColumn({
+              columnName: header.id,
+              eventId: _id,
+              field: header,
+              linkValues: getOr([], header.linkField ?? '', ecsData),
+              timelineId: activeTab != null ? `${timelineId}-${activeTab}` : timelineId,
+              truncate: true,
+              values: getMappedNonEcsValue({
+                data,
+                fieldName: header.id,
+              }),
+            })}
           </EventsTdContent>
+
+          {hasRowRenderers && (
+            <ScreenReader
+              data-test-subj="hasRowRendererScreenReaderOnly"
+              text={i18n.EVENT_HAS_AN_EVENT_RENDERER(ariaRowindex)}
+            />
+          )}
+
+          {hasRowRenderers && (
+            <ScreenReader
+              data-test-subj="hasNotesScreenReaderOnly"
+              text={i18n.EVENT_HAS_NOTES({ row: ariaRowindex, notesCount })}
+            />
+          )}
         </EventsTd>
       ))}
     </EventsTdGroupData>

@@ -4,18 +4,13 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import {
-  EuiButtonIcon,
-  EuiFocusTrap,
-  EuiPanel,
-  EuiScreenReaderOnly,
-  EuiToolTip,
-} from '@elastic/eui';
+import { EuiButtonIcon, EuiFocusTrap, EuiPanel, EuiToolTip } from '@elastic/eui';
 import React, { useCallback, useEffect, useRef, useMemo, useState } from 'react';
 import { DraggableId } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 
 import { stopPropagationAndPreventDefault } from '../accessibility/helpers';
+import { ScreenReader } from '../accessibility/screenreader';
 import { TooltipWithKeyboardShortcut } from '../accessibility/tooltip_with_keyboard_shortcut';
 import { getAllFieldsByName } from '../../containers/source';
 import { useAddToTimeline } from '../../hooks/use_add_to_timeline';
@@ -250,9 +245,10 @@ const DraggableWrapperHoverContentComponent: React.FC<Props> = ({
           showTopN,
         })}
       >
-        <EuiScreenReaderOnly>
-          <p>{i18n.YOU_ARE_IN_A_DIALOG_CONTAINING_OPTIONS(field)}</p>
-        </EuiScreenReaderOnly>
+        <ScreenReader
+          data-test-subj="screenReaderOnly"
+          text={i18n.YOU_ARE_IN_A_DIALOG_CONTAINING_OPTIONS(field)}
+        />
 
         {additionalContent != null && <AdditionalContent>{additionalContent}</AdditionalContent>}
 

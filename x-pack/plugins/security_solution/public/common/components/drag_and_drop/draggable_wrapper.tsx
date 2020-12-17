@@ -4,7 +4,6 @@
  * you may not use this file except in compliance with the Elastic License.
  */
 
-import { EuiScreenReaderOnly } from '@elastic/eui';
 import React, { useCallback, useEffect, useMemo, useState, useRef } from 'react';
 import {
   Draggable,
@@ -17,6 +16,7 @@ import {
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
+import { ScreenReader } from '../accessibility/screenreader';
 import { dragAndDropActions } from '../../store/drag_and_drop';
 import { DataProvider } from '../../../timelines/components/timeline/data_providers/data_provider';
 import { ROW_RENDERER_BROWSER_EXAMPLE_TIMELINE_ID } from '../../../timelines/components/row_renderers_browser/constants';
@@ -268,9 +268,7 @@ const DraggableWrapperComponent: React.FC<Props> = ({
         registerProvider={registerProvider}
         tabIndex={-1}
       >
-        <EuiScreenReaderOnly data-test-subj="screenReaderOnlyField">
-          <p>{dataProvider.queryMatch.field}</p>
-        </EuiScreenReaderOnly>
+        <ScreenReader data-test-subj="screenReaderOnlyField" text={dataProvider.queryMatch.field} />
         {truncate && !snapshot.isDragging ? (
           <TruncatableText data-test-subj="draggable-truncatable-content">
             {render(dataProvider, provided, snapshot)}
@@ -283,9 +281,10 @@ const DraggableWrapperComponent: React.FC<Props> = ({
           </ProviderContentWrapper>
         )}
         {!snapshot.isDragging && (
-          <EuiScreenReaderOnly data-test-subj="draggableKeyboardInstructionsNotDragging">
-            <p>{i18n.DRAGGABLE_KEYBOARD_INSTRUCTIONS_NOT_DRAGGING_SCREEN_READER_ONLY}</p>
-          </EuiScreenReaderOnly>
+          <ScreenReader
+            data-test-subj="draggableKeyboardInstructionsNotDragging"
+            text={i18n.DRAGGABLE_KEYBOARD_INSTRUCTIONS_NOT_DRAGGING_SCREEN_READER_ONLY}
+          />
         )}
       </ProviderContainer>
     ),
