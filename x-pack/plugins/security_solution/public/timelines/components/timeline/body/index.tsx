@@ -21,7 +21,7 @@ import { BrowserFields } from '../../../../common/containers/source';
 import { TimelineItem } from '../../../../../common/search_strategy/timeline';
 import { inputsModel, State } from '../../../../common/store';
 import { useManageTimeline } from '../../manage_timeline';
-import { ColumnHeaderOptions, TimelineModel } from '../../../store/timeline/model';
+import { ColumnHeaderOptions, TimelineModel, TimelineTabs } from '../../../store/timeline/model';
 import { timelineDefaults } from '../../../store/timeline/defaults';
 import { timelineActions, timelineSelectors } from '../../../store/timeline';
 import { OnRowSelected, OnSelectAll } from '../events';

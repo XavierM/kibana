@@ -25,15 +25,15 @@ const TooltipWithKeyboardShortcutComponent = ({
   showShortcut,
 }: Props) => (
   <>
-    <div>{content}</div>
+    <div data-test-subj="content">{content}</div>
     {additionalScreenReaderOnlyContext !== '' && (
       <ScreenReader
         text={additionalScreenReaderOnlyContext}
-        data-test-subj="screenReaderOnlyField"
+        data-test-subj="additionalScreenReaderOnlyContext"
       />
     )}
     {showShortcut && (
-      <EuiText color="subdued" size="s" textAlign="center">
+      <EuiText color="subdued" data-test-subj="shortcut" size="s" textAlign="center">
         <span>{i18n.PRESS}</span>
         {'\u00a0'}
         <span className="euiBadge euiBadge--hollow">{shortcut}</span>

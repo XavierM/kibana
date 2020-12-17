@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-const screenReaderOnlyStyle: React.CSSProperties = {
+export const screenReaderOnlyStyle: React.CSSProperties = {
   clip: 'rect(1px, 1px, 1px, 1px)',
   clipPath: 'inset(50%)',
   height: '1px',
@@ -21,10 +21,17 @@ interface Props {
   text: string;
 }
 
+/**
+ * This component exists because, when there are too many instances of
+ * `EuiScreenReaderOnly` on the same page, layouts become very expensive,
+ * resulting in very long layout times and jank. For example, when a user
+ * hovers over an `EuiTooltip`, the forced layout causes flashing.
+ *
+ * This component uses the "CSS clip" technique, described as "fairly modern",
+ * here: https://webaim.org/techniques/css/invisiblecontent/
+ */
 const ScreenReaderComponent: React.FC<Props> = ({ text }) => (
-  <p style={screenReaderOnlyStyle} tabIndex={-1}>
-    {text}
-  </p>
+  <p style={screenReaderOnlyStyle}>{text}</p>
 );
 
 export const ScreenReader = React.memo(ScreenReaderComponent);
