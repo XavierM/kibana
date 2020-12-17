@@ -22,7 +22,7 @@ jest.mock('@elastic/eui', () => {
   return {
     ...original,
     // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
+    ScreenReaderOnly: () => <></>,
   };
 });
 

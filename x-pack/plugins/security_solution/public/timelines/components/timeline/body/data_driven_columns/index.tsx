@@ -16,7 +16,6 @@ import { ARIA_COLUMN_INDEX_OFFSET } from '../../helpers';
 import { EventsTd, EVENTS_TD_CLASS_NAME, EventsTdContent, EventsTdGroupData } from '../../styles';
 import { ColumnRenderer } from '../renderers/column_renderer';
 import { getColumnRenderer } from '../renderers/get_column_renderer';
-import { getRowRenderer } from '../renderers/get_row_renderer';
 
 import * as i18n from './translations';
 

@@ -46,6 +46,7 @@ describe('NoteCards', () => {
     getNotesByIds,
     getNewNoteId: jest.fn(),
     noteIds,
+    notes: [],
     showAddNote: true,
     status: TimelineStatus.active,
     toggleShowAddNote: jest.fn(),

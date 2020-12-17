@@ -27,7 +27,6 @@ import { AddEventNoteAction } from '../actions/add_note_icon_item';
 import { PinEventAction } from '../actions/pin_event_action';
 import { inputsModel } from '../../../../../common/store';
 import { TimelineId } from '../../../../../../common/types/timeline';
-import { RowRenderer } from '../renderers/row_renderer';
 import { timelineSelectors } from '../../../../store/timeline';
 import { timelineDefaults } from '../../../../store/timeline/defaults';
 import { AddToCaseAction } from '../../../../../cases/components/timeline_actions/add_to_case_action';
