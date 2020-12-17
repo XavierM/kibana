@@ -20,14 +20,7 @@ import { getColumnRenderer } from './get_column_renderer';
 import { getValues, findItem, deleteItemIdx } from './helpers';
 import { useMountAppended } from '../../../../../common/utils/use_mount_appended';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
+jest.mock('../../../../../common/components/accessibility/screenreader');
 
 describe('get_column_renderer', () => {
   let nonSuricata: TimelineNonEcsData[];

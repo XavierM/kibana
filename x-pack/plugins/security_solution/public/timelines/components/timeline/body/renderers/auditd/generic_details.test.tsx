@@ -14,14 +14,7 @@ import { mockTimelineData, TestProviders } from '../../../../../../common/mock';
 import { AuditdGenericDetails, AuditdGenericLine } from './generic_details';
 import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
+jest.mock('../../../../../../common/components/accessibility/screenreader');
 
 describe('GenericDetails', () => {
   const mount = useMountAppended();

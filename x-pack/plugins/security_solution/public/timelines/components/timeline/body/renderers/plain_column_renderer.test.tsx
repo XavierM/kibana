@@ -17,15 +17,7 @@ import { useMountAppended } from '../../../../../common/utils/use_mount_appended
 import { plainColumnRenderer } from './plain_column_renderer';
 import { getValues, deleteItemIdx, findItem } from './helpers';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
-
+jest.mock('../../../../../common/components/accessibility/screenreader');
 jest.mock('../../../../../common/components/link_to');
 
 describe('plain_column_renderer', () => {

@@ -12,14 +12,7 @@ import '../../../../../common/mock/match_media';
 import { UserHostWorkingDir } from './user_host_working_dir';
 import { useMountAppended } from '../../../../../common/utils/use_mount_appended';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
+jest.mock('../../../../../common/components/accessibility/screenreader');
 
 describe('UserHostWorkingDir', () => {
   const mount = useMountAppended();

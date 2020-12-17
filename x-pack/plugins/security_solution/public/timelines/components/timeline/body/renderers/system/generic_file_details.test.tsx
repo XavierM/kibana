@@ -15,26 +15,7 @@ import { mockEndgameCreationEvent } from '../../../../../../common/mock/mock_end
 import { SystemGenericFileDetails, SystemGenericFileLine } from './generic_file_details';
 import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
-
-jest.mock('react-router-dom', () => {
-  const original = jest.requireActual('react-router-dom');
-
-  return {
-    ...original,
-    useHistory: () => ({
-      createHref: jest.fn(),
-      push: jest.fn(),
-    }),
-  };
-});
+jest.mock('../../../../../../common/components/accessibility/screenreader');
 
 describe('SystemGenericFileDetails', () => {
   const mount = useMountAppended();

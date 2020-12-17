@@ -48,14 +48,7 @@ import {
   NETWORK_TRANSPORT_FIELD_NAME,
 } from './field_names';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
+jest.mock('../../../common/components/accessibility/screenreader');
 
 const getSourceDestinationInstance = () => (
   <SourceDestination

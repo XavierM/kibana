@@ -15,13 +15,10 @@ exports[`Columns it renders the expected columns 1`] = `
     <styled.div
       data-test-subj="cell-container"
     >
-      <EuiScreenReaderOnly
+      <ScreenReader
         data-test-subj="screenReaderOnly"
-      >
-        <p>
-          You are in a table cell. row: 2, column: 2
-        </p>
-      </EuiScreenReaderOnly>
+        text="You are in a table cell. row: 2, column: 2"
+      />
       <DraggableWrapper
         dataProvider={
           Object {
@@ -56,13 +53,10 @@ exports[`Columns it renders the expected columns 1`] = `
     <styled.div
       data-test-subj="cell-container"
     >
-      <EuiScreenReaderOnly
+      <ScreenReader
         data-test-subj="screenReaderOnly"
-      >
-        <p>
-          You are in a table cell. row: 2, column: 3
-        </p>
-      </EuiScreenReaderOnly>
+        text="You are in a table cell. row: 2, column: 3"
+      />
       <Memo(FormattedFieldValueComponent)
         contextId="plain-column-renderer-formatted-field-value-test"
         eventId="1"
@@ -86,13 +80,10 @@ exports[`Columns it renders the expected columns 1`] = `
     <styled.div
       data-test-subj="cell-container"
     >
-      <EuiScreenReaderOnly
+      <ScreenReader
         data-test-subj="screenReaderOnly"
-      >
-        <p>
-          You are in a table cell. row: 2, column: 4
-        </p>
-      </EuiScreenReaderOnly>
+        text="You are in a table cell. row: 2, column: 4"
+      />
       <Memo(FormattedFieldValueComponent)
         contextId="plain-column-renderer-formatted-field-value-test"
         eventId="1"
@@ -116,13 +107,10 @@ exports[`Columns it renders the expected columns 1`] = `
     <styled.div
       data-test-subj="cell-container"
     >
-      <EuiScreenReaderOnly
+      <ScreenReader
         data-test-subj="screenReaderOnly"
-      >
-        <p>
-          You are in a table cell. row: 2, column: 5
-        </p>
-      </EuiScreenReaderOnly>
+        text="You are in a table cell. row: 2, column: 5"
+      />
       <Memo(FormattedFieldValueComponent)
         contextId="plain-column-renderer-formatted-field-value-test"
         eventId="1"
@@ -146,13 +134,10 @@ exports[`Columns it renders the expected columns 1`] = `
     <styled.div
       data-test-subj="cell-container"
     >
-      <EuiScreenReaderOnly
+      <ScreenReader
         data-test-subj="screenReaderOnly"
-      >
-        <p>
-          You are in a table cell. row: 2, column: 6
-        </p>
-      </EuiScreenReaderOnly>
+        text="You are in a table cell. row: 2, column: 6"
+      />
       <Memo(FormattedFieldValueComponent)
         contextId="plain-column-renderer-formatted-field-value-test"
         eventId="1"
@@ -176,13 +161,10 @@ exports[`Columns it renders the expected columns 1`] = `
     <styled.div
       data-test-subj="cell-container"
     >
-      <EuiScreenReaderOnly
+      <ScreenReader
         data-test-subj="screenReaderOnly"
-      >
-        <p>
-          You are in a table cell. row: 2, column: 7
-        </p>
-      </EuiScreenReaderOnly>
+        text="You are in a table cell. row: 2, column: 7"
+      />
       <Memo(FormattedFieldValueComponent)
         contextId="plain-column-renderer-formatted-field-value-test"
         eventId="1"
@@ -206,13 +188,10 @@ exports[`Columns it renders the expected columns 1`] = `
     <styled.div
       data-test-subj="cell-container"
     >
-      <EuiScreenReaderOnly
+      <ScreenReader
         data-test-subj="screenReaderOnly"
-      >
-        <p>
-          You are in a table cell. row: 2, column: 8
-        </p>
-      </EuiScreenReaderOnly>
+        text="You are in a table cell. row: 2, column: 8"
+      />
       <Memo(FormattedFieldValueComponent)
         contextId="plain-column-renderer-formatted-field-value-test"
         eventId="1"

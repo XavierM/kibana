@@ -16,14 +16,7 @@ import '../../../../../../common/mock/match_media';
 import { DnsRequestEventDetailsLine } from './dns_request_event_details_line';
 import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
+jest.mock('../../../../../../common/components/accessibility/screenreader');
 
 describe('DnsRequestEventDetailsLine', () => {
   const mount = useMountAppended();

@@ -24,15 +24,7 @@ import { useMountAppended } from '../../../../../../common/utils/use_mount_appen
 
 import { EndgameSecurityEventDetails } from './endgame_security_event_details';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
-
+jest.mock('../../../../../../common/components/accessibility/screenreader');
 describe('EndgameSecurityEventDetails', () => {
   const mount = useMountAppended();
 

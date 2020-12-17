@@ -12,14 +12,7 @@ import { useMountAppended } from '../../../../../common/utils/use_mount_appended
 
 import { ExitCodeDraggable } from './exit_code_draggable';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
+jest.mock('../../../../../common/components/accessibility/screenreader');
 
 describe('ExitCodeDraggable', () => {
   const mount = useMountAppended();

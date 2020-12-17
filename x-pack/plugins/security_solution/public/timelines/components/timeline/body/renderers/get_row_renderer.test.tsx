@@ -19,15 +19,7 @@ import { useMountAppended } from '../../../../../common/utils/use_mount_appended
 import { rowRenderers } from '.';
 import { getRowRenderer } from './get_row_renderer';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
-
+jest.mock('../../../../../common/components/accessibility/screenreader');
 jest.mock('../../../../../common/components/link_to');
 
 describe('get_column_renderer', () => {

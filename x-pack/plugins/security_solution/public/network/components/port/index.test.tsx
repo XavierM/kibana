@@ -14,14 +14,7 @@ import { useMountAppended } from '../../../common/utils/use_mount_appended';
 
 import { Port } from '.';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
+jest.mock('../../../common/components/accessibility/screenreader');
 
 describe('Port', () => {
   const mount = useMountAppended();

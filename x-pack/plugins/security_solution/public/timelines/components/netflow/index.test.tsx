@@ -61,14 +61,7 @@ import {
 } from '../../../network/components/source_destination/field_names';
 import { useMountAppended } from '../../../common/utils/use_mount_appended';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
+jest.mock('../../../common/components/accessibility/screenreader');
 
 const getNetflowInstance = () => (
   <Netflow
