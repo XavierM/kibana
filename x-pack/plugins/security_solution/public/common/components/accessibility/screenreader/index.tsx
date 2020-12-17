@@ -27,8 +27,8 @@ interface Props {
  * resulting in very long layout times and jank. For example, when a user
  * hovers over an `EuiTooltip`, the forced layout causes flashing.
  *
- * This component uses the "CSS clip" technique, described as "fairly modern",
- * here: https://webaim.org/techniques/css/invisiblecontent/
+ * This component uses the "CSS clip" technique, described here:
+ * https://webaim.org/techniques/css/invisiblecontent/
  */
 const ScreenReaderComponent: React.FC<Props> = ({ text }) => (
   <p style={screenReaderOnlyStyle}>{text}</p>

@@ -28,7 +28,7 @@ import { useMountAppended } from '../../../common/utils/use_mount_appended';
 import { AutonomousSystem, FlowTarget } from '../../../../common/search_strategy';
 import { HostEcs } from '../../../../common/ecs/host';
 
-jest.mock('../../../../common/components/accessibility/screenreader');
+jest.mock('../../../common/components/accessibility/screenreader');
 
 describe('Field Renderers', () => {
   const mount = useMountAppended();

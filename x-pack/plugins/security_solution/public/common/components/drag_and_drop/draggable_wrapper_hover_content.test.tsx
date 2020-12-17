@@ -23,6 +23,7 @@ import {
 } from '../../../timelines/components/manage_timeline';
 import { TimelineId } from '../../../../common/types/timeline';
 
+jest.mock('../accessibility/screenreader');
 jest.mock('../link_to');
 
 jest.mock('../../lib/kibana');

@@ -12,7 +12,6 @@ import {
   arrayIndexToAriaIndex,
   getNotesContainerClassName,
   getRowRendererClassName,
-  onArrowKeyDown,
   isArrowRight,
 } from './helpers';
 
