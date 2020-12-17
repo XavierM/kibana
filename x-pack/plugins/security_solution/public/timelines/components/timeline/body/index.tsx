@@ -36,6 +36,7 @@ import { Events } from './events';
 import { DEFAULT_ICON_BUTTON_WIDTH } from '../helpers';
 
 interface OwnProps {
+  tabType: TimelineTabs;
   activePage: number;
   browserFields: BrowserFields;
   data: TimelineItem[];
@@ -60,7 +61,6 @@ export type StatefulBodyProps = OwnProps & PropsFromRedux;
 
 export const BodyComponent = React.memo<StatefulBodyProps>(
   ({
-    activeTab,
     activePage,
     browserFields,
     columnHeaders,
@@ -79,6 +79,7 @@ export const BodyComponent = React.memo<StatefulBodyProps>(
     showCheckboxes,
     refetch,
     sort,
+    tabType,
     totalPages,
   }) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -200,7 +201,7 @@ export const BodyComponent = React.memo<StatefulBodyProps>(
             <Events
               containerRef={containerRef}
               actionsColumnWidth={actionsColumnWidth}
-              activeTab={activeTab}
+              tabType={tabType}
               browserFields={browserFields}
               columnHeaders={columnHeaders}
               columnRenderers={columnRenderers}
@@ -225,7 +226,6 @@ export const BodyComponent = React.memo<StatefulBodyProps>(
     );
   },
   (prevProps, nextProps) =>
-    prevProps.activeTab === nextProps.activeTab &&
     deepEqual(prevProps.browserFields, nextProps.browserFields) &&
     deepEqual(prevProps.columnHeaders, nextProps.columnHeaders) &&
     deepEqual(prevProps.data, nextProps.data) &&
@@ -238,7 +238,8 @@ export const BodyComponent = React.memo<StatefulBodyProps>(
     prevProps.id === nextProps.id &&
     prevProps.isEventViewer === nextProps.isEventViewer &&
     prevProps.isSelectAllChecked === nextProps.isSelectAllChecked &&
-    prevProps.showCheckboxes === nextProps.showCheckboxes
+    prevProps.showCheckboxes === nextProps.showCheckboxes &&
+    prevProps.tabType === nextProps.tabType
 );
 
 BodyComponent.displayName = 'BodyComponent';
@@ -253,7 +254,6 @@ const makeMapStateToProps = () => {
   const mapStateToProps = (state: State, { browserFields, id }: OwnProps) => {
     const timeline: TimelineModel = getTimeline(state, id) ?? timelineDefaults;
     const {
-      activeTab,
       columns,
       eventIdToNoteIds,
       excludedRowRendererIds,
@@ -265,7 +265,6 @@ const makeMapStateToProps = () => {
     } = timeline;
 
     return {
-      activeTab: id === TimelineId.active ? activeTab : undefined,
       columnHeaders: memoizedColumnHeaders(columns, browserFields),
       eventIdToNoteIds,
       excludedRowRendererIds,

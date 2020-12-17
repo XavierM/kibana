@@ -17,14 +17,7 @@ import '../../../../../../common/mock/match_media';
 import { EndgameSecurityEventDetailsLine } from './endgame_security_event_details_line';
 import { useMountAppended } from '../../../../../../common/utils/use_mount_appended';
 
-jest.mock('@elastic/eui', () => {
-  const original = jest.requireActual('@elastic/eui');
-  return {
-    ...original,
-    // eslint-disable-next-line react/display-name
-    EuiScreenReaderOnly: () => <></>,
-  };
-});
+jest.mock('../../../../../../common/components/accessibility/screenreader');
 
 describe('EndgameSecurityEventDetailsLine', () => {
   const mount = useMountAppended();

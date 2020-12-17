@@ -22,7 +22,6 @@ import * as i18n from './translations';
 
 interface Props {
   _id: string;
-  activeTab?: TimelineTabs;
   ariaRowindex: number;
   columnHeaders: ColumnHeaderOptions[];
   columnRenderers: ColumnRenderer[];
@@ -30,6 +29,7 @@ interface Props {
   ecsData: Ecs;
   hasRowRenderers: boolean;
   notesCount: number;
+  tabType?: TimelineTabs;
   timelineId: string;
 }
 
@@ -79,7 +79,6 @@ export const onKeyDown = (keyboardEvent: React.KeyboardEvent) => {
 export const DataDrivenColumns = React.memo<Props>(
   ({
     _id,
-    activeTab,
     ariaRowindex,
     columnHeaders,
     columnRenderers,
@@ -87,13 +86,14 @@ export const DataDrivenColumns = React.memo<Props>(
     ecsData,
     hasRowRenderers,
     notesCount,
+    tabType,
     timelineId,
   }) => (
     <EventsTdGroupData data-test-subj="data-driven-columns">
       {columnHeaders.map((header, i) => (
         <EventsTd
           $ariaColumnIndex={i + ARIA_COLUMN_INDEX_OFFSET}
-          key={activeTab != null ? `${header.id}_${activeTab}` : `${header.id}`}
+          key={tabType != null ? `${header.id}_${tabType}` : `${header.id}`}
           onKeyDown={onKeyDown}
           role="button"
           tabIndex={0}
@@ -110,7 +110,7 @@ export const DataDrivenColumns = React.memo<Props>(
               eventId: _id,
               field: header,
               linkValues: getOr([], header.linkField ?? '', ecsData),
-              timelineId: activeTab != null ? `${timelineId}-${activeTab}` : timelineId,
+              timelineId: tabType != null ? `${timelineId}-${tabType}` : timelineId,
               truncate: true,
               values: getMappedNonEcsValue({
                 data,

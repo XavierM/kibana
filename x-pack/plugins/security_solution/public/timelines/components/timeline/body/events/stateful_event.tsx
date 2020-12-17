@@ -36,7 +36,6 @@ import { timelineDefaults } from '../../../../store/timeline/defaults';
 
 interface Props {
   actionsColumnWidth: number;
-  activeTab?: TimelineTabs;
   containerRef: React.MutableRefObject<HTMLDivElement | null>;
   browserFields: BrowserFields;
   columnHeaders: ColumnHeaderOptions[];
@@ -54,6 +53,7 @@ interface Props {
   rowRenderers: RowRenderer[];
   selectedEventIds: Readonly<Record<string, TimelineNonEcsData[]>>;
   showCheckboxes: boolean;
+  tabType?: TimelineTabs;
   timelineId: string;
 }
 
@@ -68,7 +68,6 @@ EventsTrSupplementContainerWrapper.displayName = 'EventsTrSupplementContainerWra
 
 const StatefulEventComponent: React.FC<Props> = ({
   actionsColumnWidth,
-  activeTab,
   browserFields,
   containerRef,
   columnHeaders,
@@ -86,6 +85,7 @@ const StatefulEventComponent: React.FC<Props> = ({
   ariaRowindex,
   selectedEventIds,
   showCheckboxes,
+  tabType,
   timelineId,
 }) => {
   const trGroupRef = useRef<HTMLDivElement | null>(null);
@@ -217,7 +217,6 @@ const StatefulEventComponent: React.FC<Props> = ({
       <EventColumnView
         id={event._id}
         actionsColumnWidth={actionsColumnWidth}
-        activeTab={activeTab}
         ariaRowindex={ariaRowindex}
         columnHeaders={columnHeaders}
         columnRenderers={columnRenderers}
@@ -239,6 +238,7 @@ const StatefulEventComponent: React.FC<Props> = ({
         selectedEventIds={selectedEventIds}
         showCheckboxes={showCheckboxes}
         showNotes={!!showNotes[event._id]}
+        tabType={tabType}
         timelineId={timelineId}
         toggleShowNotes={onToggleShowNotes}
       />

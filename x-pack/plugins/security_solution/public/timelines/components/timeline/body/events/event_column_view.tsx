@@ -36,7 +36,6 @@ import * as i18n from '../translations';
 interface Props {
   id: string;
   actionsColumnWidth: number;
-  activeTab?: TimelineTabs;
   ariaRowindex: number;
   columnHeaders: ColumnHeaderOptions[];
   columnRenderers: ColumnRenderer[];
@@ -58,6 +57,7 @@ interface Props {
   selectedEventIds: Readonly<Record<string, TimelineNonEcsData[]>>;
   showCheckboxes: boolean;
   showNotes: boolean;
+  tabType?: TimelineTabs;
   timelineId: string;
   toggleShowNotes: () => void;
 }
@@ -68,7 +68,6 @@ export const EventColumnView = React.memo<Props>(
   ({
     id,
     actionsColumnWidth,
-    activeTab,
     ariaRowindex,
     columnHeaders,
     columnRenderers,
@@ -90,6 +89,7 @@ export const EventColumnView = React.memo<Props>(
     selectedEventIds,
     showCheckboxes,
     showNotes,
+    tabType,
     timelineId,
     toggleShowNotes,
   }) => {
@@ -230,7 +230,6 @@ export const EventColumnView = React.memo<Props>(
 
         <DataDrivenColumns
           _id={id}
-          activeTab={activeTab}
           ariaRowindex={ariaRowindex}
           columnHeaders={columnHeaders}
           columnRenderers={columnRenderers}
@@ -238,6 +237,7 @@ export const EventColumnView = React.memo<Props>(
           ecsData={ecsData}
           hasRowRenderers={hasRowRenderers}
           notesCount={notesCount}
+          tabType={tabType}
           timelineId={timelineId}
         />
       </EventsTrData>
