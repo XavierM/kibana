@@ -31,7 +31,6 @@ import {
   CASE_STATUS_URL,
   CASE_TAGS_URL,
   CASES_URL,
-  SUB_CASE_DETAILS_URL,
   SUB_CASES_PATCH_DEL_URL,
 } from '../../../../case/common/constants';
 
@@ -230,10 +229,10 @@ export const patchSubCase = async (
   signal: AbortSignal
 ): Promise<Case[]> => {
   const subCaseResponse = await KibanaServices.get().http.fetch<SubCasesResponse>(
-    SUB_CASE_DETAILS_URL,
+    getSubCaseDetailsUrl(caseId, subCaseId),
     {
       method: 'PATCH',
-      body: JSON.stringify({ cases: [{ ...updatedSubCase, id: caseId, version }] }),
+      body: JSON.stringify({ subCases: [{ ...updatedSubCase, id: subCaseId, version }] }),
       signal,
     }
   );

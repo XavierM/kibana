@@ -43,6 +43,7 @@ interface CaseActionBarProps {
   isLoading: boolean;
   onRefresh: () => void;
   onUpdateField: (args: OnUpdateFields) => void;
+  subCaseId?: string;
 }
 const CaseActionBarComponent: React.FC<CaseActionBarProps> = ({
   caseData,
@@ -51,6 +52,7 @@ const CaseActionBarComponent: React.FC<CaseActionBarProps> = ({
   isLoading,
   onRefresh,
   onUpdateField,
+  subCaseId,
 }) => {
   const date = useMemo(() => getStatusDate(caseData), [caseData]);
   const title = useMemo(() => getStatusTitle(caseData.status), [caseData.status]);
@@ -77,7 +79,8 @@ const CaseActionBarComponent: React.FC<CaseActionBarProps> = ({
       <EuiFlexItem grow={false}>
         <MyDescriptionList compressed>
           <EuiFlexGroup>
-            {caseData.type !== CaseType.collection && (
+            {(caseData.type !== CaseType.collection ||
+              (caseData.type === CaseType.collection && subCaseId != null)) && (
               <EuiFlexItem grow={false} data-test-subj="case-view-status">
                 <EuiDescriptionListTitle>{i18n.STATUS}</EuiDescriptionListTitle>
                 <EuiDescriptionListDescription>

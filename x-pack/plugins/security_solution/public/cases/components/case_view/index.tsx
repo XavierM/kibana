@@ -370,6 +370,7 @@ export const CaseComponent = React.memo<CaseProps>(
               isLoading={isLoading && (updateKey === 'status' || updateKey === 'settings')}
               onRefresh={handleRefresh}
               onUpdateField={onUpdateField}
+              subCaseId={subCaseId}
             />
           </HeaderPage>
         </HeaderWrapper>
