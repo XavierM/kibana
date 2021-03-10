@@ -34,4 +34,5 @@ export interface EventHit extends SearchHit {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [agg: string]: any;
   };
+  [attributes: string]: unknown;
 }

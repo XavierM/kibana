@@ -5,7 +5,7 @@
  * 2.0.
  */
 
-import { get, has, merge, uniq } from 'lodash/fp';
+import { merge, uniq } from 'lodash/fp';
 import {
   EventHit,
   TimelineEdges,
@@ -13,6 +13,14 @@ import {
 } from '../../../../../../common/search_strategy';
 import { toStringArray } from '../../../../helpers/to_array';
 import { getDataSafety, getDataFromFieldsHits } from '../details/helpers';
+
+interface MergeTimelineFieldsWithHit {
+  fieldName: string;
+  flattenedFields: TimelineEdges;
+  hit: EventHit;
+  dataFields: readonly string[];
+  ecsFields: readonly string[];
+}
 
 const getTimestamp = (hit: EventHit): string => {
   if (hit.fields && hit.fields['@timestamp']) {
@@ -40,14 +48,13 @@ export const formatTimelineData = async (
         flattenedFields.cursor.value = hit.sort[0];
         flattenedFields.cursor.tiebreaker = hit.sort[1];
       }
-      const waitForIt = await mergeTimelineFieldsWithHit(
+      return getDataSafety<MergeTimelineFieldsWithHit, TimelineEdges>(mergeTimelineFieldsWithHit, {
         fieldName,
         flattenedFields,
         hit,
         dataFields,
-        ecsFields
-      );
-      return Promise.resolve(waitForIt);
+        ecsFields,
+      });
     },
     Promise.resolve({
       node: { ecs: { _id: '' }, data: [], _id: '', _index: '' },
@@ -58,21 +65,19 @@ export const formatTimelineData = async (
     })
   );
 
-const specialFields = ['_id', '_index', '_type', '_score'];
-
-const getValuesFromFields = async (
+const getValuesFromFields = (
   fieldName: string,
   hit: EventHit,
   nestedParentFieldName?: string
-): Promise<TimelineNonEcsData[]> => {
+): TimelineNonEcsData[] => {
   if (specialFields.includes(fieldName)) {
-    return [{ field: fieldName, value: toStringArray(get(fieldName, hit)) }];
+    return [{ field: fieldName, value: toStringArray(hit[fieldName]) }];
   }
 
   let fieldToEval;
-  if (has(fieldName, hit._source)) {
+  if (hit._source[fieldName]) {
     fieldToEval = {
-      [fieldName]: get(fieldName, hit._source),
+      [fieldName]: hit._source[fieldName],
     };
   } else {
     if (nestedParentFieldName == null || nestedParentFieldName === fieldName) {
@@ -90,7 +95,7 @@ const getValuesFromFields = async (
       };
     }
   }
-  const formattedData = await getDataSafety(getDataFromFieldsHits, fieldToEval);
+  const formattedData = getDataFromFieldsHits(fieldToEval);
   return formattedData.reduce(
     (acc: TimelineNonEcsData[], { field, values }) =>
       // nested fields return all field values, pick only the one we asked for
@@ -99,48 +104,48 @@ const getValuesFromFields = async (
   );
 };
 
-const mergeTimelineFieldsWithHit = async <T>(
-  fieldName: string,
-  flattenedFields: T,
-  hit: EventHit,
-  dataFields: readonly string[],
-  ecsFields: readonly string[]
-) => {
+const specialFields = ['_id', '_index', '_type', '_score'];
+
+const mergeTimelineFieldsWithHit = ({
+  fieldName,
+  flattenedFields,
+  hit,
+  dataFields,
+  ecsFields,
+}: MergeTimelineFieldsWithHit) => {
   if (fieldName != null || dataFields.includes(fieldName)) {
     const fieldNameAsArray = fieldName.split('.');
     const nestedParentFieldName = Object.keys(hit.fields ?? []).find((f) => {
       return f === fieldNameAsArray.slice(0, f.split('.').length).join('.');
     });
     if (
-      has(fieldName, hit._source) ||
-      has(fieldName, hit.fields) ||
+      hit._source[fieldName] ||
+      hit.fields[fieldName] ||
       nestedParentFieldName != null ||
       specialFields.includes(fieldName)
     ) {
       const objectWithProperty = {
         node: {
-          ...get('node', flattenedFields),
+          ...flattenedFields.node,
           data: dataFields.includes(fieldName)
             ? [
-                ...get('node.data', flattenedFields),
-                ...(await getValuesFromFields(fieldName, hit, nestedParentFieldName)),
+                ...flattenedFields.node.data,
+                ...getValuesFromFields(fieldName, hit, nestedParentFieldName),
               ]
-            : get('node.data', flattenedFields),
+            : flattenedFields.node.data,
           ecs: ecsFields.includes(fieldName)
             ? {
-                ...get('node.ecs', flattenedFields),
+                ...flattenedFields.node.ecs,
                 // @ts-expect-error
                 ...fieldName.split('.').reduceRight(
                   // @ts-expect-error
                   (obj, next) => ({ [next]: obj }),
                   toStringArray(
-                    has(fieldName, hit._source)
-                      ? get(fieldName, hit._source)
-                      : hit.fields[fieldName]
+                    hit._source[fieldName] ? hit._source[fieldName] : hit.fields[fieldName]
                   )
                 ),
               }
-            : get('node.ecs', flattenedFields),
+            : flattenedFields.node.ecs,
         },
       };
       return merge(flattenedFields, objectWithProperty);

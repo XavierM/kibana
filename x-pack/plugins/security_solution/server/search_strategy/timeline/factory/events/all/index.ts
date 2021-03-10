@@ -40,11 +40,13 @@ export const timelineEventsAll: SecuritySolutionTimelineFactory<TimelineEventsQu
     const { activePage, querySize } = options.pagination;
     const totalCount = response.rawResponse.hits.total || 0;
     const hits = response.rawResponse.hits.hits;
+    console.time('formating');
     const edges: TimelineEdges[] = await Promise.all(
       hits.map((hit) =>
         formatTimelineData(options.fieldRequested, TIMELINE_EVENTS_FIELDS, hit as EventHit)
       )
     );
+    console.timeEnd('formating');
     const inspect = {
       dsl: [inspectStringifyObject(buildTimelineEventsAllQuery(queryOptions))],
     };
