@@ -101,7 +101,7 @@ export const parseEqlResponse = async (
     edges = await parseSequences(response.rawResponse.body.hits.sequences, options.fieldRequested);
   } else if (response.rawResponse.body.hits.events !== undefined) {
     edges = await Promise.all(
-      response.rawResponse.body.hits.events.map(async (event) =>
+      response.rawResponse.body.hits.events.map((event) =>
         formatTimelineData(options.fieldRequested, TIMELINE_EVENTS_FIELDS, event as EventHit)
       )
     );
