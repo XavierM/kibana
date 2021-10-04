@@ -420,7 +420,7 @@ export const updateTimelineDetailsPanel = (action: ToggleDetailPanel): TimelineE
   const panelViewOptions = new Set(['eventDetail', 'hostDetail', 'networkDetail']);
   const expandedTabType = tabType ?? TimelineTabs.query;
   const newExpandDetails = {
-    params: expandedDetails.params ? { ...expandedDetails.params } : undefined,
+    params: expandedDetails.params ? { ...expandedDetails.params } : {},
     panelView: expandedDetails.panelView,
   } as TimelineExpandedDetailType;
   return {
