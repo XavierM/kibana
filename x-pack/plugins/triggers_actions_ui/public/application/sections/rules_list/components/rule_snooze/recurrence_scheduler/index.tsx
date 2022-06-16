@@ -16,10 +16,11 @@ import {
   EuiSelect,
 } from '@elastic/eui';
 import { i18n } from '@kbn/i18n';
+import deepEqual from 'fast-deep-equal';
 import moment from 'moment';
 import { Moment } from 'moment';
-import React from 'react';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import ReactDOM from 'react-dom';
 
 import { RRuleFrequency, RecurrenceSchedule } from '../../../../../../types';
 import { i18nMonthDayDate } from '../../../../../lib/i18n_month_day_date';
@@ -92,73 +93,75 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
         setRecurrenceEnds('afterx');
         setOccurrrences(initialState.count);
       }
+      hasInitialized.current = true;
     }
-    hasInitialized.current = true;
   }, [initialState]);
 
-  const { repeatOptions, rrulePresets } = useMemo(() => {
+  const rrulePresets = useMemo(
+    () =>
+      !startDate
+        ? DEFAULT_RRULE_PRESETS
+        : {
+            [RRuleFrequency.DAILY]: {
+              interval: 1,
+            },
+            [RRuleFrequency.WEEKLY]: {
+              interval: 1,
+              byweekday: [ISO_WEEKDAYS_TO_RRULE[startDate.isoWeekday()]],
+            },
+            [RRuleFrequency.MONTHLY]: {
+              interval: 1,
+              byweekday: generateNthByweekday(startDate),
+            },
+            [RRuleFrequency.YEARLY]: {
+              interval: 1,
+              bymonth: [startDate.month() + 1],
+              bymonthday: [startDate.date()],
+            },
+          },
+    [startDate]
+  );
+
+  const repeatOptions = useMemo(() => {
     if (!startDate) {
-      return {
-        repeatOptions: DEFAULT_REPEAT_OPTIONS,
-        rrulePresets: DEFAULT_RRULE_PRESETS,
-      };
+      return DEFAULT_REPEAT_OPTIONS;
     }
     const { dayOfWeek, nthWeekdayOfMonth, isLastOfMonth } = getWeekdayInfo(startDate);
-    return {
-      repeatOptions: [
-        {
-          text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurDaily', {
-            defaultMessage: 'Daily',
-          }),
-          value: RRuleFrequency.DAILY,
-          disabled: disableDailyOption,
-        },
-        {
-          text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurWeeklyOnWeekday', {
-            defaultMessage: 'Weekly on {dayOfWeek}',
-            values: { dayOfWeek },
-          }),
-          value: RRuleFrequency.WEEKLY,
-        },
-        {
-          text: i18nNthWeekday(dayOfWeek)[isLastOfMonth ? 0 : nthWeekdayOfMonth],
-          value: RRuleFrequency.MONTHLY,
-        },
-        {
-          text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurYearlyOnDay', {
-            defaultMessage: 'Yearly on {date}',
-            values: {
-              date: i18nMonthDayDate(startDate),
-            },
-          }),
-          value: RRuleFrequency.YEARLY,
-        },
-        {
-          text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurCustom', {
-            defaultMessage: 'Custom',
-          }),
-          value: 'CUSTOM',
-        },
-      ],
-      rrulePresets: {
-        [RRuleFrequency.DAILY]: {
-          interval: 1,
-        },
-        [RRuleFrequency.WEEKLY]: {
-          interval: 1,
-          byweekday: [ISO_WEEKDAYS_TO_RRULE[startDate.isoWeekday()]],
-        },
-        [RRuleFrequency.MONTHLY]: {
-          interval: 1,
-          byweekday: generateNthByweekday(startDate),
-        },
-        [RRuleFrequency.YEARLY]: {
-          interval: 1,
-          bymonth: [startDate.month() + 1],
-          bymonthday: [startDate.date()],
-        },
+    return [
+      {
+        text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurDaily', {
+          defaultMessage: 'Daily',
+        }),
+        value: RRuleFrequency.DAILY,
+        disabled: disableDailyOption,
       },
-    };
+      {
+        text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurWeeklyOnWeekday', {
+          defaultMessage: 'Weekly on {dayOfWeek}',
+          values: { dayOfWeek },
+        }),
+        value: RRuleFrequency.WEEKLY,
+      },
+      {
+        text: i18nNthWeekday(dayOfWeek)[isLastOfMonth ? 0 : nthWeekdayOfMonth],
+        value: RRuleFrequency.MONTHLY,
+      },
+      {
+        text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurYearlyOnDay', {
+          defaultMessage: 'Yearly on {date}',
+          values: {
+            date: i18nMonthDayDate(startDate),
+          },
+        }),
+        value: RRuleFrequency.YEARLY,
+      },
+      {
+        text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurCustom', {
+          defaultMessage: 'Custom',
+        }),
+        value: 'CUSTOM',
+      },
+    ];
   }, [startDate, disableDailyOption]);
 
   const compiledRecurrenceSchedule: RecurrenceSchedule = useMemo(() => {
@@ -182,8 +185,12 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
     };
   }, [frequency, rrulePresets, recurrenceEnds, customFrequency, recurrenceEndDate, occurrences]);
 
+  const compiledRecurrenceScheduleBk = useRef<RecurrenceSchedule | null>(null);
   useEffect(() => {
-    onChange(compiledRecurrenceSchedule);
+    if (!deepEqual(compiledRecurrenceScheduleBk.current, compiledRecurrenceSchedule)) {
+      onChange(compiledRecurrenceSchedule);
+      compiledRecurrenceScheduleBk.current = compiledRecurrenceSchedule;
+    }
   }, [compiledRecurrenceSchedule, onChange]);
 
   return (
