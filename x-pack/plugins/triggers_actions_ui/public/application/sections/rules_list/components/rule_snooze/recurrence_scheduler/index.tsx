@@ -20,7 +20,6 @@ import deepEqual from 'fast-deep-equal';
 import moment from 'moment';
 import { Moment } from 'moment';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import ReactDOM from 'react-dom';
 
 import { RRuleFrequency, RecurrenceSchedule } from '../../../../../../types';
 import { i18nMonthDayDate } from '../../../../../lib/i18n_month_day_date';
@@ -65,7 +64,7 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
   });
 
   const [recurrenceEndDate, setRecurrenceEndDate] = useState(endDate);
-  const [occurrences, setOccurrrences] = useState(1);
+  const [occurrences, setOccurrences] = useState(1);
 
   const disableDailyOption = useMemo(() => {
     if (!startDate || !endDate) return false;
@@ -91,7 +90,7 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
       }
       if (initialState.count) {
         setRecurrenceEnds('afterx');
-        setOccurrrences(initialState.count);
+        setOccurrences(initialState.count);
       }
       hasInitialized.current = true;
     }
@@ -134,6 +133,7 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
         }),
         value: RRuleFrequency.DAILY,
         disabled: disableDailyOption,
+        'data-test-subj': 'ruleSnoozeSchedulerRecurDaily',
       },
       {
         text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurWeeklyOnWeekday', {
@@ -141,10 +141,12 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
           values: { dayOfWeek },
         }),
         value: RRuleFrequency.WEEKLY,
+        'data-test-subj': 'ruleSnoozeSchedulerRecurWeeklyOnWeekday',
       },
       {
         text: i18nNthWeekday(dayOfWeek)[isLastOfMonth ? 0 : nthWeekdayOfMonth],
         value: RRuleFrequency.MONTHLY,
+        'data-test-subj': 'ruleSnoozeSchedulerRecurNthWeekday',
       },
       {
         text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurYearlyOnDay', {
@@ -154,12 +156,14 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
           },
         }),
         value: RRuleFrequency.YEARLY,
+        'data-test-subj': 'ruleSnoozeSchedulerRecurYearlyOnDay',
       },
       {
         text: i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.recurCustom', {
           defaultMessage: 'Custom',
         }),
         value: 'CUSTOM',
+        'data-test-subj': 'ruleSnoozeSchedulerRecurCustom',
       },
     ];
   }, [startDate, disableDailyOption]);
@@ -194,7 +198,12 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
   }, [compiledRecurrenceSchedule, onChange]);
 
   return (
-    <EuiPanel hasShadow={false} hasBorder={true} paddingSize="none">
+    <EuiPanel
+      hasShadow={false}
+      hasBorder={true}
+      paddingSize="none"
+      data-test-subj="recurrenceScheduler"
+    >
       <div style={{ padding: '16px', backgroundColor: '#f8fafd' }}>
         <EuiFormRow
           display="columnCompressed"
@@ -205,6 +214,7 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
           })}
         >
           <EuiSelect
+            data-test-subj="recurrenceSchedulerRepeatSelector"
             options={repeatOptions}
             value={frequency}
             onChange={(e) =>
@@ -236,6 +246,7 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
             idSelected={recurrenceEnds}
             onChange={setRecurrenceEnds}
             options={RECURRENCE_END_OPTIONS}
+            data-test-subj="recurrenceSchedulerRecurrenceEnds"
           />
         </EuiFormRow>
         {recurrenceEnds === 'ondate' && (
@@ -246,6 +257,7 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
             fullWidth
           >
             <EuiDatePicker
+              data-test-subj="recurrenceSchedulerRecurrenceEndsDatePicker"
               selected={recurrenceEndDate}
               onChange={setRecurrenceEndDate}
               minDate={startDate ?? moment()}
@@ -279,14 +291,15 @@ export const RecurrenceScheduler: React.FC<ComponentOpts> = ({
                 compressed
                 min={1}
                 value={occurrences}
-                onChange={(e) => setOccurrrences(Number(e.target.value))}
+                onChange={(e) => setOccurrences(Number(e.target.value))}
+                data-test-subj="recurrenceSchedulerRecurrenceEndsAfterOccurrences"
               />
             </EuiFormControlLayout>
           </EuiFormRow>
         )}
       </div>
       <EuiHorizontalRule margin="none" />
-      <div style={{ padding: '16px' }}>
+      <div data-test-subj="recurrenceSchedulerRepeatSummary" style={{ padding: '16px' }}>
         {i18n.translate('xpack.triggersActionsUI.ruleSnoozeScheduler.repeatsSummary', {
           defaultMessage: 'Repeats {summary}',
           values: { summary: recurrenceSummary(compiledRecurrenceSchedule) },

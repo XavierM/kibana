@@ -12,9 +12,9 @@ import { RRuleFrequency } from '../../../../../../types';
 export const ISO_WEEKDAYS = [1, 2, 3, 4, 5, 6, 7];
 
 export const RECURRENCE_END_OPTIONS = [
-  { id: 'never', label: 'Never' },
-  { id: 'ondate', label: 'On date' },
-  { id: 'afterx', label: 'After {x}' },
+  { id: 'never', label: 'Never', 'data-test-subj': 'recurrenceSchedulerRecurrenceEndsNever' },
+  { id: 'ondate', label: 'On date', 'data-test-subj': 'recurrenceSchedulerRecurrenceEndsOnDate' },
+  { id: 'afterx', label: 'After {x}', 'data-test-subj': 'recurrenceSchedulerRecurrenceEndsAfterX' },
 ];
 
 export const DEFAULT_REPEAT_OPTIONS = [
