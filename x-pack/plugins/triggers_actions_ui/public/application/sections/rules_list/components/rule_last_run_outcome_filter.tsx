@@ -8,22 +8,22 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { FormattedMessage } from '@kbn/i18n-react';
 import { EuiPopover, EuiFilterButton, EuiFilterSelectItem, EuiHealth } from '@elastic/eui';
-import { RuleExecutionStatuses, RuleExecutionStatusValues } from '@kbn/alerting-plugin/common';
-import { rulesStatusesTranslationsMapping } from '../translations';
-import { getExecutionStatusHealthColor } from '../../../../common/lib';
+import { RuleLastRunOutcomes, RuleLastRunOutcomeValues } from '@kbn/alerting-plugin/common';
+import { rulesLastRunOutcomeTranslationMapping } from '../translations';
+import { getOutcomeHealthColor } from '../../../../common/lib';
 
-interface RuleExecutionStatusFilterProps {
-  selectedStatuses: string[];
-  onChange?: (selectedRuleStatusesIds: string[]) => void;
+const sortedRuleLastRunOutcomeValues = [...RuleLastRunOutcomeValues].sort();
+
+interface RuleLastRunOutcomeFilterProps {
+  selectedOutcomes: string[];
+  onChange?: (selectedRuleOutcomeIds: string[]) => void;
 }
 
-const sortedRuleExecutionStatusValues = [...RuleExecutionStatusValues].sort();
-
-export const RuleExecutionStatusFilter: React.FunctionComponent<RuleExecutionStatusFilterProps> = ({
-  selectedStatuses,
+export const RuleLastRunOutcomeFilter: React.FunctionComponent<RuleLastRunOutcomeFilterProps> = ({
+  selectedOutcomes,
   onChange,
-}: RuleExecutionStatusFilterProps) => {
-  const [selectedValues, setSelectedValues] = useState<string[]>(selectedStatuses);
+}: RuleLastRunOutcomeFilterProps) => {
+  const [selectedValues, setSelectedValues] = useState<string[]>(selectedOutcomes);
   const [isPopoverOpen, setIsPopoverOpen] = useState<boolean>(false);
 
   const onTogglePopover = useCallback(() => {
@@ -42,8 +42,8 @@ export const RuleExecutionStatusFilter: React.FunctionComponent<RuleExecutionSta
   }, [selectedValues]);
 
   useEffect(() => {
-    setSelectedValues(selectedStatuses);
-  }, [selectedStatuses]);
+    setSelectedValues(selectedOutcomes);
+  }, [selectedOutcomes]);
 
   return (
     <EuiPopover
@@ -56,18 +56,18 @@ export const RuleExecutionStatusFilter: React.FunctionComponent<RuleExecutionSta
           numActiveFilters={selectedValues.length}
           numFilters={selectedValues.length}
           onClick={onTogglePopover}
-          data-test-subj="ruleExecutionStatusFilterButton"
+          data-test-subj="ruleLastRunOutcomeFilterButton"
         >
           <FormattedMessage
-            id="xpack.triggersActionsUI.sections.rulesList.ruleExecutionStatusFilterLabel"
+            id="xpack.triggersActionsUI.sections.rulesList.ruleLastRunOutcomeFilterLabel"
             defaultMessage="Last response"
           />
         </EuiFilterButton>
       }
     >
       <div className="euiFilterSelect__items">
-        {sortedRuleExecutionStatusValues.map((item: RuleExecutionStatuses) => {
-          const healthColor = getExecutionStatusHealthColor(item);
+        {sortedRuleLastRunOutcomeValues.map((item: RuleLastRunOutcomes) => {
+          const healthColor = getOutcomeHealthColor(item);
           return (
             <EuiFilterSelectItem
               key={item}
@@ -81,9 +81,11 @@ export const RuleExecutionStatusFilter: React.FunctionComponent<RuleExecutionSta
                 }
               }}
               checked={selectedValues.includes(item) ? 'on' : undefined}
-              data-test-subj={`ruleExecutionStatus${item}FilterOption`}
+              data-test-subj={`ruleLastRunOutcome${item}FilterOption`}
             >
-              <EuiHealth color={healthColor}>{rulesStatusesTranslationsMapping[item]}</EuiHealth>
+              <EuiHealth color={healthColor}>
+                {rulesLastRunOutcomeTranslationMapping[item]}
+              </EuiHealth>
             </EuiFilterSelectItem>
           );
         })}
@@ -92,4 +94,4 @@ export const RuleExecutionStatusFilter: React.FunctionComponent<RuleExecutionSta
   );
 };
 
-export { getExecutionStatusHealthColor as getHealthColor };
+export { getOutcomeHealthColor as getHealthColor };
